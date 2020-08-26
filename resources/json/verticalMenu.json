@@ -1,0 +1,40 @@
+{
+  "menu": [
+    {
+      "url": "javascript:void(0)",
+      "name": "Manage Location",
+      "i18n": "Manage Location",
+      "class": "collapsible-header waves-effect waves-cyan",
+      "icon": "photo_filter",
+      "slug": "",
+      "submenu": [
+        {
+          "url": "javascript:void(0)",
+          "name": "Locations List",
+          "i18n": "Locations List",
+          "slug": ""
+        },
+        {
+          "url": "javascript:void(0)",
+          "name": "Add New Locations",
+          "i18n": "Add New Locations",
+          "slug": ""
+        },
+        {
+          "url": "javascript:void(0)",
+          "name": "Location Types List",
+          "i18n": "Location Types List",
+          "slug": ""
+        },
+        {
+          "url": "javascript:void(0)",
+          "name": "Add New Location Type",
+          "i18n": "Add New Location Type",
+          "slug": ""
+        }
+
+
+      ]
+    }
+  ]
+}
