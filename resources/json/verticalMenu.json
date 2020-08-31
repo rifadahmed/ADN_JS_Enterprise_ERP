@@ -9,25 +9,25 @@
       "slug": "",
       "submenu": [
         {
-          "url": "javascript:void(0)",
+          "url": "/lists",
           "name": "Locations List",
           "i18n": "Locations List",
           "slug": ""
         },
         {
-          "url": "javascript:void(0)",
+          "url": "/addList",
           "name": "Add New Locations",
           "i18n": "Add New Locations",
           "slug": ""
         },
         {
-          "url": "javascript:void(0)",
+          "url": "/typeLists",
           "name": "Location Types List",
           "i18n": "Location Types List",
           "slug": ""
         },
         {
-          "url": "javascript:void(0)",
+          "url": "/addTypeList",
           "name": "Add New Location Type",
           "i18n": "Add New Location Type",
           "slug": ""

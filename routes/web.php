@@ -152,3 +152,7 @@ Route::get('lang/{locale}',[LanguageController::class, 'swap']);
 
 Auth::routes();
 
+Route::get('/lists','Location@lists');
+Route::get('/addList','Location@add_list');
+Route::get('/typeLists','Location@type_lists');
+Route::get('/addTypeList','Location@add_type_list');
