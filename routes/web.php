@@ -152,7 +152,23 @@ Route::get('lang/{locale}',[LanguageController::class, 'swap']);
 
 Auth::routes();
 
+//****************Navbar********************
+//manage location
 Route::get('/lists','Location@lists');
 Route::get('/addList','Location@add_list');
 Route::get('/typeLists','Location@type_lists');
 Route::get('/addTypeList','Location@add_type_list');
+
+//warehouse
+Route::get('/warehouselists','warehouse@list');
+Route::get('/addnewwarehouse','warehouse@addWarehouse');
+
+//Products
+Route::get('/products/categorylist','Products@categoryList');
+Route::get('/products/addnewcategory','Products@addCategory');
+Route::get('/products/subcategorylist','Products@subCatList');
+Route::get('/products/addSubCatList','Products@addSubCatList');
+Route::get('/products/brandlist','Products@brandList');
+Route::get('/products/addnewbrand','Products@addBrand');
+Route::get('/products/productlist','Products@productList');
+Route::get('/products/addnewproducts','Products@addProduct');

@@ -70,51 +70,51 @@
       "slug": "",
       "submenu": [
         {
-          "url": "/categorylist",
+          "url": "/products/categorylist",
           "name": "Category List",
           "i18n": "Category List",
           "slug": ""
         },
         {
-          "url": "/addnewcategory",
+          "url": "/products/addnewcategory",
           "name": "Add New Category",
           "i18n": "Add New Category",
           "slug": ""
         },
         {
-          "url": "/subcategorylist",
+          "url": "/products/subcategorylist",
           "name": "Sub Category List",
           "i18n": "Sub Category List",
           "slug": ""
         },
         {
-          "url": "/addnewsubcategory",
+          "url": "/products/addSubCatList",
           "name": "Add New Sub Category",
           "i18n": "Add New Sub Category",
           "slug": ""
         },
         {
-          "url": "/brandlist",
+          "url": "/products/brandlist",
           "name": "Brand List",
           "i18n": "Brand List",
           "slug": ""
         },
         {
-          "url": "/addnewbrand",
+          "url": "/products/addnewbrand",
           "name": "Add New Brand",
           "i18n": "Add New Brand",
           "slug": ""
         }
         ,
         {
-          "url": "/productlist",
+          "url": "/products/productlist",
           "name": "Products List",
           "i18n": "Products List",
           "slug": ""
         }
         ,
         {
-          "url": "/addnewproducts",
+          "url": "/products/addnewproducts",
           "name": "Add New Products",
           "i18n": "Add New Products",
           "slug": ""
