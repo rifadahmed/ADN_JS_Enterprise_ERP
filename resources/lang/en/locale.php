@@ -96,11 +96,30 @@ return [
     // "ChartJS"=> "ChartJS",
     // "Chartist"=> "Chartist",
     // "Sparkline Charts"=> "Sparkline Charts",
+
+    // ********Mange Location********//
     "Manage Location"=> "Mange Location",
     "Locations List"=>"Locations List",
     "Add New Locations"=>"Add New Locations",
     "Location Types List"=>"Location Types List",
-    "Add New Location Type"=>"Add New Location Type"
+    "Add New Location Type"=>"Add New Location Type",
+
+    // ********Warehouse********//
+    "Warehouse"=> "Warehouse",
+    "Warehouse List"=>"Warehouse List",
+    "Add New Warehouse"=> "Add New Warehouse",
+
+    // ********Products********//
+    "Products"=> "Products",
+    "Category List"=> "Category List",
+    "Add New Category"=> "Add New Category",
+    "Sub Category List"=> "Sub Category List",
+    "Add New Sub Category"=> "Add New Sub Category",
+    "Brand List"=> "Brand List",
+    "Add New Brand"=> "Add New Brand",
+    "Products List"=> "Products List",
+    "Add New Products"=> "Add New Products",
+    
 
             // "Manage Location type"=> "Mange Location type",
             // "Location type"=> "Location type",
