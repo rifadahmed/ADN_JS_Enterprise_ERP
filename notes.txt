@@ -1,9 +1,0 @@
-to modify navbar
-edit in these files
-1)G:\xampp\htdocs\material\resources\lang\en\locale.php
-2)G:\xampp\htdocs\material\resources\json\template-list.json
-3)G:\xampp\htdocs\material\resources\json\verticalMenu.json
-4)G:\xampp\htdocs\material\public\json\verticalMenu.json
-
-to modify navbar style
-1)G:\xampp\htdocs\material\public\css\themes\vertical-gradient-menu-template\style.css
