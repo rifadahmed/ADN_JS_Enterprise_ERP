@@ -57,6 +57,10 @@ Website: http://adndigital.com.bd
     </div>
     <!-- END: Page Main-->
 
+    <!-- Start : Intro -->
+    {{--@include('includes.intro')--}}
+    <!-- End : Intro -->
+
     <!-- START RIGHT SIDEBAR NAV -->
     @include('includes.right_nav')
     <!-- END RIGHT SIDEBAR NAV -->
