@@ -201,7 +201,7 @@ License: You must have a valid license purchased only from themeforest(the above
             <ul class="collapsible collapsible-sub" data-collapsible="accordion">
               <li class="active"><a class="active" href="dashboard-modern.html"><i class="material-icons">radio_button_unchecked</i><span data-i18n="Modern">Locations List</span></a>
               </li>
-              <li><a href="{{route('locations.add')}}"><i class="material-icons">radio_button_unchecked</i><span data-i18n="eCommerce">Add New Location</span></a>
+              <li><a href="{{route('location.create')}}"><i class="material-icons">radio_button_unchecked</i><span data-i18n="eCommerce">Add New Location</span></a>
               </li>
               <li><a href="dashboard-analytics.html"><i class="material-icons">radio_button_unchecked</i><span data-i18n="Analytics">Location Types List</span></a>
               <li><a href="dashboard-analytics.html"><i class="material-icons">radio_button_unchecked</i><span data-i18n="Analytics">Add New Location Type</span></a>
