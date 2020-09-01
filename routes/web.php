@@ -16,5 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('layouts.dashboard');
 });
+<<<<<<< HEAD
 
-Route::get('locations/add', ['as'=>'locations.add','uses'=>'LocationsController@addLocation']);
+// Route::get('locations/add', ['as'=>'locations.add','uses'=>'LocationsController@addLocation']);
+=======
+@include ('rifad.php');
+>>>>>>> c4f1836c135f37180cf61c361e54d1e7225f1b6e

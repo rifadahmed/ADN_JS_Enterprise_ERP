@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class LocationsController extends Controller
 {
-    public function addLocation(){
+    public function create(){
         return view('locations.addLocation');
     }
 }
