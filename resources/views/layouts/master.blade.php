@@ -12,7 +12,7 @@ Website: http://adndigital.com.bd
     <meta name="description" content="ADN ERP Solution">
     <meta name="keywords" content="">
     <meta name="author" content="ADN Digital">
-    <title>JS ERP</title>
+    <title>{{ config('app.name', 'JS ERP') }}</title>
     <link rel="apple-touch-icon" href={{asset("app-assets/images/favicon/apple-touch-icon-152x152.png")}}>
     <link rel="shortcut icon" type="image/x-icon" href={{asset("app-assets/images/favicon/favicon-32x32.png")}}>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -57,6 +57,10 @@ Website: http://adndigital.com.bd
     </div>
     <!-- END: Page Main-->
 
+    <!-- START RIGHT SIDEBAR NAV -->
+    @include('includes.right_nav')
+    <!-- END RIGHT SIDEBAR NAV -->
+
     <!-- Theme Customizer -->
     @include('includes.settings')
     <!--/ Theme Customizer -->
@@ -84,5 +88,6 @@ Website: http://adndigital.com.bd
     <script src={{asset("app-assets/js/scripts/dashboard-modern.js")}}></script>
     <script src={{asset("app-assets/js/scripts/intro.js")}}></script>
     <!-- END PAGE LEVEL JS-->
+    @stack('script')
   </body>
 </html>
