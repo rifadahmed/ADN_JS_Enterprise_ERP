@@ -29,6 +29,7 @@
     <label for="exampleFormControlSelect2">Location Order</label>
     <input type="locationOrder" class="form-control" id="exampleFormControlInput2" placeholder="">
   </div>
+  <button class="btn btn-primary" type="submit">Submit</button>
 
 
 

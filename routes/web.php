@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('dashboard.dashboard');
+    return view('layouts.dashboard');
 });
 
 Route::get('locations/add', ['as'=>'locations.add','uses'=>'LocationsController@addLocation']);
