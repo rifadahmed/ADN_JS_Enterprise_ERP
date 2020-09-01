@@ -21,23 +21,23 @@ License: You must have a valid license purchased only from themeforest(the above
     <meta name="keywords" content="materialize, admin template, dashboard template, flat admin template, responsive admin template, eCommerce dashboard, analytic dashboard">
     <meta name="author" content="ThemeSelect">
     <title>Dashboard Modern | Materialize - Material Design Admin Template</title>
-    <link rel="apple-touch-icon" href="../../../app-assets/images/favicon/apple-touch-icon-152x152.png">
-    <link rel="shortcut icon" type="image/x-icon" href="../../../app-assets/images/favicon/favicon-32x32.png">
+    <link rel="apple-touch-icon" href={{asset("app-assets/images/favicon/apple-touch-icon-152x152.png")}}>
+    <link rel="shortcut icon" type="image/x-icon" href={{asset("app-assets/images/favicon/favicon-32x32.png")}}>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- BEGIN: VENDOR CSS-->
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/vendors.min.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/animate-css/animate.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/chartist-js/chartist.min.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/chartist-js/chartist-plugin-tooltip.css">
+    <link rel="stylesheet" type="text/css" href={{asset("app-assets/vendors/vendors.min.css")}}>
+    <link rel="stylesheet" type="text/css" href={{asset("app-assets/vendors/animate-css/animate.css")}}>
+    <link rel="stylesheet" type="text/css" href={{asset("app-assets/vendors/chartist-js/chartist.min.css")}}>
+    <link rel="stylesheet" type="text/css" href={{asset("app-assets/vendors/chartist-js/chartist-plugin-tooltip.css")}}>
     <!-- END: VENDOR CSS-->
     <!-- BEGIN: Page Level CSS-->
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/themes/vertical-modern-menu-template/materialize.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/themes/vertical-modern-menu-template/style.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/pages/dashboard-modern.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/pages/intro.css">
+    <link rel="stylesheet" type="text/css" href={{asset("app-assets/css/themes/vertical-modern-menu-template/materialize.css")}}>
+    <link rel="stylesheet" type="text/css" href={{asset("app-assets/css/themes/vertical-modern-menu-template/style.css")}}>
+    <link rel="stylesheet" type="text/css" href={{asset("app-assets/css/pages/dashboard-modern.css")}}>
+    <link rel="stylesheet" type="text/css" href={{asset("app-assets/css/pages/intro.css")}}>
     <!-- END: Page Level CSS-->
     <!-- BEGIN: Custom CSS-->
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/custom/custom.css">
+    <link rel="stylesheet" type="text/css" href={{asset("app-assets/css/custom/custom.css")}}>
     <!-- END: Custom CSS-->
   </head>
   <!-- END: Head-->
@@ -57,7 +57,7 @@ License: You must have a valid license purchased only from themeforest(the above
               <li class="hide-on-med-and-down"><a class="waves-effect waves-block waves-light toggle-fullscreen" href="javascript:void(0);"><i class="material-icons">settings_overscan</i></a></li>
               <li class="hide-on-large-only search-input-wrapper"><a class="waves-effect waves-block waves-light search-button" href="javascript:void(0);"><i class="material-icons">search</i></a></li>
               <li><a class="waves-effect waves-block waves-light notification-button" href="javascript:void(0);" data-target="notifications-dropdown"><i class="material-icons">notifications_none<small class="notification-badge">5</small></i></a></li>
-              <li><a class="waves-effect waves-block waves-light profile-button" href="javascript:void(0);" data-target="profile-dropdown"><span class="avatar-status avatar-online"><img src="../../../app-assets/images/avatar/avatar-7.png" alt="avatar"><i></i></span></a></li>
+              <li><a class="waves-effect waves-block waves-light profile-button" href="javascript:void(0);" data-target="profile-dropdown"><span class="avatar-status avatar-online"><img src={{asset("app-assets/images/avatar/avatar-7.png")}} alt="avatar"><i></i></span></a></li>
               <li><a class="waves-effect waves-block waves-light sidenav-trigger" href="#" data-target="slide-out-right"><i class="material-icons">format_indent_increase</i></a></li>
             </ul>
             <!-- translation-button-->
@@ -120,7 +120,7 @@ License: You must have a valid license purchased only from themeforest(the above
       <li class="auto-suggestion"><a class="collection-item" href="#">
           <div class="display-flex">
             <div class="display-flex align-item-center flex-grow-1">
-              <div class="avatar"><img src="../../../app-assets/images/icon/pdf-image.png" width="24" height="30" alt="sample image"></div>
+              <div class="avatar"><img src={{asset("app-assets/images/icon/pdf-image.png")}} width="24" height="30" alt="sample image"></div>
               <div class="member-info display-flex flex-column"><span class="black-text">Two new item submitted</span><small class="grey-text">Marketing Manager</small></div>
             </div>
             <div class="status"><small class="grey-text">17kb</small></div>
@@ -128,7 +128,7 @@ License: You must have a valid license purchased only from themeforest(the above
       <li class="auto-suggestion"><a class="collection-item" href="#">
           <div class="display-flex">
             <div class="display-flex align-item-center flex-grow-1">
-              <div class="avatar"><img src="../../../app-assets/images/icon/doc-image.png" width="24" height="30" alt="sample image"></div>
+              <div class="avatar"><img src={{asset("app-assets/images/icon/doc-image.png")}} width="24" height="30" alt="sample image"></div>
               <div class="member-info display-flex flex-column"><span class="black-text">52 Doc file Generator</span><small class="grey-text">FontEnd Developer</small></div>
             </div>
             <div class="status"><small class="grey-text">550kb</small></div>
@@ -136,7 +136,7 @@ License: You must have a valid license purchased only from themeforest(the above
       <li class="auto-suggestion"><a class="collection-item" href="#">
           <div class="display-flex">
             <div class="display-flex align-item-center flex-grow-1">
-              <div class="avatar"><img src="../../../app-assets/images/icon/xls-image.png" width="24" height="30" alt="sample image"></div>
+              <div class="avatar"><img src={{asset("app-assets/images/icon/xls-image.png")}} width="24" height="30" alt="sample image"></div>
               <div class="member-info display-flex flex-column"><span class="black-text">25 Xls File Uploaded</span><small class="grey-text">Digital Marketing Manager</small></div>
             </div>
             <div class="status"><small class="grey-text">20kb</small></div>
@@ -144,7 +144,7 @@ License: You must have a valid license purchased only from themeforest(the above
       <li class="auto-suggestion"><a class="collection-item" href="#">
           <div class="display-flex">
             <div class="display-flex align-item-center flex-grow-1">
-              <div class="avatar"><img src="../../../app-assets/images/icon/jpg-image.png" width="24" height="30" alt="sample image"></div>
+              <div class="avatar"><img src={{asset("app-assets/images/icon/jpg-image.png")}} width="24" height="30" alt="sample image"></div>
               <div class="member-info display-flex flex-column"><span class="black-text">Anna Strong</span><small class="grey-text">Web Designer</small></div>
             </div>
             <div class="status"><small class="grey-text">37kb</small></div>
@@ -154,28 +154,28 @@ License: You must have a valid license purchased only from themeforest(the above
       <li class="auto-suggestion"><a class="collection-item" href="#">
           <div class="display-flex">
             <div class="display-flex align-item-center flex-grow-1">
-              <div class="avatar"><img class="circle" src="../../../app-assets/images/avatar/avatar-7.png" width="30" alt="sample image"></div>
+              <div class="avatar"><img class="circle" src={{asset("app-assets/images/avatar/avatar-7.png")}} width="30" alt="sample image"></div>
               <div class="member-info display-flex flex-column"><span class="black-text">John Doe</span><small class="grey-text">UI designer</small></div>
             </div>
           </div></a></li>
       <li class="auto-suggestion"><a class="collection-item" href="#">
           <div class="display-flex">
             <div class="display-flex align-item-center flex-grow-1">
-              <div class="avatar"><img class="circle" src="../../../app-assets/images/avatar/avatar-8.png" width="30" alt="sample image"></div>
+              <div class="avatar"><img class="circle" src={{asset("app-assets/images/avatar/avatar-8.png")}} width="30" alt="sample image"></div>
               <div class="member-info display-flex flex-column"><span class="black-text">Michal Clark</span><small class="grey-text">FontEnd Developer</small></div>
             </div>
           </div></a></li>
       <li class="auto-suggestion"><a class="collection-item" href="#">
           <div class="display-flex">
             <div class="display-flex align-item-center flex-grow-1">
-              <div class="avatar"><img class="circle" src="../../../app-assets/images/avatar/avatar-10.png" width="30" alt="sample image"></div>
+              <div class="avatar"><img class="circle" src={{asset("app-assets/images/avatar/avatar-10.png")}} width="30" alt="sample image"></div>
               <div class="member-info display-flex flex-column"><span class="black-text">Milena Gibson</span><small class="grey-text">Digital Marketing</small></div>
             </div>
           </div></a></li>
       <li class="auto-suggestion"><a class="collection-item" href="#">
           <div class="display-flex">
             <div class="display-flex align-item-center flex-grow-1">
-              <div class="avatar"><img class="circle" src="../../../app-assets/images/avatar/avatar-12.png" width="30" alt="sample image"></div>
+              <div class="avatar"><img class="circle" src={{asset("app-assets/images/avatar/avatar-12.png")}} width="30" alt="sample image"></div>
               <div class="member-info display-flex flex-column"><span class="black-text">Anna Strong</span><small class="grey-text">Web Designer</small></div>
             </div>
           </div></a></li>
@@ -193,7 +193,7 @@ License: You must have a valid license purchased only from themeforest(the above
     <!-- BEGIN: SideNav-->
     <aside class="sidenav-main nav-expanded nav-lock nav-collapsible sidenav-light sidenav-active-square">
       <div class="brand-sidebar">
-        <h1 class="logo-wrapper"><a class="brand-logo darken-1" href="index.html"><img class="hide-on-med-and-down" src="../../../app-assets/images/logo/materialize-logo-color.png" alt="materialize logo"/><img class="show-on-medium-and-down hide-on-med-and-up" src="../../../app-assets/images/logo/materialize-logo.png" alt="materialize logo"/><span class="logo-text hide-on-med-and-down">Materialize</span></a><a class="navbar-toggler" href="#"><i class="material-icons">radio_button_checked</i></a></h1>
+        <h1 class="logo-wrapper"><a class="brand-logo darken-1" href="index.html"><img class="hide-on-med-and-down" src={{asset("app-assets/images/logo/materialize-logo-color.png")}} alt="materialize logo"/><img class="show-on-medium-and-down hide-on-med-and-up" src={{asset("app-assets/images/logo/materialize-logo.png")}} alt="materialize logo"/><span class="logo-text hide-on-med-and-down">Materialize</span></a><a class="navbar-toggler" href="#"><i class="material-icons">radio_button_checked</i></a></h1>
       </div>
       <ul class="sidenav sidenav-collapsible leftside-navigation collapsible sidenav-fixed menu-shadow" id="slide-out" data-menu="menu-navigation" data-collapsible="menu-accordion">
         <li class="active bold"><a class="collapsible-header waves-effect waves-cyan " href="JavaScript:void(0)"><i class="material-icons">settings_input_svideo</i><span class="menu-title" data-i18n="Dashboard">Dashboard</span><span class="badge badge pill orange float-right mr-10">3</span></a>
@@ -626,19 +626,19 @@ License: You must have a valid license purchased only from themeforest(the above
                <p class="medium-small pt-2">Today</p>
                <ul class="collection mb-0">
                   <li class="collection-item avatar">
-                     <img src="../../../app-assets/images/avatar/avatar-7.png" alt="" class="circle" />
+                     <img src={{asset("app-assets/images/avatar/avatar-7.png")}} alt="" class="circle" />
                      <p class="font-weight-600">John Doe</p>
                      <p class="medium-small">18, January 2019</p>
                      <a href="#!" class="secondary-content"><i class="material-icons">star_border</i></a>
                   </li>
                   <li class="collection-item avatar">
-                     <img src="../../../app-assets/images/avatar/avatar-3.png" alt="" class="circle" />
+                     <img src={{asset("app-assets/images/avatar/avatar-3.png")}} alt="" class="circle" />
                      <p class="font-weight-600">Adam Garza</p>
                      <p class="medium-small">20, January 2019</p>
                      <a href="#!" class="secondary-content"><i class="material-icons">star_border</i></a>
                   </li>
                   <li class="collection-item avatar">
-                     <img src="../../../app-assets/images/avatar/avatar-5.png" alt="" class="circle" />
+                     <img src={{asset("app-assets/images/avatar/avatar-5.png")}} alt="" class="circle" />
                      <p class="font-weight-600">Jennifer Rice</p>
                      <p class="medium-small">25, January 2019</p>
                      <a href="#!" class="secondary-content"><i class="material-icons">star_border</i></a>
@@ -784,7 +784,7 @@ License: You must have a valid license purchased only from themeforest(the above
               <li class="collection-item right-sidebar-chat-item sidenav-trigger display-flex avatar pl-5 pb-0"
                 data-target="slide-out-chat">
                 <span class="avatar-status avatar-online avatar-50"><img
-                    src="../../../app-assets/images/avatar/avatar-7.png" alt="avatar" />
+                    src={{asset("app-assets/images/avatar/avatar-7.png")}} alt="avatar" />
                   <i></i>
                 </span>
                 <div class="user-content">
@@ -796,7 +796,7 @@ License: You must have a valid license purchased only from themeforest(the above
               <li class="collection-item right-sidebar-chat-item sidenav-trigger display-flex avatar pl-5 pb-0"
                 data-target="slide-out-chat">
                 <span class="avatar-status avatar-online avatar-50"><img
-                    src="../../../app-assets/images/avatar/avatar-1.png" alt="avatar" />
+                    src={{asset("app-assets/images/avatar/avatar-1.png")}} alt="avatar" />
                   <i></i>
                 </span>
                 <div class="user-content">
@@ -808,7 +808,7 @@ License: You must have a valid license purchased only from themeforest(the above
               <li class="collection-item right-sidebar-chat-item sidenav-trigger display-flex avatar pl-5 pb-0"
                 data-target="slide-out-chat">
                 <span class="avatar-status avatar-off avatar-50"><img
-                    src="../../../app-assets/images/avatar/avatar-2.png" alt="avatar" />
+                    src={{asset("app-assets/images/avatar/avatar-2.png")}} alt="avatar" />
                   <i></i>
                 </span>
                 <div class="user-content">
@@ -820,7 +820,7 @@ License: You must have a valid license purchased only from themeforest(the above
               <li class="collection-item right-sidebar-chat-item sidenav-trigger display-flex avatar pl-5 pb-0"
                 data-target="slide-out-chat">
                 <span class="avatar-status avatar-online avatar-50"><img
-                    src="../../../app-assets/images/avatar/avatar-3.png" alt="avatar" />
+                    src={{asset("app-assets/images/avatar/avatar-3.png")}} alt="avatar" />
                   <i></i>
                 </span>
                 <div class="user-content">
@@ -832,7 +832,7 @@ License: You must have a valid license purchased only from themeforest(the above
               <li class="collection-item right-sidebar-chat-item sidenav-trigger display-flex avatar pl-5 pb-0"
                 data-target="slide-out-chat">
                 <span class="avatar-status avatar-online avatar-50"><img
-                    src="../../../app-assets/images/avatar/avatar-4.png" alt="avatar" />
+                    src={{asset("app-assets/images/avatar/avatar-4.png")}} alt="avatar" />
                   <i></i>
                 </span>
                 <div class="user-content">
@@ -844,7 +844,7 @@ License: You must have a valid license purchased only from themeforest(the above
               <li class="collection-item right-sidebar-chat-item sidenav-trigger display-flex avatar pl-5 pb-0"
                 data-target="slide-out-chat">
                 <span class="avatar-status avatar-off avatar-50"><img
-                    src="../../../app-assets/images/avatar/avatar-5.png" alt="avatar" />
+                    src={{asset("app-assets/images/avatar/avatar-5.png")}} alt="avatar" />
                   <i></i>
                 </span>
                 <div class="user-content">
@@ -856,7 +856,7 @@ License: You must have a valid license purchased only from themeforest(the above
               <li class="collection-item right-sidebar-chat-item sidenav-trigger display-flex avatar pl-5 pb-0"
                 data-target="slide-out-chat">
                 <span class="avatar-status avatar-online avatar-50"><img
-                    src="../../../app-assets/images/avatar/avatar-6.png" alt="avatar" />
+                    src={{asset("app-assets/images/avatar/avatar-6.png")}} alt="avatar" />
                   <i></i>
                 </span>
                 <div class="user-content">
@@ -868,7 +868,7 @@ License: You must have a valid license purchased only from themeforest(the above
               <li class="collection-item right-sidebar-chat-item sidenav-trigger display-flex avatar pl-5 pb-0"
                 data-target="slide-out-chat">
                 <span class="avatar-status avatar-off avatar-50"><img
-                    src="../../../app-assets/images/avatar/avatar-7.png" alt="avatar" />
+                    src={{asset("app-assets/images/avatar/avatar-7.png")}} alt="avatar" />
                   <i></i>
                 </span>
                 <div class="user-content">
@@ -880,7 +880,7 @@ License: You must have a valid license purchased only from themeforest(the above
               <li class="collection-item right-sidebar-chat-item sidenav-trigger display-flex avatar pl-5 pb-0"
                 data-target="slide-out-chat">
                 <span class="avatar-status avatar-off avatar-50"><img
-                    src="../../../app-assets/images/avatar/avatar-8.png" alt="avatar" />
+                    src={{asset("app-assets/images/avatar/avatar-8.png")}} alt="avatar" />
                   <i></i>
                 </span>
                 <div class="user-content">
@@ -892,7 +892,7 @@ License: You must have a valid license purchased only from themeforest(the above
               <li class="collection-item right-sidebar-chat-item sidenav-trigger display-flex avatar pl-5 pb-0"
                 data-target="slide-out-chat">
                 <span class="avatar-status avatar-online avatar-50"><img
-                    src="../../../app-assets/images/avatar/avatar-1.png" alt="avatar" />
+                    src={{asset("app-assets/images/avatar/avatar-1.png")}} alt="avatar" />
                   <i></i>
                 </span>
                 <div class="user-content">
@@ -904,7 +904,7 @@ License: You must have a valid license purchased only from themeforest(the above
               <li class="collection-item right-sidebar-chat-item sidenav-trigger display-flex avatar pl-5 pb-0"
                 data-target="slide-out-chat">
                 <span class="avatar-status avatar-online avatar-50"><img
-                    src="../../../app-assets/images/avatar/avatar-9.png" alt="avatar" />
+                    src={{asset("app-assets/images/avatar/avatar-9.png")}} alt="avatar" />
                   <i></i>
                 </span>
                 <div class="user-content">
@@ -916,7 +916,7 @@ License: You must have a valid license purchased only from themeforest(the above
               <li class="collection-item right-sidebar-chat-item sidenav-trigger display-flex avatar pl-5 pb-0"
                 data-target="slide-out-chat">
                 <span class="avatar-status avatar-off avatar-50"><img
-                    src="../../../app-assets/images/avatar/avatar-10.png" alt="avatar" />
+                    src={{asset("app-assets/images/avatar/avatar-10.png")}} alt="avatar" />
                   <i></i>
                 </span>
                 <div class="user-content">
@@ -928,7 +928,7 @@ License: You must have a valid license purchased only from themeforest(the above
               <li class="collection-item right-sidebar-chat-item sidenav-trigger display-flex avatar pl-5 pb-0"
                 data-target="slide-out-chat">
                 <span class="avatar-status avatar-off avatar-50"><img
-                    src="../../../app-assets/images/avatar/avatar-11.png" alt="avatar" />
+                    src={{asset("app-assets/images/avatar/avatar-11.png")}} alt="avatar" />
                   <i></i>
                 </span>
                 <div class="user-content">
@@ -940,7 +940,7 @@ License: You must have a valid license purchased only from themeforest(the above
               <li class="collection-item right-sidebar-chat-item sidenav-trigger display-flex avatar pl-5 pb-0"
                 data-target="slide-out-chat">
                 <span class="avatar-status avatar-online avatar-50"><img
-                    src="../../../app-assets/images/avatar/avatar-12.png" alt="avatar" />
+                    src={{asset("app-assets/images/avatar/avatar-12.png")}} alt="avatar" />
                   <i></i>
                 </span>
                 <div class="user-content">
@@ -1102,7 +1102,7 @@ License: You must have a valid license purchased only from themeforest(the above
                 <h6 class="timeline-title">12 new users registered</h6>
                 <p class="timeline-text">Here are some news feed interactions concepts.</p>
                 <div class="timeline-content">
-                  <img src="../../../app-assets/images/icon/pdf.png" alt="document" height="30" width="25"
+                  <img src={{asset("app-assets/images/icon/pdf.png")}} alt="document" height="30" width="25"
                     class="mr-1">Registration.doc
                 </div>
               </li>
@@ -1111,7 +1111,7 @@ License: You must have a valid license purchased only from themeforest(the above
                 <h6 class="timeline-title">Tina is attending your activity</h6>
                 <p class="timeline-text">Here are some news feed interactions concepts.</p>
                 <div class="timeline-content">
-                  <img src="../../../app-assets/images/icon/pdf.png" alt="document" height="30" width="25"
+                  <img src={{asset("app-assets/images/icon/pdf.png")}} alt="document" height="30" width="25"
                     class="mr-1">Activity.doc
                 </div>
               </li>
@@ -1141,7 +1141,7 @@ License: You must have a valid license purchased only from themeforest(the above
                 <h6 class="timeline-title">Database overloaded 89%</h6>
                 <p class="timeline-text">Here are some news feed interactions concepts.</p>
                 <div class="timeline-content">
-                  <img src="../../../app-assets/images/icon/pdf.png" alt="document" height="30" width="25"
+                  <img src={{asset("app-assets/images/icon/pdf.png")}} alt="document" height="30" width="25"
                     class="mr-1">Database-log.doc
                 </div>
               </li>
@@ -1175,7 +1175,7 @@ License: You must have a valid license purchased only from themeforest(the above
     <li class="chat-body">
       <ul class="collection">
         <li class="collection-item display-flex avatar pl-5 pb-0" data-target="slide-out-chat">
-          <span class="avatar-status avatar-online avatar-50"><img src="../../../app-assets/images/avatar/avatar-7.png"
+          <span class="avatar-status avatar-online avatar-50"><img src={{asset("app-assets/images/avatar/avatar-7.png")}}
               alt="avatar" />
           </span>
           <div class="user-content speech-bubble">
@@ -1188,7 +1188,7 @@ License: You must have a valid license purchased only from themeforest(the above
           </div>
         </li>
         <li class="collection-item display-flex avatar pl-5 pb-0" data-target="slide-out-chat">
-          <span class="avatar-status avatar-online avatar-50"><img src="../../../app-assets/images/avatar/avatar-7.png"
+          <span class="avatar-status avatar-online avatar-50"><img src={{asset("app-assets/images/avatar/avatar-7.png")}}
               alt="avatar" />
           </span>
           <div class="user-content speech-bubble">
@@ -1206,7 +1206,7 @@ License: You must have a valid license purchased only from themeforest(the above
         </li>
 
         <li class="collection-item display-flex avatar pl-5 pb-0" data-target="slide-out-chat">
-          <span class="avatar-status avatar-online avatar-50"><img src="../../../app-assets/images/avatar/avatar-7.png"
+          <span class="avatar-status avatar-online avatar-50"><img src={{asset("app-assets/images/avatar/avatar-7.png")}}
               alt="avatar" />
           </span>
           <div class="user-content speech-bubble">
@@ -1219,7 +1219,7 @@ License: You must have a valid license purchased only from themeforest(the above
           </div>
         </li>
         <li class="collection-item display-flex avatar pl-5 pb-0" data-target="slide-out-chat">
-          <span class="avatar-status avatar-online avatar-50"><img src="../../../app-assets/images/avatar/avatar-7.png"
+          <span class="avatar-status avatar-online avatar-50"><img src={{asset("app-assets/images/avatar/avatar-7.png")}}
               alt="avatar" />
           </span>
           <div class="user-content speech-bubble">
@@ -1242,7 +1242,7 @@ License: You must have a valid license purchased only from themeforest(the above
           </div>
         </li>
         <li class="collection-item display-flex avatar pl-5 pb-0" data-target="slide-out-chat">
-          <span class="avatar-status avatar-online avatar-50"><img src="../../../app-assets/images/avatar/avatar-7.png"
+          <span class="avatar-status avatar-online avatar-50"><img src={{asset("app-assets/images/avatar/avatar-7.png")}}
               alt="avatar" />
           </span>
           <div class="user-content speech-bubble">
@@ -1250,7 +1250,7 @@ License: You must have a valid license purchased only from themeforest(the above
           </div>
         </li>
         <li class="collection-item display-flex avatar pl-5 pb-0" data-target="slide-out-chat">
-          <span class="avatar-status avatar-online avatar-50"><img src="../../../app-assets/images/avatar/avatar-7.png"
+          <span class="avatar-status avatar-online avatar-50"><img src={{asset("app-assets/images/avatar/avatar-7.png")}}
               alt="avatar" />
           </span>
           <div class="user-content speech-bubble">
@@ -1307,7 +1307,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             </div>
                         </div>
                         <div class="carousel-item slide-1">
-                            <img src="../../../app-assets/images/gallery/intro-slide-1.png" alt="" class="responsive-img animated fadeInUp slide-1-img">
+                            <img src={{asset("app-assets/images/gallery/intro-slide-1.png")}} alt="" class="responsive-img animated fadeInUp slide-1-img">
                             <h5 class="intro-step-title mt-7 center animated fadeInUp">Welcome to Materialize</h5>
                             <p class="intro-step-text mt-5 animated fadeInUp">Materialize is a Material Design Admin
                                 Template is the excellent responsive google material design inspired multipurpose admin
@@ -1315,7 +1315,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                 Elements.</p>
                         </div>
                         <div class="carousel-item slide-2">
-                            <img src="../../../app-assets/images/gallery/intro-features.png" alt="" class="responsive-img slide-2-img">
+                            <img src={{asset("app-assets/images/gallery/intro-features.png")}} alt="" class="responsive-img slide-2-img">
                             <h5 class="intro-step-title mt-7 center">Example Request Information</h5>
                             <p class="intro-step-text mt-5">Lorem ipsum dolor sit amet consectetur,
                                 adipisicing elit.
@@ -1342,7 +1342,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             </div>
                         </div>
                         <div class="carousel-item slide-3">
-                            <img src="../../../app-assets/images/gallery/intro-app.png" alt="" class="responsive-img slide-1-img">
+                            <img src={{asset("app-assets/images/gallery/intro-app.png")}} alt="" class="responsive-img slide-1-img">
                             <h5 class="intro-step-title mt-7 center">Showcase App Features</h5>
                             <div class="row">
                                 <div class="col m5 offset-m1 s12">
@@ -1636,23 +1636,23 @@ License: You must have a valid license purchased only from themeforest(the above
 
     <!-- END: Footer-->
     <!-- BEGIN VENDOR JS-->
-    <script src="../../../app-assets/js/vendors.min.js"></script>
+    <script src={{asset("app-assets/js/vendors.min.js")}}></script>
     <!-- BEGIN VENDOR JS-->
     <!-- BEGIN PAGE VENDOR JS-->
-    <script src="../../../app-assets/vendors/chartjs/chart.min.js"></script>
-    <script src="../../../app-assets/vendors/chartist-js/chartist.min.js"></script>
-    <script src="../../../app-assets/vendors/chartist-js/chartist-plugin-tooltip.js"></script>
-    <script src="../../../app-assets/vendors/chartist-js/chartist-plugin-fill-donut.min.js"></script>
+    <script src={{asset("app-assets/vendors/chartjs/chart.min.js")}}></script>
+    <script src={{asset("app-assets/vendors/chartist-js/chartist.min.js")}}></script>
+    <script src={{asset("app-assets/vendors/chartist-js/chartist-plugin-tooltip.js")}}></script>
+    <script src={{asset("app-assets/vendors/chartist-js/chartist-plugin-fill-donut.min.js")}}></script>
     <!-- END PAGE VENDOR JS-->
     <!-- BEGIN THEME  JS-->
-    <script src="../../../app-assets/js/plugins.js"></script>
-    <script src="../../../app-assets/js/search.js"></script>
-    <script src="../../../app-assets/js/custom/custom-script.js"></script>
-    <script src="../../../app-assets/js/scripts/customizer.js"></script>
+    <script src={{asset("app-assets/js/plugins.js")}}></script>
+    <script src={{asset("app-assets/js/search.js")}}></script>
+    <script src={{asset("app-assets/js/custom/custom-script.js")}}></script>
+    <script src={{asset("app-assets/js/scripts/customizer.js")}}></script>
     <!-- END THEME  JS-->
     <!-- BEGIN PAGE LEVEL JS-->
-    <script src="../../../app-assets/js/scripts/dashboard-modern.js"></script>
-    <script src="../../../app-assets/js/scripts/intro.js"></script>
+    <script src={{asset("app-assets/js/scripts/dashboard-modern.js")}}></script>
+    <script src={{asset("app-assets/js/scripts/intro.js")}}></script>
     <!-- END PAGE LEVEL JS-->
   </body>
 </html>
