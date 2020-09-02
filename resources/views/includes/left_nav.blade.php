@@ -17,6 +17,8 @@
                 <span class="menu-title" data-i18n="Mail">Dashboard</span>
             </a>
         </li>
+
+        {{-- manage Location --}}
         <li class="@if(Request::segment(1) == 'location') active @endif bold"><a class="collapsible-header waves-effect waves-cyan " href="JavaScript:void(0)"><i class="material-icons">settings_input_svideo</i><span class="menu-title" data-i18n="Dashboard">Manage Location</span>{{--<span class="badge badge pill orange float-right mr-10">3</span>--}}</a>
             <div class="collapsible-body">
                 <ul class="collapsible collapsible-sub" data-collapsible="accordion">
@@ -27,7 +29,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="{{route('location.create')}}">
+                        <a class="@if(Request::segment(1) == 'location' &&  Request::segment(2) == 'create') active @endif" href="{{route('location.create')}}">
                             <i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="eCommerce">Add New Location</span>
                         </a>
@@ -42,6 +44,28 @@
                             <span data-i18n="Analytics">Add New Location Type</span>
                         </a>
                     </li>
+                </ul>
+            </div>
+        </li>
+
+        {{-- Warehouse --}}
+        <li class="@if(Request::segment(1) == 'location') active @endif bold"><a class="collapsible-header waves-effect waves-cyan " href="JavaScript:void(0)"><i class="material-icons">settings_input_svideo</i><span class="menu-title" data-i18n="Dashboard">Warehouse</span>{{--<span class="badge badge pill orange float-right mr-10">3</span>--}}</a>
+            <div class="collapsible-body">
+                <ul class="collapsible collapsible-sub" data-collapsible="accordion">
+                    <li class="">
+                        <a class="" href="#">
+                            <i class="material-icons">radio_button_unchecked</i>
+                            <span data-i18n="Modern">Warehouse List</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="" href="#">
+                            <i class="material-icons">radio_button_unchecked</i>
+                            <span data-i18n="eCommerce">Add New warehouse</span>
+                        </a>
+                    </li>
+
+
                 </ul>
             </div>
         </li>
