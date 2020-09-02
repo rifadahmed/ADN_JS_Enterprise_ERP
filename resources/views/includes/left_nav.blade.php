@@ -14,12 +14,13 @@
         <li class="active bold"><a class="collapsible-header waves-effect waves-cyan " href="JavaScript:void(0)"><i class="material-icons">settings_input_svideo</i><span class="menu-title" data-i18n="Dashboard">Manage Location</span><span class="badge badge pill orange float-right mr-10">3</span></a>
             <div class="collapsible-body">
                 <ul class="collapsible collapsible-sub" data-collapsible="accordion">
-                    <li class="active"><a class="active" href="dashboard-modern.html"><i class="material-icons">radio_button_unchecked</i><span data-i18n="Modern">Locations List</span></a>
+                    <li class="active"><a class="active" href="{{route('location.list')}}"><i class="material-icons">radio_button_unchecked</i><span data-i18n="Modern">Locations List</span></a>
                     </li>
                     <li><a href="{{route('location.create')}}"><i class="material-icons">radio_button_unchecked</i><span data-i18n="eCommerce">Add New Location</span></a>
                     </li>
-                    <li><a href="dashboard-analytics.html"><i class="material-icons">radio_button_unchecked</i><span data-i18n="Analytics">Location Types List</span></a>
-                    <li><a href="dashboard-analytics.html"><i class="material-icons">radio_button_unchecked</i><span data-i18n="Analytics">Add New Location Type</span></a>
+                    </li>
+                    <li><a href="#"><i class="material-icons">radio_button_unchecked</i><span data-i18n="Analytics">Location Types List</span></a>
+                    <li><a href="#"><i class="material-icons">radio_button_unchecked</i><span data-i18n="Analytics">Add New Location Type</span></a>
                 </ul>
             </div>
         </li>
