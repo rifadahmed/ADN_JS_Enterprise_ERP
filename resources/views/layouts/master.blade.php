@@ -28,9 +28,16 @@ Website: http://adndigital.com.bd
     <link rel="stylesheet" type="text/css" href={{asset("app-assets/css/pages/dashboard-modern.css")}}>
     <link rel="stylesheet" type="text/css" href={{asset("app-assets/css/pages/intro.css")}}>
     <!-- END: Page Level CSS-->
+
     <!-- BEGIN: Custom CSS-->
     <link rel="stylesheet" type="text/css" href={{asset("app-assets/css/custom/custom.css")}}>
     <!-- END: Custom CSS-->
+
+     <!-- BEGIN: Bootsrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- END: Bootstrap-->
   </head>
   <!-- END: Head-->
   <body class="vertical-layout vertical-menu-collapsible page-header-dark vertical-modern-menu preload-transitions 2-columns   " data-open="click" data-menu="vertical-modern-menu" data-col="2-columns">
