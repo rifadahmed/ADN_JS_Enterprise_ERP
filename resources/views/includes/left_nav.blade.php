@@ -7,20 +7,41 @@
                 <img class="show-on-medium-and-down hide-on-med-and-up" src={{asset("app-assets/images/logo/js-enterprise-logo.png")}} alt="logo">
                 <span class="logo-text hide-on-med-and-down">Enterprise</span>
             </a>
-            {{--<a class="navbar-toggler" href="#"><i class="material-icons">radio_button_checked</i></a>--}}
+            <a class="navbar-toggler" href="#"><i class="material-icons">radio_button_checked</i></a>
         </h1>
     </div>
     <ul class="sidenav sidenav-collapsible leftside-navigation collapsible sidenav-fixed menu-shadow" id="slide-out" data-menu="menu-navigation" data-collapsible="menu-accordion">
-        <li class="active bold"><a class="collapsible-header waves-effect waves-cyan " href="JavaScript:void(0)"><i class="material-icons">settings_input_svideo</i><span class="menu-title" data-i18n="Dashboard">Manage Location</span><span class="badge badge pill orange float-right mr-10">3</span></a>
+        <li class="bold">
+            <a class="waves-effect waves-cyan @if(Request::segment(1) == '') active @endif" href="{{ route('dashboard') }}">
+                <i class="material-icons">settings_input_svideo</i>
+                <span class="menu-title" data-i18n="Mail">Dashboard</span>
+            </a>
+        </li>
+        <li class="@if(Request::segment(1) == 'location') active @endif bold"><a class="collapsible-header waves-effect waves-cyan " href="JavaScript:void(0)"><i class="material-icons">settings_input_svideo</i><span class="menu-title" data-i18n="Dashboard">Manage Location</span>{{--<span class="badge badge pill orange float-right mr-10">3</span>--}}</a>
             <div class="collapsible-body">
                 <ul class="collapsible collapsible-sub" data-collapsible="accordion">
-                    <li class="active"><a class="active" href="{{route('location.list')}}"><i class="material-icons">radio_button_unchecked</i><span data-i18n="Modern">Locations List</span></a>
+                    <li class="">
+                        <a class="@if(Request::segment(1) == 'location' && Request::segment(2) == 'list') active @endif" href="{{route('location.list')}}">
+                            <i class="material-icons">radio_button_unchecked</i>
+                            <span data-i18n="Modern">Locations List</span>
+                        </a>
                     </li>
-                    <li><a href="{{route('location.create')}}"><i class="material-icons">radio_button_unchecked</i><span data-i18n="eCommerce">Add New Location</span></a>
+                    <li>
+                        <a href="{{route('location.create')}}">
+                            <i class="material-icons">radio_button_unchecked</i>
+                            <span data-i18n="eCommerce">Add New Location</span>
+                        </a>
                     </li>
+                    <li>
+                        <a href="#"><i class="material-icons">radio_button_unchecked</i>
+                            <span data-i18n="Analytics">Location Types List</span>
+                        </a>
                     </li>
-                    <li><a href="#"><i class="material-icons">radio_button_unchecked</i><span data-i18n="Analytics">Location Types List</span></a>
-                    <li><a href="#"><i class="material-icons">radio_button_unchecked</i><span data-i18n="Analytics">Add New Location Type</span></a>
+                    <li>
+                        <a href="#"><i class="material-icons">radio_button_unchecked</i>
+                            <span data-i18n="Analytics">Add New Location Type</span>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </li>
