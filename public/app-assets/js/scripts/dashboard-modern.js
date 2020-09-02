@@ -32,7 +32,7 @@
           items: [
             {
               content:
-                '<p class="small">Balance</p><h5 class="mt-0 mb-0">$ 10k</h5>'
+                '<p class="small">Today (TK)</p><h5 class="mt-0 mb-0">1000k</h5>'
             }
           ]
         })

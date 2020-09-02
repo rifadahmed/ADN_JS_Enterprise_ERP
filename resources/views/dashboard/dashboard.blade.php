@@ -8,15 +8,16 @@
             <!-- Current Balance -->
             <div class="card animate fadeLeft">
                 <div class="card-content">
-                    <h6 class="mb-0 mt-0 display-flex justify-content-between">Current Balance <i
-                            class="material-icons float-right">more_vert</i>
+                    <h6 class="mb-0 mt-0 display-flex justify-content-between">
+                        Sales
+                        <i class="material-icons float-right">more_vert</i>
                     </h6>
-                    <p class="medium-small">This billing cycle</p>
+                    <p class="medium-small">Sales Accumulation</p>
                     <div class="current-balance-container">
                         <div id="current-balance-donut-chart" class="current-balance-shadow"></div>
                     </div>
-                    <h5 class="center-align">$ 50,150.00</h5>
-                    <p class="medium-small center-align">Used balance this billing cycle</p>
+                    <h5 class="center-align">TK 50,150.00</h5>
+                    <p class="medium-small center-align">Sales of all time</p>
                 </div>
             </div>
         </div>
