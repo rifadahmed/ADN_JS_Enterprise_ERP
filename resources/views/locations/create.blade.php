@@ -3,5 +3,5 @@
     <h3>Create New Location</h3>
 @endsection
 @section('content-button')
-    submit
+    Send
 @endsection
