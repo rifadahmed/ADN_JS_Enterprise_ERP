@@ -10,10 +10,12 @@ class LocationController extends Controller
         return view('locations.index');
     }
     public function create(){
-        return view('locations.create');
+        $data['title'] = "Create New Location";
+        return view('locations.create', $data);
     }
     public function edit($id)
     {
-        return view('locations.edit');
+        $data['title'] = "Edit Location";
+        return view('locations.edit', $data);
     }
 }
