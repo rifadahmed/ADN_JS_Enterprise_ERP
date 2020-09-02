@@ -7,7 +7,8 @@ use Illuminate\Http\Request;
 class LocationController extends Controller
 {
     public function index(){
-        return view('locations.index');
+        $data['title'] = "List of Locations";
+        return view('locations.index', $data);
     }
     public function create(){
         $data['title'] = "Create New Location";
