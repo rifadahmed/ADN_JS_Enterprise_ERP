@@ -31,6 +31,7 @@ Website: http://adndigital.com.bd
 
     <!-- BEGIN: Custom CSS-->
     <link rel="stylesheet" type="text/css" href={{asset("app-assets/css/custom/custom.css")}}>
+    @stack('css')
     <!-- END: Custom CSS-->
 
      <!-- BEGIN: Bootsrap -->
