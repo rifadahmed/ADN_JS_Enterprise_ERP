@@ -34,9 +34,9 @@ Website: http://adndigital.com.bd
     <!-- END: Custom CSS-->
 
      <!-- BEGIN: Bootsrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    {{--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>--}}
     <!-- END: Bootstrap-->
   </head>
   <!-- END: Head-->
@@ -96,7 +96,7 @@ Website: http://adndigital.com.bd
     <script src={{asset("app-assets/js/scripts/customizer.js")}}></script>
     <!-- END THEME  JS-->
     <!-- BEGIN PAGE LEVEL JS-->
-    <script src={{asset("app-assets/js/scripts/dashboard-modern.js")}}></script>
+    {{--<script src={{asset("app-assets/js/scripts/dashboard-modern.js")}}></script>--}}
     <script src={{asset("app-assets/js/scripts/intro.js")}}></script>
     <!-- END PAGE LEVEL JS-->
     @stack('script')
