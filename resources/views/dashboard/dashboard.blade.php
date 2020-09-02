@@ -200,4 +200,5 @@
 
 @push('script')
     {{-- Custom Scripts--}}
+    <script src={{asset("app-assets/js/scripts/dashboard-modern.js")}}></script>
 @endpush
