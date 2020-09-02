@@ -133,7 +133,7 @@
                 <td>1/04/2019</td>
                 <td>29/05/2019</td>
                 
-                <td><a href="{{route('location.list',1)}}"><i class="material-icons">edit</i></a></td>
+                <td><a href="#"><i class="material-icons">edit</i></a></td>
                 <td><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
               </tr>
 
