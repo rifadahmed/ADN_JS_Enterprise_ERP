@@ -1,3 +1,5 @@
+
+
 @extends('layouts.master')
 @push('css')
     <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/vendors/vendors.min.css') }}">
@@ -6,8 +8,9 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/pages/page-users.css') }}">
 @endpush
 
-@section('content')
 
+@section('content')
+<link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
 
     <!-- BEGIN: Page Main-->
         <div class="row">
@@ -82,10 +85,7 @@
                                                 <tr>
                                                     <th></th>
                                                     <th>SL</th>
-                                                    <th></th>
-                                                    <th>Location Name</th>
-                                                    <th></th>
-                                                    <th></th>
+                                                    <th>Location Name</th>                                                    
                                                     <th>Location Type</th>
                                                     <th>Status</th>
                                                     <th>Action</th>
@@ -96,276 +96,222 @@
                                                 <tr>
                                                     <td></td>
                                                     <td>300</td>
-                                                    <td>
-                                                    </td>
-                                                    <td>Dean Stanley</td>
-                                                    <td></td>
-                                                    <td></td>
+                                                    <td>Dean Stanley</td>                                                  
                                                     <td>Area</td>
                                                     <td><span class="chip green lighten-5">
-                    <span class="green-text">Active</span>
-                  </span>
+                                                        <span class="green-text">Active</span>
+                                                      </span>
                                                     </td>
-                                                    <td><a class="border-primary" href="page-users-edit.html"><i class="material-icons border" style="margin-right: 10px">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a class="border-primary" href="page-users-edit.html"><i class="material-icons  edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    {{-- <td></td>
                                                     <td></td>
+                                                    <td></td>
+                                                    <td></td> --}}
                                                 </tr>
                                                 <tr>
                                                     <td></td>
                                                     <td>301</td>
-                                                    <td>
-                                                    </td>
+
                                                     <td>Zena Buckley</td>
-                                                    <td></td>
-                                                    <td></td>
+
                                                     <td>Division</td>
                                                     <td><span class="chip green lighten-5">
                     <span class="green-text">Active</span>
                   </span>
                                                     </td>
-                                                    <td><a href="page-users-edit.html"><i class="material-icons">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
+                                                    <td><a href="page-users-edit.html"><i class="material-icons  edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    
                                                 </tr>
                                                 <tr>
                                                     <td></td>
                                                     <td>302</td>
-                                                    <td>
-                                                    </td>
+                                                    
                                                     <td>Delilah Moon</td>
-                                                    <td></td>
-                                                    <td></td>
                                                     <td>Area</td>
                                                     <td><span class="chip green lighten-5">
                     <span class="green-text">Active</span>
                   </span>
                                                     </td>
-                                                    <td><a href="page-users-edit.html"><i class="material-icons">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="page-users-edit.html"><i class="material-icons edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
                                                 <tr>
                                                     <td></td>
                                                     <td>303</td>
-                                                    <td>
-                                                    </td>
+                                                    
                                                     <td>Hillary Rasmussen</td>
-                                                    <td></td>
-                                                    <td></td>
                                                     <td>District</td>
                                                     <td><span class="chip red lighten-5"><span class="red-text">Idle</span></span></td>
-                                                    <td><a href="page-users-edit.html"><i class="material-icons">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="page-users-edit.html"><i class="material-icons edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
                                                 <tr>
                                                     <td></td>
                                                     <td>304</td>
-                                                    <td>
-                                                    </td>
+                                                    
                                                     <td>Herman Tate</td>
-                                                    <td></td>
-                                                    <td></td>
                                                     <td>District</td>
                                                     <td><span class="chip red lighten-5"><span class="red-text">Idle</span></span></td>
-                                                    <td><a href="page-users-edit.html"><i class="material-icons">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="page-users-edit.html"><i class="material-icons edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
                                                 <tr>
                                                     <td></td>
                                                     <td>305</td>
-                                                    <td>
-                                                    </td>
+                                                    
                                                     <td>Kuame Ford</td>
-                                                    <td></td>
-                                                    <td></td>
                                                     <td>Division</td>
                                                     <td><span class="chip green lighten-5">
                     <span class="green-text">Active</span>
                   </span>
                                                     </td>
-                                                    <td><a href="page-users-edit.html"><i class="material-icons">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="page-users-edit.html"><i class="material-icons edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
 
                                                 <tr>
                                                     <td></td>
                                                     <td>307</td>
-                                                    <td>
-                                                    </td>
+                                                    
                                                     <td>Piper Jordan</td>
-                                                    <td></td>
-                                                    <td></td>
                                                     <td>Division</td>
                                                     <td><span class="chip green lighten-5">
                     <span class="green-text">Active</span>
                   </span>
                                                     </td>
-                                                    <td><a href="page-users-edit.html"><i class="material-icons">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="page-users-edit.html"><i class="material-icons edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
                                                 <tr>
                                                     <td></td>
                                                     <td>308</td>
-                                                    <td>
-                                                    </td>
+                                                    
                                                     <td>Neil Sosa</td>
-                                                    <td></td>
-                                                    <td></td>
                                                     <td>District</td>
                                                     <td><span class="chip red lighten-5"><span class="red-text">Idle</span></span></td>
-                                                    <td><a href="page-users-edit.html"><i class="material-icons">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="page-users-edit.html"><i class="material-icons edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
                                                 <tr>
                                                     <td></td>
                                                     <td>309</td>
-                                                    <td>
-                                                    </td>
+                                                    
                                                     <td>Caldwell Chapman</td>
-                                                    <td></td>
-                                                    <td></td>
                                                     <td>Division</td>
                                                     <td><span class="chip green lighten-5">
                     <span class="green-text">Active</span>
                   </span>
                                                     </td>
-                                                    <td><a href="page-users-edit.html"><i class="material-icons">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="page-users-edit.html"><i class="material-icons edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
                                                 <tr>
                                                     <td></td>
                                                     <td>310</td>
-                                                    <td>
-                                                    </td>
+                                                    
                                                     <td>Wesley Oneil</td>
-                                                    <td></td>
-                                                    <td></td>
                                                     <td>District</td>
                                                     <td><span class="chip red lighten-5"><span class="red-text">Idle</span></span></td>
-                                                    <td><a href="page-users-edit.html"><i class="material-icons">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="page-users-edit.html"><i class="material-icons edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
                                                 <tr>
                                                     <td></td>
                                                     <td>311</td>
-                                                    <td>
-                                                    </td>
+                                                    
                                                     <td>Tallulah Fleming</td>
-                                                    <td></td>
-                                                    <td></td>
                                                     <td>District</td>
                                                     <td><span class="chip red lighten-5"><span class="red-text">Idle</span></span></td>
-                                                    <td><a href="page-users-edit.html"><i class="material-icons">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="page-users-edit.html"><i class="material-icons edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
                                                 <tr>
                                                     <td></td>
                                                     <td>312</td>
-                                                    <td>
-                                                    </td>
+                                                    
                                                     <td>Iris Maddox</td>
-                                                    <td></td>
-                                                    <td></td>
                                                     <td>District</td>
                                                     <td><span class="chip red lighten-5"><span class="red-text">Idle</span></span></td>
-                                                    <td><a href="page-users-edit.html"><i class="material-icons">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="page-users-edit.html"><i class="material-icons edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
                                                 <tr>
                                                     <td></td>
                                                     <td>313</td>
-                                                    <td>
-                                                    </td>
+                                                    
                                                     <td>Caleb Bradley</td>
-                                                    <td></td>
-                                                    <td></td>
                                                     <td>Division</td>
                                                     <td><span class="chip green lighten-5">
                     <span class="green-text">Active</span>
                   </span>
                                                     </td>
-                                                    <td><a href="page-users-edit.html"><i class="material-icons">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="page-users-edit.html"><i class="material-icons edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
                                                 <tr>
                                                     <td></td>
                                                     <td>314</td>
-                                                    <td>
-                                                    </td>
+                                                    
                                                     <td>Illiana Grimes</td>
-                                                    <td></td>
-                                                    <td></td>
                                                     <td>District</td>
                                                     <td><span class="chip red lighten-5"><span class="red-text">Idle</span></span></td>
-                                                    <td><a href="page-users-edit.html"><i class="material-icons">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="page-users-edit.html"><i class="material-icons edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
                                                 <tr>
                                                     <td></td>
                                                     <td>315</td>
-                                                    <td>
-                                                    </td>
+                                                    
                                                     <td>Chester Estes</td>
-                                                    <td></td>
-                                                    <td></td>
                                                     <td>Division</td>
                                                     <td><span class="chip green lighten-5">
                     <span class="green-text">Active</span>
                   </span>
                                                     </td>
-                                                    <td><a href="page-users-edit.html"><i class="material-icons">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="page-users-edit.html"><i class="material-icons edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
                                                 <tr>
                                                     <td></td>
                                                     <td>316</td>
-                                                    <td>
-                                                    </td>
+                                                    
                                                     <td>Gregory Hayden</td>
-                                                    <td></td>
-                                                    <td></td>
                                                     <td>Division</td>
                                                     <td><span class="chip green lighten-5">
                     <span class="green-text">Active</span>
                   </span>
                                                     </td>
-                                                    <td><a href="page-users-edit.html"><i class="material-icons">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="page-users-edit.html"><i class="material-icons edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
                                                 <tr>
                                                     <td></td>
                                                     <td>317</td>
-                                                    <td>
-                                                    </td>
+                                                    
                                                     <td>Jescie Parker</td>
-                                                    <td></td>
-                                                    <td></td>
                                                     <td>District</td>
                                                     <td><span class="chip red lighten-5"><span class="red-text">Idle</span></span></td>
-                                                    <td><a href="page-users-edit.html"><i class="material-icons">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="page-users-edit.html"><i class="material-icons edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
                                                 <tr>
                                                     <td></td>
                                                     <td>318</td>
-                                                    <td>
-                                                    </td>
+                                                    
                                                     <td>Sydney Cabrera</td>
-                                                    <td></td>
-                                                    <td></td>
                                                     <td>District</td>
                                                     <td><span class="chip red lighten-5"><span class="red-text">Idle</span></span></td>
-                                                    <td><a href="page-users-edit.html"><i class="material-icons">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="page-users-edit.html"><i class="material-icons edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
                                                 <tr>
                                                     <td></td>
                                                     <td>319</td>
-                                                    <td>
-                                                    </td>
+                                                    
                                                     <td>Gray Valenzuela</td>
-                                                    <td></td>
-                                                    <td></td>
                                                     <td>District</td>
                                                     <td><span class="chip red lighten-5"><span class="red-text">Idle</span></span></td>
-                                                    <td><a href="page-users-edit.html"><i class="material-icons">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="page-users-edit.html"><i class="material-icons edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
 
