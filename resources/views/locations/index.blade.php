@@ -106,7 +106,7 @@
                     <span class="green-text">Active</span>
                   </span>
                                                     </td>
-                                                    <td><a href="page-users-edit.html"><i class="material-icons">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a class="border-primary" href="page-users-edit.html"><i class="material-icons border" style="margin-right: 10px">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
                                                 <tr>
@@ -364,7 +364,7 @@
                                                     <td></td>
                                                     <td></td>
                                                     <td>District</td>
-                                                    <td><span class="chip orange lighten-5"><span class="orange-text">Close</span></span></td>
+                                                    <td><span class="chip red lighten-5"><span class="red-text">Idle</span></span></td>
                                                     <td><a href="page-users-edit.html"><i class="material-icons">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
