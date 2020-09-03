@@ -102,7 +102,7 @@
                                                         <span class="green-text">Active</span>
                                                       </span>
                                                     </td>
-                                                    <td><a class="border-primary" href="page-users-edit.html"><i class="material-icons  edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a class="border-primary" href="/location/edit/300"><i class="material-icons  edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
                                                     {{-- <td></td>
                                                     <td></td>
                                                     <td></td>
@@ -119,7 +119,7 @@
                     <span class="green-text">Active</span>
                   </span>
                                                     </td>
-                                                    <td><a href="page-users-edit.html"><i class="material-icons  edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="/location/edit/301"><i class="material-icons  edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
                                                     
                                                 </tr>
                                                 <tr>
@@ -132,7 +132,7 @@
                     <span class="green-text">Active</span>
                   </span>
                                                     </td>
-                                                    <td><a href="page-users-edit.html"><i class="material-icons edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="/location/edit/302"><i class="material-icons edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
                                                 <tr>
@@ -142,7 +142,7 @@
                                                     <td>Hillary Rasmussen</td>
                                                     <td>District</td>
                                                     <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="page-users-edit.html"><i class="material-icons edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="/location/edit/303"><i class="material-icons edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
                                                 <tr>
@@ -152,7 +152,7 @@
                                                     <td>Herman Tate</td>
                                                     <td>District</td>
                                                     <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="page-users-edit.html"><i class="material-icons edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="/location/edit/304"><i class="material-icons edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
                                                 <tr>
@@ -165,7 +165,7 @@
                     <span class="green-text">Active</span>
                   </span>
                                                     </td>
-                                                    <td><a href="page-users-edit.html"><i class="material-icons edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="/location/edit/305"><i class="material-icons edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
 
@@ -179,7 +179,7 @@
                     <span class="green-text">Active</span>
                   </span>
                                                     </td>
-                                                    <td><a href="page-users-edit.html"><i class="material-icons edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="/location/edit/307"><i class="material-icons edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
                                                 <tr>
@@ -189,7 +189,7 @@
                                                     <td>Neil Sosa</td>
                                                     <td>District</td>
                                                     <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="page-users-edit.html"><i class="material-icons edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="/location/edit/21"><i class="material-icons edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
                                                 <tr>
@@ -202,7 +202,7 @@
                     <span class="green-text">Active</span>
                   </span>
                                                     </td>
-                                                    <td><a href="page-users-edit.html"><i class="material-icons edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="/location/edit/21"><i class="material-icons edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
                                                 <tr>
@@ -212,7 +212,7 @@
                                                     <td>Wesley Oneil</td>
                                                     <td>District</td>
                                                     <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="page-users-edit.html"><i class="material-icons edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="/location/edit/21"><i class="material-icons edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
                                                 <tr>
@@ -222,7 +222,7 @@
                                                     <td>Tallulah Fleming</td>
                                                     <td>District</td>
                                                     <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="page-users-edit.html"><i class="material-icons edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="/location/edit/21"><i class="material-icons edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
                                                 <tr>
@@ -232,7 +232,7 @@
                                                     <td>Iris Maddox</td>
                                                     <td>District</td>
                                                     <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="page-users-edit.html"><i class="material-icons edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="/location/edit/21"><i class="material-icons edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
                                                 <tr>
@@ -245,7 +245,7 @@
                     <span class="green-text">Active</span>
                   </span>
                                                     </td>
-                                                    <td><a href="page-users-edit.html"><i class="material-icons edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="/location/edit/21"><i class="material-icons edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
                                                 <tr>
@@ -255,7 +255,7 @@
                                                     <td>Illiana Grimes</td>
                                                     <td>District</td>
                                                     <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="page-users-edit.html"><i class="material-icons edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="/location/edit/21"><i class="material-icons edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
                                                 <tr>
@@ -268,7 +268,7 @@
                     <span class="green-text">Active</span>
                   </span>
                                                     </td>
-                                                    <td><a href="page-users-edit.html"><i class="material-icons edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="/location/edit/21"><i class="material-icons edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
                                                 <tr>
@@ -281,7 +281,7 @@
                     <span class="green-text">Active</span>
                   </span>
                                                     </td>
-                                                    <td><a href="page-users-edit.html"><i class="material-icons edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="/location/edit/21"><i class="material-icons edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
                                                 <tr>
@@ -291,7 +291,7 @@
                                                     <td>Jescie Parker</td>
                                                     <td>District</td>
                                                     <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="page-users-edit.html"><i class="material-icons edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="/location/edit/21"><i class="material-icons edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
                                                 <tr>
@@ -301,7 +301,7 @@
                                                     <td>Sydney Cabrera</td>
                                                     <td>District</td>
                                                     <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="page-users-edit.html"><i class="material-icons edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="/location/edit/21"><i class="material-icons edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
                                                 <tr>
@@ -311,7 +311,7 @@
                                                     <td>Gray Valenzuela</td>
                                                     <td>District</td>
                                                     <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="page-users-edit.html"><i class="material-icons edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="/location/edit/21"><i class="material-icons edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
 
