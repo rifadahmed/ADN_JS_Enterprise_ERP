@@ -225,7 +225,7 @@
                                                     <select class="form-control" id="users-list-role">
                                                         <option value="">Any</option>
                                                         <option value="Location type 1">Location type 1</option>
-                                                        <option value="Staff">Staff</option>
+                                                        <option value="Location type 2">Location type 2</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -323,7 +323,7 @@
                                                     <td>Hillary Rasmussen</td>
                                                     <td>18/07/2019</td>
                                                     <td>No</td>
-                                                    <td>Staff</td>
+                                                    <td>Location type 2</td>
                                                     <td><span class="chip red lighten-5"><span class="red-text">Idle</span></span></td>
                                                     <td><a href="page-users-edit.html"><i class="material-icons">edit</i></a></td>
                                                     <td><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
@@ -336,7 +336,7 @@
                                                     <td>Herman Tate</td>
                                                     <td>20/03/2020</td>
                                                     <td>No</td>
-                                                    <td>Staff</td>
+                                                    <td>Location type 2</td>
                                                     <td><span class="chip red lighten-5"><span class="red-text">Idle</span></span></td>
                                                     <td><a href="page-users-edit.html"><i class="material-icons">edit</i></a></td>
                                                     <td><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
@@ -382,7 +382,7 @@
                                                     <td>Neil Sosa</td>
                                                     <td>10/02/2019</td>
                                                     <td>No</td>
-                                                    <td>Staff</td>
+                                                    <td>Location type 2</td>
                                                     <td><span class="chip red lighten-5"><span class="red-text">Idle</span></span></td>
                                                     <td><a href="page-users-edit.html"><i class="material-icons">edit</i></a></td>
                                                     <td><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
@@ -411,7 +411,7 @@
                                                     <td>Wesley Oneil</td>
                                                     <td>05/08/2020</td>
                                                     <td>No</td>
-                                                    <td>Staff</td>
+                                                    <td>Location type 2</td>
                                                     <td><span class="chip red lighten-5"><span class="red-text">Idle</span></span></td>
                                                     <td><a href="page-users-edit.html"><i class="material-icons">edit</i></a></td>
                                                     <td><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
@@ -424,7 +424,7 @@
                                                     <td>Tallulah Fleming</td>
                                                     <td>20/09/2019</td>
                                                     <td>No</td>
-                                                    <td>Staff</td>
+                                                    <td>Location type 2</td>
                                                     <td><span class="chip red lighten-5"><span class="red-text">Idle</span></span></td>
                                                     <td><a href="page-users-edit.html"><i class="material-icons">edit</i></a></td>
                                                     <td><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
@@ -437,7 +437,7 @@
                                                     <td>Iris Maddox</td>
                                                     <td>25/05/2019</td>
                                                     <td>No</td>
-                                                    <td>Staff</td>
+                                                    <td>Location type 2</td>
                                                     <td><span class="chip red lighten-5"><span class="red-text">Idle</span></span></td>
                                                     <td><a href="page-users-edit.html"><i class="material-icons">edit</i></a></td>
                                                     <td><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
@@ -466,7 +466,7 @@
                                                     <td>Illiana Grimes</td>
                                                     <td>04/10/2019</td>
                                                     <td>No</td>
-                                                    <td>Staff</td>
+                                                    <td>Location type 2</td>
                                                     <td><span class="chip red lighten-5"><span class="red-text">Idle</span></span></td>
                                                     <td><a href="page-users-edit.html"><i class="material-icons">edit</i></a></td>
                                                     <td><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
@@ -511,7 +511,7 @@
                                                     <td>Jescie Parker</td>
                                                     <td>18/02/2019</td>
                                                     <td>No</td>
-                                                    <td>Staff</td>
+                                                    <td>Location type 2</td>
                                                     <td><span class="chip red lighten-5"><span class="red-text">Idle</span></span></td>
                                                     <td><a href="page-users-edit.html"><i class="material-icons">edit</i></a></td>
                                                     <td><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
@@ -524,7 +524,7 @@
                                                     <td>Sydney Cabrera</td>
                                                     <td>31/01/2020</td>
                                                     <td>No</td>
-                                                    <td>Staff</td>
+                                                    <td>Location type 2</td>
                                                     <td><span class="chip red lighten-5"><span class="red-text">Idle</span></span></td>
                                                     <td><a href="page-users-edit.html"><i class="material-icons">edit</i></a></td>
                                                     <td><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
@@ -537,7 +537,7 @@
                                                     <td>Gray Valenzuela</td>
                                                     <td>27/02/2020</td>
                                                     <td>No</td>
-                                                    <td>Staff</td>
+                                                    <td>Location type 2</td>
                                                     <td><span class="chip orange lighten-5"><span class="orange-text">Close</span></span></td>
                                                     <td><a href="page-users-edit.html"><i class="material-icons">edit</i></a></td>
                                                     <td><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
