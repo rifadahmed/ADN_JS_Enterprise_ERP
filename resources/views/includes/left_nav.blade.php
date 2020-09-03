@@ -48,13 +48,30 @@
             </div>
         </li>
 
-<<<<<<< HEAD
-        {{-- Warehouse --}}
-        <li class="@if(Request::segment(1) == 'location') active @endif bold"><a class="collapsible-header waves-effect waves-cyan " href="JavaScript:void(0)"><i class="material-icons">cloud_upload</i><span class="menu-title" data-i18n="Dashboard">Warehouse</span>{{--<span class="badge badge pill orange float-right mr-10">3</span>--}}</a>
-=======
+        <!-- ** Buyers -->
+        <li class="@if(Request::segment(1) == 'buyer') active @endif bold"><a class="collapsible-header waves-effect waves-cyan " href="JavaScript:void(0)"><i class="material-icons">person</i><span class="menu-title" data-i18n="Dashboard">Manage Buyer</span>{{--<span class="badge badge pill orange float-right mr-10">3</span>--}}</a>
+            <div class="collapsible-body">
+                <ul class="collapsible collapsible-sub" data-collapsible="accordion">
+                    <li class="">
+                        <a class="" href="#">
+                            <i class="material-icons">radio_button_unchecked</i>
+                            <span data-i18n="Modern">Buyer List</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="" href="#">
+                            <i class="material-icons">radio_button_unchecked</i>
+                            <span data-i18n="eCommerce">Add New Buyer</span>
+                        </a>
+                    </li>
+
+
+                </ul>
+            </div>
+        </li>
+
         <!-- ** Warehouse -->
         <li class="@if(Request::segment(1) == 'location') active @endif bold"><a class="collapsible-header waves-effect waves-cyan " href="JavaScript:void(0)"><i class="material-icons">home</i><span class="menu-title" data-i18n="Dashboard">Manage Warehouse</span>{{--<span class="badge badge pill orange float-right mr-10">3</span>--}}</a>
->>>>>>> 7c5d759b15618873d61cb7c342cde1e8a8920cf4
             <div class="collapsible-body">
                 <ul class="collapsible collapsible-sub" data-collapsible="accordion">
                     <li class="">
@@ -75,37 +92,73 @@
             </div>
         </li>
 
-<<<<<<< HEAD
-        {{-- Products --}}
-        <li class="@if(Request::segment(1) == 'location') active @endif bold"><a class="collapsible-header waves-effect waves-cyan " href="JavaScript:void(0)"><i class="material-icons">apps</i><span class="menu-title" data-i18n="Dashboard">Products</span>{{--<span class="badge badge pill orange float-right mr-10">3</span>--}}</a>
-=======
-        <!-- ** Product -->
-        <li class="@if(Request::segment(1) == 'product') active @endif bold"><a class="collapsible-header waves-effect waves-cyan " href="JavaScript:void(0)"><i class="material-icons">card_giftcard</i><span class="menu-title" data-i18n="Dashboard">Manage Products</span>{{--<span class="badge badge pill orange float-right mr-10">3</span>--}}</a>
->>>>>>> 7c5d759b15618873d61cb7c342cde1e8a8920cf4
+        <!-- ** Category -->
+        <li class="@if(Request::segment(1) == 'product') active @endif bold"><a class="collapsible-header waves-effect waves-cyan " href="JavaScript:void(0)"><i class="material-icons">grain</i><span class="menu-title" data-i18n="Dashboard">Manage Category</span>{{--<span class="badge badge pill orange float-right mr-10">3</span>--}}</a>
             <div class="collapsible-body">
                 <ul class="collapsible collapsible-sub" data-collapsible="accordion">
                     <li class="">
                         <a class="" href="#">
                             <i class="material-icons">radio_button_unchecked</i>
-<<<<<<< HEAD
-                            <span data-i18n="Modern">Category list</span>
-=======
+                            <span data-i18n="Modern">Category List</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="" href="#">
+                            <i class="material-icons">radio_button_unchecked</i>
+                            <span data-i18n="eCommerce">Add New Category</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="" href="#">
+                            <i class="material-icons">radio_button_unchecked</i>
+                            <span data-i18n="Modern">Sub Category List</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="" href="#">
+                            <i class="material-icons">radio_button_unchecked</i>
+                            <span data-i18n="eCommerce">Add New Sub Category</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+
+        <!-- ** Brand -->
+        <li class="@if(Request::segment(1) == 'product') active @endif bold"><a class="collapsible-header waves-effect waves-cyan " href="JavaScript:void(0)"><i class="material-icons">filter_vintage</i><span class="menu-title" data-i18n="Dashboard">Manage Brands</span>{{--<span class="badge badge pill orange float-right mr-10">3</span>--}}</a>
+            <div class="collapsible-body">
+                <ul class="collapsible collapsible-sub" data-collapsible="accordion">
+                    <li class="">
+                        <a class="" href="#">
+                            <i class="material-icons">radio_button_unchecked</i>
+                            <span data-i18n="Modern">Brand List</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="" href="#">
+                            <i class="material-icons">radio_button_unchecked</i>
+                            <span data-i18n="eCommerce">Add New Brand</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+
+        <!-- ** Product -->
+        <li class="@if(Request::segment(1) == 'product') active @endif bold"><a class="collapsible-header waves-effect waves-cyan " href="JavaScript:void(0)"><i class="material-icons">card_giftcard</i><span class="menu-title" data-i18n="Dashboard">Manage Products</span>{{--<span class="badge badge pill orange float-right mr-10">3</span>--}}</a>
+            <div class="collapsible-body">
+                <ul class="collapsible collapsible-sub" data-collapsible="accordion">
+                    <li class="">
+                        <a class="" href="#">
+                            <i class="material-icons">radio_button_unchecked</i>
+
                             <span data-i18n="Modern">Product List</span>
->>>>>>> 7c5d759b15618873d61cb7c342cde1e8a8920cf4
+
                         </a>
                     </li>
                     <li>
                         <a class="" href="#">
                             <i class="material-icons">radio_button_unchecked</i>
-<<<<<<< HEAD
-                            <span data-i18n="eCommerce">Sub category list</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="" href="#">
-                            <i class="material-icons">radio_button_unchecked</i>
-                            <span data-i18n="eCommerce">Add New sub category</span>
-=======
                             <span data-i18n="eCommerce">Add New Product</span>
                         </a>
                     </li>
@@ -123,21 +176,12 @@
                         <a class="" href="#">
                             <i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="Modern">Purchase List</span>
->>>>>>> 7c5d759b15618873d61cb7c342cde1e8a8920cf4
+
                         </a>
                     </li>
                     <li>
                         <a class="" href="#">
                             <i class="material-icons">radio_button_unchecked</i>
-<<<<<<< HEAD
-                            <span data-i18n="eCommerce">Brand list</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="" href="#">
-                            <i class="material-icons">radio_button_unchecked</i>
-                            <span data-i18n="eCommerce">Add New brand</span>
-=======
                             <span data-i18n="eCommerce">Add New Purchase</span>
                         </a>
                     </li>
@@ -155,15 +199,11 @@
                         <a class="" href="#">
                             <i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="Modern">Sales List</span>
->>>>>>> 7c5d759b15618873d61cb7c342cde1e8a8920cf4
                         </a>
                     </li>
                     <li>
                         <a class="" href="#">
                             <i class="material-icons">radio_button_unchecked</i>
-<<<<<<< HEAD
-                            <span data-i18n="eCommerce">Products list</span>
-=======
                             <span data-i18n="eCommerce">Add New Sales</span>
                         </a>
                     </li>
@@ -180,24 +220,36 @@
                     <li class="">
                         <a class="" href="#">
                             <i class="material-icons">radio_button_unchecked</i>
-                            <span data-i18n="Modern">Sales List</span>
->>>>>>> 7c5d759b15618873d61cb7c342cde1e8a8920cf4
+                            <span data-i18n="Modern">Sales Report</span>
+
                         </a>
                     </li>
                     <li>
                         <a class="" href="#">
                             <i class="material-icons">radio_button_unchecked</i>
-<<<<<<< HEAD
-                            <span data-i18n="eCommerce">Add New products</span>
-=======
-                            <span data-i18n="eCommerce">Add New Sales</span>
->>>>>>> 7c5d759b15618873d61cb7c342cde1e8a8920cf4
+                            <span data-i18n="eCommerce">Purchase Report</span>
                         </a>
                     </li>
+                </ul>
+            </div>
+        </li>
 
-
-<<<<<<< HEAD
-=======
+        <!-- ** Users -->
+        <li class="@if(Request::segment(1) == 'user') active @endif bold"><a class="collapsible-header waves-effect waves-cyan " href="JavaScript:void(0)"><i class="material-icons">verified_user</i><span class="menu-title" data-i18n="Dashboard">Manage User</span>{{--<span class="badge badge pill orange float-right mr-10">3</span>--}}</a>
+            <div class="collapsible-body">
+                <ul class="collapsible collapsible-sub" data-collapsible="accordion">
+                    <li class="">
+                        <a class="" href="#">
+                            <i class="material-icons">radio_button_unchecked</i>
+                            <span data-i18n="Modern">User List</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="" href="#">
+                            <i class="material-icons">radio_button_unchecked</i>
+                            <span data-i18n="eCommerce">Add New User</span>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </li>
@@ -218,9 +270,6 @@
                             <span data-i18n="eCommerce">Add New Sales</span>
                         </a>
                     </li>
->>>>>>> 7c5d759b15618873d61cb7c342cde1e8a8920cf4
-
-
                 </ul>
             </div>
         </li>
