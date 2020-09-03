@@ -45,12 +45,13 @@
                                                 </div>
                                             </div>
                                             <div class="col s12 m6 l3">
-                                                <label for="users-list-role">Location Type id</label>
+                                                <label for="users-list-role">Location Type</label>
                                                 <div class="input-field">
                                                     <select class="form-control" id="users-list-role">
                                                         <option value="">Any</option>
-                                                        <option value="87">87</option>
-                                                        <option value="33">33</option>
+                                                        <option value="Division">Division</option>
+                                                        <option value="District">District</option>
+                                                        <option value="Area">Area</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -80,14 +81,14 @@
                                                 <thead>
                                                 <tr>
                                                     <th></th>
-                                                    <th>id</th>
-                                                    <th>Location id</th>
-                                                    <th>location name</th>
+                                                    <th>SL</th>
+                                                    <th></th>
+                                                    <th>Location Name</th>
                                                     <th></th>
                                                     <th></th>
-                                                    <th>Location type id</th>
-                                                    <th>status</th>
-                                                    <th>edit</th>
+                                                    <th>Location Type</th>
+                                                    <th>Status</th>
+                                                    <th>Action</th>
                                                     <th></th>
                                                 </tr>
                                                 </thead>
@@ -95,12 +96,12 @@
                                                 <tr>
                                                     <td></td>
                                                     <td>300</td>
-                                                    <td><a href="page-users-view.html">dean3004</a>
+                                                    <td>
                                                     </td>
                                                     <td>Dean Stanley</td>
                                                     <td></td>
                                                     <td></td>
-                                                    <td>87</td>
+                                                    <td>Area</td>
                                                     <td><span class="chip green lighten-5">
                     <span class="green-text">Active</span>
                   </span>
@@ -111,12 +112,12 @@
                                                 <tr>
                                                     <td></td>
                                                     <td>301</td>
-                                                    <td><a href="page-users-view.html">zena0604</a>
+                                                    <td>
                                                     </td>
                                                     <td>Zena Buckley</td>
                                                     <td></td>
                                                     <td></td>
-                                                    <td>87</td>
+                                                    <td>Division</td>
                                                     <td><span class="chip green lighten-5">
                     <span class="green-text">Active</span>
                   </span>
@@ -127,12 +128,12 @@
                                                 <tr>
                                                     <td></td>
                                                     <td>302</td>
-                                                    <td><a href="page-users-view.html">delilah0301</a>
+                                                    <td>
                                                     </td>
                                                     <td>Delilah Moon</td>
                                                     <td></td>
                                                     <td></td>
-                                                    <td>87</td>
+                                                    <td>Area</td>
                                                     <td><span class="chip green lighten-5">
                     <span class="green-text">Active</span>
                   </span>
@@ -143,12 +144,12 @@
                                                 <tr>
                                                     <td></td>
                                                     <td>303</td>
-                                                    <td><a href="page-users-view.html">hillary1807</a>
+                                                    <td>
                                                     </td>
                                                     <td>Hillary Rasmussen</td>
                                                     <td></td>
                                                     <td></td>
-                                                    <td>33</td>
+                                                    <td>District</td>
                                                     <td><span class="chip red lighten-5"><span class="red-text">Idle</span></span></td>
                                                     <td><a href="page-users-edit.html"><i class="material-icons">edit</i></a></td>
                                                     <td><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
@@ -156,12 +157,12 @@
                                                 <tr>
                                                     <td></td>
                                                     <td>304</td>
-                                                    <td><a href="page-users-view.html">herman2003</a>
+                                                    <td>
                                                     </td>
                                                     <td>Herman Tate</td>
                                                     <td></td>
                                                     <td></td>
-                                                    <td>33</td>
+                                                    <td>District</td>
                                                     <td><span class="chip red lighten-5"><span class="red-text">Idle</span></span></td>
                                                     <td><a href="page-users-edit.html"><i class="material-icons">edit</i></a></td>
                                                     <td><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
@@ -169,12 +170,12 @@
                                                 <tr>
                                                     <td></td>
                                                     <td>305</td>
-                                                    <td><a href="page-users-view.html">kuame3008</a>
+                                                    <td>
                                                     </td>
                                                     <td>Kuame Ford</td>
                                                     <td></td>
                                                     <td></td>
-                                                    <td>87</td>
+                                                    <td>Division</td>
                                                     <td><span class="chip green lighten-5">
                     <span class="green-text">Active</span>
                   </span>
@@ -186,12 +187,12 @@
                                                 <tr>
                                                     <td></td>
                                                     <td>307</td>
-                                                    <td><a href="page-users-view.html">piper0508</a>
+                                                    <td>
                                                     </td>
                                                     <td>Piper Jordan</td>
                                                     <td></td>
                                                     <td></td>
-                                                    <td>87</td>
+                                                    <td>Division</td>
                                                     <td><span class="chip green lighten-5">
                     <span class="green-text">Active</span>
                   </span>
@@ -202,12 +203,12 @@
                                                 <tr>
                                                     <td></td>
                                                     <td>308</td>
-                                                    <td><a href="page-users-view.html">neil1002</a>
+                                                    <td>
                                                     </td>
                                                     <td>Neil Sosa</td>
                                                     <td></td>
                                                     <td></td>
-                                                    <td>33</td>
+                                                    <td>District</td>
                                                     <td><span class="chip red lighten-5"><span class="red-text">Idle</span></span></td>
                                                     <td><a href="page-users-edit.html"><i class="material-icons">edit</i></a></td>
                                                     <td><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
@@ -215,12 +216,12 @@
                                                 <tr>
                                                     <td></td>
                                                     <td>309</td>
-                                                    <td><a href="page-users-view.html">caldwell2402</a>
+                                                    <td>
                                                     </td>
                                                     <td>Caldwell Chapman</td>
                                                     <td></td>
                                                     <td></td>
-                                                    <td>87</td>
+                                                    <td>Division</td>
                                                     <td><span class="chip green lighten-5">
                     <span class="green-text">Active</span>
                   </span>
@@ -231,12 +232,12 @@
                                                 <tr>
                                                     <td></td>
                                                     <td>310</td>
-                                                    <td><a href="page-users-view.html">wesley0508</a>
+                                                    <td>
                                                     </td>
                                                     <td>Wesley Oneil</td>
                                                     <td></td>
                                                     <td></td>
-                                                    <td>33</td>
+                                                    <td>District</td>
                                                     <td><span class="chip red lighten-5"><span class="red-text">Idle</span></span></td>
                                                     <td><a href="page-users-edit.html"><i class="material-icons">edit</i></a></td>
                                                     <td><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
@@ -244,12 +245,12 @@
                                                 <tr>
                                                     <td></td>
                                                     <td>311</td>
-                                                    <td><a href="page-users-view.html">tallulah2009</a>
+                                                    <td>
                                                     </td>
                                                     <td>Tallulah Fleming</td>
                                                     <td></td>
                                                     <td></td>
-                                                    <td>33</td>
+                                                    <td>District</td>
                                                     <td><span class="chip red lighten-5"><span class="red-text">Idle</span></span></td>
                                                     <td><a href="page-users-edit.html"><i class="material-icons">edit</i></a></td>
                                                     <td><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
@@ -257,12 +258,12 @@
                                                 <tr>
                                                     <td></td>
                                                     <td>312</td>
-                                                    <td><a href="page-users-view.html">iris2505</a>
+                                                    <td>
                                                     </td>
                                                     <td>Iris Maddox</td>
                                                     <td></td>
                                                     <td></td>
-                                                    <td>33</td>
+                                                    <td>District</td>
                                                     <td><span class="chip red lighten-5"><span class="red-text">Idle</span></span></td>
                                                     <td><a href="page-users-edit.html"><i class="material-icons">edit</i></a></td>
                                                     <td><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
@@ -270,12 +271,12 @@
                                                 <tr>
                                                     <td></td>
                                                     <td>313</td>
-                                                    <td><a href="page-users-view.html">caleb1504</a>
+                                                    <td>
                                                     </td>
                                                     <td>Caleb Bradley</td>
                                                     <td></td>
                                                     <td></td>
-                                                    <td>87</td>
+                                                    <td>Division</td>
                                                     <td><span class="chip green lighten-5">
                     <span class="green-text">Active</span>
                   </span>
@@ -286,12 +287,12 @@
                                                 <tr>
                                                     <td></td>
                                                     <td>314</td>
-                                                    <td><a href="page-users-view.html">illiana0410</a>
+                                                    <td>
                                                     </td>
                                                     <td>Illiana Grimes</td>
                                                     <td></td>
                                                     <td></td>
-                                                    <td>33</td>
+                                                    <td>District</td>
                                                     <td><span class="chip red lighten-5"><span class="red-text">Idle</span></span></td>
                                                     <td><a href="page-users-edit.html"><i class="material-icons">edit</i></a></td>
                                                     <td><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
@@ -299,12 +300,12 @@
                                                 <tr>
                                                     <td></td>
                                                     <td>315</td>
-                                                    <td><a href="page-users-view.html">chester0902</a>
+                                                    <td>
                                                     </td>
                                                     <td>Chester Estes</td>
                                                     <td></td>
                                                     <td></td>
-                                                    <td>87</td>
+                                                    <td>Division</td>
                                                     <td><span class="chip green lighten-5">
                     <span class="green-text">Active</span>
                   </span>
@@ -315,12 +316,12 @@
                                                 <tr>
                                                     <td></td>
                                                     <td>316</td>
-                                                    <td><a href="page-users-view.html">gregory2309</a>
+                                                    <td>
                                                     </td>
                                                     <td>Gregory Hayden</td>
                                                     <td></td>
                                                     <td></td>
-                                                    <td>87</td>
+                                                    <td>Division</td>
                                                     <td><span class="chip green lighten-5">
                     <span class="green-text">Active</span>
                   </span>
@@ -331,12 +332,12 @@
                                                 <tr>
                                                     <td></td>
                                                     <td>317</td>
-                                                    <td><a href="page-users-view.html">jescie1802</a>
+                                                    <td>
                                                     </td>
                                                     <td>Jescie Parker</td>
                                                     <td></td>
                                                     <td></td>
-                                                    <td>33</td>
+                                                    <td>District</td>
                                                     <td><span class="chip red lighten-5"><span class="red-text">Idle</span></span></td>
                                                     <td><a href="page-users-edit.html"><i class="material-icons">edit</i></a></td>
                                                     <td><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
@@ -344,12 +345,12 @@
                                                 <tr>
                                                     <td></td>
                                                     <td>318</td>
-                                                    <td><a href="page-users-view.html">sydney3101</a>
+                                                    <td>
                                                     </td>
                                                     <td>Sydney Cabrera</td>
                                                     <td></td>
                                                     <td></td>
-                                                    <td>33</td>
+                                                    <td>District</td>
                                                     <td><span class="chip red lighten-5"><span class="red-text">Idle</span></span></td>
                                                     <td><a href="page-users-edit.html"><i class="material-icons">edit</i></a></td>
                                                     <td><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
@@ -357,12 +358,12 @@
                                                 <tr>
                                                     <td></td>
                                                     <td>319</td>
-                                                    <td><a href="page-users-view.html">gray2702</a>
+                                                    <td>
                                                     </td>
                                                     <td>Gray Valenzuela</td>
                                                     <td></td>
                                                     <td></td>
-                                                    <td>33</td>
+                                                    <td>District</td>
                                                     <td><span class="chip orange lighten-5"><span class="orange-text">Close</span></span></td>
                                                     <td><a href="page-users-edit.html"><i class="material-icons">edit</i></a></td>
                                                     <td><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
