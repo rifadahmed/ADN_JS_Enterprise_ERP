@@ -23,17 +23,17 @@ class LocationController extends Controller
     public function showTypesList()
     {
         $data['title'] = "List of Location Type";
-        return view('locations.showTypesList', $data);
+        return view('locations.locations_type.showTypesList', $data);
     }
     public function addTypesList()
     {
         $data['title'] = "Create New Location Type";
-        return view('locations.addTypesList', $data);
+        return view('locations.locations_type.addTypesList', $data);
     }
     public function editTypesList()
     {
         $data['title'] = "Edit Location Type";
-        return view('locations.editTypesList', $data);
+        return view('locations.locations_type.editTypesList', $data);
     }
     
     

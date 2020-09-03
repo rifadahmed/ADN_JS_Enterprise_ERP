@@ -11,10 +11,10 @@
                     <div class="col s12 active" id="account">
                         <form method="POST" action="">
                             @csrf
-                            @include('locations._typeform')
+                            @include('locations.locations_type._typeform')
                             <div class="col s12 display-flex justify-content-end mt-3">
                                 <button type="submit" class="btn indigo">Save</button> &nbsp;
-                                <a href="{{route('location.types.list') }}"type="button" class="btn btn-light">Cancel</a>
+                                <a href="{{route('location.types.list') }}" type="button" class="btn btn-light">Cancel</a>
                             </div>
                         </form>
                     </div>
