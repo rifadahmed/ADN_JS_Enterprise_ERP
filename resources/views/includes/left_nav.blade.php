@@ -35,12 +35,12 @@
                         </a>
                     </li>
                     <li>
-                        <a href="{{route('location.types.list')}}"><i class="material-icons">radio_button_unchecked</i>
+                        <a  class="@if(Request::segment(1) == 'location' &&  Request::segment(2) == 'types' &&  Request::segment(3) == 'list') active @endif" href="{{route('location.types.list')}}"><i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="Analytics">Location Types List</span>
                         </a>
                     </li>
                     <li>
-                        <a href="{{route('location.types.create')}}"><i class="material-icons">radio_button_unchecked</i>
+                        <a class="@if(Request::segment(1) == 'location' &&  Request::segment(2) == 'types' &&  Request::segment(3) == 'create') active @endif" href="{{route('location.types.create')}}"><i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="Analytics">Add New Location Type</span>
                         </a>
                     </li>
