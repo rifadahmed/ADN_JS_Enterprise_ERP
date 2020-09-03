@@ -40,7 +40,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="{{route('location.types.list.create')}}"><i class="material-icons">radio_button_unchecked</i>
+                        <a href="{{route('location.types.create')}}"><i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="Analytics">Add New Location Type</span>
                         </a>
                     </li>
