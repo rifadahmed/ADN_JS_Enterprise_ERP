@@ -19,7 +19,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/','DashboardController@index')->name('dashboard');
 
+
 @include ('rifad.php');
 Route::get("/test",function(){
-    return view('locations._form');
+    return view('locations.index_1');
 });
