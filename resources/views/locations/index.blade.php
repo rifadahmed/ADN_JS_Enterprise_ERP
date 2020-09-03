@@ -220,11 +220,11 @@
                                                 </div>
                                             </div>
                                             <div class="col s12 m6 l3">
-                                                <label for="users-list-role">Role</label>
+                                                <label for="users-list-role">Location Type id</label>
                                                 <div class="input-field">
                                                     <select class="form-control" id="users-list-role">
                                                         <option value="">Any</option>
-                                                        <option value="User">User</option>
+                                                        <option value="Location type 1">Location type 1</option>
                                                         <option value="Staff">Staff</option>
                                                     </select>
                                                 </div>
@@ -275,7 +275,7 @@
                                                     <td>Dean Stanley</td>
                                                     <td>30/04/2019</td>
                                                     <td>No</td>
-                                                    <td>Staff</td>
+                                                    <td>Location type 1</td>
                                                     <td><span class="chip green lighten-5">
                     <span class="green-text">Active</span>
                   </span>
@@ -291,7 +291,7 @@
                                                     <td>Zena Buckley</td>
                                                     <td>06/04/2020</td>
                                                     <td>Yes</td>
-                                                    <td>User </td>
+                                                    <td>Location type 1</td>
                                                     <td><span class="chip green lighten-5">
                     <span class="green-text">Active</span>
                   </span>
@@ -307,7 +307,7 @@
                                                     <td>Delilah Moon</td>
                                                     <td>03/01/2020</td>
                                                     <td>Yes</td>
-                                                    <td>User </td>
+                                                    <td>Location type 1</td>
                                                     <td><span class="chip green lighten-5">
                     <span class="green-text">Active</span>
                   </span>
@@ -349,7 +349,7 @@
                                                     <td>Kuame Ford</td>
                                                     <td>30/08/2019</td>
                                                     <td>Yes</td>
-                                                    <td>User </td>
+                                                    <td>Location type 1</td>
                                                     <td><span class="chip green lighten-5">
                     <span class="green-text">Active</span>
                   </span>
@@ -365,7 +365,7 @@
                                                     <td>Fulton Stafford</td>
                                                     <td>20/09/2019</td>
                                                     <td>Yes</td>
-                                                    <td>User </td>
+                                                    <td>Location type 1</td>
                                                     <td><span class="chip green lighten-5">
                     <span class="green-text">Active</span>
                   </span>
@@ -381,7 +381,7 @@
                                                     <td>Piper Jordan</td>
                                                     <td>05/08/2020</td>
                                                     <td>Yes</td>
-                                                    <td>User </td>
+                                                    <td>Location type 1</td>
                                                     <td><span class="chip green lighten-5">
                     <span class="green-text">Active</span>
                   </span>
@@ -410,7 +410,7 @@
                                                     <td>Caldwell Chapman</td>
                                                     <td>24/02/2020</td>
                                                     <td>Yes</td>
-                                                    <td>User </td>
+                                                    <td>Location type 1</td>
                                                     <td><span class="chip green lighten-5">
                     <span class="green-text">Active</span>
                   </span>
@@ -465,7 +465,7 @@
                                                     <td>Caleb Bradley</td>
                                                     <td>15/04/2020</td>
                                                     <td>Yes</td>
-                                                    <td>User </td>
+                                                    <td>Location type 1</td>
                                                     <td><span class="chip green lighten-5">
                     <span class="green-text">Active</span>
                   </span>
@@ -494,7 +494,7 @@
                                                     <td>Chester Estes</td>
                                                     <td>09/02/2020</td>
                                                     <td>Yes</td>
-                                                    <td>User </td>
+                                                    <td>Location type 1</td>
                                                     <td><span class="chip green lighten-5">
                     <span class="green-text">Active</span>
                   </span>
@@ -510,7 +510,7 @@
                                                     <td>Gregory Hayden</td>
                                                     <td>23/09/2019</td>
                                                     <td>Yes</td>
-                                                    <td>User </td>
+                                                    <td>Location type 1</td>
                                                     <td><span class="chip green lighten-5">
                     <span class="green-text">Active</span>
                   </span>
