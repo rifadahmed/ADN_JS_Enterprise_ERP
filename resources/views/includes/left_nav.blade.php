@@ -35,7 +35,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#"><i class="material-icons">radio_button_unchecked</i>
+                        <a href="{{route('location.types.list')}}"><i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="Analytics">Location Types List</span>
                         </a>
                     </li>

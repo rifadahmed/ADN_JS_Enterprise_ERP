@@ -19,4 +19,12 @@ class LocationController extends Controller
         $data['title'] = "Edit Location";
         return view('locations.edit', $data);
     }
+
+    public function showTypesList()
+    {
+        $data['title'] = "List of Location Type";
+        return view('locations.showTypesList', $data);
+    }
+
+    
 }
