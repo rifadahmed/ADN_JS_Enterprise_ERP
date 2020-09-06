@@ -108,7 +108,7 @@
                                                         <span class="green-text">Active</span>
                                                       </span>
                                                     </td>
-                                                    <td><a class="border-primary" href="{{ route('location.types.edit', 1)}}"><i class="material-icons  edit-icon">edit</i></a><a href="{{ route('location.types.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a class="border-primary" href="{{ route('buyer.edit', 1)}}"><i class="material-icons  edit-icon">edit</i></a><a href="{{ route('buyer.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
                                                     {{-- <td></td>
                                                     <td></td>
                                                     <td></td>
@@ -126,7 +126,7 @@
                     <span class="green-text">Active</span>
                   </span>
                                                     </td>
-                                                    <td><a href="{{ route('location.types.edit', 1)}}"><i class="material-icons  edit-icon">edit</i></a><a href="{{ route('location.types.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="{{ route('buyer.edit', 1)}}"><i class="material-icons  edit-icon">edit</i></a><a href="{{ route('buyer.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
                                                     
                                                 </tr>
                                                 <tr>
@@ -141,7 +141,7 @@
                     <span class="green-text">Active</span>
                   </span>
                                                     </td>
-                                                    <td><a href="{{ route('location.types.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('location.types.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="{{ route('buyer.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('buyer.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
                                                 <tr>
@@ -153,7 +153,7 @@
                                                     <td>+8801811781201</td>
                                                     <td>demo@gmail.com</td>
                                                     <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('location.types.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('location.types.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="{{ route('buyer.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('buyer.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
                                                 <tr>
@@ -165,7 +165,7 @@
                                                     <td>+8801811781201</td>
                                                     <td>demo@gmail.com</td>
                                                     <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('location.types.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('location.types.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="{{ route('buyer.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('buyer.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
                                                 <tr>
@@ -180,7 +180,7 @@
                     <span class="green-text">Active</span>
                   </span>
                                                     </td>
-                                                    <td><a href="{{ route('location.types.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('location.types.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="{{ route('buyer.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('buyer.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
 
@@ -196,7 +196,7 @@
                     <span class="green-text">Active</span>
                   </span>
                                                     </td>
-                                                    <td><a href="{{ route('location.types.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('location.types.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="{{ route('buyer.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('buyer.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
                                                 <tr>
@@ -208,7 +208,7 @@
                                                     <td>+8801811781201</td>
                                                     <td>demo@gmail.com</td>
                                                     <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('location.types.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('location.types.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="{{ route('buyer.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('buyer.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
                                                 <tr>
@@ -223,7 +223,7 @@
                     <span class="green-text">Active</span>
                   </span>
                                                     </td>
-                                                    <td><a href="{{ route('location.types.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('location.types.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="{{ route('buyer.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('buyer.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
                                                 <tr>
@@ -235,7 +235,7 @@
                                                     <td>+8801811781201</td>
                                                     <td>demo@gmail.com</td>
                                                     <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('location.types.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('location.types.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="{{ route('buyer.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('buyer.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
                                                 <tr>
@@ -247,7 +247,7 @@
                                                     <td>+8801811781201</td>
                                                     <td>demo@gmail.com</td>
                                                     <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('location.types.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('location.types.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="{{ route('buyer.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('buyer.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
                                                 <tr>
@@ -259,7 +259,7 @@
                                                     <td>+8801811781201</td>
                                                     <td>demo@gmail.com</td>
                                                     <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('location.types.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('location.types.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="{{ route('buyer.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('buyer.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
                                                 <tr>
@@ -274,7 +274,7 @@
                     <span class="green-text">Active</span>
                   </span>
                                                     </td>
-                                                    <td><a href="{{ route('location.types.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('location.types.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="{{ route('buyer.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('buyer.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
                                                 <tr>
@@ -286,7 +286,7 @@
                                                     <td>+8801811781201</td>
                                                     <td>demo@gmail.com</td>
                                                     <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('location.types.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('location.types.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="{{ route('buyer.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('buyer.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
                                                 <tr>
@@ -301,7 +301,7 @@
                     <span class="green-text">Active</span>
                   </span>
                                                     </td>
-                                                    <td><a href="{{ route('location.types.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('location.types.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="{{ route('buyer.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('buyer.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
 
