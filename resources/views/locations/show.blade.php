@@ -1,5 +1,9 @@
+<style>
+    table.striped > tbody > tr > td {
+        padding: 8px 15px;
+    }
+</style>
 @extends('layouts.master')
-
 @section('content')
 
     <div class="section users-edit">
@@ -10,7 +14,7 @@
                 <div class="divider mb-3"></div>
                 <div class="row">
                     <div class="col s12">
-                        <div class="container">
+                        <div class="container" style="margin-left: -10px">
                             <!-- users view start -->
                             <div class="section users-view">
                                 <!-- users view media object start -->
@@ -47,10 +51,7 @@
                                             <div class="col s12 m4">
                                                 <table class="striped">
                                                     <tbody>
-                                                        <tr>
-                                                            <td>SL:</td>
-                                                            <td>301</td>
-                                                        </tr>
+
                                                         <tr>
                                                             <td>Location Name:</td>
                                                             <td class="location_name">Rampura</td>
