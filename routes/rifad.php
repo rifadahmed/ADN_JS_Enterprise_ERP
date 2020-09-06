@@ -15,7 +15,7 @@ Route::get('/location/types/show/{id}', 'LocationController@showTypesList')->nam
 /*** Routes for Buyer */
 Route::get('/buyer/list', 'BuyerController@index')->name('buyer.list');
 Route::get('/buyer/create', 'BuyerController@create')->name('buyer.create');
-Route::post('/buyer/store', 'BuyerController@store')->name('buyer.create');
+Route::post('/buyer/store', 'BuyerController@store')->name('buyer.store');
 Route::get('/buyer/edit/{id}', 'BuyerController@edit')->name('buyer.edit');
 Route::get('/buyer/update/{id}', 'BuyerController@update')->name('buyer.update');
 Route::get('/buyer/show/{id}', 'BuyerController@show')->name('buyer.show');
@@ -23,7 +23,7 @@ Route::get('/buyer/show/{id}', 'BuyerController@show')->name('buyer.show');
 
 Route::get('/buyer/type/list', 'BuyerController@indexBuyerType')->name('buyer.type.list');
 Route::get('/buyer/type/create', 'BuyerController@createBuyerType')->name('buyer.type.create');
-Route::post('/buyer/type/store', 'BuyerController@storeBuyerType')->name('buyer.type.create');
+Route::post('/buyer/type/store', 'BuyerController@storeBuyerType')->name('buyer.type.store');
 Route::get('/buyer/type/edit/{id}', 'BuyerController@editBuyerType')->name('buyer.type.edit');
 Route::get('/buyer/type/update/{id}', 'BuyerController@updateBuyerType')->name('buyer.type.update');
 Route::get('/buyer/type/show/{id}', 'BuyerController@showBuyerType')->name('buyer.type.show');
@@ -31,7 +31,7 @@ Route::get('/buyer/type/show/{id}', 'BuyerController@showBuyerType')->name('buye
 /*** Routes for Warehouse */
 Route::get('/warehouse/list', 'WarehouseController@index')->name('warehouse.list');
 Route::get('/warehouse/create', 'WarehouseController@create')->name('warehouse.create');
-Route::post('/warehouse/store', 'WarehouseController@store')->name('warehouse.create');
+Route::post('/warehouse/store', 'WarehouseController@store')->name('warehouse.store');
 Route::get('/warehouse/edit/{id}', 'WarehouseController@edit')->name('warehouse.edit');
 Route::get('/warehouse/update/{id}', 'WarehouseController@update')->name('warehouse.update');
 Route::get('/warehouse/show/{id}', 'WarehouseController@show')->name('warehouse.show');
@@ -39,7 +39,7 @@ Route::get('/warehouse/show/{id}', 'WarehouseController@show')->name('warehouse.
 /*** Routes for Category */
 Route::get('/category/list', 'CategoryController@index')->name('category.list');
 Route::get('/category/create', 'CategoryController@create')->name('category.create');
-Route::post('/category/store', 'CategoryController@store')->name('category.create');
+Route::post('/category/store', 'CategoryController@store')->name('category.store');
 Route::get('/category/edit/{id}', 'CategoryController@edit')->name('category.edit');
 Route::get('/category/update/{id}', 'CategoryController@update')->name('category.update');
 Route::get('/category/show/{id}', 'CategoryController@show')->name('category.show');
@@ -47,7 +47,7 @@ Route::get('/category/show/{id}', 'CategoryController@show')->name('category.sho
 /*** Routes for Sub Category */
 Route::get('/subcategory/list', 'SubCategoryController@index')->name('subcategory.list');
 Route::get('/subcategory/create', 'SubCategoryController@create')->name('subcategory.create');
-Route::post('/subcategory/store', 'SubCategoryController@store')->name('subcategory.create');
+Route::post('/subcategory/store', 'SubCategoryController@store')->name('subcategory.store');
 Route::get('/subcategory/edit/{id}', 'SubCategoryController@edit')->name('subcategory.edit');
 Route::get('/subcategory/update/{id}', 'SubCategoryController@update')->name('subcategory.update');
 Route::get('/subcategory/show/{id}', 'SubCategoryController@show')->name('subcategory.show');
@@ -55,7 +55,7 @@ Route::get('/subcategory/show/{id}', 'SubCategoryController@show')->name('subcat
 /*** Routes for Brand */
 Route::get('/brand/list', 'BrandController@index')->name('brand.list');
 Route::get('/brand/create', 'BrandController@create')->name('brand.create');
-Route::post('/brand/store', 'BrandController@store')->name('brand.create');
+Route::post('/brand/store', 'BrandController@store')->name('brand.store');
 Route::get('/brand/edit/{id}', 'BrandController@edit')->name('brand.edit');
 Route::get('/brand/update/{id}', 'BrandController@update')->name('brand.update');
 Route::get('/brand/show/{id}', 'BrandController@show')->name('brand.show');
@@ -63,7 +63,7 @@ Route::get('/brand/show/{id}', 'BrandController@show')->name('brand.show');
 /*** Routes for Product */
 Route::get('/product/list', 'ProductController@index')->name('product.list');
 Route::get('/product/create', 'ProductController@create')->name('product.create');
-Route::post('/product/store', 'ProductController@store')->name('product.create');
+Route::post('/product/store', 'ProductController@store')->name('product.store');
 Route::get('/product/edit/{id}', 'ProductController@edit')->name('product.edit');
 Route::get('/product/update/{id}', 'ProductController@update')->name('product.update');
 Route::get('/product/show/{id}', 'ProductController@show')->name('product.show');
