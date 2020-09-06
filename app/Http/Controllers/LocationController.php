@@ -25,10 +25,10 @@ class LocationController extends Controller
         return view('locations.edit', $data);
     }
 
-    public function showTypesList()
+    public function indexTypesList()
     {
         $data['title'] = "List of Location Type";
-        return view('locations.locations_type.showTypesList', $data);
+        return view('locations.locations_type.indexTypesList', $data);
     }
     public function addTypesList()
     {
@@ -40,6 +40,10 @@ class LocationController extends Controller
         $data['title'] = "Edit Location Type";
         return view('locations.locations_type.editTypesList', $data);
     }
-    
+    public function showTypesList()
+    {
+        $data['title'] = "Location Type Details";
+        return view('locations.locations_type.showTypesList', $data);
+    }
     
 }
