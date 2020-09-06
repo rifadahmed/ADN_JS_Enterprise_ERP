@@ -110,25 +110,25 @@
             <div class="collapsible-body">
                 <ul class="collapsible collapsible-sub" data-collapsible="accordion">
                     <li class="">
-                        <a class="" href="{{route('category.list')}} ">
+                        <a class="@if(Request::segment(1) == 'category' &&  Request::segment(2) == 'list') active @endif" href="{{route('category.list')}} ">
                             <i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="Modern">Category List</span>
                         </a>
                     </li>
                     <li>
-                        <a class="" href="{{route('category.create')}}">
+                        <a class="@if(Request::segment(1) == 'category' &&  Request::segment(2) == 'create') active @endif" href="{{route('category.create')}}">
                             <i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="eCommerce">Add New Category</span>
                         </a>
                     </li>
                     <li>
-                        <a class="" href="{{route('subcategory.list')}}">
+                        <a class="@if(Request::segment(1) == 'subcategory' &&  Request::segment(2) == 'list') active @endif" href="{{route('subcategory.list')}}">
                             <i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="Modern">Sub Category List</span>
                         </a>
                     </li>
                     <li>
-                        <a class="" href="{{route('subcategory.create')}}">
+                        <a class="@if(Request::segment(1) == 'subcategory' &&  Request::segment(2) == 'create') active @endif" href="{{route('subcategory.create')}}">
                             <i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="eCommerce">Add New Sub Category</span>
                         </a>
@@ -142,13 +142,13 @@
             <div class="collapsible-body">
                 <ul class="collapsible collapsible-sub" data-collapsible="accordion">
                     <li class="">
-                        <a class="" href="{{route('brand.list')}}">
+                        <a class="@if(Request::segment(1) == 'brand' &&  Request::segment(2) == 'list') active @endif" href="{{route('brand.list')}}">
                             <i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="Modern">Brand List</span>
                         </a>
                     </li>
                     <li>
-                        <a class="" href="{{route('brand.create')}}">
+                        <a class="@if(Request::segment(1) == 'brand' &&  Request::segment(2) == 'create') active @endif" href="{{route('brand.create')}}">
                             <i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="eCommerce">Add New Brand</span>
                         </a>
