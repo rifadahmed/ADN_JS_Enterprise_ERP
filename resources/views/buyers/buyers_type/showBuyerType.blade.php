@@ -6,7 +6,7 @@
     <div class="section users-edit">
         <div class="card">
             <div class="card-content">
-            <h5 class="card-title">{{ isset($title) ? $title : "Title Not Found" }} <a href="{{route('location.types.list')}}" class="btn btn-primary float-right">Back</a></h5>
+            <h5 class="card-title">{{ isset($title) ? $title : "Title Not Found" }} <a href="{{route('buyer.type.list')}}" class="btn btn-primary float-right">Back</a></h5>
                 
                 <div class="divider mb-3"></div>
                 <div class="row">
@@ -50,8 +50,8 @@
                                                     <tbody>
 
                                                         <tr>
-                                                            <td>Location Type Name:</td>
-                                                            <td class="location_type_name">Division</td>
+                                                            <td>Buyer Type Name:</td>
+                                                            <td class="location_type_name">X</td>
                                                         </tr>
 
                                                         <tr>
