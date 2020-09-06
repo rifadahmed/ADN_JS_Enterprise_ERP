@@ -29,6 +29,9 @@
                             </ol>
                         </div>
 
+                        <div class="col s2 m6 l6">
+                            <a href="{{ route('location.create') }}" class="btn indigo waves-effect waves-light breadcrumbs-btn right"> Create New Location </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -85,7 +88,7 @@
                                                 <tr>
                                                     <th></th>
                                                     <th>SL</th>
-                                                    <th>Location Name</th>                                                    
+                                                    <th>Location Name</th>
                                                     <th>Location Type</th>
                                                     <th>Status</th>
                                                     <th>Action</th>
@@ -96,7 +99,7 @@
                                                 <tr>
                                                     <td></td>
                                                     <td>300</td>
-                                                    <td>Rampura</td>                                                  
+                                                    <td>Rampura</td>
                                                     <td>Area</td>
                                                     <td><span class="chip green lighten-5">
                                                         <span class="green-text">Active</span>
@@ -120,15 +123,15 @@
                   </span>
                                                     </td>
                                                     <td><a href="{{ route('location.edit', 1) }}"><i class="material-icons  edit-icon">edit</i></a><a href="{{ route('location.show',1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    
+
                                                 </tr>
-                                                
-                                                
-                                                
+
+
+
                                                 <tr>
                                                     <td></td>
                                                     <td>305</td>
-                                                    
+
                                                     <td>Cumilla</td>
                                                     <td>Division</td>
                                                     <td><span class="chip green lighten-5">
@@ -142,7 +145,7 @@
                                                 <tr>
                                                     <td></td>
                                                     <td>307</td>
-                                                    
+
                                                     <td>Gajipur</td>
                                                     <td>Division</td>
                                                     <td><span class="chip green lighten-5">
@@ -152,11 +155,11 @@
                                                     <td><a href="{{ route('location.edit', 1) }}7"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('location.show',1)}}"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
-                                                
+
                                                 <tr>
                                                     <td></td>
                                                     <td>309</td>
-                                                    
+
                                                     <td>Rajshahi</td>
                                                     <td>Division</td>
                                                     <td><span class="chip green lighten-5">
@@ -166,11 +169,11 @@
                                                     <td><a href="{{ route('location.edit', 1) }}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('location.show',1)}}"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
-                                                
+
                                                 <tr>
                                                     <td></td>
                                                     <td>311</td>
-                                                    
+
                                                     <td>Narayanganj</td>
                                                     <td>District</td>
                                                     <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
@@ -180,18 +183,18 @@
                                                 <tr>
                                                     <td></td>
                                                     <td>312</td>
-                                                    
+
                                                     <td>Narshingdi</td>
                                                     <td>District</td>
                                                     <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
                                                     <td><a href="{{ route('location.edit', 1) }}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('location.show',1)}}"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
-                                                
+
                                                 <tr>
                                                     <td></td>
                                                     <td>314</td>
-                                                    
+
                                                     <td>Cox's bazar</td>
                                                     <td>District</td>
                                                     <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
@@ -201,7 +204,7 @@
                                                 <tr>
                                                     <td></td>
                                                     <td>315</td>
-                                                    
+
                                                     <td>Sylhet</td>
                                                     <td>Division</td>
                                                     <td><span class="chip green lighten-5">
@@ -214,7 +217,7 @@
                                                 <tr>
                                                     <td></td>
                                                     <td>316</td>
-                                                    
+
                                                     <td>Mymansingh</td>
                                                     <td>Division</td>
                                                     <td><span class="chip green lighten-5">
@@ -227,7 +230,7 @@
                                                 <tr>
                                                     <td></td>
                                                     <td>317</td>
-                                                    
+
                                                     <td>Bandarban</td>
                                                     <td>District</td>
                                                     <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
@@ -237,7 +240,7 @@
                                                 <tr>
                                                     <td></td>
                                                     <td>318</td>
-                                                    
+
                                                     <td>Habiganj</td>
                                                     <td>District</td>
                                                     <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
@@ -247,7 +250,7 @@
                                                 <tr>
                                                     <td></td>
                                                     <td>319</td>
-                                                    
+
                                                     <td>Shatkhira</td>
                                                     <td>District</td>
                                                     <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
