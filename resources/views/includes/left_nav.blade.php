@@ -53,13 +53,13 @@
             <div class="collapsible-body">
                 <ul class="collapsible collapsible-sub" data-collapsible="accordion">
                     <li class="">
-                    <a class="" href="{{route('buyer.list')}}">
+                    <a class="@if(Request::segment(1) == 'buyer' &&  Request::segment(2) == 'list') active @endif" href="{{route('buyer.list')}}">
                             <i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="Modern">Buyer List</span>
                         </a>
                     </li>
                     <li>
-                        <a class="" href="/buyer/create">
+                        <a class="@if(Request::segment(1) == 'buyer' &&  Request::segment(2) == 'create') active @endif" href="/buyer/create">
                             <i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="eCommerce">Add New Buyer</span>
                         </a>
