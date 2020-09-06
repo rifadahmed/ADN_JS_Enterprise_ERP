@@ -59,7 +59,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="" href="#">
+                        <a class="" href="/buyer/create">
                             <i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="eCommerce">Add New Buyer</span>
                         </a>

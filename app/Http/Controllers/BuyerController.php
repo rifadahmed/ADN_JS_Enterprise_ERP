@@ -18,5 +18,9 @@ class BuyerController extends Controller
         $data['title'] = "Buyer details";
         return view('buyers.show', $data);
     }
+    public function create(){
+        $data['title'] = "Create Buyer";
+        return view('buyers.create', $data);
+    }
     
 }
