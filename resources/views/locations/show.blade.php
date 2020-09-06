@@ -1,11 +1,7 @@
-<style>
-    table.striped > tbody > tr > td {
-        padding: 8px 15px;
-    }
-</style>
+<link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
+
 @extends('layouts.master')
 @section('content')
-
     <div class="section users-edit">
         <div class="card">
             <div class="card-content">
@@ -45,7 +41,7 @@
                                 </div> --}}
                                 <!-- users view media object ends -->
                                 <!-- users view card data start -->
-                                <div class="card" style="box-shadow:none;border:1px solid #e0e0e0">
+                                <div class="card" id="location_card" >
                                     <div class="card-content">
                                         <div class="row">
                                             <div class="col s12 m4">
