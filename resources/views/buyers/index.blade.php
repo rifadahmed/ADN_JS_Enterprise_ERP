@@ -28,7 +28,9 @@
                                 </li>
                             </ol>
                         </div>
-
+                        <div class="col s2 m6 l6">
+                            <a href="{{ route('buyer.create') }}" class="btn indigo waves-effect waves-light breadcrumbs-btn right"> Create New Buyer</a>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -28,7 +28,9 @@
                                 </li>
                             </ol>
                         </div>
-
+                        <div class="col s2 m6 l6">
+                            <a href="{{ route('warehouse.create') }}" class="btn indigo waves-effect waves-light breadcrumbs-btn right"> Create New Warehouse</a>
+                        </div>
                     </div>
                 </div>
             </div>
