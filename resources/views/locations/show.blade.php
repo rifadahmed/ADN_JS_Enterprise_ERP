@@ -41,7 +41,7 @@
                                 </div> --}}
                                 <!-- users view media object ends -->
                                 <!-- users view card data start -->
-                                <div class="card" style="box-shadow: none;">
+                                <div class="card" style="box-shadow:none;border:1px solid #e0e0e0">
                                     <div class="card-content">
                                         <div class="row">
                                             <div class="col s12 m4">
