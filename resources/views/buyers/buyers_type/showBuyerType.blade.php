@@ -6,7 +6,7 @@
     <div class="section users-edit">
         <div class="card">
             <div class="card-content">
-            <h5 class="card-title">{{ isset($title) ? $title : "Title Not Found" }} <a href="{{route('buyer.list')}}" class="btn btn-primary float-right">Back</a></h5>
+            <h5 class="card-title">{{ isset($title) ? $title : "Title Not Found" }} <a href="{{route('buyer.type.list')}}" class="btn btn-primary float-right">Back</a></h5>
                 
                 <div class="divider mb-3"></div>
                 <div class="row">
@@ -50,24 +50,8 @@
                                                     <tbody>
 
                                                         <tr>
-                                                            <td>Buyer Name:</td>
-                                                            <td class="location_name">Omi</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Buyer Company:</td>
-                                                            <td class="location_type">Chaldal</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Buyer Address:</td>
-                                                            <td class="location_type">Badda</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Buyer Phone:</td>
-                                                            <td class="location_type">+8801812057845</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Buyer Email:</td>
-                                                            <td class="location_type">demo@gmail.com</td>
+                                                            <td>Buyer Type Name:</td>
+                                                            <td class="location_type_name">X</td>
                                                         </tr>
 
                                                         <tr>

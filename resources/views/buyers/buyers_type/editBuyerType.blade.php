@@ -11,10 +11,10 @@
                     <div class="col s12 active" id="account">
                         <form method="POST" action="">
                             @csrf
-                            @include('buyers._buyerform')
+                            @include('buyers.buyers_type._buyertypeform')
                             <div class="col s12 display-flex justify-content-end mt-3">
                                 <button type="submit" class="btn indigo">Save</button> &nbsp;
-                                <a href="{{route('buyer.list') }}"type="button" class="btn btn-light">Cancel</a>
+                                <a href="{{route('buyer.type.list') }}"type="button" class="btn btn-light">Cancel</a>
                             </div>
                         </form>
                     </div>

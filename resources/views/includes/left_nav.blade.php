@@ -53,17 +53,31 @@
             <div class="collapsible-body">
                 <ul class="collapsible collapsible-sub" data-collapsible="accordion">
                     <li class="">
-                        <a class="" href="#">
+                    <a class="@if(Request::segment(1) == 'buyer' &&  Request::segment(2) == 'list') active @endif" href="{{route('buyer.list')}}">
                             <i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="Modern">Buyer List</span>
                         </a>
                     </li>
                     <li>
-                        <a class="" href="#">
+                        <a class="@if(Request::segment(1) == 'buyer' &&  Request::segment(2) == 'create') active @endif" href="/buyer/create">
                             <i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="eCommerce">Add New Buyer</span>
                         </a>
                     </li>
+                    <li >
+                        <a class="@if(Request::segment(1) == '' &&  Request::segment(2) == '') active @endif" href="{{route('buyer.type.list')}}">
+                                <i class="material-icons">radio_button_unchecked</i>
+                                <span data-i18n="Modern">Buyer Types List</span>
+                            </a>
+                        </li>
+                        <li>
+                        {{-- <a class="@if(Request::segment(1) == '' &&  Request::segment(2) == '') active @endif" href="{{route('buyer.type.create')}}"> --}}
+                        <a class="@if(Request::segment(1) == '' &&  Request::segment(2) == '') active @endif" href="/buyer/type/create">
+
+                                <i class="material-icons">radio_button_unchecked</i>
+                                <span data-i18n="eCommerce">Add New Buyer Type</span>
+                            </a>
+                        </li>
 
 
                 </ul>
@@ -75,7 +89,7 @@
             <div class="collapsible-body">
                 <ul class="collapsible collapsible-sub" data-collapsible="accordion">
                     <li class="">
-                        <a class="" href="#">
+                    <a class="" href="{{route('warehouse.list')}}">
                             <i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="Modern">Warehouse List</span>
                         </a>
