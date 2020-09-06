@@ -22,7 +22,7 @@
                         <div class="col s10 m6 l6">
                             <h5 class="breadcrumbs-title mt-0 mb-0"><span>{{ isset($title) ? $title : "Title Not Found" }}</span></h5>
                             <ol class="breadcrumbs mb-0">
-                            <li class="breadcrumb-item"><a href="{{route('location.types.list') }}">Manage Buyer</a>
+                            <li class="breadcrumb-item"><a href="{{route('buyer.list') }}">Manage Buyer</a>
                                 </li>
                                 <li class="breadcrumb-item active">Buyer List
                                 </li>
