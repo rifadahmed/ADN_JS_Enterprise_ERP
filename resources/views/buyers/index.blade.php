@@ -42,7 +42,7 @@
                                     <div class="row">
                                         <form>
                                             <div class="col s12 m6 l3">
-                                                <label for="users-list-verified">buyer Name</label>
+                                                <label for="users-list-verified">Buyer Name</label>
                                                 <div class="input-field">
                                                     <input type="text">
                                                 </div>
@@ -52,9 +52,9 @@
                                                 <div class="input-field">
                                                     <select class="form-control" id="users-list-role">
                                                         <option value="">Any</option>
-                                                        <option value="Division">Division</option>
-                                                        <option value="District">District</option>
-                                                        <option value="Area">Area</option>
+                                                        <option value="Division">X</option>
+                                                        <option value="District">Y</option>
+                                                        <option value="Area">Z</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -85,7 +85,11 @@
                                                 <tr>
                                                     <th></th>
                                                     <th>SL</th>
-                                                    <th>Location Type Name</th>                                                    
+                                                    <th>Name</th>
+                                                    <th>Company</th>
+                                                    <th>Address</th>
+                                                    <th>Phone</th>
+                                                    <th>Email</th>                                                      
                                                     <th>Status</th>
                                                     <th>Action</th>
                                                     <th></th>
@@ -95,7 +99,11 @@
                                                 <tr>
                                                     <td></td>
                                                     <td>300</td>
-                                                    <td>Area</td>
+                                                    <td>Nji</td>
+                                                    <td>Chaldal</td>
+                                                    <td>Badda</td>
+                                                    <td>+8801811781201</td>
+                                                    <td>demo@gmail.com</td>
                                                     <td><span class="chip green lighten-5">
                                                         <span class="green-text">Active</span>
                                                       </span>
@@ -109,7 +117,11 @@
                                                 <tr>
                                                     <td></td>
                                                     <td>301</td>
-                                                    <td>Division</td>
+                                                    <td>Omi</td>
+                                                    <td>Chaldal</td>
+                                                    <td>Badda</td>
+                                                    <td>+8801811781201</td>
+                                                    <td>demo@gmail.com</td>
                                                     <td><span class="chip green lighten-5">
                     <span class="green-text">Active</span>
                   </span>
@@ -120,7 +132,11 @@
                                                 <tr>
                                                     <td></td>
                                                     <td>302</td>                                                 
-                                                    <td>Area</td>
+                                                    <td>Miku</td>
+                                                    <td>Chaldal</td>
+                                                    <td>Badda</td>
+                                                    <td>+8801811781201</td>
+                                                    <td>demo@gmail.com</td>
                                                     <td><span class="chip green lighten-5">
                     <span class="green-text">Active</span>
                   </span>
@@ -131,7 +147,11 @@
                                                 <tr>
                                                     <td></td>
                                                     <td>303</td>
-                                                    <td>District</td>
+                                                    <td>jez</td>
+                                                    <td>Chaldal</td>
+                                                    <td>Badda</td>
+                                                    <td>+8801811781201</td>
+                                                    <td>demo@gmail.com</td>
                                                     <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
                                                     <td><a href="{{ route('location.types.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('location.types.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
@@ -139,7 +159,11 @@
                                                 <tr>
                                                     <td></td>
                                                     <td>304</td>
-                                                    <td>District</td>
+                                                    <td>Olive</td>
+                                                    <td>Chaldal</td>
+                                                    <td>Badda</td>
+                                                    <td>+8801811781201</td>
+                                                    <td>demo@gmail.com</td>
                                                     <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
                                                     <td><a href="{{ route('location.types.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('location.types.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
@@ -147,7 +171,11 @@
                                                 <tr>
                                                     <td></td>
                                                     <td>305</td>
-                                                    <td>Division</td>
+                                                    <td>Panny</td>
+                                                    <td>Chaldal</td>
+                                                    <td>Badda</td>
+                                                    <td>+8801811781201</td>
+                                                    <td>demo@gmail.com</td>
                                                     <td><span class="chip green lighten-5">
                     <span class="green-text">Active</span>
                   </span>
@@ -159,7 +187,11 @@
                                                 <tr>
                                                     <td></td>
                                                     <td>307</td>
-                                                    <td>Division</td>
+                                                    <td>nijam</td>
+                                                    <td>Chaldal</td>
+                                                    <td>Badda</td>
+                                                    <td>+8801811781201</td>
+                                                    <td>demo@gmail.com</td>
                                                     <td><span class="chip green lighten-5">
                     <span class="green-text">Active</span>
                   </span>
@@ -171,6 +203,10 @@
                                                     <td></td>
                                                     <td>308</td>
                                                     <td>District</td>
+                                                    <td>Chaldal</td>
+                                                    <td>Badda</td>
+                                                    <td>+8801811781201</td>
+                                                    <td>demo@gmail.com</td>
                                                     <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
                                                     <td><a href="{{ route('location.types.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('location.types.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
@@ -178,7 +214,11 @@
                                                 <tr>
                                                     <td></td>
                                                     <td>309</td>
-                                                    <td>Division</td>
+                                                    <td>poly</td>
+                                                    <td>Chaldal</td>
+                                                    <td>Badda</td>
+                                                    <td>+8801811781201</td>
+                                                    <td>demo@gmail.com</td>
                                                     <td><span class="chip green lighten-5">
                     <span class="green-text">Active</span>
                   </span>
@@ -189,7 +229,11 @@
                                                 <tr>
                                                     <td></td>
                                                     <td>310</td>
-                                                    <td>District</td>
+                                                    <td>jony</td>
+                                                    <td>Chaldal</td>
+                                                    <td>Badda</td>
+                                                    <td>+8801811781201</td>
+                                                    <td>demo@gmail.com</td>
                                                     <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
                                                     <td><a href="{{ route('location.types.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('location.types.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
@@ -197,7 +241,11 @@
                                                 <tr>
                                                     <td></td>
                                                     <td>311</td>
-                                                    <td>District</td>
+                                                    <td>tony</td>
+                                                    <td>Chaldal</td>
+                                                    <td>Badda</td>
+                                                    <td>+8801811781201</td>
+                                                    <td>demo@gmail.com</td>
                                                     <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
                                                     <td><a href="{{ route('location.types.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('location.types.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
@@ -205,7 +253,11 @@
                                                 <tr>
                                                     <td></td>
                                                     <td>312</td>
-                                                    <td>District</td>
+                                                    <td>jafi</td>
+                                                    <td>Chaldal</td>
+                                                    <td>Badda</td>
+                                                    <td>+8801811781201</td>
+                                                    <td>demo@gmail.com</td>
                                                     <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
                                                     <td><a href="{{ route('location.types.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('location.types.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
@@ -213,7 +265,11 @@
                                                 <tr>
                                                     <td></td>
                                                     <td>313</td>
-                                                    <td>Division</td>
+                                                    <td>Nafi</td>
+                                                    <td>Chaldal</td>
+                                                    <td>Badda</td>
+                                                    <td>+8801811781201</td>
+                                                    <td>demo@gmail.com</td>
                                                     <td><span class="chip green lighten-5">
                     <span class="green-text">Active</span>
                   </span>
@@ -224,7 +280,11 @@
                                                 <tr>
                                                     <td></td>
                                                     <td>314</td>
-                                                    <td>District</td>
+                                                    <td>Azp</td>
+                                                    <td>Chaldal</td>
+                                                    <td>Badda</td>
+                                                    <td>+8801811781201</td>
+                                                    <td>demo@gmail.com</td>
                                                     <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
                                                     <td><a href="{{ route('location.types.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('location.types.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
@@ -232,7 +292,11 @@
                                                 <tr>
                                                     <td></td>
                                                     <td>315</td>
-                                                    <td>Division</td>
+                                                    <td>najim</td>
+                                                    <td>Chaldal</td>
+                                                    <td>Badda</td>
+                                                    <td>+8801811781201</td>
+                                                    <td>demo@gmail.com</td>
                                                     <td><span class="chip green lighten-5">
                     <span class="green-text">Active</span>
                   </span>
@@ -240,41 +304,8 @@
                                                     <td><a href="{{ route('location.types.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('location.types.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>316</td>
-                                                    <td>Division</td>
-                                                    <td><span class="chip green lighten-5">
-                    <span class="green-text">Active</span>
-                  </span>
-                                                    </td>
-                                                    <td><a href="{{ route('location.types.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('location.types.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>317</td>
-                                                    <td>District</td>
-                                                    <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('location.types.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('location.types.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>318</td>
-                                                    <td>District</td>
-                                                    <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('location.types.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('location.types.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>319</td>
-                                                    <td>District</td>
-                                                    <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('location.types.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('location.types.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
+
+
 
 
 

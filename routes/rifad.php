@@ -12,7 +12,9 @@ Route::get('/location/types/create', 'LocationController@addTypesList')->name('l
 Route::get('/location/types/edit/{id}', 'LocationController@editTypesList')->name('location.types.edit');
 Route::get('/location/types/show/{id}', 'LocationController@showTypesList')->name('location.types.show');
 
-
+/*** Routes for Buyer */
 Route::get('/buyer/list', 'BuyerController@index')->name('buyer.list');
-
-
+Route::get('/buyer/create', 'BuyerController@create')->name('buyer.create');
+Route::post('/buyer/store', 'BuyerController@store')->name('buyer.create');
+Route::get('/buyer/edit/{id}', 'BuyerController@edit')->name('buyer.edit');
+Route::get('/buyer/show/{id}', 'BuyerController@show')->name('buyer.show');
