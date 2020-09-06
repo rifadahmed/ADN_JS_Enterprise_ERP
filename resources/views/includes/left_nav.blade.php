@@ -71,7 +71,9 @@
                             </a>
                         </li>
                         <li>
-                            <a class="@if(Request::segment(1) == '' &&  Request::segment(2) == '') active @endif" href="#">
+                        {{-- <a class="@if(Request::segment(1) == '' &&  Request::segment(2) == '') active @endif" href="{{route('buyer.type.create')}}"> --}}
+                        <a class="@if(Request::segment(1) == '' &&  Request::segment(2) == '') active @endif" href="/buyer/type/create">
+
                                 <i class="material-icons">radio_button_unchecked</i>
                                 <span data-i18n="eCommerce">Add New Buyer Type</span>
                             </a>

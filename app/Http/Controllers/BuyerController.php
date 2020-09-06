@@ -35,5 +35,9 @@ class BuyerController extends Controller
         return view('buyers.buyers_type.showBuyerType', $data);
     }
     
+    public function createBuyerType(){
+        $data['title'] = "Create Buyer Types";
+        return view('buyers.buyers_type.createBuyerType', $data);
+    }
     
 }
