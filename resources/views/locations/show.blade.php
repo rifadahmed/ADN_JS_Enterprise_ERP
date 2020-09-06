@@ -5,7 +5,8 @@
     <div class="section users-edit">
         <div class="card">
             <div class="card-content">
-                <h5 class="card-title">{{ isset($title) ? $title : "Title Not Found" }}</h5>
+            <h5 class="card-title">{{ isset($title) ? $title : "Title Not Found" }} <a href="{{route('location.list')}}" class="btn btn-primary float-right">Back</a></h5>
+                
                 <div class="divider mb-3"></div>
                 <div class="row">
                     <div class="col s12">
@@ -40,7 +41,7 @@
                                 </div> --}}
                                 <!-- users view media object ends -->
                                 <!-- users view card data start -->
-                                <div class="card">
+                                <div class="card" style="box-shadow: none;">
                                     <div class="card-content">
                                         <div class="row">
                                             <div class="col s12 m4">
