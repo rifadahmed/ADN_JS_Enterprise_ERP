@@ -11,15 +11,15 @@ class WarehouseController extends Controller
         return view('warehouses.index', $data);
     }
     public function edit(){
-        $data['title'] = "Edit Buyer";
-        return view('buyers.edit', $data);
+        $data['title'] = "Edit Warehouse";
+        return view('warehouses.edit', $data);
     }
     public function show(){
-        $data['title'] = "Buyer Details";
-        return view('buyers.show', $data);
+        $data['title'] = "Warehouse Details";
+        return view('warehouses.show', $data);
     }
     public function create(){
-        $data['title'] = "Create Buyer";
-        return view('buyers.create', $data);
+        $data['title'] = "Create Warehouse";
+        return view('warehouses.create', $data);
     }
 }
