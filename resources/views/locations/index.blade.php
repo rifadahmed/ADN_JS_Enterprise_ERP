@@ -96,13 +96,13 @@
                                                 <tr>
                                                     <td></td>
                                                     <td>300</td>
-                                                    <td>Dean Stanley</td>                                                  
+                                                    <td>Rampura</td>                                                  
                                                     <td>Area</td>
                                                     <td><span class="chip green lighten-5">
                                                         <span class="green-text">Active</span>
                                                       </span>
                                                     </td>
-                                                    <td><a class="border-primary" href="{{ route('location.edit', 1) }}"><i class="material-icons  edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a class="border-primary" href="{{ route('location.edit', 1) }}"><i class="material-icons  edit-icon">edit</i></a><a href="{{ route('location.show',1)}}"><i class="material-icons">remove_red_eye</i></a></td>
                                                     {{-- <td></td>
                                                     <td></td>
                                                     <td></td>
@@ -112,60 +112,30 @@
                                                     <td></td>
                                                     <td>301</td>
 
-                                                    <td>Zena Buckley</td>
+                                                    <td>Dhaka</td>
 
                                                     <td>Division</td>
                                                     <td><span class="chip green lighten-5">
                     <span class="green-text">Active</span>
                   </span>
                                                     </td>
-                                                    <td><a href="{{ route('location.edit', 1) }}"><i class="material-icons  edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="{{ route('location.edit', 1) }}"><i class="material-icons  edit-icon">edit</i></a><a href="{{ route('location.show',1)}}"><i class="material-icons">remove_red_eye</i></a></td>
                                                     
                                                 </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>302</td>
-                                                    
-                                                    <td>Delilah Moon</td>
-                                                    <td>Area</td>
-                                                    <td><span class="chip green lighten-5">
-                    <span class="green-text">Active</span>
-                  </span>
-                                                    </td>
-                                                    <td><a href="{{ route('location.edit', 1) }}"><i class="material-icons edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>303</td>
-                                                    
-                                                    <td>Hillary Rasmussen</td>
-                                                    <td>District</td>
-                                                    <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('location.edit', 1) }}"><i class="material-icons edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>304</td>
-                                                    
-                                                    <td>Herman Tate</td>
-                                                    <td>District</td>
-                                                    <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('location.edit', 1) }}"><i class="material-icons edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
+                                                
+                                                
+                                                
                                                 <tr>
                                                     <td></td>
                                                     <td>305</td>
                                                     
-                                                    <td>Kuame Ford</td>
+                                                    <td>Cumilla</td>
                                                     <td>Division</td>
                                                     <td><span class="chip green lighten-5">
                     <span class="green-text">Active</span>
                   </span>
                                                     </td>
-                                                    <td><a href="{{ route('location.edit', 1) }}"><i class="material-icons edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="{{ route('location.edit', 1) }}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('location.show',1)}}"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
 
@@ -173,145 +143,115 @@
                                                     <td></td>
                                                     <td>307</td>
                                                     
-                                                    <td>Piper Jordan</td>
+                                                    <td>Gajipur</td>
                                                     <td>Division</td>
                                                     <td><span class="chip green lighten-5">
                     <span class="green-text">Active</span>
                   </span>
                                                     </td>
-                                                    <td><a href="{{ route('location.edit', 1) }}7"><i class="material-icons edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="{{ route('location.edit', 1) }}7"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('location.show',1)}}"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>308</td>
-                                                    
-                                                    <td>Neil Sosa</td>
-                                                    <td>District</td>
-                                                    <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('location.edit', 1) }}"><i class="material-icons edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
+                                                
                                                 <tr>
                                                     <td></td>
                                                     <td>309</td>
                                                     
-                                                    <td>Caldwell Chapman</td>
+                                                    <td>Rajshahi</td>
                                                     <td>Division</td>
                                                     <td><span class="chip green lighten-5">
                     <span class="green-text">Active</span>
                   </span>
                                                     </td>
-                                                    <td><a href="{{ route('location.edit', 1) }}"><i class="material-icons edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="{{ route('location.edit', 1) }}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('location.show',1)}}"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>310</td>
-                                                    
-                                                    <td>Wesley Oneil</td>
-                                                    <td>District</td>
-                                                    <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('location.edit', 1) }}"><i class="material-icons edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
+                                                
                                                 <tr>
                                                     <td></td>
                                                     <td>311</td>
                                                     
-                                                    <td>Tallulah Fleming</td>
+                                                    <td>Narayanganj</td>
                                                     <td>District</td>
                                                     <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('location.edit', 1) }}"><i class="material-icons edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="{{ route('location.edit', 1) }}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('location.show',1)}}"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
                                                 <tr>
                                                     <td></td>
                                                     <td>312</td>
                                                     
-                                                    <td>Iris Maddox</td>
+                                                    <td>Narshingdi</td>
                                                     <td>District</td>
                                                     <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('location.edit', 1) }}"><i class="material-icons edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="{{ route('location.edit', 1) }}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('location.show',1)}}"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>313</td>
-                                                    
-                                                    <td>Caleb Bradley</td>
-                                                    <td>Division</td>
-                                                    <td><span class="chip green lighten-5">
-                    <span class="green-text">Active</span>
-                  </span>
-                                                    </td>
-                                                    <td><a href="{{ route('location.edit', 1) }}"><i class="material-icons edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
+                                                
                                                 <tr>
                                                     <td></td>
                                                     <td>314</td>
                                                     
-                                                    <td>Illiana Grimes</td>
+                                                    <td>Cox's bazar</td>
                                                     <td>District</td>
                                                     <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('location.edit', 1) }}"><i class="material-icons edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="{{ route('location.edit', 1) }}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('location.show',1)}}"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
                                                 <tr>
                                                     <td></td>
                                                     <td>315</td>
                                                     
-                                                    <td>Chester Estes</td>
+                                                    <td>Sylhet</td>
                                                     <td>Division</td>
                                                     <td><span class="chip green lighten-5">
                     <span class="green-text">Active</span>
                   </span>
                                                     </td>
-                                                    <td><a href="{{ route('location.edit', 1) }}"><i class="material-icons edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="{{ route('location.edit', 1) }}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('location.show',1)}}"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
                                                 <tr>
                                                     <td></td>
                                                     <td>316</td>
                                                     
-                                                    <td>Gregory Hayden</td>
+                                                    <td>Mymansingh</td>
                                                     <td>Division</td>
                                                     <td><span class="chip green lighten-5">
                     <span class="green-text">Active</span>
                   </span>
                                                     </td>
-                                                    <td><a href="{{ route('location.edit', 1) }}"><i class="material-icons edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="{{ route('location.edit', 1) }}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('location.show',1)}}"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
                                                 <tr>
                                                     <td></td>
                                                     <td>317</td>
                                                     
-                                                    <td>Jescie Parker</td>
+                                                    <td>Bandarban</td>
                                                     <td>District</td>
                                                     <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('location.edit', 1) }}"><i class="material-icons edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="{{ route('location.edit', 1) }}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('location.show',1)}}"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
                                                 <tr>
                                                     <td></td>
                                                     <td>318</td>
                                                     
-                                                    <td>Sydney Cabrera</td>
+                                                    <td>Habiganj</td>
                                                     <td>District</td>
                                                     <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('location.edit', 1) }}"><i class="material-icons edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="{{ route('location.edit', 1) }}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('location.show',1)}}"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
                                                 <tr>
                                                     <td></td>
                                                     <td>319</td>
                                                     
-                                                    <td>Gray Valenzuela</td>
+                                                    <td>Shatkhira</td>
                                                     <td>District</td>
                                                     <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('location.edit', 1) }}"><i class="material-icons edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="{{ route('location.edit', 1) }}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('location.show',1)}}"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
 

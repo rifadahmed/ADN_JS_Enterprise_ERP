@@ -14,6 +14,11 @@ class LocationController extends Controller
         $data['title'] = "Create New Location";
         return view('locations.create', $data);
     }
+
+    public function show(){
+        $data['title'] = "Location details";
+        return view('locations.show', $data);
+    }
     public function edit($id)
     {
         $data['title'] = "Edit Location";
