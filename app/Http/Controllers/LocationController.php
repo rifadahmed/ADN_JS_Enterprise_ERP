@@ -16,7 +16,7 @@ class LocationController extends Controller
     }
 
     public function show(){
-        $data['title'] = "Location details";
+        $data['title'] = "Location Details";
         return view('locations.show', $data);
     }
     public function edit($id)

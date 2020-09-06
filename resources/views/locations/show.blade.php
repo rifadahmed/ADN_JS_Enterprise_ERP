@@ -1,7 +1,8 @@
-<link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
 
 @extends('layouts.master')
 @section('content')
+<link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
+
     <div class="section users-edit">
         <div class="card">
             <div class="card-content">
