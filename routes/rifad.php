@@ -20,6 +20,7 @@ Route::get('/buyer/edit/{id}', 'BuyerController@edit')->name('buyer.edit');
 Route::get('/buyer/update/{id}', 'BuyerController@update')->name('buyer.update');
 Route::get('/buyer/show/{id}', 'BuyerController@show')->name('buyer.show');
 
+
 Route::get('/buyer/type/list', 'BuyerController@indexBuyerType')->name('buyer.type.list');
 Route::get('/buyer/type/create', 'BuyerController@createBuyerType')->name('buyer.type.create');
 Route::post('/buyer/type/store', 'BuyerController@storeBuyerType')->name('buyer.type.create');
