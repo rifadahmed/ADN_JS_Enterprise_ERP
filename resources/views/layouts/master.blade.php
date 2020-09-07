@@ -57,6 +57,9 @@ Website: http://adndigital.com.bd
         <div class="content-wrapper-before gradient-45deg-indigo-purple"></div>
         <div class="col s12">
           <div class="container">
+              <!-- STAET : FLASH MESSAGE RK -->
+              @include('includes.flash_message')
+              <!-- STAET : FLASH MESSAGE RK -->
               @yield('content')
           </div>
           <div class="content-overlay"></div>
@@ -98,7 +101,8 @@ Website: http://adndigital.com.bd
     <!-- END THEME  JS-->
     <!-- BEGIN PAGE LEVEL JS-->
     {{--<script src={{asset("app-assets/js/scripts/dashboard-modern.js")}}></script>--}}
-    <script src={{asset("app-assets/js/scripts/intro.js")}}></script>
+    {{--<script src={{asset("app-assets/js/scripts/intro.js")}}></script>--}}
+    <script src={{asset("app-assets/js/scripts/ui-alerts.js")}}></script>
     <!-- END PAGE LEVEL JS-->
     @stack('script')
   </body>

@@ -13,14 +13,14 @@ class CreateSubCategoryTable extends Migration
      */
     public function up()
     {
-        Schema::create('sub_category', function (Blueprint $table) {
+        Schema::create('sub_categories', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('sub_category_name',100);
-            $table->foreign('category_id')->references('id')->on('category');
+            $table->foreign('category_id')->references('id')->on('categories');
             $table->unsignedBigInteger('category_id');
-            $table->integer('sub_category_order');
+            $table->integer('sub_category_order')->nullable();
             $table->enum('sub_category_status',['Active','Inactive'])->default('Active');
-            $table->integer('created_by');
+            $table->integer('created_by')->nullable();
             $table->integer('updated_by')->nullable();
             $table->softDeletes();
             $table->timestamps();

@@ -6,21 +6,80 @@ use Illuminate\Http\Request;
 use App\Category;
 class CategoryController extends Controller
 {
+    /***
+     * List Category
+     */
     public function index(){
         $title = "List Of Categories";
-        $categories=Category::all();
+        $categories=Category::orderBy('category_name')->paginate(15);
         return view('categories.index',compact('title','categories'));
     }
-    public function edit(){
-        $data['title'] = "Edit Category";
-        return view('categories.edit', $data);
-    }
-    public function show(){
-        $data['title'] = "Category Details";
-        return view('categories.show', $data);
-    }
+
+    /***
+     * Create Category
+     */
     public function create(){
         $data['title'] = "Create Category";
         return view('categories.create', $data);
     }
+
+    /***
+     * Store Category
+     */
+    public function store(Request $request){
+        $request->validate([
+            'category_name' => 'required|unique:categories',
+            'category_status' => 'required',
+        ]);
+        //dd($request->all());
+
+        $categoryModel = new Category();
+        $categoryModel->category_name = $request->category_name;
+        $categoryModel->category_status = $request->category_status;
+        if($request->category_order) {
+            $categoryModel->category_order = $request->category_order;
+        }
+        $categoryModel->save();
+
+        return redirect()->route('category.create')->with('success','Category has been created successfully!');
+    }
+
+    /***
+     * Edit Category
+     */
+    public function edit($id){
+        $data['title'] = "Edit Category";
+        $data['data'] = Category::where('id',$id)->first();
+        return view('categories.edit', $data);
+    }
+
+    /***
+     * Update Category
+     */
+    public function update(Request $request,$id){
+
+        $request->validate([
+            'category_name' => 'required',
+            'category_status' => 'required',
+        ]);
+
+        $categoryModel = Category::find($id);
+        $categoryModel->category_name = $request->category_name;
+        $categoryModel->category_status = $request->category_status;
+        if($request->category_order) {
+            $categoryModel->category_order = $request->category_order;
+        }
+        $categoryModel->save();
+
+        return redirect()->route('category.edit',$id)->with('success','Category has been Updated successfully!');
+    }
+
+    /***
+     * Show Category
+     */
+    public function show(){
+        $data['title'] = "Category Details";
+        return view('categories.show', $data);
+    }
+
 }

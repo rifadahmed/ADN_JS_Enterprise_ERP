@@ -13,12 +13,12 @@ class CreateCategoryTable extends Migration
      */
     public function up()
     {
-        Schema::create('category', function (Blueprint $table) {
+        Schema::create('categories', function (Blueprint $table) {
             $table->id();
             $table->string('category_name',100);
-            $table->integer('category_order');
+            $table->integer('category_order')->nullable();
             $table->enum('category_status',['Active','Inactive'])->default('Active');
-            $table->integer('created_by');
+            $table->integer('created_by')->nullable();
             $table->integer('updated_by')->nullable();
             $table->softDeletes();
             $table->timestamps();

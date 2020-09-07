@@ -85,12 +85,12 @@
                                             <table id="users-list-datatable" class="table">
                                                 <thead>
                                                 <tr>
-                                                    
+
                                                     <th>SL</th>
-                                                    <th>Category Name</th>                                                    
+                                                    <th>Category Name</th>
                                                     <th>Status</th>
                                                     <th>Action</th>
-                                                    
+
                                                 </tr>
                                                 </thead>
                                                 <tbody>
@@ -98,19 +98,26 @@
                                                     <tr>
                                                         <td>{{$category->id}}</td>
                                                         <td>{{$category->category_name}}</td>
-                                                       
+
                                                         <td><span class="chip green lighten-5">
                                                             <span class="{{($category->category_status=="Active")?"green-text":"red-text"}}">{{$category->category_status}}</span>
                                                           </span>
                                                         </td>
-                                                        <td><a class="border-primary" href="{{ route('category.edit', 1)}}"><i class="material-icons  edit-icon">edit</i></a><a href="{{ route('category.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                       
-                                                    </tr> 
+                                                        <td>
+                                                            <a class="border-primary" href="{{ route('category.edit', $category->id)}}"><i class="material-icons  edit-icon">edit</i></a>
+                                                            <a href="{{ route('category.show', $category->id)}}"><i class="material-icons">remove_red_eye</i></a>
+                                                        </td>
+
+                                                    </tr>
                                                     @endforeach
-                                                
 
                                                 </tbody>
                                             </table>
+                                            <div class="clearfix">
+                                                <div class="pull-right">
+                                                    {{ $categories->appends(request()->input())->links() }}
+                                                </div>
+                                            </div>
                                         </div>
                                         <!-- datatable ends -->
                                     </div>

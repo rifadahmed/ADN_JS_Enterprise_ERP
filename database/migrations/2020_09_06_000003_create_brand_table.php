@@ -13,12 +13,12 @@ class CreateBrandTable extends Migration
      */
     public function up()
     {
-        Schema::create('brand', function (Blueprint $table) {
+        Schema::create('brands', function (Blueprint $table) {
             $table->id();
             $table->string('brand_name',60);
-            $table->integer('brand_order');
+            $table->integer('brand_order')->nullable();
             $table->enum('brand_status',['Active','Inactive'])->default('Active');
-            $table->integer('created_by');
+            $table->integer('created_by')->nullable();
             $table->integer('updated_by')->nullable();
             $table->softDeletes();
             $table->timestamps();

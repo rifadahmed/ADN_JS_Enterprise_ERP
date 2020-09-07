@@ -16,9 +16,9 @@ class CreateLocationTypesTable extends Migration
         Schema::create('location_types', function (Blueprint $table) {
             $table->id();
             $table->string('location_type_name',100);
-            $table->integer('location_type_order');
+            $table->integer('location_type_order')->nullable();
             $table->enum('location_type_status',['Active','Inactive'])->default('Active');
-            $table->integer('created_by');
+            $table->integer('created_by')->nullable();
             $table->integer('updated_by')->nullable();
             $table->softDeletes();
             $table->timestamps();

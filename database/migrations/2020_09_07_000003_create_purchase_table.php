@@ -13,12 +13,12 @@ class CreatePurchaseTable extends Migration
      */
     public function up()
     {
-        Schema::create('purchase', function (Blueprint $table) {
+        Schema::create('purchases', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->char('purchase_no',20);
-            $table->foreign('purchase_warehouse_id')->references('id')->on('warehouse');
+            $table->foreign('purchase_warehouse_id')->references('id')->on('warehouses');
             $table->unsignedBigInteger('purchase_warehouse_id');
-            $table->foreign('purchase_supplier_id')->references('id')->on('warehouse');
+            $table->foreign('purchase_supplier_id')->references('id')->on('warehouses');
             $table->unsignedBigInteger('purchase_supplier_id');
             $table->double('purchase_grand_total',8,2);
             $table->double('purchase_payable_total',8,2);
@@ -32,7 +32,7 @@ class CreatePurchaseTable extends Migration
             $table->boolean('purchase_returned')->default(0);
             $table->boolean('purchase_refunded')->default(0);
             $table->enum('purchase_status',['Active','Inactive'])->default('Active');
-            $table->integer('created_by');
+            $table->integer('created_by')->nullable();
             $table->integer('updated_by')->nullable();
             $table->softDeletes();
             $table->timestamps();

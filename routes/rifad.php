@@ -38,14 +38,6 @@ Route::get('/warehouse/edit/{id}', 'WarehouseController@edit')->name('warehouse.
 Route::post('/warehouse/update/{id}', 'WarehouseController@update')->name('warehouse.update');
 Route::get('/warehouse/show/{id}', 'WarehouseController@show')->name('warehouse.show');
 
-/*** Routes for Category */
-Route::get('/category/list', 'CategoryController@index')->name('category.list');
-Route::get('/category/create', 'CategoryController@create')->name('category.create');
-Route::post('/category/store', 'CategoryController@store')->name('category.store');
-Route::get('/category/edit/{id}', 'CategoryController@edit')->name('category.edit');
-Route::post('/category/update/{id}', 'CategoryController@update')->name('category.update');
-Route::get('/category/show/{id}', 'CategoryController@show')->name('category.show');
-
 /*** Routes for Sub Category */
 Route::get('/subcategory/list', 'SubCategoryController@index')->name('subcategory.list');
 Route::get('/subcategory/create', 'SubCategoryController@create')->name('subcategory.create');

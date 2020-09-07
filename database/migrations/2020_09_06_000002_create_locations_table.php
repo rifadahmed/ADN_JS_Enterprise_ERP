@@ -18,9 +18,9 @@ class CreateLocationsTable extends Migration
             $table->foreign('location_type_id')->references('id')->on('location_types');
             $table->unsignedBigInteger('location_type_id');
             $table->string('location_name',100);
-            $table->integer('location_order');
+            $table->integer('location_order')->nullable();
             $table->enum('location_status',['Active','Inactive'])->default('Active');
-            $table->integer('created_by');
+            $table->integer('created_by')->nullable();
             $table->integer('updated_by')->nullable();
             $table->softDeletes();
             $table->timestamps();
