@@ -51,11 +51,11 @@
 
                                                         <tr>
                                                             <td>Location Name:</td>
-                                                            <td class="location_name">Rampura</td>
+                                                            <td class="location_name">{{$location->location_name}}</td>
                                                         </tr>
                                                         <tr>
                                                             <td>Location Type:</td>
-                                                            <td class="location_type">Area</td>
+                                                            <td class="location_type">{{$location->type->location_type_name}}</td>
                                                         </tr>
 
                                                         <tr>

@@ -105,7 +105,7 @@
                                                             <span class="{{($location->location_status=="Active")?"green-text":"red-text"}}">{{$location->location_status}}</span>
                                                           </span>
                                                         </td>
-                                                        <td><a class="border-primary" href="{{ route('location.edit', $location->id) }}"><i class="material-icons  edit-icon">edit</i></a><a href="{{ route('location.show',1)}}"><i class="material-icons">remove_red_eye</i></a></td>
+                                                        <td><a class="border-primary" href="{{ route('location.edit', $location->id) }}"><i class="material-icons  edit-icon">edit</i></a><a href="{{ route('location.show',$location->id)}}"><i class="material-icons">remove_red_eye</i></a></td>
                                                         {{-- <td></td>
                                                         <td></td>
                                                         <td></td>

@@ -16,10 +16,20 @@ class LocationController extends Controller
         $data['title'] = "Create New Location";
         return view('locations.create', $data);
     }
+    public function store(Request $request){
+        $input=$request->all();
+        $input['location_type_id']=1;
+        $input['created_by']=916;
+        $input['updated_by']=916;
+        Location::create($input);
+        return redirect('/location/list');
+    }
 
-    public function show(){
-        $data['title'] = "Location Details";
-        return view('locations.show', $data);
+    public function show($id){
+        $title= "Location Details";
+        $location=Location::findOrFail($id);
+
+        return view('locations.show', compact('title','location'));
     }
     public function edit($id)
     {
@@ -27,6 +37,10 @@ class LocationController extends Controller
         return view('locations.edit', $data);
     }
 
+
+
+
+                 // Location Type
     public function indexTypesList()
     {
         $title = "List of Location Type";
