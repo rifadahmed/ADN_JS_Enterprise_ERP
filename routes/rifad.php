@@ -67,3 +67,11 @@ Route::post('/product/store', 'ProductController@store')->name('product.store');
 Route::get('/product/edit/{id}', 'ProductController@edit')->name('product.edit');
 Route::get('/product/update/{id}', 'ProductController@update')->name('product.update');
 Route::get('/product/show/{id}', 'ProductController@show')->name('product.show');
+
+/*** Routes for Purchase */
+Route::get('/purchase/list', 'PurchaseController@index')->name('purchase.list');
+Route::get('/purchase/create', 'PurchaseController@create')->name('purchase.create');
+Route::post('/purchase/store', 'PurchaseController@store')->name('purchase.store');
+Route::get('/purchase/edit/{id}', 'PurchaseController@edit')->name('purchase.edit');
+Route::get('/purchase/update/{id}', 'PurchaseController@update')->name('purchase.update');
+Route::get('/purchase/show/{id}', 'PurchaseController@show')->name('purchase.show');
