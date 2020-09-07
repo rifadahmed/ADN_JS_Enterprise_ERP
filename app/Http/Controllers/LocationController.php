@@ -2,13 +2,15 @@
 
 namespace App\Http\Controllers;
 use App\LocationType;
+use App\Location;
 use Illuminate\Http\Request;
 
 class LocationController extends Controller
 {
     public function index(){
-        $data['title'] = "List of Locations";
-        return view('locations.index', $data);
+        $title = "List of Locations";
+        $locations=Location::all();
+        return view('locations.index', compact('title','locations'));
     }
     public function create(){
         $data['title'] = "Create New Location";
@@ -40,7 +42,7 @@ class LocationController extends Controller
     public function storeTypesList(Request $request)
      {  $input=$request->all();
         $input['created_by']='916';
-        $input['deleted_by']='916';
+        $input['updated_by']='916';
         LocationType::create($input);
         return redirect('/location/types/list'); 
     
@@ -63,7 +65,7 @@ class LocationController extends Controller
     { 
         $input=$request->all();
         $input['created_by']='16';
-        $input['deleted_by']='16';
+        $input['updated_by']='16';
         $locationType=LocationType::findOrFail($id);
         $locationType->update($input);
         return redirect('/location/types/list'); 

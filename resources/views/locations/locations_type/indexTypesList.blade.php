@@ -49,7 +49,7 @@
                                                     <input type="text">
                                                 </div>
                                             </div>
-                                            <div class="col s12 m6 l3">
+                                            {{-- <div class="col s12 m6 l3">
                                                 <label for="users-list-role">Location Type</label>
                                                 <div class="input-field">
                                                     <select class="form-control" id="users-list-role">
@@ -59,7 +59,7 @@
                                                         <option value="Area">Area</option>
                                                     </select>
                                                 </div>
-                                            </div>
+                                            </div> --}}
                                             <div class="col s12 m6 l3">
                                                 <label for="users-list-status">Status</label>
                                                 <div class="input-field">
