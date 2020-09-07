@@ -209,13 +209,13 @@
             <div class="collapsible-body">
                 <ul class="collapsible collapsible-sub" data-collapsible="accordion">
                     <li class="">
-                        <a class="" href="#">
+                        <a class="" href="{{route('sale.list')}}">
                             <i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="Modern">Sales List</span>
                         </a>
                     </li>
                     <li>
-                        <a class="" href="#">
+                        <a class="" href="{{route('sale.create')}}">
                             <i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="eCommerce">Add New Sales</span>
                         </a>
