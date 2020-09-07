@@ -42,10 +42,11 @@ class LocationController extends Controller
         $data['title'] = "Edit Location Type";
         return view('locations.locations_type.editTypesList', $data);
     }
-    public function showTypesList()
+    public function showTypesList($id)
     {
-        $data['title'] = "Location Type Details";
-        return view('locations.locations_type.showTypesList', $data);
+        $title= "Location Type Details";
+        $locationType=LocationType::findOrFail($id); 
+        return view('locations.locations_type.showTypesList', compact('title','locationType'));
     }
     
 }

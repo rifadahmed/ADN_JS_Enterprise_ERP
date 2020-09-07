@@ -102,14 +102,8 @@
                                                         <td><span class="chip green lighten-5">
                                                             <span class= "{{($locationType->location_type_status=="Active")?"green-text":"red-text"}}" >{{$locationType->location_type_status}}</span>
                                                           </span>
-                                                          
-                                                              
-                                                          
-                                                              
-                                                          
                                                         </td>
-                                                        <td><a class="border-primary" href="{{ route('location.types.edit', 1)}}"><i class="material-icons  edit-icon">edit</i></a><a href="{{ route('location.types.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-
+                                                        <td><a class="border-primary" href="{{ route('location.types.edit', $locationType->id)}}"><i class="material-icons  edit-icon">edit</i></a><a href="{{ route('location.types.show', $locationType->id)}}"><i class="material-icons">remove_red_eye</i></a></td>
                                                     </tr>
                                                     @endforeach
 

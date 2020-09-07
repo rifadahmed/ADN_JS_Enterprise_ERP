@@ -51,12 +51,12 @@
 
                                                         <tr>
                                                             <td>Location Type Name:</td>
-                                                            <td class="location_type_name">Division</td>
+                                                            <td class="location_type_name">{{$locationType->location_type_name}}</td>
                                                         </tr>
 
                                                         <tr>
                                                             <td>Status:</td>
-                                                            <td><span class=" users-view-status chip green lighten-5 green-text">Active</span></td>
+                                                            <td><span class="{{($locationType->location_type_status=="Active")?"green-text":"red-text"}}">{{$locationType->location_type_status}}</span></td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
