@@ -1,7 +1,7 @@
 <div class="row">
     <div class="input-field col s12 m6">
         <label for="brand_name">Brand Name *</label>
-        <input class="validate" required="" id="brand_name" name="brand_name" value="{{ old('brand_name',isset($data) ? $data->category_name : null ) }}" type="text">
+        <input class="validate" required="" id="brand_name" name="brand_name" value="{{ old('brand_name',isset($data) ? $data->brand_name : null ) }}" type="text">
     </div>
     <div class="input-field col s12 m6">
         <label for="brand_order">Brand Order </label>
