@@ -9,14 +9,15 @@
                 <div class="divider mb-3"></div>
                 <div class="row">
                     <div class="col s12 active" id="account">
-                        <form method="POST" action="">
+                    <form method="POST" action="{{route('location.types.update',$data->id)}}">
                             @csrf
                             @include('locations.locations_type._typeform')
                             <div class="col s12 display-flex justify-content-end mt-3">
                                 <button type="submit" class="btn indigo">Save</button> &nbsp;
                                 <a href="{{route('location.types.list') }}"type="button" class="btn btn-light">Cancel</a>
                             </div>
-                        </form>
+                    </form>
+
                     </div>
                 </div>
             </div>

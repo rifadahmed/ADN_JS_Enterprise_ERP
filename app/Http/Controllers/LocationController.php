@@ -38,18 +38,20 @@ class LocationController extends Controller
         return view('locations.locations_type.addTypesList', $data);
     }
     public function storeTypesList(Request $request)
-    { $input=$request->all();
+     {  $input=$request->all();
         $input['created_by']='916';
         $input['deleted_by']='916';
         LocationType::create($input);
         return redirect('/location/types/list'); 
-        // return $input;
+    
     }
     
-    public function editTypesList()
+    public function editTypesList($id)
     {
-        $data['title'] = "Edit Location Type";
-        return view('locations.locations_type.editTypesList', $data);
+        $title = "Edit Location Type";
+        $data=LocationType::findOrFail($id);
+        return view('locations.locations_type.editTypesList', compact('title','data'));
+
     }
     public function showTypesList($id)
     {
@@ -57,5 +59,15 @@ class LocationController extends Controller
         $locationType=LocationType::findOrFail($id); 
         return view('locations.locations_type.showTypesList', compact('title','locationType'));
     }
+    public function updateTypesList(Request $request,$id)
+    { 
+        $input=$request->all();
+        $input['created_by']='16';
+        $input['deleted_by']='16';
+        $locationType=LocationType::findOrFail($id);
+        $locationType->update($input);
+        return redirect('/location/types/list'); 
+    }
+    
     
 }

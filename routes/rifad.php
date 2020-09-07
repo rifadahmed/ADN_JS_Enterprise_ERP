@@ -11,6 +11,7 @@ Route::get('/location/types/list', 'LocationController@indexTypesList')->name('l
 Route::get('/location/types/create', 'LocationController@addTypesList')->name('location.types.create');
 Route::post('/location/types/store', 'LocationController@storeTypesList')->name('location.types.store');
 Route::get('/location/types/edit/{id}', 'LocationController@editTypesList')->name('location.types.edit');
+Route::post('/location/types/update/{id}', 'LocationController@updateTypesList')->name('location.types.update');
 Route::get('/location/types/show/{id}', 'LocationController@showTypesList')->name('location.types.show');
 
 /*** Routes for Buyer */
