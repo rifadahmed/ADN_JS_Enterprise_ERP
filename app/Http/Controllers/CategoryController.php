@@ -3,12 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Category;
 class CategoryController extends Controller
 {
     public function index(){
-        $data['title'] = "List Of Categories";
-        return view('categories.index', $data);
+        $title = "List Of Categories";
+        $categories=Category::all();
+        return view('categories.index',compact('title','categories'));
     }
     public function edit(){
         $data['title'] = "Edit Category";
