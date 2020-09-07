@@ -33,9 +33,21 @@ class LocationController extends Controller
     }
     public function edit($id)
     {
-        $data['title'] = "Edit Location";
-        return view('locations.edit', $data);
+        $title = "Edit Location";
+        $data=Location::findOrFail($id);
+        return view('locations.edit', compact('title','data'));
     }
+    public function update(Request $request,$id)
+    { 
+        $input=$request->all();
+        $input['location_type_id']=1;
+        $input['created_by']='16';
+        $input['updated_by']='16';
+        $locationType=Location::findOrFail($id);
+        $locationType->update($input);
+        return redirect('/location/list'); 
+    }
+
 
 
 
