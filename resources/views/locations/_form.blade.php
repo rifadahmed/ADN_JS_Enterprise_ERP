@@ -12,8 +12,8 @@
     <div class="input-field col s12 m6">
         <select class="validate" name="location_status" id="status" required="" >
             <option value="" disabled selected> - Select Location status - </option>
-            <option value="Active" @if(old('status', (isset($data ) && $data->status == 'Active'))) selected @endif>Active</option>
-            <option value="Inactive" @if(old('status', (isset($data ) && $data->status == 'Inactive'))) selected @endif>Inactive</option>
+            <option value="Active" @if(old('location_status', (isset($data ) && $data->location_status == 'Active'))) selected @endif>Active</option>
+            <option value="Inactive" @if(old('location_status', (isset($data ) && $data->location_status == 'Inactive'))) selected @endif>Inactive</option>
         </select>
         <label for="status">Location Status *</label>
     </div>
