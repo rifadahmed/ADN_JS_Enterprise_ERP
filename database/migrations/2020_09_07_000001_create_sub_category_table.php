@@ -19,7 +19,7 @@ class CreateSubCategoryTable extends Migration
             $table->foreign('category_id')->references('id')->on('category');
             $table->unsignedBigInteger('category_id');
             $table->integer('sub_category_order');
-            $table->enum('location_status',['Active','Inactive'])->default('Active');
+            $table->enum('sub_category_status',['Active','Inactive'])->default('Active');
             $table->integer('created_by');
             $table->integer('updated_by')->nullable();
             $table->softDeletes();
