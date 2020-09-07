@@ -83,3 +83,11 @@ Route::post('/sale/store', 'SaleController@store')->name('sale.store');
 Route::get('/sale/edit/{id}', 'SaleController@edit')->name('sale.edit');
 Route::post('/sale/update/{id}', 'SaleController@update')->name('sale.update');
 Route::get('/sale/show/{id}', 'SaleController@show')->name('sale.show');
+
+/*** Routes for User */
+Route::get('/user/list', 'UserController@index')->name('user.list');
+Route::get('/user/create', 'UserController@create')->name('user.create');
+Route::post('/user/store', 'UserController@store')->name('user.store');
+Route::get('/user/edit/{id}', 'UserController@edit')->name('user.edit');
+Route::post('/user/update/{id}', 'UserController@update')->name('user.update');
+Route::get('/user/show/{id}', 'UserController@show')->name('user.show');
