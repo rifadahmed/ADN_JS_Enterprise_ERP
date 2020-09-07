@@ -11,15 +11,15 @@ class BrandController extends Controller
         return view('brands.index', $data);
     }
     public function edit(){
-        $data['title'] = "Edit Brands";
+        $data['title'] = "Edit Brand";
         return view('brands.edit', $data);
     }
     public function show(){
-        $data['title'] = "Brands Details";
+        $data['title'] = "Brand Details";
         return view('brands.show', $data);
     }
     public function create(){
-        $data['title'] = "Create Brands";
+        $data['title'] = "Create Brand";
         return view('brands.create', $data);
     }
 }

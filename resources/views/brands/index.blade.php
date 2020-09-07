@@ -24,7 +24,7 @@
                             <ol class="breadcrumbs mb-0">
                             <li class="breadcrumb-item"><a href="{{route('brand.list') }}">Manage Brand</a>
                                 </li>
-                                <li class="breadcrumb-item active">brand List
+                                <li class="breadcrumb-item active">Brand List
                                 </li>
                             </ol>
                         </div>

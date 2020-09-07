@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class PurchaseController extends Controller
 {
     public function index(){
-        $data['title'] = "List Of Purchase";
+        $data['title'] = "List Of Purchases";
         return view('purchases.index', $data);
     }
     public function edit(){

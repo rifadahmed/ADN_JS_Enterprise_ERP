@@ -15,7 +15,7 @@
             <option value="Active" @if(old('status', (isset($data ) && $data->status == 'Active'))) selected @endif>Active</option>
             <option value="Inactive" @if(old('status', (isset($data ) && $data->status == 'Inactive'))) selected @endif>Inactive</option>
         </select>
-        <label for="status">Location type Status *</label>
+        <label for="status">Buyer type Status *</label>
     </div>
 </div>
 

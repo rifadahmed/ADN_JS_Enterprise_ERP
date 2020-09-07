@@ -11,15 +11,15 @@ class SubCategoryController extends Controller
         return view('categories.subcategories.index', $data);
     }
     public function edit(){
-        $data['title'] = "Edit SubCategories";
+        $data['title'] = "Edit SubCategory";
         return view('categories.subcategories.edit', $data);
     }
     public function show(){
-        $data['title'] = "SubCategories Details";
+        $data['title'] = "SubCategory Details";
         return view('categories.subcategories.show', $data);
     }
     public function create(){
-        $data['title'] = "Create SubCategories";
+        $data['title'] = "Create SubCategory";
         return view('categories.subcategories.create', $data);
     }
 }

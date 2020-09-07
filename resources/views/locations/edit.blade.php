@@ -14,7 +14,7 @@
                             @include('locations._form')
                             <div class="col s12 display-flex justify-content-end mt-3">
                                 <button type="submit" class="btn indigo">Save changes</button> &nbsp;
-                                <button type="button" class="btn btn-light">Cancel</button>
+                                <a href="{{route('location.list') }}"type="button" class="btn btn-light">Cancel</a>
                             </div>
                         </form>
                     </div>
