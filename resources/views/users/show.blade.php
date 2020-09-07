@@ -29,10 +29,6 @@
                                                             <td class="sale_name">X</td>
                                                         </tr>
 
-                                                        <tr>
-                                                            <td>Status:</td>
-                                                            <td><span class=" users-view-status chip green lighten-5 green-text">Active</span></td>
-                                                        </tr>
                                                     </tbody>
                                                 </table>
                                             </div>
