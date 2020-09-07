@@ -27,9 +27,10 @@ class CreateSupplierTable extends Migration
             $table->foreign('supplier_area_id')->references('id')->on('locations');
             $table->unsignedBigInteger('supplier_area_id');
             $table->double('supplier_opening_balance',8,2);
-            $table->enum('location_status',['Active','Inactive'])->default('Active');
+            $table->enum('supplier_status',['Active','Inactive'])->default('Active');
             $table->integer('created_by');
             $table->integer('updated_by')->nullable();
+            $table->softDeletes();
             $table->timestamps();
         });
     }

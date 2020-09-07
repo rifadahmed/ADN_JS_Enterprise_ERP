@@ -22,6 +22,7 @@ class CreateLocationsTable extends Migration
             $table->enum('location_status',['Active','Inactive'])->default('Active');
             $table->integer('created_by');
             $table->integer('updated_by')->nullable();
+            $table->softDeletes();
             $table->timestamps();
 
         });
