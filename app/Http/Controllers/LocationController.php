@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\LocationType;
 use Illuminate\Http\Request;
 
 class LocationController extends Controller
@@ -27,8 +27,10 @@ class LocationController extends Controller
 
     public function indexTypesList()
     {
-        $data['title'] = "List of Location Type";
-        return view('locations.locations_type.indexTypesList', $data);
+        $title = "List of Location Type";
+        $locationTypes=LocationType::all();
+        return view('locations.locations_type.indexTypesList', compact('title','locationTypes'));
+
     }
     public function addTypesList()
     {

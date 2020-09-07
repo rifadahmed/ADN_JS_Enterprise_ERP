@@ -94,191 +94,24 @@
                                                 </tr>
                                                 </thead>
                                                 <tbody>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>300</td>
-                                                    <td>Area</td>
-                                                    <td><span class="chip green lighten-5">
-                                                        <span class="green-text">Active</span>
-                                                      </span>
-                                                    </td>
-                                                    <td><a class="border-primary" href="{{ route('location.types.edit', 1)}}"><i class="material-icons  edit-icon">edit</i></a><a href="{{ route('location.types.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    {{-- <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td> --}}
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>301</td>
-                                                    <td>Division</td>
-                                                    <td><span class="chip green lighten-5">
-                    <span class="green-text">Active</span>
-                  </span>
-                                                    </td>
-                                                    <td><a href="{{ route('location.types.edit', 1)}}"><i class="material-icons  edit-icon">edit</i></a><a href="{{ route('location.types.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>302</td>                                                 
-                                                    <td>Area</td>
-                                                    <td><span class="chip green lighten-5">
-                    <span class="green-text">Active</span>
-                  </span>
-                                                    </td>
-                                                    <td><a href="{{ route('location.types.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('location.types.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>303</td>
-                                                    <td>District</td>
-                                                    <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('location.types.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('location.types.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>304</td>
-                                                    <td>District</td>
-                                                    <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('location.types.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('location.types.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>305</td>
-                                                    <td>Division</td>
-                                                    <td><span class="chip green lighten-5">
-                    <span class="green-text">Active</span>
-                  </span>
-                                                    </td>
-                                                    <td><a href="{{ route('location.types.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('location.types.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
+                                                    @foreach ($locationTypes as $locationType)
+                                                    <tr>
+                                                        <td></td>
+                                                        <td>{{$locationType->id}}</td>
+                                                        <td>{{$locationType->location_type_name}}</td>
+                                                        <td><span class="chip green lighten-5">
+                                                            <span class= "{{($locationType->location_type_status=="Active")?"green-text":"red-text"}}" >{{$locationType->location_type_status}}</span>
+                                                          </span>
+                                                          
+                                                              
+                                                          
+                                                              
+                                                          
+                                                        </td>
+                                                        <td><a class="border-primary" href="{{ route('location.types.edit', 1)}}"><i class="material-icons  edit-icon">edit</i></a><a href="{{ route('location.types.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
 
-                                                <tr>
-                                                    <td></td>
-                                                    <td>307</td>
-                                                    <td>Division</td>
-                                                    <td><span class="chip green lighten-5">
-                    <span class="green-text">Active</span>
-                  </span>
-                                                    </td>
-                                                    <td><a href="{{ route('location.types.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('location.types.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>308</td>
-                                                    <td>District</td>
-                                                    <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('location.types.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('location.types.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>309</td>
-                                                    <td>Division</td>
-                                                    <td><span class="chip green lighten-5">
-                    <span class="green-text">Active</span>
-                  </span>
-                                                    </td>
-                                                    <td><a href="{{ route('location.types.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('location.types.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>310</td>
-                                                    <td>District</td>
-                                                    <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('location.types.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('location.types.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>311</td>
-                                                    <td>District</td>
-                                                    <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('location.types.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('location.types.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>312</td>
-                                                    <td>District</td>
-                                                    <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('location.types.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('location.types.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>313</td>
-                                                    <td>Division</td>
-                                                    <td><span class="chip green lighten-5">
-                    <span class="green-text">Active</span>
-                  </span>
-                                                    </td>
-                                                    <td><a href="{{ route('location.types.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('location.types.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>314</td>
-                                                    <td>District</td>
-                                                    <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('location.types.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('location.types.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>315</td>
-                                                    <td>Division</td>
-                                                    <td><span class="chip green lighten-5">
-                    <span class="green-text">Active</span>
-                  </span>
-                                                    </td>
-                                                    <td><a href="{{ route('location.types.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('location.types.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>316</td>
-                                                    <td>Division</td>
-                                                    <td><span class="chip green lighten-5">
-                    <span class="green-text">Active</span>
-                  </span>
-                                                    </td>
-                                                    <td><a href="{{ route('location.types.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('location.types.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>317</td>
-                                                    <td>District</td>
-                                                    <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('location.types.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('location.types.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>318</td>
-                                                    <td>District</td>
-                                                    <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('location.types.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('location.types.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>319</td>
-                                                    <td>District</td>
-                                                    <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('location.types.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('location.types.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-
-
+                                                    </tr>
+                                                    @endforeach
 
                                                 </tbody>
                                             </table>
