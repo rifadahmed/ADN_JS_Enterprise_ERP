@@ -37,6 +37,15 @@ class LocationController extends Controller
         $data['title'] = "Create New Location Type";
         return view('locations.locations_type.addTypesList', $data);
     }
+    public function storeTypesList(Request $request)
+    { $input=$request->all();
+        $input['created_by']='916';
+        $input['deleted_by']='916';
+        LocationType::create($input);
+        return redirect('/location/types/list'); 
+        // return $input;
+    }
+    
     public function editTypesList()
     {
         $data['title'] = "Edit Location Type";

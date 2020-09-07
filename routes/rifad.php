@@ -9,6 +9,7 @@ Route::post('/location/update/{id}', 'LocationController@update')->name('locatio
 
 Route::get('/location/types/list', 'LocationController@indexTypesList')->name('location.types.list');
 Route::get('/location/types/create', 'LocationController@addTypesList')->name('location.types.create');
+Route::post('/location/types/store', 'LocationController@storeTypesList')->name('location.types.store');
 Route::get('/location/types/edit/{id}', 'LocationController@editTypesList')->name('location.types.edit');
 Route::get('/location/types/show/{id}', 'LocationController@showTypesList')->name('location.types.show');
 
