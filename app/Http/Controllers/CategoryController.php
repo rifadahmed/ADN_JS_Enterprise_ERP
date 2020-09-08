@@ -9,15 +9,47 @@ class CategoryController extends Controller
     /***
      * List Category
      */
-    public function index(){
-
+    public function index(Request $request)
+    {
         $data['title'] = "List Of Categories";
-        $data['categories'] = Category::orderBy('category_name')->paginate(2);
-        return view('categories.index',$data);
 
-        // $title = "List Of Categories";
-        // $categories=Category::orderBy('category_name')->paginate(15);
-        // return view('categories.index',compact('title','categories'));
+        $categories = New Category();
+
+        /** Search with status */
+        if ($request->status == 'Active') {
+            $categories = $categories->where('category_status', 'Active');
+        } else if ($request->status == 'Inactive') {
+            $categories = $categories->where('category_status', 'Inactive');
+        }
+        /** Search with name */
+        if (isset($request->search)) {
+            $categories = $categories->where(function ($query) use ($request) {
+                $query->where('category_name', 'like', '%' . $request->search . '%');
+            });
+        }
+
+        $categories = $categories->orderBy('id', 'DESC')->paginate(10);
+
+        if (isset($request->search) || $request->status) {
+            $render['status'] = $request->status;
+            $render['search'] = $request->search;
+            $categories       = $categories->appends($render);
+        }
+
+
+        $data['categories'] = $categories;
+        $data['serial']     = managePagination($categories);
+
+        return view('categories.index',$data);
+    }
+
+    /***
+     * Show Category
+     */
+    public function show($id){
+        $data['title'] = "Category Details";
+        $data['data'] = Category::findOrFail($id);
+        return view('categories.show', $data);
     }
 
     /***
@@ -83,12 +115,41 @@ class CategoryController extends Controller
     }
 
     /***
-     * Show Category
+     * Trash Category
      */
-    public function show($id){
-        $title = "Category Details";
-        $data=Category::findOrFail($id);
-        return view('categories.show', compact('title','data'));
+    public function trash($id)
+    {
+        Category::findOrFail($id)->delete();
+        return redirect()->route('category.index')->with('success','Category trashed successfully');
+    }
+
+    /***
+     * Restore Category
+     */
+    public function restore($id)
+    {
+        Category::withTrashed()->where('id', $id)->first()->restore();
+        return redirect()->back()->with('success','Category has been restored successfully');
+    }
+
+    /***
+     * Delete Category Permanently
+     */
+    public function destroy($id)
+    {
+        try {
+            Category::where('id', $id)->withTrashed()->forceDelete();
+            return redirect()->back()->with('success','Category has been deleted successfully');
+        } catch (\Exception $exception) {
+            if ($exception->getCode() == 23000) {
+                $status = 'warning';
+                $alert = 'You can\'t delete this item because lot\'s of dependency exist on system';
+            } else {
+                $status = 'danger';
+                $alert = $exception->getMessage();
+            }
+            return redirect()->back()->with($status,$alert);
+        }
     }
 
 }

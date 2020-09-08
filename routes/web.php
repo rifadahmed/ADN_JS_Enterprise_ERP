@@ -32,3 +32,6 @@ Route::post('/category/store', 'CategoryController@store')->name('category.store
 Route::get('/category/edit/{id}', 'CategoryController@edit')->name('category.edit');
 Route::post('/category/update/{id}', 'CategoryController@update')->name('category.update');
 Route::get('/category/show/{id}', 'CategoryController@show')->name('category.show');
+Route::get('/category/trash/{id}', 'CategoryController@trash')->name('category.trash');
+Route::get('/category/restore/{id}', 'CategoryController@restore')->name('category.restore');
+Route::get('/category/destroy/{id}', 'CategoryController@destroy')->name('category.destroy');

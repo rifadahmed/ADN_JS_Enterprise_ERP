@@ -42,35 +42,25 @@
                             <div class="users-list-filter">
                                 <div class="card-panel">
                                     <div class="row">
-                                        <form>
-                                            <div class="col s12 m6 l3">
+                                        <form method="GET" action="">
+                                            @csrf
+                                            <div class="col s12 m6 l4">
                                                 <label for="users-list-verified">Category Name</label>
                                                 <div class="input-field">
-                                                    <input type="text">
+                                                    <input type="text" name="search" value="{{ (Request::get('search')) ? Request::get('search') : null }}">
                                                 </div>
                                             </div>
-                                            <div class="col s12 m6 l3">
-                                                <label for="users-list-role">Category Type</label>
+                                            <div class="col s12 m6 l4">
+                                                <label for="users-list-status">Category Status</label>
                                                 <div class="input-field">
-                                                    <select class="form-control" id="users-list-role">
-                                                        <option value="">Any</option>
-                                                        <option value="X">X</option>
-                                                        <option value="Y">Y</option>
-                                                        <option value="z">Z</option>
+                                                    <select class="form-control" id="users-list-status" name="status">
+                                                        <option value="" selected >Any</option>
+                                                        <option value="Active" @if(Request::get('status') == 'Active') selected @endif>Active</option>
+                                                        <option value="Inactive" @if(Request::get('status') == 'Inactive') selected @endif>Inactive</option>
                                                     </select>
                                                 </div>
                                             </div>
-                                            <div class="col s12 m6 l3">
-                                                <label for="users-list-status">Status</label>
-                                                <div class="input-field">
-                                                    <select class="form-control" id="users-list-status">
-                                                        <option value="">Any</option>
-                                                        <option value="Active">Active</option>
-                                                        <option value="Inactive">Inactive</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="col s12 m6 l3 display-flex align-items-center show-btn">
+                                            <div class="col s12 m6 l4 display-flex align-items-center show-btn">
                                                 <button type="submit" class="btn btn-block indigo waves-effect waves-light">Show</button>
                                             </div>
                                         </form>
@@ -96,7 +86,7 @@
                                                 <tbody>
                                                     @foreach ($categories as $category)
                                                     <tr>
-                                                        <td>{{$category->id}}</td>
+                                                        <td>{{ $serial++ }}</td>
                                                         <td>{{$category->category_name}}</td>
 
                                                         <td><span class="chip green lighten-5">

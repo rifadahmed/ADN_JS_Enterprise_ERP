@@ -9,7 +9,7 @@
     </div>
 @endif
 
-@if ($message = Session::get('error'))
+@if ($message = Session::get('error') || $message = Session::get('danger'))
     <div class="card-alert card red lighten-5">
         <div class="card-content red-text">
             <p>{{--DANGER :--}} {{ $message }}</p>
