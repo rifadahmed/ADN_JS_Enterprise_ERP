@@ -48,7 +48,7 @@ class CategoryController extends Controller
         }
         $categoryModel->save();
 
-        return redirect()->route('category.list')->with('success','Category has been created successfully!');
+        return redirect()->route('category.create')->with('success','Category has been created successfully!');
     }
 
     /***
@@ -79,7 +79,7 @@ class CategoryController extends Controller
         }
         $categoryModel->save();
 
-        return redirect()->route('category.list')->with('success','Category has been Updated successfully!');
+        return redirect()->route('category.edit',$id)->with('success','Category has been Updated successfully!');
     }
 
     /***
