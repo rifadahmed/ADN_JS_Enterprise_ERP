@@ -115,6 +115,9 @@
                                                 
                                                 </tbody>
                                             </table>
+                                            <div class="pull-right pagination-one">
+                                                {{ $sub_categories->appends(request()->input())->links() }}
+                                            </div>
                                         </div>
                                         <!-- datatable ends -->
                                     </div>
