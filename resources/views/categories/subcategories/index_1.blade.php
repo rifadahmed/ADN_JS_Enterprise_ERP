@@ -22,14 +22,14 @@
                         <div class="col s10 m6 l6">
                             <h5 class="breadcrumbs-title mt-0 mb-0"><span>{{ isset($title) ? $title : "Title Not Found" }}</span></h5>
                             <ol class="breadcrumbs mb-0">
-                            <li class="breadcrumb-item"><a href="{{route('category.list') }}">Manage Category</a>
+                            <li class="breadcrumb-item"><a href="{{route('subcategory.list') }}">Manage SubCategory v2</a>
                                 </li>
-                                <li class="breadcrumb-item active">Sub Category List
+                                <li class="breadcrumb-item active">SubCategory List
                                 </li>
                             </ol>
                         </div>
                         <div class="col s2 m6 l6">
-                            <a href="{{ route('subcategory.create') }}" class="btn indigo waves-effect waves-light breadcrumbs-btn right"> Create New Sub Category</a>
+                            <a href="{{ route('subcategory.create') }}" class="btn indigo waves-effect waves-light breadcrumbs-btn right"> Create New SubCategory</a>
                         </div>
                     </div>
                 </div>
@@ -42,25 +42,35 @@
                             <div class="users-list-filter">
                                 <div class="card-panel">
                                     <div class="row">
-                                        <form method="GET" action="">
-                                            @csrf
-                                            <div class="col s12 m6 l4">
-                                                <label for="users-list-verified">Sub Category Name</label>
+                                        <form>
+                                            <div class="col s12 m6 l3">
+                                                <label for="users-list-verified">SubCategory Name</label>
                                                 <div class="input-field">
-                                                    <input type="text" name="search" value="{{ (Request::get('search')) ? Request::get('search') : null }}">
+                                                    <input type="text">
                                                 </div>
                                             </div>
-                                            <div class="col s12 m6 l4">
-                                                <label for="users-list-status">Sub Category Status</label>
+                                            <div class="col s12 m6 l3">
+                                                <label for="users-list-role">SubCategory Type</label>
                                                 <div class="input-field">
-                                                    <select class="form-control" id="users-list-status" name="status">
-                                                        <option value="" selected >Any</option>
-                                                        <option value="Active" @if(Request::get('status') == 'Active') selected @endif>Active</option>
-                                                        <option value="Inactive" @if(Request::get('status') == 'Inactive') selected @endif>Inactive</option>
+                                                    <select class="form-control" id="users-list-role">
+                                                        <option value="">Any</option>
+                                                        <option value="X">X</option>
+                                                        <option value="Y">Y</option>
+                                                        <option value="z">Z</option>
                                                     </select>
                                                 </div>
                                             </div>
-                                            <div class="col s12 m6 l4 display-flex align-items-center show-btn">
+                                            <div class="col s12 m6 l3">
+                                                <label for="users-list-status">Status</label>
+                                                <div class="input-field">
+                                                    <select class="form-control" id="users-list-status">
+                                                        <option value="">Any</option>
+                                                        <option value="Active">Active</option>
+                                                        <option value="Inactive">Inactive</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col s12 m6 l3 display-flex align-items-center show-btn">
                                                 <button type="submit" class="btn btn-block indigo waves-effect waves-light">Show</button>
                                             </div>
                                         </form>
@@ -75,20 +85,21 @@
                                             <table id="users-list-datatable" class="table">
                                                 <thead>
                                                 <tr>
-
+                                                   
                                                     <th>SL</th>
-                                                    <th>Sub Category Name</th>
+                                                    <th>SubCategory Name</th>                                                    
                                                     <th>Status</th>
                                                     <th>Action</th>
-
+                                                   
                                                 </tr>
                                                 </thead>
                                                 <tbody>
+                                                
+                                                
                                                     @foreach ($sub_categories as $sub_category)
-                                                    <tr>
-                                                        <td>{{ $sub_category->id }}</td>
+                                                       <tr>
+                                                        <td>{{$sub_category->id}}</td>
                                                         <td>{{$sub_category->sub_category_name}}</td>
-
                                                         <td><span class="chip green lighten-5">
                                                             <span class="{{($sub_category->sub_category_status=="Active")?"green-text":"red-text"}}">{{$sub_category->sub_category_status}}</span>
                                                           </span>
@@ -97,16 +108,16 @@
                                                             <a class="border-primary" href="{{ route('subcategory.edit', $sub_category->id)}}"><i class="material-icons  edit-icon">edit</i></a>
                                                             <a href="{{ route('subcategory.show', $sub_category->id)}}"><i class="material-icons">remove_red_eye</i></a>
                                                         </td>
-
-                                                    </tr>
+                                                       </tr> 
                                                     @endforeach
+                                      
 
+                                                
                                                 </tbody>
                                             </table>
                                             <div class="pull-right pagination-one">
                                                 {{ $sub_categories->appends(request()->input())->links() }}
                                             </div>
-
                                         </div>
                                         <!-- datatable ends -->
                                     </div>
@@ -121,7 +132,6 @@
             </div>
         </div>
     <!-- END: Page Main-->
-
 @endsection
 
 @push('script')

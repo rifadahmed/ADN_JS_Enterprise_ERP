@@ -11,6 +11,7 @@ class CategoryController extends Controller
      */
     public function index(Request $request)
     {
+    
         $data['title'] = "List Of Categories";
 
         $categories = New Category();

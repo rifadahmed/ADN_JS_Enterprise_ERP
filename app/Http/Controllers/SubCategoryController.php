@@ -7,9 +7,34 @@ use App\SubCategory;
 use App\Category;
 class SubCategoryController extends Controller
 {
-    public function index(){
+    public function index(Request $request){
         $data['title'] = "List Of SubCategories";
-        $data['sub_categories']=SubCategory::orderBy('sub_category_name')->paginate(2);
+        //$data['sub_categories']=SubCategory::orderBy('sub_category_name')->paginate(2);
+        $sub_categories = New SubCategory();
+
+        /** Search with status */
+        if ($request->status == 'Active') {
+            $sub_categories = $sub_categories->where('sub_category_status', 'Active');
+        } else if ($request->status == 'Inactive') {
+            $sub_categories = $sub_categories->where('sub_category_status', 'Inactive');
+        }
+         /** Search with name */
+         if (isset($request->search)) {
+            $sub_categories = $sub_categories->where(function ($query) use ($request) {
+                $query->where('sub_category_name', 'like', '%' . $request->search . '%');
+            });
+        }
+        $sub_categories = $sub_categories->orderBy('id', 'DESC')->paginate(10);
+
+        if (isset($request->search) || $request->status) {
+            $render['status'] = $request->status;
+            $render['search'] = $request->search;
+            $sub_categories       = $sub_categories->appends($render);
+        }
+
+
+        $data['sub_categories'] = $sub_categories;
+        $data['serial']     = managePagination($sub_categories);
         return view('categories.subcategories.index', $data);
     }
     public function edit($id){
