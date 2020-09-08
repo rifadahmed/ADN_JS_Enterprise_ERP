@@ -67,6 +67,7 @@ class CategoryController extends Controller
         $request->validate([
             'category_name' => 'required',
             'category_status' => 'required',
+            'category_order' => 'integer',
         ]);
 
         $categoryModel = Category::find($id);

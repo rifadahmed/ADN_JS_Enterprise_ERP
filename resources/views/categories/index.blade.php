@@ -113,10 +113,8 @@
 
                                                 </tbody>
                                             </table>
-                                            <div class="clearfix">
-                                                <div class="pull-right">
-                                                    {{ $categories->appends(request()->input())->links() }}
-                                                </div>
+                                            <div class="pull-right pagination-one">
+                                                {{ $categories->appends(request()->input())->links() }}
                                             </div>
                                               
                                         </div>

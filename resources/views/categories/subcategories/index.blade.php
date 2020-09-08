@@ -85,30 +85,34 @@
                                             <table id="users-list-datatable" class="table">
                                                 <thead>
                                                 <tr>
-                                                    <th></th>
+                                                   
                                                     <th>SL</th>
                                                     <th>SubCategory Name</th>                                                    
                                                     <th>Status</th>
                                                     <th>Action</th>
-                                                    <th></th>
+                                                   
                                                 </tr>
                                                 </thead>
                                                 <tbody>
                                                 
-                                                <tr>
-                                                    <td></td>
-                                                    <td>300</td>
-                                                    <td>X</td>
-                                                    <td><span class="chip green lighten-5">
-                                                        <span class="green-text">Active</span>
-                                                      </span>
-                                                    </td>
-                                                    <td><a class="border-primary" href="{{ route('subcategory.edit', 1)}}"><i class="material-icons  edit-icon">edit</i></a><a href="{{ route('subcategory.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    {{-- <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td> --}}
-                                                </tr>
+                                                
+                                                    @foreach ($sub_categories as $sub_category)
+                                                       <tr>
+                                                        <td>{{$sub_category->id}}</td>
+                                                        <td>{{$sub_category->sub_category_name}}</td>
+                                                        <td><span class="chip green lighten-5">
+                                                            <span class="{{($sub_category->sub_category_status=="Active")?"green-text":"red-text"}}">{{$sub_category->sub_category_status}}</span>
+                                                          </span>
+                                                        </td>
+                                                        <td>
+                                                            <a class="border-primary" href="{{ route('subcategory.edit', $sub_category->id)}}"><i class="material-icons  edit-icon">edit</i></a>
+                                                            <a href="{{ route('subcategory.show', $sub_category->id)}}"><i class="material-icons">remove_red_eye</i></a>
+                                                        </td>
+                                                       </tr> 
+                                                    @endforeach
+                                      
+
+                                                
                                                 </tbody>
                                             </table>
                                         </div>
