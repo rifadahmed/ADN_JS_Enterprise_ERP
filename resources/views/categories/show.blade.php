@@ -26,12 +26,12 @@
 
                                                         <tr>
                                                             <td>Category Name:</td>
-                                                            <td class="location_type_name">X</td>
+                                                        <td class="location_type_name">{{$data->category_name}}</td>
                                                         </tr>
 
                                                         <tr>
                                                             <td>Status:</td>
-                                                            <td><span class=" users-view-status chip green lighten-5 green-text">Active</span></td>
+                                                            <td><span class=" {{($data->category_status=="Active")?"green-text":"red-text"}}">{{$data->category_status}}</span></td>
                                                         </tr>
                                                     </tbody>
                                                 </table>

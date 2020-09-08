@@ -82,9 +82,10 @@ class CategoryController extends Controller
     /***
      * Show Category
      */
-    public function show(){
-        $data['title'] = "Category Details";
-        return view('categories.show', $data);
+    public function show($id){
+        $title = "Category Details";
+        $data=Category::findOrFail($id);
+        return view('categories.show', compact('title','data'));
     }
 
 }
