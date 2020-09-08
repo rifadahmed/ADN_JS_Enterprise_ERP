@@ -10,9 +10,14 @@ class CategoryController extends Controller
      * List Category
      */
     public function index(){
-        $title = "List Of Categories";
-        $categories=Category::orderBy('category_name')->paginate(15);
-        return view('categories.index',compact('title','categories'));
+
+        $data['title'] = "List Of Categories";
+        $data['categories'] = Category::orderBy('category_name')->paginate(2);
+        return view('categories.index',$data);
+
+        // $title = "List Of Categories";
+        // $categories=Category::orderBy('category_name')->paginate(15);
+        // return view('categories.index',compact('title','categories'));
     }
 
     /***

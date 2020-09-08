@@ -118,6 +118,7 @@
                                                     {{ $categories->appends(request()->input())->links() }}
                                                 </div>
                                             </div>
+                                              
                                         </div>
                                         <!-- datatable ends -->
                                     </div>
@@ -132,6 +133,7 @@
             </div>
         </div>
     <!-- END: Page Main-->
+ 
 @endsection
 
 @push('script')
