@@ -15,6 +15,8 @@ class LocationController extends Controller
     }
     public function create(){
         $data['title'] = "Create New Location";
+        $data['location_types']=LocationType::all();
+
         return view('locations.create', $data);
     }
     public function store(Request $request){
@@ -28,7 +30,7 @@ class LocationController extends Controller
         $input['location_type_id']=1;
         
         Location::create($input);
-        return redirect('/location/list');
+        return redirect()->route('location.create')->with('success','Location has been Added successfully!');
     }
 
     public function show($id){
@@ -67,9 +69,9 @@ class LocationController extends Controller
 
         return redirect()->route('location.edit',$id)->with('success','Location has been Updated successfully!');
 
-        $locationType=Location::findOrFail($id);
-        $locationType->update($input);
-        return redirect('/location/list'); 
+        // $locationType=Location::findOrFail($id);
+        // $locationType->update($input);
+        // return redirect('/location/list'); 
     }
 
 
