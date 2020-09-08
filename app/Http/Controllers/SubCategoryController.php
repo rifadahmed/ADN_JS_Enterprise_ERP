@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\SubCategory;
+use App\Category;
 class SubCategoryController extends Controller
 {
     public function index(){
@@ -14,6 +15,7 @@ class SubCategoryController extends Controller
     public function edit($id){
         $data['title'] = "Edit SubCategory";
         $data['data'] = SubCategory::findOrFail($id);
+        $data['categories'] = Category::all();
         return view('categories.subcategories.edit', $data);
     }
     public function show($id){
@@ -23,11 +25,12 @@ class SubCategoryController extends Controller
     }
     public function create(){
         $data['title'] = "Create SubCategory";
+        $data['categories'] = Category::all();
         return view('categories.subcategories.create', $data);
     }
     public function store(Request $request){
         $request->validate([
-            'sub_category_name' => 'unique:sub_categories,sub_category_name,'.$id ,
+            'sub_category_name' => 'unique:sub_categories,sub_category_name,' ,
             'sub_category_status' => 'required',
             'sub_category_order' => 'nullable|integer',
         ]);
@@ -36,7 +39,7 @@ class SubCategoryController extends Controller
         $sub_categoryModel = new SubCategory();
         $sub_categoryModel->sub_category_name = $request->sub_category_name;
         $sub_categoryModel->sub_category_status = $request->sub_category_status;
-        $sub_categoryModel->category_id = 1;
+        $sub_categoryModel->category_id = $request->category_id;
         if($request->sub_category_order) {
             $sub_categoryModel->sub_category_order = $request->sub_category_order;
         }
@@ -58,6 +61,7 @@ class SubCategoryController extends Controller
         $sub_categoryModel = SubCategory::find($id);
         $sub_categoryModel->sub_category_name = $request->sub_category_name;
         $sub_categoryModel->sub_category_status = $request->sub_category_status;
+        $sub_categoryModel->category_id = $request->category_id;
         if($request->sub_category_order) {
             $sub_categoryModel->sub_category_order = $request->sub_category_order;
         }
