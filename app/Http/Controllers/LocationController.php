@@ -17,10 +17,15 @@ class LocationController extends Controller
         return view('locations.create', $data);
     }
     public function store(Request $request){
+        $request->validate([
+            'location_name' => 'required|unique:locations',
+            'location_status' => 'required',
+            'location_order' => 'nullable|integer',
+
+        ]);
         $input=$request->all();
         $input['location_type_id']=1;
-        $input['created_by']=916;
-        $input['updated_by']=916;
+        
         Location::create($input);
         return redirect('/location/list');
     }
@@ -39,10 +44,26 @@ class LocationController extends Controller
     }
     public function update(Request $request,$id)
     { 
+        $request->validate([
+            'location_name' => 'unique:locations,location_name,'.$id ,
+            'location_status' => 'required',
+            'location_order' => 'nullable|integer',
+
+        ]);
         $input=$request->all();
         $input['location_type_id']=1;
-        $input['created_by']='16';
-        $input['updated_by']='16';
+        
+
+        $locationModel = location::find($id);
+        $locationModel->location_name = $request->location_name;
+        $locationModel->location_status = $request->location_status;
+        if($request->location_order) {
+            $locationModel->location_order = $request->location_order;
+        }
+        $locationModel->save();
+
+        return redirect()->route('location.edit',$id)->with('success','Location has been Updated successfully!');
+
         $locationType=Location::findOrFail($id);
         $locationType->update($input);
         return redirect('/location/list'); 
