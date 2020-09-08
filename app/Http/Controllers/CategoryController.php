@@ -35,7 +35,7 @@ class CategoryController extends Controller
         $request->validate([
             'category_name' => 'required|unique:categories',
             'category_status' => 'required',
-             'category_order' => 'integer',
+            'category_order' => 'integer',
         ]);
         //dd($request->all());
 
@@ -65,8 +65,9 @@ class CategoryController extends Controller
     public function update(Request $request,$id){
 
         $request->validate([
-            'category_name' => 'required',
+            'category_name' => 'required|unique:categories,category_name,'.$id,
             'category_status' => 'required',
+            'category_order' => 'integer',
         ]);
 
         $categoryModel = Category::find($id);
