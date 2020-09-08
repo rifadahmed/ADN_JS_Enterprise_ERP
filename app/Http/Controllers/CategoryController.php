@@ -35,11 +35,8 @@ class CategoryController extends Controller
         $request->validate([
             'category_name' => 'required|unique:categories',
             'category_status' => 'required',
-<<<<<<< HEAD
-            'category_order' => 'integer',
-=======
-             'category_order' => 'nullable|integer',
->>>>>>> ddaeae2b96d946f8e590d788c5cb0c47c6b7fc7e
+            'category_order' => 'nullable|integer',
+
         ]);
         //dd($request->all());
 
@@ -69,16 +66,9 @@ class CategoryController extends Controller
     public function update(Request $request,$id){
 
         $request->validate([
-<<<<<<< HEAD
-            'category_name' => 'required|unique:categories,category_name,'.$id,
-            'category_status' => 'required',
-            'category_order' => 'integer',
-=======
-            
             'category_name' => 'unique:categories,category_name,'.$id ,
             'category_status' => 'required',
             'category_order' => 'nullable|integer',
->>>>>>> ddaeae2b96d946f8e590d788c5cb0c47c6b7fc7e
         ]);
 
         $categoryModel = Category::find($id);
