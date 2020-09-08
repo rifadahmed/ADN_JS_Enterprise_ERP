@@ -35,6 +35,7 @@ class CategoryController extends Controller
         $request->validate([
             'category_name' => 'required|unique:categories',
             'category_status' => 'required',
+             'category_order' => 'integer',
         ]);
         //dd($request->all());
 

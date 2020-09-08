@@ -1,21 +1,21 @@
 <div class="row">
     <div class="input-field col s12 m6">
-        <label for="subcategory_name">SubCategory Name *</label>
-        <input class="validate" required="" id="subcategory_name" name="subcategory_name" value="{{ old('subcategory_name',isset($data) ? $data->subcategory_name : null ) }}" type="text">
+        <label for="sub_category_name">SubCategory Name * @if ($errors->has('sub_category_name')) <small class="red-text"> [ {{ $errors->first('sub_category_name') }} ] </small> @endif</label>
+        <input class="validate" required="" id="sub_category_name" name="sub_category_name" value="{{ old('sub_category_name',isset($data) ? $data->sub_category_name : null ) }}" type="text">
     </div>
     <div class="input-field col s12 m6">
-        <label for="subcategory_order">SubCategory Order </label>
-        <input class="validate" id="subcategory_order" name="subcategory_order" value="{{ old('subcategory_order',isset($data) ? $data->subcategory_order : null ) }}" type="text">
+        <label for="sub_category_order">SubCategory Order @if ($errors->has('sub_category_order')) <small class="red-text"> [ {{ $errors->first('sub_category_order') }} ] </small> @endif</label>
+        <input class="validate" id="sub_category_order" name="sub_category_order" value="{{ old('sub_category_order',isset($data) ? $data->sub_category_order : null ) }}" type="text">
     </div>
 </div>
 <div class="row">
     <div class="input-field col s12 m6">
-        <select class="validate" name="subcategory_status" id="status" required="" >
+        <select class="validate" name="sub_category_status" id="status" required="" >
             <option value="" disabled selected> - Select SubCategory Status - </option>
-            <option value="Active" @if(old('status', (isset($data ) && $data->status == 'Active'))) selected @endif>Active</option>
-            <option value="Inactive" @if(old('status', (isset($data ) && $data->status == 'Inactive'))) selected @endif>Inactive</option>
+            <option value="Active" @if(old('sub_category_status', (isset($data ) && $data->sub_category_status == 'Active'))) selected @endif>Active</option>
+            <option value="Inactive" @if(old('sub_category_status', (isset($data ) && $data->sub_category_status == 'Inactive'))) selected @endif>Inactive</option>
         </select>
-        <label for="status">SubCategory Status *</label>
+        <label for="status">SubCategory Status * @if ($errors->has('sub_category_status')) <small class="red-text"> [ {{ $errors->first('sub_category_status') }} ] </small> @endif</label>
     </div>
 </div>
 
