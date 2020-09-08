@@ -10,16 +10,14 @@
 </div>
 <div class="row">
 
-    {{-- <div class="input-field col s12 m6">
+    <div class="input-field col s12 m6">
         <select class="validate" name="location_type_id" id="status" required="" >
-                @foreach($categories as $category)
-
-                         <option value="{{$category->id}}">{{$category->category_name}}</option>
-                         
+                @foreach($location_types as $location_type)
+                         <option value="{{$location_type->id}}">{{$location_type->location_type_name}}</option>       
                 @endforeach
         </select>
         <label for="status">Select Location Type * @if ($errors->has('category')) <small class="red-text"> [ {{ $errors->first('sub_category_status') }} ] </small> @endif</label>
-    </div> --}}
+    </div>
     <div class="input-field col s12 m6">
         <select class="validate" name="location_status" id="status" required="" >
             <option value="" disabled selected> - Select Location status - </option>

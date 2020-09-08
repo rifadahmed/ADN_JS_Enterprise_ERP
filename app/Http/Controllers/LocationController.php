@@ -8,9 +8,10 @@ use Illuminate\Http\Request;
 class LocationController extends Controller
 {
     public function index(){
-        $title = "List of Locations";
-        $locations=Location::all();
-        return view('locations.index', compact('title','locations'));
+        $data['title'] = "List of Locations";
+        $data['locations']=Location::all();
+        
+        return view('locations.index', $data);
     }
     public function create(){
         $data['title'] = "Create New Location";
@@ -38,9 +39,10 @@ class LocationController extends Controller
     }
     public function edit($id)
     {
-        $title = "Edit Location";
-        $data=Location::findOrFail($id);
-        return view('locations.edit', compact('title','data'));
+        $data['title'] = "Edit Location";
+        $data['data']=Location::findOrFail($id);
+        $data['location_types']=LocationType::all();
+        return view('locations.edit', $data);
     }
     public function update(Request $request,$id)
     { 
@@ -57,6 +59,7 @@ class LocationController extends Controller
         $locationModel = location::find($id);
         $locationModel->location_name = $request->location_name;
         $locationModel->location_status = $request->location_status;
+        $locationModel->location_type_id=$request->location_type_id;
         if($request->location_order) {
             $locationModel->location_order = $request->location_order;
         }
