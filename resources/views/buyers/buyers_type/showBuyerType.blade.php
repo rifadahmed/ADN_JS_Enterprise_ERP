@@ -51,12 +51,12 @@
 
                                                         <tr>
                                                             <td>Buyer Type Name:</td>
-                                                            <td class="location_type_name">X</td>
+                                                        <td class="location_type_name">{{$buyer_type->buyer_type_name}}</td>
                                                         </tr>
 
                                                         <tr>
                                                             <td>Status:</td>
-                                                            <td><span class=" users-view-status chip green lighten-5 green-text">Active</span></td>
+                                                            <td><span class="{{$buyer_type->buyer_type_status=="Active"?"green-text":"red-text"}}">{{$buyer_type->buyer_type_status}}</span></td>
                                                         </tr>
                                                     </tbody>
                                                 </table>

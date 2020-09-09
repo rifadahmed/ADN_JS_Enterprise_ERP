@@ -35,8 +35,9 @@ class BuyerController extends Controller
         $data['title'] = "Edit Buyer Types";
         return view('buyers.buyers_type.editBuyerType', $data);
     }
-    public function showBuyerType(){
+    public function showBuyerType($id){
         $data['title'] = "Edit Buyer Types";
+        $data['buyer_type']=BuyerType::findOrFail($id);
         return view('buyers.buyers_type.showBuyerType', $data);
     }
     
