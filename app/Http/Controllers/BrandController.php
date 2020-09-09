@@ -6,9 +6,35 @@ use App\Brand;
 use Illuminate\Http\Request;
 class BrandController extends Controller
 {
-    public function index(){
+    public function index(Request $request){
         $data['title'] = "List Of Brands";
-        $data['brands']=Brand::all();
+        $brands = New Brand();
+
+        /** Search with status */
+        if ($request->status == 'Active') {
+            $brands = $brands->where('brand_status', 'Active');
+        } else if ($request->status == 'Inactive') {
+            $brands = $brands->where('brand_status', 'Inactive');
+        }
+        /** Search with name */
+        if (isset($request->search)) {
+            $brands = $brands->where(function ($query) use ($request) {
+                $query->where('brand_name', 'like', '%' . $request->search . '%');
+            });
+        }
+
+        $brands = $brands->orderBy('id', 'DESC')->paginate(10);
+
+        if (isset($request->search) || $request->status) {
+            $render['status'] = $request->status;
+            $render['search'] = $request->search;
+            $brands       = $brands->appends($render);
+        }
+
+
+        $data['brands'] = $brands;
+        $data['serial']     = managePagination($brands);
+
         return view('brands.index', $data);
     }
     public function edit($id){
