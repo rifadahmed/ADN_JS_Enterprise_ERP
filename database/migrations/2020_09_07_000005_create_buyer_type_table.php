@@ -13,8 +13,14 @@ class CreateBuyerTypeTable extends Migration
      */
     public function up()
     {
-        Schema::create('buyer_type', function (Blueprint $table) {
+        Schema::create('buyer_types', function (Blueprint $table) {
             $table->id();
+            $table->string('buyer_type_name',45);
+            $table->integer('buyer_type_order')->nullable();
+            $table->enum('buyer_type_status',['Active','Inactive'])->default('Active');
+            $table->integer('created_by')->nullable();
+            $table->integer('updated_by')->nullable();
+            $table->softDeletes();
             $table->timestamps();
         });
     }
@@ -26,6 +32,6 @@ class CreateBuyerTypeTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('buyer_type');
+        Schema::dropIfExists('buyer_types');
     }
 }
