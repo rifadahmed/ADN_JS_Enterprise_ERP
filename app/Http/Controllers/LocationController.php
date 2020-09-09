@@ -7,10 +7,46 @@ use Illuminate\Http\Request;
 
 class LocationController extends Controller
 {
-    public function index(){
+    public function index(Request $request){
         $data['title'] = "List of Locations";
-        $data['locations']=Location::all();
+        $data['location_types']=LocationType::all();
+
         
+        $locations = New Location();
+
+        /** Search with status */
+        if ($request->status == 'Active') {
+            $locations = $locations->where('location_status', 'Active');
+        } else if ($request->status == 'Inactive') {
+            $locations = $locations->where('location_status', 'Inactive');
+        }
+        /** Search with type */
+        foreach($data['location_types'] as $location_type)
+        {
+            if($request->type ==$location_type->location_type_name )
+            $locations = $locations->where('location_type_id', $location_type->id);
+        }
+
+
+      
+
+         /** Search with name */
+         if (isset($request->search)) {
+            $locations = $locations->where(function ($query) use ($request) {
+                $query->where('location_name', 'like', '%' . $request->search . '%');
+            });
+        }
+
+        $locations = $locations->orderBy('id', 'DESC')->paginate(10);
+
+        if (isset($request->search) || $request->type || $request->status) {
+            $render['status'] = $request->status;
+            $render['search'] = $request->search;
+            $render['type'] = $request->type;
+            $locations       = $locations->appends($render);
+        }
+        $data['locations'] = $locations;
+        $data['serial']     = managePagination($locations);
         return view('locations.index', $data);
     }
     public function create(){

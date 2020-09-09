@@ -43,31 +43,33 @@
                             <div class="users-list-filter">
                                 <div class="card-panel">
                                     <div class="row">
-                                        <form>
+                                        <form method="GET" action="">
                                             <div class="col s12 m6 l3">
                                                 <label for="users-list-verified">Location Name</label>
                                                 <div class="input-field">
-                                                    <input type="text">
+                                                    <input type="text" name="search" value="{{ (Request::get('search')) ? Request::get('search') : null }}">
                                                 </div>
                                             </div>
                                             <div class="col s12 m6 l3">
                                                 <label for="users-list-role">Location Type</label>
                                                 <div class="input-field">
-                                                    <select class="form-control" id="users-list-role">
+                                                    <select class="form-control" id="users-list-role" name="type">
                                                         <option value="">Any</option>
-                                                        <option value="Division">Division</option>
-                                                        <option value="District">District</option>
-                                                        <option value="Area">Area</option>
+                                                        @foreach ($location_types as $location_type)
+                                                        <option value= {{$location_type->location_type_name}} @if(Request::get('type') == $location_type->location_type_name) selected @endif>{{$location_type->location_type_name}}</option>
+
+                                                        @endforeach
+                                                        
                                                     </select>
                                                 </div>
                                             </div>
                                             <div class="col s12 m6 l3">
                                                 <label for="users-list-status">Status</label>
                                                 <div class="input-field">
-                                                    <select class="form-control" id="users-list-status">
+                                                    <select class="form-control" id="users-list-status" name="status">
                                                         <option value="">Any</option>
-                                                        <option value="Active">Active</option>
-                                                        <option value="Inactive">Inactive</option>
+                                                        <option value="Active" @if(Request::get('status') == "Active") selected @endif>Active</option>
+                                                        <option value="Inactive" @if(Request::get('status') == "Inactive") selected @endif>Inactive</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -97,7 +99,7 @@
                                                 <tbody>
                                                     @foreach ($locations as $location)
                                                     <tr>
-                                                        <td>{{$location->id}}</td>
+                                                        <td>{{$serial++ }}</td>
                                                         <td>{{$location->location_name}}</td>
                                                         <td>{{$location->type->location_type_name}}</td>
                                                         
