@@ -86,7 +86,7 @@
                                                 <tbody>
                                                     @foreach ($locationTypes as $location_type)
                                                     <tr>
-                                                        <td>{{ $location_type->id }}</td>
+                                                        <td>{{ $serial++ }}</td>
                                                         <td>{{$location_type->location_type_name}}</td>
 
                                                         <td><span class="chip green lighten-5">
