@@ -10,4 +10,5 @@ class LocationType extends Model
         //mass assignment
         'location_type_name', 'location_type_order', 'location_type_status','created_by','updated_by'
     ];
+  
 }

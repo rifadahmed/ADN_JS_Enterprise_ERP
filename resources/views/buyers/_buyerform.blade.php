@@ -30,6 +30,35 @@
         </select>
         <label for="status">Buyer type Status *</label>
     </div>
+    <div class="input-field col s12 m6">
+        <select class="validate" name="buyer_division_id" id="buyer_division_id" required="" >
+            <option value="" disabled selected> - Select Division - </option>
+            @foreach ($division_locations as $division_location)
+        <option value={{$division_location->id}} >{{$division_location->location_name}}</option>
+            @endforeach
+        </select>
+        <label for="buyer_division_id">Buyer type division *</label>
+    </div>
+     <div class="input-field col s12 m6">
+        <select class="validate" name="buyer_district_id" id="buyer_district_id" required="" >
+            <option value="" disabled selected> - Select District - </option>
+            @foreach ($district_locations as $district_location)
+            <option value={{$district_location->id}}>{{$district_location->location_name}}</option>
+            @endforeach
+           
+        </select>
+        <label for="buyer_district_id">Buyer type District *</label>
+    </div>
+    
+    <div class="input-field col s12 m6">
+        <select class="validate" name="buyer_area_id" id="buyer_area_id" required="" >
+            <option value="" disabled selected> - Select Area - </option>
+            @foreach ($area_locations as $area_location)
+            <option value={{$area_location->id}} >{{$area_location->location_name}}</option>
+            @endforeach
+        </select>
+        <label for="buyer_area_id">Buyer type Area *</label>
+    </div>
 </div>
 
 
