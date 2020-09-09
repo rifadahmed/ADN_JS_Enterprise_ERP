@@ -54,9 +54,10 @@
                                                 <div class="input-field">
                                                     <select class="form-control" id="users-list-role">
                                                         <option value="">Any</option>
-                                                        <option value="Division">X</option>
-                                                        <option value="District">Y</option>
-                                                        <option value="Area">Z</option>
+                                                        @foreach ($buyer_types as $buyer_type)
+                                                        <option value= {{$buyer_type->buyer_type_name}}>{{$buyer_type->buyer_type_name}}</option>
+
+                                                        @endforeach
                                                     </select>
                                                 </div>
                                             </div>
