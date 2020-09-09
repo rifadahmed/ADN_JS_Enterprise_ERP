@@ -12,8 +12,8 @@
     <div class="input-field col s12 m6">
         <select class="validate" name="buyer_type_status" id="status" required="" >
             <option value="" disabled selected> - Select buyer Type Status - </option>
-            <option value="Active" @if(old('status', (isset($data ) && $data->status == 'Active'))) selected @endif>Active</option>
-            <option value="Inactive" @if(old('status', (isset($data ) && $data->status == 'Inactive'))) selected @endif>Inactive</option>
+            <option value="Active" @if(old('buyer_type_status', (isset($data ) && $data->buyer_type_status == 'Active'))) selected @endif>Active</option>
+            <option value="Inactive" @if(old('buyer_type_status', (isset($data ) && $data->buyer_type_status == 'Inactive'))) selected @endif>Inactive</option>
         </select>
         <label for="status">Buyer type Status *</label>
     </div>
