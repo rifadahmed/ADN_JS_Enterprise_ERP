@@ -9,7 +9,7 @@
     </div>
     <div class="input-field col s12 m6">
         <label for="buyer_address">Buyer Address </label>
-        <input class="validate" id="buyer_address" name="buyer_address" value="{{ old('buyer_address',isset($data) ? $data->buyer_address : null ) }}" type="text">
+         <input class="validate" id="buyer_address" name="buyer_address" value="{{ old('buyer_address',isset($data) ? $data->buyer_address : null ) }}" type="text"> 
     </div>
     <div class="input-field col s12 m6">
         <label for="buyer_phone">Buyer Phone </label>
