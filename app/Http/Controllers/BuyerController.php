@@ -26,9 +26,36 @@ class BuyerController extends Controller
     }
 
     // *****************************BUYER TYPE *****************************
-    public function indexBuyerType(){
+    public function indexBuyerType(Request $request){
         $data['title'] = "List Of Buyer Types";
-         $data['buyer_types']=BuyerType::all();
+        //  $data['buyer_types']=BuyerType::all();
+        $buyer_types = New BuyerType();
+
+        /** Search with status */
+        if ($request->status == 'Active') {
+            $buyer_types = $buyer_types->where('buyer_type_status', 'Active');
+        } else if ($request->status == 'Inactive') {
+            $buyer_types = $buyer_types->where('buyer_type_status', 'Inactive');
+        }
+        /** Search with name */
+        if (isset($request->search)) {
+            $buyer_types = $buyer_types->where(function ($query) use ($request) {
+                $query->where('buyer_type_name', 'like', '%' . $request->search . '%');
+            });
+        }
+
+        $buyer_types = $buyer_types->orderBy('id', 'DESC')->paginate(10);
+
+        if (isset($request->search) || $request->status) {
+            $render['status'] = $request->status;
+            $render['search'] = $request->search;
+            $buyer_types       = $buyer_types->appends($render);
+        }
+
+
+        $data['buyer_types'] = $buyer_types;
+        $data['serial']     = managePagination($buyer_types);
+
         return view('buyers.buyers_type.indexBuyerType', $data);
     }
     public function editBuyerType($id){
