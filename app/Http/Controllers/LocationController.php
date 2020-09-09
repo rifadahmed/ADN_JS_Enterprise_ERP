@@ -78,12 +78,38 @@ class LocationController extends Controller
 
 
 
-                 // Location Type
-    public function indexTypesList()
+    // ****************************************** Location Type ******************************************
+    public function indexTypesList(Request $request)
     {
-        $title = "List of Location Type";
-        $locationTypes=LocationType::all();
-        return view('locations.locations_type.indexTypesList', compact('title','locationTypes'));
+        $data['title'] = "List of Location Type";
+        $locationTypes = New LocationType();
+
+        /** Search with status */
+        if ($request->status == 'Active') {
+            $locationTypes = $locationTypes->where('location_type_status', 'Active');
+        } else if ($request->status == 'Inactive') {
+            $locationTypes = $locationTypes->where('location_type_status', 'Inactive');
+        }
+
+         /** Search with name */
+         if (isset($request->search)) {
+            $locationTypes = $locationTypes->where(function ($query) use ($request) {
+                $query->where('location_type_name', 'like', '%' . $request->search . '%');
+            });
+        }
+
+        $locationTypes = $locationTypes->orderBy('id', 'DESC')->paginate(10);
+
+        if (isset($request->search) || $request->status) {
+            $render['status'] = $request->status;
+            $render['search'] = $request->search;
+            $locationTypes       = $locationTypes->appends($render);
+        }
+        $data['locationTypes'] = $locationTypes;
+        $data['serial']     = managePagination($locationTypes);
+
+       // $data['locationTypes']=LocationType::all();
+        return view('locations.locations_type.indexTypesList', $data);
 
     }
     public function addTypesList()
