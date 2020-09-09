@@ -85,200 +85,29 @@
                                             <table id="users-list-datatable" class="table">
                                                 <thead>
                                                 <tr>
-                                                    <th></th>
+                                                    
                                                     <th>SL</th>
                                                     <th>Buyer Type Name</th>                                                    
                                                     <th>Status</th>
                                                     <th>Action</th>
-                                                    <th></th>
+                                                    
                                                 </tr>
                                                 </thead>
                                                 <tbody>
+                                                @foreach ($buyer_types as $buyer_type)
                                                 <tr>
-                                                    <td></td>
-                                                    <td>300</td>
-                                                    <td>X</td>
+                                                    <td>{{$buyer_type->id}}</td>
+                                                    <td>{{$buyer_type->buyer_type_name}}</td>
                                                     <td><span class="chip green lighten-5">
-                                                        <span class="green-text">Active</span>
+                                                        <span class="{{$buyer_type->buyer_type_status=="Active"?"green-text":"red-text"}}">{{$buyer_type->buyer_type_status}}</span>
                                                       </span>
                                                     </td>
-                                                    <td><a class="border-primary" href="{{ route('buyer.type.edit', 1)}}"><i class="material-icons  edit-icon">edit</i></a><a href="{{ route('buyer.type.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    {{-- <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td> --}}
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>301</td>
-                                                    <td>Z</td>
-                                                    <td><span class="chip green lighten-5">
-                    <span class="green-text">Active</span>
-                  </span>
-                                                    </td>
-                                                    <td><a href="{{ route('buyer.type.edit', 1)}}"><i class="material-icons  edit-icon">edit</i></a><a href="{{ route('buyer.type.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>302</td>                                                 
-                                                    <td>X</td>
-                                                    <td><span class="chip green lighten-5">
-                    <span class="green-text">Active</span>
-                  </span>
-                                                    </td>
-                                                    <td><a href="{{ route('buyer.type.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('buyer.type.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>303</td>
-                                                    <td>Y</td>
-                                                    <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('buyer.type.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('buyer.type.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>304</td>
-                                                    <td>Y</td>
-                                                    <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('buyer.type.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('buyer.type.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>305</td>
-                                                    <td>Z</td>
-                                                    <td><span class="chip green lighten-5">
-                    <span class="green-text">Active</span>
-                  </span>
-                                                    </td>
-                                                    <td><a href="{{ route('buyer.type.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('buyer.type.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
+                                                    <td><a class="border-primary" href="{{ route('buyer.type.edit', $buyer_type->id)}}"><i class="material-icons  edit-icon">edit</i></a><a href="{{ route('buyer.type.show', $buyer_type->id)}}"><i class="material-icons">remove_red_eye</i></a></td>
 
-                                                <tr>
-                                                    <td></td>
-                                                    <td>307</td>
-                                                    <td>Z</td>
-                                                    <td><span class="chip green lighten-5">
-                    <span class="green-text">Active</span>
-                  </span>
-                                                    </td>
-                                                    <td><a href="{{ route('buyer.type.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('buyer.type.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
                                                 </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>308</td>
-                                                    <td>Y</td>
-                                                    <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('buyer.type.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('buyer.type.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>309</td>
-                                                    <td>Z</td>
-                                                    <td><span class="chip green lighten-5">
-                    <span class="green-text">Active</span>
-                  </span>
-                                                    </td>
-                                                    <td><a href="{{ route('buyer.type.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('buyer.type.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>310</td>
-                                                    <td>Y</td>
-                                                    <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('buyer.type.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('buyer.type.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>311</td>
-                                                    <td>Y</td>
-                                                    <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('buyer.type.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('buyer.type.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>312</td>
-                                                    <td>Y</td>
-                                                    <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('buyer.type.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('buyer.type.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>313</td>
-                                                    <td>Z</td>
-                                                    <td><span class="chip green lighten-5">
-                    <span class="green-text">Active</span>
-                  </span>
-                                                    </td>
-                                                    <td><a href="{{ route('buyer.type.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('buyer.type.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>314</td>
-                                                    <td>Y</td>
-                                                    <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('buyer.type.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('buyer.type.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>315</td>
-                                                    <td>Z</td>
-                                                    <td><span class="chip green lighten-5">
-                    <span class="green-text">Active</span>
-                  </span>
-                                                    </td>
-                                                    <td><a href="{{ route('buyer.type.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('buyer.type.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>316</td>
-                                                    <td>Z</td>
-                                                    <td><span class="chip green lighten-5">
-                    <span class="green-text">Active</span>
-                  </span>
-                                                    </td>
-                                                    <td><a href="{{ route('buyer.type.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('buyer.type.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>317</td>
-                                                    <td>Y</td>
-                                                    <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('buyer.type.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('buyer.type.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>318</td>
-                                                    <td>Y</td>
-                                                    <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('buyer.type.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('buyer.type.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>319</td>
-                                                    <td>Y</td>
-                                                    <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('buyer.type.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('buyer.type.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-
-
+                                                @endforeach
+                                               
+                                                
 
                                                 </tbody>
                                             </table>

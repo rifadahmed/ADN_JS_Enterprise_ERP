@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Buyer;
+use App\BuyerType;
 use Illuminate\Http\Request;
 
 class BuyerController extends Controller
@@ -26,6 +28,7 @@ class BuyerController extends Controller
     // *****************************BUYER TYPE *****************************
     public function indexBuyerType(){
         $data['title'] = "List Of Buyer Types";
+         $data['buyer_types']=BuyerType::all();
         return view('buyers.buyers_type.indexBuyerType', $data);
     }
     public function editBuyerType(){
