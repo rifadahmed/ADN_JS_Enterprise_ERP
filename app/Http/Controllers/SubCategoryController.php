@@ -91,7 +91,7 @@ class SubCategoryController extends Controller
             $sub_categoryModel->sub_category_order = $request->sub_category_order;
         }
         $sub_categoryModel->save();
+        return redirect()->back()->with('success','Sub Category has been Updated successfully!');
 
-        return redirect()->route('subcategory.list')->with('success','Sub Category has been Updated successfully!');
     }
 }

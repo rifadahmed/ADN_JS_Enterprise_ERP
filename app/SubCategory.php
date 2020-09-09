@@ -24,7 +24,7 @@ class SubCategory extends Model
             }
         });
     }
-    public function id(){
+    public function getName(){
         return $this->belongsTo('App\Category','category_id');
     }
 

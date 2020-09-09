@@ -26,12 +26,12 @@
 
                                                         <tr>
                                                             <td>Brand Name:</td>
-                                                            <td class="location_type_name">X</td>
+                                                        <td class="location_type_name">{{$brand->brand_name}}</td>
                                                         </tr>
 
                                                         <tr>
                                                             <td>Status:</td>
-                                                            <td><span class=" users-view-status chip green lighten-5 green-text">Active</span></td>
+                                                        <td><span class="{{$brand->brand_status=="Active" ? "green-text" :"red-text" }}">{{$brand->brand_status}}</span></td>
                                                         </tr>
                                                     </tbody>
                                                 </table>

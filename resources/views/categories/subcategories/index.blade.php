@@ -78,6 +78,7 @@
 
                                                     <th>SL</th>
                                                     <th>Sub Category Name</th>
+                                                    <th>Category Name</th>
                                                     <th>Status</th>
                                                     <th>Action</th>
 
@@ -88,7 +89,7 @@
                                                     <tr>
                                                         <td>{{ $sub_category->id }}</td>
                                                         <td>{{$sub_category->sub_category_name}}</td>
-
+                                                        <td>{{$sub_category->getName->category_name}}</td>
                                                         <td><span class="chip green lighten-5">
                                                             <span class="{{($sub_category->sub_category_status=="Active")?"green-text":"red-text"}}">{{$sub_category->sub_category_status}}</span>
                                                           </span>

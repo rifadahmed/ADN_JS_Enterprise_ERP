@@ -42,32 +42,23 @@
                             <div class="users-list-filter">
                                 <div class="card-panel">
                                     <div class="row">
-                                        <form>
-                                            <div class="col s12 m6 l3">
+                                        <form method="GET" action="">
+                                            <div class="col s12 m6 l4">
                                                 <label for="users-list-verified">Brand Name</label>
                                                 <div class="input-field">
-                                                    <input type="text">
+                                                    <input type="text" name="search" value="{{ (Request::get('search')) ? Request::get('search') : null }}">
                                                 </div>
                                             </div>
-                                            <div class="col s12 m6 l3">
-                                                <label for="users-list-role">Brand Type</label>
-                                                <div class="input-field">
-                                                    <select class="form-control" id="users-list-role">
-                                                        <option value="">Any</option>
-                                                        <option value="X">X</option>
-                                                        <option value="Y">Y</option>
-                                                        <option value="z">Z</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="col s12 m6 l3">
+                                            
+                                            <div class="col s12 m6 l4">
                                                 <label for="users-list-status">Status</label>
                                                 <div class="input-field">
-                                                    <select class="form-control" id="users-list-status">
-                                                        <option value="">Any</option>
-                                                        <option value="Active">Active</option>
-                                                        <option value="Inactive">Inactive</option>
+                                                    <select class="form-control" id="users-list-status" name="status">
+                                                        <option value="" selected >Any</option>
+                                                        <option value="Active" @if(Request::get('status') == 'Active') selected @endif>Active</option>
+                                                        <option value="Inactive" @if(Request::get('status') == 'Inactive') selected @endif>Inactive</option>
                                                     </select>
+
                                                 </div>
                                             </div>
                                             <div class="col s12 m6 l3 display-flex align-items-center show-btn">
@@ -99,10 +90,10 @@
                                                         <td>{{$brand->id}}</td>
                                                         <td>{{$brand->brand_name}}</td>
                                                         <td><span class="chip green lighten-5">
-                                                            <span class="green-text">{{$brand->brand_status}}</span>
+                                                        <span class="{{$brand->brand_status=="Active"? "green-text" : "red-text"}}">{{$brand->brand_status}}</span>
                                                           </span>
                                                         </td>
-                                                        <td><a class="border-primary" href="{{ route('brand.edit', 1)}}"><i class="material-icons  edit-icon">edit</i></a><a href="{{ route('brand.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
+                                                        <td><a class="border-primary" href="{{ route('brand.edit', $brand->id)}}"><i class="material-icons  edit-icon">edit</i></a><a href="{{ route('brand.show', $brand->id)}}"><i class="material-icons">remove_red_eye</i></a></td>
 
                                                     </tr>
                                                     @endforeach

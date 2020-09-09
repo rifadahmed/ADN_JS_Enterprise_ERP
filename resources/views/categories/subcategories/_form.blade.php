@@ -16,8 +16,8 @@
 
             @foreach($categories as $category)
 
-                         <option value="{{$category->id}}">{{$category->category_name}}</option>
-                         
+                         <option value="{{$category->id}}" @if(isset($data) && $category->id == $data->category_id) selected @endif>{{$category->category_name}}</option>
+
                 @endforeach
         </select>
         <label for="status">Select Category * @if ($errors->has('category')) <small class="red-text"> [ {{ $errors->first('sub_category_status') }} ] </small> @endif</label>
