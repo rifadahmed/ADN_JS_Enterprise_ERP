@@ -17,8 +17,9 @@ class BuyerController extends Controller
         $data['title'] = "Edit Buyer";
         return view('buyers.edit', $data);
     }
-    public function show(){
+    public function show($id){
         $data['title'] = "Buyer Details";
+        $data['buyer']=Buyer::find($id);
         return view('buyers.show', $data);
     }
     public function create(){

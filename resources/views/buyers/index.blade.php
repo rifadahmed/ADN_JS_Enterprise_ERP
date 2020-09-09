@@ -112,7 +112,7 @@
                                                             <span class="{{$buyer->buyer_status=="Active"?"green-text": "red-text" }}">{{$buyer->buyer_status}}</span>
                                                           </span>
                                                         </td>
-                                                        <td><a class="border-primary" href="{{ route('buyer.edit', 1)}}"><i class="material-icons  edit-icon">edit</i></a><a href="{{ route('buyer.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
+                                                        <td><a class="border-primary" href="{{ route('buyer.edit', $buyer->id)}}"><i class="material-icons  edit-icon">edit</i></a><a href="{{ route('buyer.show', $buyer->id)}}"><i class="material-icons">remove_red_eye</i></a></td>
     
                                                     </tr>
                                                     @endforeach
