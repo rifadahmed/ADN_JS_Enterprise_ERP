@@ -85,7 +85,7 @@
                                             <table id="users-list-datatable" class="table">
                                                 <thead>
                                                 <tr>
-                                                    <th></th>
+                                                    
                                                     <th>SL</th>
                                                     <th>Name</th>
                                                     <th>Company</th>
@@ -94,222 +94,28 @@
                                                     <th>Email</th>                                                      
                                                     <th>Status</th>
                                                     <th>Action</th>
-                                                    <th></th>
+                                                  
                                                 </tr>
                                                 </thead>
                                                 <tbody>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>300</td>
-                                                    <td>Nji</td>
-                                                    <td>Chaldal</td>
-                                                    <td>Badda</td>
-                                                    <td>+8801811781201</td>
-                                                    <td>demo@gmail.com</td>
-                                                    <td><span class="chip green lighten-5">
-                                                        <span class="green-text">Active</span>
-                                                      </span>
-                                                    </td>
-                                                    <td><a class="border-primary" href="{{ route('buyer.edit', 1)}}"><i class="material-icons  edit-icon">edit</i></a><a href="{{ route('buyer.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    {{-- <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td> --}}
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>301</td>
-                                                    <td>Omi</td>
-                                                    <td>Chaldal</td>
-                                                    <td>Badda</td>
-                                                    <td>+8801811781201</td>
-                                                    <td>demo@gmail.com</td>
-                                                    <td><span class="chip green lighten-5">
-                    <span class="green-text">Active</span>
-                  </span>
-                                                    </td>
-                                                    <td><a href="{{ route('buyer.edit', 1)}}"><i class="material-icons  edit-icon">edit</i></a><a href="{{ route('buyer.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
+
+                                                    @foreach ($buyers as $buyer)
+                                                    <tr>
                                                     
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>302</td>                                                 
-                                                    <td>Miku</td>
-                                                    <td>Chaldal</td>
-                                                    <td>Badda</td>
-                                                    <td>+8801811781201</td>
-                                                    <td>demo@gmail.com</td>
-                                                    <td><span class="chip green lighten-5">
-                    <span class="green-text">Active</span>
-                  </span>
-                                                    </td>
-                                                    <td><a href="{{ route('buyer.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('buyer.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>303</td>
-                                                    <td>jez</td>
-                                                    <td>Chaldal</td>
-                                                    <td>Badda</td>
-                                                    <td>+8801811781201</td>
-                                                    <td>demo@gmail.com</td>
-                                                    <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('buyer.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('buyer.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>304</td>
-                                                    <td>Olive</td>
-                                                    <td>Chaldal</td>
-                                                    <td>Badda</td>
-                                                    <td>+8801811781201</td>
-                                                    <td>demo@gmail.com</td>
-                                                    <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('buyer.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('buyer.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>305</td>
-                                                    <td>Panny</td>
-                                                    <td>Chaldal</td>
-                                                    <td>Badda</td>
-                                                    <td>+8801811781201</td>
-                                                    <td>demo@gmail.com</td>
-                                                    <td><span class="chip green lighten-5">
-                    <span class="green-text">Active</span>
-                  </span>
-                                                    </td>
-                                                    <td><a href="{{ route('buyer.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('buyer.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td></td>
-                                                    <td>307</td>
-                                                    <td>nijam</td>
-                                                    <td>Chaldal</td>
-                                                    <td>Badda</td>
-                                                    <td>+8801811781201</td>
-                                                    <td>demo@gmail.com</td>
-                                                    <td><span class="chip green lighten-5">
-                    <span class="green-text">Active</span>
-                  </span>
-                                                    </td>
-                                                    <td><a href="{{ route('buyer.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('buyer.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>308</td>
-                                                    <td>District</td>
-                                                    <td>Chaldal</td>
-                                                    <td>Badda</td>
-                                                    <td>+8801811781201</td>
-                                                    <td>demo@gmail.com</td>
-                                                    <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('buyer.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('buyer.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>309</td>
-                                                    <td>poly</td>
-                                                    <td>Chaldal</td>
-                                                    <td>Badda</td>
-                                                    <td>+8801811781201</td>
-                                                    <td>demo@gmail.com</td>
-                                                    <td><span class="chip green lighten-5">
-                    <span class="green-text">Active</span>
-                  </span>
-                                                    </td>
-                                                    <td><a href="{{ route('buyer.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('buyer.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>310</td>
-                                                    <td>jony</td>
-                                                    <td>Chaldal</td>
-                                                    <td>Badda</td>
-                                                    <td>+8801811781201</td>
-                                                    <td>demo@gmail.com</td>
-                                                    <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('buyer.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('buyer.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>311</td>
-                                                    <td>tony</td>
-                                                    <td>Chaldal</td>
-                                                    <td>Badda</td>
-                                                    <td>+8801811781201</td>
-                                                    <td>demo@gmail.com</td>
-                                                    <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('buyer.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('buyer.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>312</td>
-                                                    <td>jafi</td>
-                                                    <td>Chaldal</td>
-                                                    <td>Badda</td>
-                                                    <td>+8801811781201</td>
-                                                    <td>demo@gmail.com</td>
-                                                    <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('buyer.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('buyer.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>313</td>
-                                                    <td>Nafi</td>
-                                                    <td>Chaldal</td>
-                                                    <td>Badda</td>
-                                                    <td>+8801811781201</td>
-                                                    <td>demo@gmail.com</td>
-                                                    <td><span class="chip green lighten-5">
-                    <span class="green-text">Active</span>
-                  </span>
-                                                    </td>
-                                                    <td><a href="{{ route('buyer.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('buyer.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>314</td>
-                                                    <td>Azp</td>
-                                                    <td>Chaldal</td>
-                                                    <td>Badda</td>
-                                                    <td>+8801811781201</td>
-                                                    <td>demo@gmail.com</td>
-                                                    <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('buyer.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('buyer.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>315</td>
-                                                    <td>najim</td>
-                                                    <td>Chaldal</td>
-                                                    <td>Badda</td>
-                                                    <td>+8801811781201</td>
-                                                    <td>demo@gmail.com</td>
-                                                    <td><span class="chip green lighten-5">
-                    <span class="green-text">Active</span>
-                  </span>
-                                                    </td>
-                                                    <td><a href="{{ route('buyer.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('buyer.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-
-
-
-
+                                                        <td>{{$buyer->id}}</td>
+                                                        <td>{{$buyer->buyer_name}}</td>
+                                                        <td>{{$buyer->buyer_company}}</td>
+                                                        <td>{{$buyer->buyer_address}}</td>
+                                                        <td>{{$buyer->buyer_phone}}</td>
+                                                        <td>{{$buyer->buyer_email}}</td>
+                                                        <td><span class="chip green lighten-5">
+                                                            <span class="{{$buyer->buyer_status=="Active"?"green-text": "red-text" }}">{{$buyer->buyer_status}}</span>
+                                                          </span>
+                                                        </td>
+                                                        <td><a class="border-primary" href="{{ route('buyer.edit', 1)}}"><i class="material-icons  edit-icon">edit</i></a><a href="{{ route('buyer.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
+    
+                                                    </tr>
+                                                    @endforeach
 
                                                 </tbody>
                                             </table>

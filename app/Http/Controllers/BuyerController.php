@@ -10,6 +10,7 @@ class BuyerController extends Controller
 {
     public function index(){
         $data['title'] = "List Of Buyer";
+        $data['buyers']=Buyer::all();
         return view('buyers.index', $data);
     }
     public function edit(){
