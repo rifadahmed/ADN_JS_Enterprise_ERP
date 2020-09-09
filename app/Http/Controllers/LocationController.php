@@ -62,11 +62,19 @@ class LocationController extends Controller
             'location_order' => 'nullable|integer',
 
         ]);
-        $input=$request->all();
-        $input['location_type_id']=1;
+
         
-        Location::create($input);
-        return redirect()->route('location.create')->with('success','Location has been Added successfully!');
+
+        $locationModel = new location ;
+        $locationModel->location_name = $request->location_name;
+        $locationModel->location_status = $request->location_status;
+        $locationModel->location_type_id=$request->location_type_id;
+        if($request->location_order) {
+            $locationModel->location_order = $request->location_order;
+        }
+        $locationModel->save();
+
+        return redirect()->route('location.create')->with('success','Location has been Updated successfully!');
     }
 
     public function show($id){
@@ -90,8 +98,7 @@ class LocationController extends Controller
             'location_order' => 'nullable|integer',
 
         ]);
-        $input=$request->all();
-        $input['location_type_id']=1;
+        
         
 
         $locationModel = location::find($id);
@@ -154,10 +161,24 @@ class LocationController extends Controller
         return view('locations.locations_type.addTypesList', $data);
     }
     public function storeTypesList(Request $request)
-     {  $input=$request->all();
-        $input['created_by']='916';
-        $input['updated_by']='916';
-        LocationType::create($input);
+     {  
+       
+        $request->validate([
+            'location_type_name' => 'required|unique:location_types',
+            'location_type_status' => 'required',
+            'location_type_order' => 'nullable|integer',
+
+        ]);
+
+        
+
+        $locationTypeModel = new LocationType ;
+        $locationTypeModel->location_type_name = $request->location_type_name;
+        $locationTypeModel->location_type_status = $request->location_type_status;
+        if($request->location_type_order) {
+            $locationTypeModel->location_type_order = $request->location_type_order;
+        }
+        $locationTypeModel->save();
         return redirect()->route('location.types.create')->with('success','Location Type has been Added successfully!');
 
     
@@ -178,11 +199,22 @@ class LocationController extends Controller
     }
     public function updateTypesList(Request $request,$id)
     { 
-        $input=$request->all();
-        $input['created_by']='16';
-        $input['updated_by']='16';
-        $locationType=LocationType::findOrFail($id);
-        $locationType->update($input);
+        $request->validate([
+            'location_type_name' => 'unique:location_types,location_type_name,'.$id,
+            'location_type_status' => 'required',
+            'location_type_order' => 'nullable|integer',
+
+        ]);
+
+        
+
+        $locationTypeModel = LocationType::find($id) ;
+        $locationTypeModel->location_type_name = $request->location_type_name;
+        $locationTypeModel->location_type_status = $request->location_type_status;
+        if($request->location_type_order) {
+            $locationTypeModel->location_type_order = $request->location_type_order;
+        }
+        $locationTypeModel->save();
         return redirect()->route('location.types.edit',$id)->with('success','Location Type has been Updated successfully!');
     }
     
