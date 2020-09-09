@@ -15,8 +15,9 @@ class BrandController extends Controller
         $data['title'] = "Edit Brand";
         return view('brands.edit', $data);
     }
-    public function show(){
+    public function show($id){
         $data['title'] = "Brand Details";
+        $data['brand'] =Brand::findOrFail($id);
         return view('brands.show', $data);
     }
     public function create(){

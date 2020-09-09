@@ -99,10 +99,10 @@
                                                         <td>{{$brand->id}}</td>
                                                         <td>{{$brand->brand_name}}</td>
                                                         <td><span class="chip green lighten-5">
-                                                            <span class="green-text">{{$brand->brand_status}}</span>
+                                                        <span class="{{$brand->brand_status=="Active"? "green-text" : "red-text"}}">{{$brand->brand_status}}</span>
                                                           </span>
                                                         </td>
-                                                        <td><a class="border-primary" href="{{ route('brand.edit', 1)}}"><i class="material-icons  edit-icon">edit</i></a><a href="{{ route('brand.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
+                                                        <td><a class="border-primary" href="{{ route('brand.edit', $brand->id)}}"><i class="material-icons  edit-icon">edit</i></a><a href="{{ route('brand.show', $brand->id)}}"><i class="material-icons">remove_red_eye</i></a></td>
 
                                                     </tr>
                                                     @endforeach
