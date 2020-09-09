@@ -9,13 +9,11 @@
     </div>
 </div>
 <div class="row">
-
     <div class="input-field col s12 m6">
         <select class="validate" name="location_type_id" id="status" required="" >
-                @foreach($location_types as $location_type)
-                         <option value="{{$location_type->id}}"  >{{$location_type->location_type_name}}</option>      
-                         {{-- @if(old('location_type_id' )== $location_type->id  )) selected @endif  --}}
-                @endforeach
+            @foreach($location_types as $location_type)
+                     <option value="{{$location_type->id}}" @if($location_type->id == $data->location_type_id) selected @endif>{{$location_type->location_type_name}}</option>
+            @endforeach
         </select>
         <label for="status">Select Location Type * @if ($errors->has('category')) <small class="red-text"> [ {{ $errors->first('sub_category_status') }} ] </small> @endif</label>
     </div>
