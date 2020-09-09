@@ -44,7 +44,45 @@ class BuyerController extends Controller
     
     public function createBuyerType(){
         $data['title'] = "Create Buyer Types";
+        
         return view('buyers.buyers_type.createBuyerType', $data);
     }
+    public function storeBuyerType(Request $request){
+        $request->validate([
+            'buyer_type_name' => 'required|unique:buyer_types',
+            'buyer_type_status' => 'required',
+            'buyer_type_order' => 'nullable|integer',
+
+        ]);
+        $buyerTypeModel = new BuyerType();
+        $buyerTypeModel->buyer_type_name = $request->buyer_type_name;
+        $buyerTypeModel->buyer_type_status = $request->buyer_type_status;
+        if($request->buyer_type_order) {
+            $buyerTypeModel->buyer_type_order = $request->buyer_type_order;
+        }
+        $buyerTypeModel->save();
+
+        return redirect()->route('buyer.type.create')->with('success','Buyer Type has been created successfully!');
+    }
+    public function updateBuyerType(Request $request,$id){
+        $request->validate([
+            'buyer_type_name' => 'unique:buyer_types,buyer_type_name,'.$id ,
+
+            'buyer_type_status' => 'required',
+            'buyer_type_order' => 'nullable|integer',
+
+        ]);
+        $buyerTypeModel = BuyerType::findOrFail($id);;
+        $buyerTypeModel->buyer_type_name = $request->buyer_type_name;
+        $buyerTypeModel->buyer_type_status = $request->buyer_type_status;
+        if($request->buyer_type_order) {
+            $buyerTypeModel->buyer_type_order = $request->buyer_type_order;
+        }
+        $buyerTypeModel->save();
+
+        return redirect()->route('buyer.type.edit',$id)->with('success','Buyer Type has been created successfully!');
+    }
+    
+    
     
 }

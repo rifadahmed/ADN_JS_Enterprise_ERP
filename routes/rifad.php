@@ -1,4 +1,6 @@
 <?php
+
+
 Route::get('/location/list', 'LocationController@index')->name('location.list');
 Route::get('/location/create', 'LocationController@create')->name('location.create');
 Route::get('/location/show/{id}', 'LocationController@show')->name('location.show');

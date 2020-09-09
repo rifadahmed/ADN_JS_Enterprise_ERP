@@ -73,7 +73,7 @@ class BrandController extends Controller
     public function update(Request $request,$id){
 
         $request->validate([
-            'brand_name' => 'required|unique:brands',
+            'brand_name' => 'unique:brands,brand_name,'.$id,
             'brand_status' => 'required',
             'brand_order' => 'nullable|integer',
 
