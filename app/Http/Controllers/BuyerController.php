@@ -22,6 +22,8 @@ class BuyerController extends Controller
         $data['title'] = "Create Buyer";
         return view('buyers.create', $data);
     }
+
+    // *****************************BUYER TYPE *****************************
     public function indexBuyerType(){
         $data['title'] = "List Of Buyer Types";
         return view('buyers.buyers_type.indexBuyerType', $data);

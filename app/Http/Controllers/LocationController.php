@@ -158,7 +158,8 @@ class LocationController extends Controller
         $input['created_by']='916';
         $input['updated_by']='916';
         LocationType::create($input);
-        return redirect('/location/types/list'); 
+        return redirect()->route('location.types.create')->with('success','Location Type has been Added successfully!');
+
     
     }
     
@@ -182,7 +183,7 @@ class LocationController extends Controller
         $input['updated_by']='16';
         $locationType=LocationType::findOrFail($id);
         $locationType->update($input);
-        return redirect('/location/types/list'); 
+        return redirect()->route('location.types.edit',$id)->with('success','Location Type has been Updated successfully!');
     }
     
     
