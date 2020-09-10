@@ -29,22 +29,24 @@ class BuyerController extends Controller
         $data['title'] = "Create Buyer";
 
         //get location names for  division
-        $data['locationTypeId']=LocationType::where('location_type_name', "Division")->first();
-        $locId=$data['locationTypeId']->id;
-        $data['division_locations']=Location::where('location_type_id',$locId )->get();
+        // $data['locationTypeId']=LocationType::where('location_type_name', "Division")->first();
+        // $locId=$data['locationTypeId']->id;
+        // $data['division_locations']=Location::where('location_type_id',$locId )->get();
 
         //get location names for  district
-        $data['locationTypeId']=LocationType::where('location_type_name', "District")->first();
-        $locId=$data['locationTypeId']->id;
-        $data['district_locations']=Location::where('location_type_id',$locId )->get();
+        // $data['locationTypeId']=LocationType::where('location_type_name', "District")->first();
+        // $locId=$data['locationTypeId']->id;
+        // $data['district_locations']=Location::where('location_type_id',$locId )->get();
 
         //get location names for  area
-        $data['locationTypeId']=LocationType::where('location_type_name', "Area")->first();
-        $locId=$data['locationTypeId']->id;
-        $data['area_locations']=Location::where('location_type_id',$locId )->get();
+        // $data['locationTypeId']=LocationType::where('location_type_name', "Area")->first();
+        // $locId=$data['locationTypeId']->id;
+        // $data['area_locations']=Location::where('location_type_id',$locId )->get();
 
         //get buyer type
         $data['buyer_types']=BuyerType::all();
+
+        $data['locations'] = Location::where('location_status','Active')->get();
 
         return view('buyers.create', $data);
     }
