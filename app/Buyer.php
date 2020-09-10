@@ -15,4 +15,7 @@ class Buyer extends Model
     public function area(){
         return $this->belongsTo('App\Location','buyer_area_id');
     }
+    public function buyer_type(){
+        return $this->belongsTo('App\BuyerType','buyer_type_id');
+    }
 }

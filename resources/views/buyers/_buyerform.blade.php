@@ -59,6 +59,16 @@
         </select>
         <label for="buyer_area_id">Buyer type Area *</label>
     </div>
+
+    <div class="input-field col s12 m6">
+        <select class="validate" name="buyer_type_id" id="buyer_type_id" required="" >
+            <option value="" disabled selected> - Select Buyer Type - </option>
+            @foreach ($buyer_types as $buyer_type)
+            <option value={{$buyer_type->id}} >{{$buyer_type->buyer_type_name}}</option>
+            @endforeach
+        </select>
+        <label for="buyer_type_id">Buyer type  *</label>
+    </div>
 </div>
 
 

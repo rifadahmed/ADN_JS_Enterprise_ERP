@@ -43,6 +43,8 @@ class BuyerController extends Controller
         $locId=$data['locationTypeId']->id;
         $data['area_locations']=Location::where('location_type_id',$locId )->get();
 
+        //get buyer type
+        $data['buyer_types']=BuyerType::all();
 
         return view('buyers.create', $data);
     }
@@ -58,7 +60,7 @@ class BuyerController extends Controller
         $buyerModel->buyer_name = $request->buyer_name;
         $buyerModel->buyer_company = $request->buyer_company;
         $buyerModel->buyer_address = $request->buyer_address;
-        $buyerModel->buyer_type_id = 1; //this  field will be dynamic
+        $buyerModel->buyer_type_id =  $request->buyer_type_id;
         $buyerModel->buyer_kam_id = 1;//this  field will be dynamic
         $buyerModel->buyer_division_id = $request->buyer_division_id;
         $buyerModel->buyer_district_id = $request->buyer_district_id;
