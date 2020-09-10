@@ -2,6 +2,7 @@
 
 @section('content')
 
+<link rel="stylesheet" href="">
     <div class="section users-edit">
         <div class="card">
             <div class="card-content">

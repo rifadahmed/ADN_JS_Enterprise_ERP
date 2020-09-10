@@ -32,6 +32,7 @@ Website: http://adndigital.com.bd
     <!-- BEGIN: Custom CSS-->
     <link rel="stylesheet" type="text/css" href={{asset("app-assets/css/custom/custom.css")}}>
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href={{asset("css/select_2.css")}}>
 
     @stack('css')
     <!-- END: Custom CSS-->
@@ -117,7 +118,6 @@ Website: http://adndigital.com.bd
       $(document).ready(function() {
     
         $('.js-example-basic-single').select2();
-        $('#_location').select2();
 
         
       });

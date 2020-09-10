@@ -11,8 +11,8 @@
 </div>
 <div class="row">
     <div class="input-field col s12 m6 ">
-        
-        <select class="validate " name="location_type_id" id="_location" required="" >
+        <br>
+        <select class="validate js-example-basic-single" name="location_type_id" id="location_type_id" required="" >
             
             <option value="" selected disabled> - Select Location Type - </option>
             
@@ -24,6 +24,7 @@
         <label for="status">Select Location Type * @if ($errors->has('category')) <small class="red-text"> [ {{ $errors->first('sub_category_status') }} ] </small> @endif</label>
     </div>
     <div class="input-field col s12 m6">
+        <br>
         <select class="validate js-example-basic-single" name="location_status" id="status" required="" >
             <option value="" disabled selected> - Select Location status - </option>
             <option value="Active" @if(old('location_status', (isset($data ) && $data->location_status == 'Active'))) selected @endif>Active</option>
