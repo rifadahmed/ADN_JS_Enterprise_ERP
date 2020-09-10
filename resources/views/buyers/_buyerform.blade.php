@@ -25,11 +25,12 @@
     <div class="input-field col s12 m6">
         <select class="validate" name="buyer_status" id="status" required="" >
             <option value="" disabled selected> - Select Buyer Status - </option>
-            <option value="Active" @if(old('status', (isset($data ) && $data->status == 'Active'))) selected @endif>Active</option>
-            <option value="Inactive" @if(old('status', (isset($data ) && $data->status == 'Inactive'))) selected @endif>Inactive</option>
+            <option value="Active" @if(old('buyer_status', (isset($data ) && $data->buyer_status == 'Active'))) selected @endif>Active</option>
+            <option value="Inactive" @if(old('buyer_status', (isset($data ) && $data->buyer_status == 'Inactive'))) selected @endif>Inactive</option>
         </select>
         <label for="status">Buyer type Status *</label>
     </div>
+    
     <div class="input-field col s12 m6">
         <select class="validate" name="buyer_division_id" id="buyer_division_id" required="" >
             <option value="" disabled selected> - Select Division - </option>
@@ -39,13 +40,14 @@
             @foreach($locations as $location)
                 @if($location->locationType)
                     @if($location->locationType->location_type_name == 'Division')
-                        <option value={{$location->id}} >{{$location->location_name}}</option>
+                        <option value={{$location->id}} @if(old('buyer_division_id', (isset($data ) && $data->buyer_division_id == $location->id))) selected @endif>{{$location->location_name}}</option>
                     @endif
                 @endif
             @endforeach
         </select>
         <label for="buyer_division_id">Division *</label>
     </div>
+
      <div class="input-field col s12 m6">
         <select class="validate" name="buyer_district_id" id="buyer_district_id" required="" >
             <option value="" disabled selected> - Select District - </option>
@@ -55,7 +57,7 @@
             @foreach($locations as $location)
                 @if($location->locationType)
                     @if($location->locationType->location_type_name == 'District')
-                        <option value={{$location->id}} >{{$location->location_name}}</option>
+                        <option value={{$location->id}} @if(old('buyer_district_id', (isset($data ) && $data->buyer_district_id == $location->id))) selected @endif>{{$location->location_name}}</option>
                     @endif
                 @endif
             @endforeach
@@ -69,7 +71,7 @@
             @foreach($locations as $location)
                 @if($location->locationType)
                     @if($location->locationType->location_type_name == 'Area')
-                        <option value={{$location->id}} >{{$location->location_name}}</option>
+                        <option value={{$location->id}} @if(old('buyer_area_id', (isset($data ) && $data->buyer_area_id == $location->id))) selected @endif>{{$location->location_name}}</option>
                     @endif
                 @endif
             @endforeach
@@ -77,12 +79,11 @@
         <label for="buyer_area_id">Area *</label>
     </div>
 
-    
     <div class="input-field col s12 m6">
         <select class="validate" name="buyer_type_id" id="buyer_type_id" required="" >
             <option value="" disabled selected> - Select Buyer Type - </option>
             @foreach ($buyer_types as $buyer_type)
-            <option value={{$buyer_type->id}} >{{$buyer_type->buyer_type_name}}</option>
+            <option value={{$buyer_type->id}} @if(old('buyer_type_id', (isset($data ) && $data->buyer_type_id == $buyer_type->id))) selected @endif>{{$buyer_type->buyer_type_name}}</option>
             @endforeach
         </select>
         <label for="buyer_type_id">Buyer type  *</label>

@@ -16,9 +16,14 @@ class BuyerController extends Controller
         $data['buyer_types']=BuyerType::all();
         return view('buyers.index', $data);
     }
-    public function edit(){
+    public function edit($id){
         $data['title'] = "Edit Buyer";
-        return view('buyers.edit', $data);
+        $data['buyer_types']=BuyerType::all();
+        $data['data']=Buyer::find($id);
+        $data['locations'] = Location::where('location_status','Active')->get();
+
+         return view('buyers.edit', $data);
+        
     }
     public function show($id){
         $data['title'] = "Buyer Details";
@@ -27,22 +32,6 @@ class BuyerController extends Controller
     }
     public function create(){
         $data['title'] = "Create Buyer";
-
-        //get location names for  division
-        // $data['locationTypeId']=LocationType::where('location_type_name', "Division")->first();
-        // $locId=$data['locationTypeId']->id;
-        // $data['division_locations']=Location::where('location_type_id',$locId )->get();
-
-        //get location names for  district
-        // $data['locationTypeId']=LocationType::where('location_type_name', "District")->first();
-        // $locId=$data['locationTypeId']->id;
-        // $data['district_locations']=Location::where('location_type_id',$locId )->get();
-
-        //get location names for  area
-        // $data['locationTypeId']=LocationType::where('location_type_name', "Area")->first();
-        // $locId=$data['locationTypeId']->id;
-        // $data['area_locations']=Location::where('location_type_id',$locId )->get();
-
         //get buyer type
         $data['buyer_types']=BuyerType::all();
 
@@ -74,6 +63,30 @@ class BuyerController extends Controller
         $buyerModel->save();
 
         return redirect()->route('buyer.create')->with('success','Buyer has been created successfully!');
+    }
+    public function update(Request $request,$id){
+        // $request->validate([
+        //     'buyer_type_name' => 'required|unique:buyer_types',
+        //     'buyer_type_status' => 'required',
+        //     'buyer_type_order' => 'nullable|integer',
+
+        // ]);
+        $buyerModel = Buyer::find($id);
+        $buyerModel->buyer_name = $request->buyer_name;
+        $buyerModel->buyer_company = $request->buyer_company;
+        $buyerModel->buyer_address = $request->buyer_address;
+        $buyerModel->buyer_type_id =  $request->buyer_type_id;
+        $buyerModel->buyer_kam_id = 1;//this  field will be dynamic
+        $buyerModel->buyer_division_id = $request->buyer_division_id;
+        $buyerModel->buyer_district_id = $request->buyer_district_id;
+        $buyerModel->buyer_area_id = $request->buyer_area_id;
+        $buyerModel->buyer_phone = $request->buyer_phone;
+        $buyerModel->buyer_email = $request->buyer_email;
+        $buyerModel->buyer_status = $request->buyer_status;
+
+        $buyerModel->save();
+
+        return redirect()->route('buyer.edit',$id)->with('success','Buyer has been Updated successfully!');
     }
 
     // *****************************BUYER TYPE *****************************
