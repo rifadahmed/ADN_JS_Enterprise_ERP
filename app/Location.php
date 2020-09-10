@@ -10,7 +10,7 @@ class Location extends Model
         //mass assignment
         'location_type_id', 'location_name', 'location_order','location_status','created_by','updated_by'
     ];
-    public function type(){
+    public function locationType(){
         return $this->belongsTo('App\LocationType','location_type_id');
     }
 }
