@@ -1,7 +1,8 @@
+
 @extends('layouts.master')
 
 @section('content')
-
+   
     <div class="section users-edit">
         <div class="card">
             <div class="card-content">
@@ -12,6 +13,8 @@
                     <form method="POST" action="{{route('location.types.update',$data->id)}}">
                             @csrf
                             @include('locations.locations_type._typeform')
+                           
+                        </div>
                             <div class="col s12 display-flex justify-content-end mt-3">
                                 <button type="submit" class="btn indigo">Save</button> &nbsp;
                                 <a href="{{route('location.types.list') }}"type="button" class="btn btn-light">Cancel</a>
@@ -23,4 +26,9 @@
             </div>
         </div>
     </div>
+    
 @endsection
+
+     
+   
+

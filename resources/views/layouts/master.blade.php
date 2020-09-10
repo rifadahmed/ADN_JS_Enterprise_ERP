@@ -31,6 +31,8 @@ Website: http://adndigital.com.bd
 
     <!-- BEGIN: Custom CSS-->
     <link rel="stylesheet" type="text/css" href={{asset("app-assets/css/custom/custom.css")}}>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+
     @stack('css')
     <!-- END: Custom CSS-->
 
@@ -39,6 +41,8 @@ Website: http://adndigital.com.bd
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>--}}
     <!-- END: Bootstrap-->
+    {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" integrity="sha512-nMNlpuaDPrqlEls3IX/Q56H36qvBASwb3ipuo3MxeWbsQB1881ox0cRv7UPTgBlriqoynt35KjEwgGUeUXIPnw==" crossorigin="anonymous" /> --}}
+
   </head>
   <!-- END: Head-->
   <body class="vertical-layout vertical-menu-collapsible page-header-dark vertical-modern-menu preload-transitions 2-columns   " data-open="click" data-menu="vertical-modern-menu" data-col="2-columns">
@@ -104,6 +108,21 @@ Website: http://adndigital.com.bd
     {{--<script src={{asset("app-assets/js/scripts/intro.js")}}></script>--}}
     <script src={{asset("app-assets/js/scripts/ui-alerts.js")}}></script>
     <!-- END PAGE LEVEL JS-->
+   
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+    
+    <script>
+      $(document).ready(function() {
+    
+        $('.js-example-basic-single').select2();
+        $('#_location').select2();
+
+        
+      });
+      </script>
     @stack('script')
+
   </body>
 </html>
