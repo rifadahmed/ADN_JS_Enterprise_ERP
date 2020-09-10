@@ -101,7 +101,7 @@
                                                     <tr>
                                                         <td>{{$serial++ }}</td>
                                                         <td>{{$location->location_name}}</td>
-                                                        <td>{{$location->type->location_type_name}}</td>
+                                                        <td>{{$location->locationType->location_type_name}}</td>
                                                         
                                                         <td><span class="chip green lighten-5">
                                                             <span class="{{($location->location_status=="Active")?"green-text":"red-text"}}">{{$location->location_status}}</span>

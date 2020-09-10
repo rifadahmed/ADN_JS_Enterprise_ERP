@@ -1,22 +1,22 @@
 <div class="row">
     <div class="input-field col s12 m6">
-        <label for="buyer_name">Buyer Name *</label>
+        <label for="buyer_name"> Name *</label>
         <input class="validate" required="" id="buyer_name" name="buyer_name" value="{{ old('buyer_name',isset($data) ? $data->buyer_name : null ) }}" type="text">
     </div>
     <div class="input-field col s12 m6">
-        <label for="buyer_company">Buyer Company </label>
+        <label for="buyer_company"> Company </label>
         <input class="validate" id="buyer_company" name="buyer_company" value="{{ old('buyer_company',isset($data) ? $data->buyer_company : null ) }}" type="text">
     </div>
     <div class="input-field col s12 m6">
-        <label for="buyer_address">Buyer Address </label>
+        <label for="buyer_address"> Address </label>
          <input class="validate" id="buyer_address" name="buyer_address" value="{{ old('buyer_address',isset($data) ? $data->buyer_address : null ) }}" type="text"> 
     </div>
     <div class="input-field col s12 m6">
-        <label for="buyer_phone">Buyer Phone </label>
+        <label for="buyer_phone"> Phone </label>
         <input class="validate" id="buyer_phone" name="buyer_phone" value="{{ old('buyer_phone',isset($data) ? $data->buyer_phone : null ) }}" type="text">
     </div>
     <div class="input-field col s12 m6">
-        <label for="buyer_email">Buyer Email </label>
+        <label for="buyer_email"> Email </label>
         <input class="validate" id="buyer_email" name="buyer_email" value="{{ old('buyer_email',isset($data) ? $data->buyer_email : null ) }}" type="text">
     </div>
 
@@ -44,7 +44,7 @@
                 @endif
             @endforeach
         </select>
-        <label for="buyer_division_id">Buyer type division *</label>
+        <label for="buyer_division_id">Division *</label>
     </div>
      <div class="input-field col s12 m6">
         <select class="validate" name="buyer_district_id" id="buyer_district_id" required="" >
@@ -60,7 +60,7 @@
                 @endif
             @endforeach
         </select>
-        <label for="buyer_district_id">Buyer type District *</label>
+        <label for="buyer_district_id">District *</label>
     </div>
     
      <div class="input-field col s12 m6">
@@ -74,7 +74,7 @@
                 @endif
             @endforeach
         </select>
-        <label for="buyer_area_id">Buyer type Area *</label>
+        <label for="buyer_area_id">Area *</label>
     </div>
 
     
