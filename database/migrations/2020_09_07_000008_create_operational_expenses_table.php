@@ -14,7 +14,15 @@ class CreateOperationalExpensesTable extends Migration
     public function up()
     {
         Schema::create('operational_expenses', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
+            $table->string('operational_expense_name',100);
+            $table->foreign('operational_expense_type_id')->references('id')->on('operational_expense_types');
+            $table->unsignedBigInteger('operational_expense_type_id');
+            $table->integer('operational_expense_order')->nullable();
+            $table->enum('operational_expense_status',['Active','Inactive'])->default('Active');
+            $table->integer('created_by')->nullable();
+            $table->integer('updated_by')->nullable();
+            $table->softDeletes();
             $table->timestamps();
         });
     }
