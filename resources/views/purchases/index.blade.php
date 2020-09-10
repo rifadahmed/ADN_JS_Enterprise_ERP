@@ -52,7 +52,8 @@
                                             <div class="col s12 m6 l3">
                                                 <label for="users-list-role">Purchase Type</label>
                                                 <div class="input-field">
-                                                    <select class="form-control" id="users-list-role">
+                                                    <br>
+                                                    <select class="js-example-basic-single" id="users-list-role">
                                                         <option value="">Any</option>
                                                         <option value="X">X</option>
                                                         <option value="Y">Y</option>
@@ -63,7 +64,8 @@
                                             <div class="col s12 m6 l3">
                                                 <label for="users-list-status">Status</label>
                                                 <div class="input-field">
-                                                    <select class="form-control" id="users-list-status">
+                                                    <br>
+                                                    <select class="js-example-basic-single" id="users-list-status">
                                                         <option value="">Any</option>
                                                         <option value="Active">Active</option>
                                                         <option value="Inactive">Inactive</option>

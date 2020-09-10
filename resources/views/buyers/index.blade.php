@@ -52,7 +52,8 @@
                                             <div class="col s12 m6 l3">
                                                 <label for="users-list-role">Buyer Type</label>
                                                 <div class="input-field">
-                                                    <select class="form-control" id="users-list-role">
+                                                    <br>
+                                                    <select class="js-example-basic-single" id="users-list-role">
                                                         <option value="">Any</option>
                                                         @foreach ($buyer_types as $buyer_type)
                                                         <option value= {{$buyer_type->buyer_type_name}}>{{$buyer_type->buyer_type_name}}</option>
@@ -64,7 +65,8 @@
                                             <div class="col s12 m6 l3">
                                                 <label for="users-list-status">Status</label>
                                                 <div class="input-field">
-                                                    <select class="form-control" id="users-list-status">
+                                                    <br>
+                                                    <select class="js-example-basic-single" id="users-list-status">
                                                         <option value="">Any</option>
                                                         <option value="Active">Active</option>
                                                         <option value="Inactive">Inactive</option>
