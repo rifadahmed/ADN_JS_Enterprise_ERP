@@ -91,6 +91,9 @@
                                                     <th>Name</th>
                                                     <th>Company</th>
                                                     <th>Address</th>
+                                                    <th>Division</th>
+                                                    <th>District</th>
+                                                    <th>Area</th>
                                                     <th>Phone</th>
                                                     <th>Email</th>                                                      
                                                     <th>Status</th>
@@ -107,6 +110,9 @@
                                                         <td>{{$buyer->buyer_name}}</td>
                                                         <td>{{$buyer->buyer_company}}</td>
                                                         <td>{{$buyer->buyer_address}}</td>
+                                                        <td>{{$buyer->division->location_name}}</td>
+                                                        <td>{{$buyer->district->location_name}}</td>
+                                                        <td>{{$buyer->area->location_name}}</td>
                                                         <td>{{$buyer->buyer_phone}}</td>
                                                         <td>{{$buyer->buyer_email}}</td>
                                                         <td><span class="chip green lighten-5">
