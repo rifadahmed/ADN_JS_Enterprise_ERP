@@ -10,10 +10,43 @@ use Illuminate\Http\Request;
 
 class BuyerController extends Controller
 {
-    public function index(){
+    public function index(Request $request){
         $data['title'] = "List Of Buyer";
-        $data['buyers']=Buyer::all();
+        // $data['buyers']=Buyer::all();
         $data['buyer_types']=BuyerType::all();
+        $buyers = New Buyer();
+
+        /** Search with status */
+        if ($request->status == 'Active') {
+            $buyers = $buyers->where('buyer_status', 'Active');
+        } else if ($request->status == 'Inactive') {
+            $buyers = $buyers->where('buyer_status', 'Inactive');
+        }
+        /** Search with name */
+        if (isset($request->search)) {
+            $buyers = $buyers->where(function ($query) use ($request) {
+                $query->where('buyer_name', 'like', '%' . $request->search . '%');
+            });
+        }
+
+        /** Search with Type */
+        if (isset($request->type)) {
+            
+                $buyers = $buyers->where('buyer_type_id', $request->type);
+            
+        }
+        $buyers = $buyers->orderBy('id', 'DESC')->paginate(10);
+
+        if (isset($request->search) || $request->status) {
+            $render['status'] = $request->status;
+            $render['search'] = $request->search;
+            $buyers       = $buyers->appends($render);
+        }
+
+
+        $data['buyers'] = $buyers;
+        $data['serial']     = managePagination($buyers);
+
         return view('buyers.index', $data);
     }
     public function edit($id){
