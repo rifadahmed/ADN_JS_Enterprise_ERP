@@ -42,11 +42,11 @@
                             <div class="users-list-filter">
                                 <div class="card-panel">
                                     <div class="row">
-                                        <form>
+                                        <form method="GET" action="">
                                             <div class="col s12 m6 l3">
                                                 <label for="users-list-verified">Product Name</label>
                                                 <div class="input-field">
-                                                    <input type="text">
+                                                    <input type="text" name="search" value="{{ (Request::get('search')) ? Request::get('search') : null }}">
                                                 </div>
                                             </div>
                                             <div class="col s12 m6 l3">
@@ -65,10 +65,11 @@
                                                 <label for="users-list-status">Status</label>
                                                 <div class="input-field">
                                                     <br>
-                                                    <select class="js-example-basic-single" id="users-list-status">
-                                                        <option value="">Any</option>
-                                                        <option value="Active">Active</option>
-                                                        <option value="Inactive">Inactive</option>
+                                                    <select class="js-example-basic-single" id="users-list-status" name="status">
+                                                        <option value="" selected >Any</option>
+                                                        <option value="Active" @if(Request::get('status') == 'Active') selected @endif>Active</option>
+                                                        <option value="Inactive" @if(Request::get('status') == 'Inactive') selected @endif>Inactive</option>
+
                                                     </select>
                                                 </div>
                                             </div>

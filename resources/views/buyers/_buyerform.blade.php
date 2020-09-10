@@ -7,10 +7,16 @@
         <label for="buyer_company"> Company </label>
         <input class="validate" id="buyer_company" name="buyer_company" value="{{ old('buyer_company',isset($data) ? $data->buyer_company : null ) }}" type="text">
     </div>
-    <div class="input-field col s12 m6">
+    <div class="input-field col s12 width-50">
         <label for="buyer_address"> Address </label>
-         <input class="validate" id="buyer_address" name="buyer_address" value="{{ old('buyer_address',isset($data) ? $data->buyer_address : null ) }}" type="text"> 
+         <input class="validate materialize-textarea" id="buyer_address" name="buyer_address" value="{{ old('buyer_address',isset($data) ? $data->buyer_address : null ) }}" type="text" > 
+        
     </div>
+    {{-- <div class="input-field col s12 " style="width: 51%">
+        <textarea id="buyer_address" class="materialize-textarea" name="buyer_address" value="{{ old('buyer_address',isset($data) ? $data->buyer_address : null ) }}"></textarea>
+        <label for="buyer_address">Address</label>
+      </div> --}}
+      
     <div class="input-field col s12 m6">
         <label for="buyer_phone"> Phone </label>
         <input class="validate" id="buyer_phone" name="buyer_phone" value="{{ old('buyer_phone',isset($data) ? $data->buyer_phone : null ) }}" type="text">

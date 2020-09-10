@@ -6,8 +6,9 @@ use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
-    public function index(){
+    public function index(Request $request){
         $data['title'] = "List Of Products";
+        
         return view('products.index', $data);
     }
     public function edit(){
