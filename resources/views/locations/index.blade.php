@@ -103,6 +103,7 @@
                                                       </span>
                                                     </td>
                                                     <td><a class="border-primary" href="{{ route('location.edit', 1) }}"><i class="material-icons  edit-icon">edit</i></a><a href="page-users-view.html"><i class="material-icons">remove_red_eye</i></a></td>
+
                                                     {{-- <td></td>
                                                     <td></td>
                                                     <td></td>
@@ -333,10 +334,13 @@
             </div>
         </div>
     <!-- END: Page Main-->
+
 @endsection
 
 @push('script')
     <script src="{{ asset('app-assets/vendors/data-tables/js/jquery.dataTables.min.js') }} "></script>
     <script src="{{ asset('app-assets/vendors/data-tables/extensions/responsive/js/dataTables.responsive.min.js') }} "></script>
     <script src="{{ asset('app-assets/js/scripts/page-users.js') }}"></script>
+
+
 @endpush
