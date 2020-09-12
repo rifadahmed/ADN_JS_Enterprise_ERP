@@ -19,11 +19,11 @@
         </li>
 
         <!-- ** Locations -->
-        <li class="@if(Request::segment(1) == 'location') active @endif bold"><a class="collapsible-header waves-effect waves-cyan " href="JavaScript:void(0)"><i class="material-icons">my_location</i><span class="menu-title" data-i18n="Dashboard">Manage Location</span>{{--<span class="badge badge pill orange float-right mr-10">3</span>--}}</a>
+        <li class="@if(Request::segment(1) == 'location') active @endif bold"><a class="collapsible-header waves-effect waves-cyan " href="JavaScript:void(0)"><i class="material-icons">my_location</i><span class="menu-title" data-i18n="Dashboard">Manage Location</span></a>
             <div class="collapsible-body">
                 <ul class="collapsible collapsible-sub" data-collapsible="accordion">
                     <li class="">
-                        <a class="@if(Request::segment(1) == 'location' && Request::segment(2) == 'list') active @endif" href="{{route('location.list')}}">
+                        <a class="@if(Request::segment(1) == 'location' && Request::segment(2) == 'list' || Request::segment(1) == 'location' && Request::segment(2) == 'edit' && Request::segment(3) ==Request::segment(3)|| Request::segment(1) == 'location' && Request::segment(2) == 'show' && Request::segment(3) ==Request::segment(3)) active @endif" href="{{route('location.list')}}">
                             <i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="Modern">Locations List</span>
                         </a>
@@ -35,7 +35,7 @@
                         </a>
                     </li>
                     <li>
-                        <a  class="@if(Request::segment(1) == 'location' &&  Request::segment(2) == 'types' &&  Request::segment(3) == 'list') active @endif" href="{{route('location.types.list')}}"><i class="material-icons">radio_button_unchecked</i>
+                        <a  class="@if(Request::segment(1) == 'location' &&  Request::segment(2) == 'types' &&  Request::segment(3) == 'list' || Request::segment(1) == 'location' && Request::segment(2) == 'types' && Request::segment(3) =="edit" && Request::segment(4) ==Request::segment(4) || Request::segment(1) == 'location' && Request::segment(2) == 'types' && Request::segment(3) =="show" && Request::segment(4) ==Request::segment(4)) active @endif" href="{{route('location.types.list')}}"><i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="Analytics">Location Types List</span>
                         </a>
                     </li>
@@ -49,21 +49,34 @@
         </li>
 
         <!-- ** Buyers -->
-        <li class="@if(Request::segment(1) == 'buyer') active @endif bold"><a class="collapsible-header waves-effect waves-cyan " href="JavaScript:void(0)"><i class="material-icons">person</i><span class="menu-title" data-i18n="Dashboard">Manage Buyer</span>{{--<span class="badge badge pill orange float-right mr-10">3</span>--}}</a>
+        <li class="@if(Request::segment(1) == 'buyer') active @endif bold"><a class="collapsible-header waves-effect waves-cyan " href="JavaScript:void(0)"><i class="material-icons">person</i><span class="menu-title" data-i18n="Dashboard">Manage Buyer</span></a>
             <div class="collapsible-body">
                 <ul class="collapsible collapsible-sub" data-collapsible="accordion">
                     <li class="">
-                        <a class="" href="#">
+                    <a class="@if(Request::segment(1) == 'buyer' &&  Request::segment(2) == 'list' ||Request::segment(1) == 'buyer' &&  Request::segment(2) == 'edit' &&  Request::segment(3) == Request::segment(3)||Request::segment(1) == 'buyer' &&  Request::segment(2) == 'show' &&  Request::segment(3) == Request::segment(3)) active @endif" href="{{route('buyer.list')}}">
                             <i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="Modern">Buyer List</span>
                         </a>
                     </li>
                     <li>
-                        <a class="" href="#">
+                        <a class="@if(Request::segment(1) == 'buyer' &&  Request::segment(2) == 'create') active @endif" href="{{route('buyer.create')}}">
                             <i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="eCommerce">Add New Buyer</span>
                         </a>
                     </li>
+                    <li >
+                        <a class="@if(Request::segment(1) == 'buyer' &&  Request::segment(2) == 'type' &&  Request::segment(3) == 'list'||Request::segment(1) == 'buyer' &&  Request::segment(2) == 'type' &&  Request::segment(3) == 'edit'&&  Request::segment(4) == Request::segment(4)||Request::segment(1) == 'buyer' &&  Request::segment(2) == 'type' &&  Request::segment(3) == 'show'&&  Request::segment(4) == Request::segment(4)) active @endif" href="{{route('buyer.type.list')}}">
+                                <i class="material-icons">radio_button_unchecked</i>
+                                <span data-i18n="Modern">Buyer Types List</span>
+                            </a>
+                        </li>
+                        <li>
+                        <a class="@if(Request::segment(1) == 'buyer' &&  Request::segment(2) == 'type' &&  Request::segment(3) == 'create') active @endif" href="{{route('buyer.type.create')}}">
+
+                                <i class="material-icons">radio_button_unchecked</i>
+                                <span data-i18n="eCommerce">Add New Buyer Type</span>
+                            </a>
+                        </li>
 
 
                 </ul>
@@ -71,17 +84,17 @@
         </li>
 
         <!-- ** Warehouse -->
-        <li class="@if(Request::segment(1) == 'location') active @endif bold"><a class="collapsible-header waves-effect waves-cyan " href="JavaScript:void(0)"><i class="material-icons">home</i><span class="menu-title" data-i18n="Dashboard">Manage Warehouse</span>{{--<span class="badge badge pill orange float-right mr-10">3</span>--}}</a>
+        <li class="@if(Request::segment(1) == 'warehouse') active @endif bold"><a class="collapsible-header waves-effect waves-cyan " href="JavaScript:void(0)"><i class="material-icons">home</i><span class="menu-title" data-i18n="Dashboard">Manage Warehouse</span></a>
             <div class="collapsible-body">
                 <ul class="collapsible collapsible-sub" data-collapsible="accordion">
                     <li class="">
-                        <a class="" href="#">
+                    <a class="@if(Request::segment(1) == 'warehouse' &&  Request::segment(2) == 'list'||Request::segment(1) == 'warehouse' &&  Request::segment(2) == 'edit'&&  Request::segment(3) == Request::segment(3)||Request::segment(1) == 'warehouse' &&  Request::segment(2) == 'show'&&  Request::segment(3) == Request::segment(3)) active @endif" href="{{route('warehouse.list')}}">
                             <i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="Modern">Warehouse List</span>
                         </a>
                     </li>
                     <li>
-                        <a class="" href="#">
+                        <a class="@if(Request::segment(1) == 'warehouse' &&  Request::segment(2) == 'create') active @endif" href="{{route('warehouse.create')}}">
                             <i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="eCommerce">Add New warehouse</span>
                         </a>
@@ -93,29 +106,29 @@
         </li>
 
         <!-- ** Category -->
-        <li class="@if(Request::segment(1) == 'product') active @endif bold"><a class="collapsible-header waves-effect waves-cyan " href="JavaScript:void(0)"><i class="material-icons">grain</i><span class="menu-title" data-i18n="Dashboard">Manage Category</span>{{--<span class="badge badge pill orange float-right mr-10">3</span>--}}</a>
+        <li class="@if(Request::segment(1) == 'category' || Request::segment(1) == 'subcategory') active @endif bold"><a class="collapsible-header waves-effect waves-cyan " href="JavaScript:void(0)"><i class="material-icons">grain</i><span class="menu-title" data-i18n="Dashboard">Manage Category</span></a>
             <div class="collapsible-body">
                 <ul class="collapsible collapsible-sub" data-collapsible="accordion">
                     <li class="">
-                        <a class="" href="#">
+                        <a class="@if(Request::segment(1) == 'category' &&  Request::segment(2) == 'list'||Request::segment(1) == 'category' &&  Request::segment(2) == 'edit'&&  Request::segment(3) ==Request::segment(3)||Request::segment(1) == 'category' &&  Request::segment(2) == 'show'&&  Request::segment(3) ==Request::segment(3) ) active @endif" href="{{route('category.list')}} ">
                             <i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="Modern">Category List</span>
                         </a>
                     </li>
                     <li>
-                        <a class="" href="#">
+                        <a class="@if(Request::segment(1) == 'category' &&  Request::segment(2) == 'create') active @endif" href="{{route('category.create')}}">
                             <i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="eCommerce">Add New Category</span>
                         </a>
                     </li>
                     <li>
-                        <a class="" href="#">
+                        <a class="@if(Request::segment(1) == 'subcategory' &&  Request::segment(2) == 'list' ||Request::segment(1) == 'subcategory' &&  Request::segment(2) == 'edit'&&  Request::segment(3) ==Request::segment(3)||Request::segment(1) == 'subcategory' &&  Request::segment(2) == 'show'&&  Request::segment(3) ==Request::segment(3) ) active @endif" href="{{route('subcategory.list')}}">
                             <i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="Modern">Sub Category List</span>
                         </a>
                     </li>
                     <li>
-                        <a class="" href="#">
+                        <a class="@if(Request::segment(1) == 'subcategory' &&  Request::segment(2) == 'create') active @endif" href="{{route('subcategory.create')}}">
                             <i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="eCommerce">Add New Sub Category</span>
                         </a>
@@ -125,17 +138,17 @@
         </li>
 
         <!-- ** Brand -->
-        <li class="@if(Request::segment(1) == 'product') active @endif bold"><a class="collapsible-header waves-effect waves-cyan " href="JavaScript:void(0)"><i class="material-icons">filter_vintage</i><span class="menu-title" data-i18n="Dashboard">Manage Brands</span>{{--<span class="badge badge pill orange float-right mr-10">3</span>--}}</a>
+        <li class="@if(Request::segment(1) == 'brand') active @endif bold"><a class="collapsible-header waves-effect waves-cyan " href="JavaScript:void(0)"><i class="material-icons">filter_vintage</i><span class="menu-title" data-i18n="Dashboard">Manage Brands</span></a>
             <div class="collapsible-body">
                 <ul class="collapsible collapsible-sub" data-collapsible="accordion">
                     <li class="">
-                        <a class="" href="#">
+                        <a class="@if(Request::segment(1) == 'brand' &&  Request::segment(2) == 'list'||Request::segment(1) == 'brand' &&  Request::segment(2) == 'edit'&&  Request::segment(3) ==Request::segment(3)||Request::segment(1) == 'brand' &&  Request::segment(2) == 'show'&&  Request::segment(3) ==Request::segment(3) ) active @endif" href="{{route('brand.list')}}">
                             <i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="Modern">Brand List</span>
                         </a>
                     </li>
                     <li>
-                        <a class="" href="#">
+                        <a class="@if(Request::segment(1) == 'brand' &&  Request::segment(2) == 'create') active @endif" href="{{route('brand.create')}}">
                             <i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="eCommerce">Add New Brand</span>
                         </a>
@@ -145,11 +158,11 @@
         </li>
 
         <!-- ** Product -->
-        <li class="@if(Request::segment(1) == 'product') active @endif bold"><a class="collapsible-header waves-effect waves-cyan " href="JavaScript:void(0)"><i class="material-icons">card_giftcard</i><span class="menu-title" data-i18n="Dashboard">Manage Products</span>{{--<span class="badge badge pill orange float-right mr-10">3</span>--}}</a>
+        <li class="@if(Request::segment(1) == 'product') active @endif bold"><a class="collapsible-header waves-effect waves-cyan " href="JavaScript:void(0)"><i class="material-icons">card_giftcard</i><span class="menu-title" data-i18n="Dashboard">Manage Products</span></a>
             <div class="collapsible-body">
                 <ul class="collapsible collapsible-sub" data-collapsible="accordion">
                     <li class="">
-                        <a class="" href="#">
+                    <a class="@if(Request::segment(1) == 'product' &&  Request::segment(2) == 'list' ||Request::segment(1) == 'product' &&  Request::segment(2) == 'edit'&&  Request::segment(3) ==Request::segment(3)||Request::segment(1) == 'product' &&  Request::segment(2) == 'show'&&  Request::segment(3) ==Request::segment(3)) active @endif" href="{{route('product.list')}}">
                             <i class="material-icons">radio_button_unchecked</i>
 
                             <span data-i18n="Modern">Product List</span>
@@ -157,7 +170,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="" href="#">
+                        <a class="@if(Request::segment(1) == 'product' &&  Request::segment(2) == 'create') active @endif" href="{{route('product.create')}}">
                             <i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="eCommerce">Add New Product</span>
                         </a>
@@ -169,18 +182,18 @@
         </li>
 
         <!-- ** Purchase -->
-        <li class="@if(Request::segment(1) == 'product') active @endif bold"><a class="collapsible-header waves-effect waves-cyan " href="JavaScript:void(0)"><i class="material-icons">add_to_photos</i><span class="menu-title" data-i18n="Dashboard">Manage Purchase</span>{{--<span class="badge badge pill orange float-right mr-10">3</span>--}}</a>
+        <li class="@if(Request::segment(1) == 'purchase') active @endif bold"><a class="collapsible-header waves-effect waves-cyan " href="JavaScript:void(0)"><i class="material-icons">add_to_photos</i><span class="menu-title" data-i18n="Dashboard">Manage Purchase</span></a>
             <div class="collapsible-body">
                 <ul class="collapsible collapsible-sub" data-collapsible="accordion">
                     <li class="">
-                        <a class="" href="#">
+                        <a class="@if(Request::segment(1) == 'purchase' &&  Request::segment(2) == 'list' ||Request::segment(1) == 'purchase' &&  Request::segment(2) == 'edit'&&  Request::segment(3) ==Request::segment(3)||Request::segment(1) == 'purchase' &&  Request::segment(2) == 'show'&&  Request::segment(3) ==Request::segment(3) ) active @endif" href="{{route('purchase.list')}}">
                             <i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="Modern">Purchase List</span>
 
                         </a>
                     </li>
                     <li>
-                        <a class="" href="#">
+                        <a class="@if(Request::segment(1) == 'purchase' &&  Request::segment(2) == 'create') active @endif" href="{{route('purchase.create')}}">
                             <i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="eCommerce">Add New Purchase</span>
                         </a>
@@ -192,17 +205,17 @@
         </li>
 
         <!-- ** Sales -->
-        <li class="@if(Request::segment(1) == 'product') active @endif bold"><a class="collapsible-header waves-effect waves-cyan " href="JavaScript:void(0)"><i class="material-icons">local_mall</i><span class="menu-title" data-i18n="Dashboard">Manage Sales</span>{{--<span class="badge badge pill orange float-right mr-10">3</span>--}}</a>
+        <li class="@if(Request::segment(1) == 'sale') active @endif bold"><a class="collapsible-header waves-effect waves-cyan " href="JavaScript:void(0)"><i class="material-icons">local_mall</i><span class="menu-title" data-i18n="Dashboard">Manage Sales</span></a>
             <div class="collapsible-body">
                 <ul class="collapsible collapsible-sub" data-collapsible="accordion">
                     <li class="">
-                        <a class="" href="#">
+                        <a class="@if(Request::segment(1) == 'sale' &&  Request::segment(2) == 'list'||Request::segment(1) == 'sale' &&  Request::segment(2) == 'edit'&&  Request::segment(3) ==Request::segment(3)||Request::segment(1) == 'sale' &&  Request::segment(2) == 'show'&&  Request::segment(3) ==Request::segment(3) ) active @endif" href="{{route('sale.list')}}">
                             <i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="Modern">Sales List</span>
                         </a>
                     </li>
                     <li>
-                        <a class="" href="#">
+                        <a class="@if(Request::segment(1) == 'sale' &&  Request::segment(2) == 'create') active @endif" href="{{route('sale.create')}}">
                             <i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="eCommerce">Add New Sales</span>
                         </a>
@@ -214,7 +227,7 @@
         </li>
 
         <!-- ** Reports -->
-        <li class="@if(Request::segment(1) == 'product') active @endif bold"><a class="collapsible-header waves-effect waves-cyan " href="JavaScript:void(0)"><i class="material-icons">insert_chart_outline</i><span class="menu-title" data-i18n="Dashboard">Reports</span>{{--<span class="badge badge pill orange float-right mr-10">3</span>--}}</a>
+        <li class="@if(Request::segment(1) == 'report') active @endif bold"><a class="collapsible-header waves-effect waves-cyan " href="JavaScript:void(0)"><i class="material-icons">insert_chart_outline</i><span class="menu-title" data-i18n="Dashboard">Reports</span></a>
             <div class="collapsible-body">
                 <ul class="collapsible collapsible-sub" data-collapsible="accordion">
                     <li class="">
@@ -235,17 +248,17 @@
         </li>
 
         <!-- ** Users -->
-        <li class="@if(Request::segment(1) == 'user') active @endif bold"><a class="collapsible-header waves-effect waves-cyan " href="JavaScript:void(0)"><i class="material-icons">verified_user</i><span class="menu-title" data-i18n="Dashboard">Manage User</span>{{--<span class="badge badge pill orange float-right mr-10">3</span>--}}</a>
+        <li class="@if(Request::segment(1) == 'user') active @endif bold"><a class="collapsible-header waves-effect waves-cyan " href="JavaScript:void(0)"><i class="material-icons">verified_user</i><span class="menu-title" data-i18n="Dashboard">Manage User</span></a>
             <div class="collapsible-body">
                 <ul class="collapsible collapsible-sub" data-collapsible="accordion">
                     <li class="">
-                        <a class="" href="#">
+                        <a class="@if(Request::segment(1) == 'user' &&  Request::segment(2) == 'list'||Request::segment(1) == 'user' &&  Request::segment(2) == 'edit'&&  Request::segment(3) ==Request::segment(3)||Request::segment(1) == 'user' &&  Request::segment(2) == 'show'&&  Request::segment(3) ==Request::segment(3) ) active @endif" href="{{route('user.list')}}">
                             <i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="Modern">User List</span>
                         </a>
                     </li>
                     <li>
-                        <a class="" href="#">
+                        <a class="@if(Request::segment(1) == 'user' &&  Request::segment(2) == 'create') active @endif" href="{{route('user.create')}}">
                             <i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="eCommerce">Add New User</span>
                         </a>
@@ -255,19 +268,20 @@
         </li>
 
         <!-- ** Settings -->
-        <li class="@if(Request::segment(1) == 'product') active @endif bold"><a class="collapsible-header waves-effect waves-cyan " href="JavaScript:void(0)"><i class="material-icons">settings</i><span class="menu-title" data-i18n="Dashboard">General Settings</span>{{--<span class="badge badge pill orange float-right mr-10">3</span>--}}</a>
+        <li class="@if(Request::segment(1) == 'setting') active @endif bold"><a class="collapsible-header waves-effect waves-cyan " href="JavaScript:void(0)">
+            <i class="material-icons">settings</i><span class="menu-title" data-i18n="Dashboard">General Settings</span></a>
             <div class="collapsible-body">
                 <ul class="collapsible collapsible-sub" data-collapsible="accordion">
                     <li class="">
                         <a class="" href="#">
                             <i class="material-icons">radio_button_unchecked</i>
-                            <span data-i18n="Modern">Sales List</span>
+                            <span data-i18n="Modern">X</span>
                         </a>
                     </li>
                     <li>
                         <a class="" href="#">
                             <i class="material-icons">radio_button_unchecked</i>
-                            <span data-i18n="eCommerce">Add New Sales</span>
+                            <span data-i18n="eCommerce">Y</span>
                         </a>
                     </li>
                 </ul>

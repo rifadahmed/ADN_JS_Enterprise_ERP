@@ -2,6 +2,7 @@
 
 @section('content')
 
+<link rel="stylesheet" href="">
     <div class="section users-edit">
         <div class="card">
             <div class="card-content">
@@ -9,12 +10,12 @@
                 <div class="divider mb-3"></div>
                 <div class="row">
                     <div class="col s12 active" id="account">
-                        <form method="POST" action="">
+                    <form method="POST" action="{{route('location.update',$data->id)}}">
                             @csrf
                             @include('locations._form')
                             <div class="col s12 display-flex justify-content-end mt-3">
                                 <button type="submit" class="btn indigo">Save changes</button> &nbsp;
-                                <button type="button" class="btn btn-light">Cancel</button>
+                                <a href="{{route('location.list') }}"type="button" class="btn btn-light">Cancel</a>
                             </div>
                         </form>
                     </div>
@@ -22,4 +23,6 @@
             </div>
         </div>
     </div>
+    
 @endsection
+
