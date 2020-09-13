@@ -2,8 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
+use App\User;
+use App\Brand;
+use App\Buyer;
+use App\Location;
+use App\Supplier;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class DashboardController extends Controller
 {
@@ -14,7 +19,26 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        return view('dashboard.dashboard');
+        // recent users
+        $data['users']=User::all()->take(3);
+
+        //buyers
+        $data['buyers']=Buyer::all()->take(4);
+        $data['totalbuyer']=count(Buyer::all());
+        $data['latestBuyer']=Buyer::whereDate('created_at', '>=', date('Y-m-d H:i:s',strtotime('-1 days')) )->count();
+
+        //Brands
+        $data['totalbrand']=count(Brand::all());
+        $data['latestbrand']=Brand::whereDate('created_at', '>=', date('Y-m-d H:i:s',strtotime('-1 days')) )->count();
+
+        //Locations
+        $data['totallocation']=count(Location::all());
+        $data['latestlocation']=Location::whereDate('created_at', '>=', date('Y-m-d H:i:s',strtotime('-1 days')) )->count();
+
+        //Suppliers
+        $data['totalsupplier']=count(Supplier::all());
+        $data['totalOpeningBalance']=Supplier::sum('supplier_opening_balance');
+        return view('dashboard.dashboard',$data);
     }
 
     /**
