@@ -10,7 +10,8 @@
 </div>
 <div class="row">
     <div class="input-field col s12 m6">
-        <select class="validate" name="category_id" id="status" required="" >
+        <br>
+        <select class="validate js-example-basic-single" name="category_id" id="status" required="" >
             {{-- <option value="Active" @if(old('category_name', (isset($data ) && $data->category_name == 'Active'))) selected @endif>Active</option>
             {{-- <option value="Inactive" @if(old('category_name', (isset($data ) && $data->category_name == 'Inactive'))) selected @endif>Inactive</option> --}} --}}
 
@@ -23,7 +24,8 @@
         <label for="status">Select Category * @if ($errors->has('category')) <small class="red-text"> [ {{ $errors->first('sub_category_status') }} ] </small> @endif</label>
     </div>
     <div class="input-field col s12 m6">
-        <select class="validate" name="sub_category_status" id="status" required="" >
+        <br>
+        <select class="validate js-example-basic-single" name="sub_category_status" id="sub_category_status" required="" >
             <option value="Active" @if(old('sub_category_status', (isset($data ) && $data->sub_category_status == 'Active'))) selected @endif>Active</option>
             <option value="Inactive" @if(old('sub_category_status', (isset($data ) && $data->sub_category_status == 'Inactive'))) selected @endif>Inactive</option>
         </select>

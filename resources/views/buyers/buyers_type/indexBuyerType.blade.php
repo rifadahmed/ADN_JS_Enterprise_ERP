@@ -63,7 +63,8 @@
                                             <div class="col s12 m6 l4">
                                                 <label for="users-list-status">Status</label>
                                                 <div class="input-field">
-                                                    <select class="form-control" id="users-list-status" name="status">
+                                                    <br>
+                                                    <select class="js-example-basic-single" id="users-list-status" name="status">
                                                         <option value="" selected >Any</option>
                                                         <option value="Active" @if(Request::get('status') == 'Active') selected @endif>Active</option>
                                                         <option value="Inactive" @if(Request::get('status') == 'Inactive') selected @endif>Inactive</option>

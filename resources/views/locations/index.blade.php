@@ -53,7 +53,8 @@
                                             <div class="col s12 m6 l3">
                                                 <label for="users-list-role">Location Type</label>
                                                 <div class="input-field">
-                                                    <select class="form-control" id="users-list-role" name="type">
+                                                    <br>
+                                                    <select class="js-example-basic-single" id="users-list-role" name="type">
                                                         <option value="">Any</option>
                                                         @foreach ($location_types as $location_type)
                                                         <option value= {{$location_type->location_type_name}} @if(Request::get('type') == $location_type->location_type_name) selected @endif>{{$location_type->location_type_name}}</option>
@@ -66,7 +67,8 @@
                                             <div class="col s12 m6 l3">
                                                 <label for="users-list-status">Status</label>
                                                 <div class="input-field">
-                                                    <select class="form-control" id="users-list-status" name="status">
+                                                    <br>
+                                                    <select class="js-example-basic-single" id="users-list-status" name="status">
                                                         <option value="">Any</option>
                                                         <option value="Active" @if(Request::get('status') == "Active") selected @endif>Active</option>
                                                         <option value="Inactive" @if(Request::get('status') == "Inactive") selected @endif>Inactive</option>
@@ -101,7 +103,7 @@
                                                     <tr>
                                                         <td>{{$serial++ }}</td>
                                                         <td>{{$location->location_name}}</td>
-                                                        <td>{{$location->type->location_type_name}}</td>
+                                                        <td>{{$location->locationType->location_type_name}}</td>
                                                         
                                                         <td><span class="chip green lighten-5">
                                                             <span class="{{($location->location_status=="Active")?"green-text":"red-text"}}">{{$location->location_status}}</span>

@@ -10,7 +10,8 @@
 </div>
 <div class="row">
     <div class="input-field col s12 m6">
-        <select class="validate" name="brand_status" id="status" required="" >
+        <br>
+        <select class="validate js-example-basic-single" name="brand_status" id="status" required="" >
             <option value="" disabled selected> - Select Brand Status - </option>
             <option value="Active" @if(old('brand_status', (isset($data ) && $data->brand_status == 'Active'))) selected @endif>Active</option>
             <option value="Inactive" @if(old('brand_status', (isset($data ) && $data->brand_status == 'Inactive'))) selected @endif>Inactive</option>

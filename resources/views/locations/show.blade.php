@@ -55,7 +55,7 @@
                                                         </tr>
                                                         <tr>
                                                             <td>Location Type:</td>
-                                                            <td class="location_type">{{$location->type->location_type_name}}</td>
+                                                            <td class="location_type">{{$location->locationType->location_type_name}}</td>
                                                         </tr>
 
                                                         <tr>

@@ -42,20 +42,21 @@
                             <div class="users-list-filter">
                                 <div class="card-panel">
                                     <div class="row">
-                                        <form>
+                                        <form method="GET" action="">
                                             <div class="col s12 m6 l3">
                                                 <label for="users-list-verified">Buyer Name</label>
                                                 <div class="input-field">
-                                                    <input type="text">
+                                                    <input type="text" name="search" value="{{ (Request::get('search')) ? Request::get('search') : null }}">
                                                 </div>
                                             </div>
                                             <div class="col s12 m6 l3">
                                                 <label for="users-list-role">Buyer Type</label>
                                                 <div class="input-field">
-                                                    <select class="form-control" id="users-list-role">
+                                                    <br>
+                                                    <select class="js-example-basic-single" name="type">
                                                         <option value="">Any</option>
                                                         @foreach ($buyer_types as $buyer_type)
-                                                        <option value= {{$buyer_type->buyer_type_name}}>{{$buyer_type->buyer_type_name}}</option>
+                                                        <option value= '{{$buyer_type->id}}' @if(Request::get('type') == $buyer_type->buyer_type_name) selected @endif>{{$buyer_type->buyer_type_name}}</option>
 
                                                         @endforeach
                                                     </select>
@@ -64,10 +65,12 @@
                                             <div class="col s12 m6 l3">
                                                 <label for="users-list-status">Status</label>
                                                 <div class="input-field">
-                                                    <select class="form-control" id="users-list-status">
+                                                    <br>
+                                                    <select class="js-example-basic-single" name="status" id="users-list-status">
                                                         <option value="">Any</option>
-                                                        <option value="Active">Active</option>
-                                                        <option value="Inactive">Inactive</option>
+                                                        <option value="Active" @if(Request::get('status') == 'Active') selected @endif>Active</option>
+                                                        <option value="Inactive" @if(Request::get('status') == 'Inactive') selected @endif>Inactive</option>
+
                                                     </select>
                                                 </div>
                                             </div>
@@ -128,6 +131,7 @@
 
                                                 </tbody>
                                             </table>
+                                            
                                         </div>
                                         <!-- datatable ends -->
                                     </div>
