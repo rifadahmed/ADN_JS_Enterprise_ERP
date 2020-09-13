@@ -1,39 +1,9 @@
+
 @extends('layouts.master')
 
 @section('content')
 <div class="section">
     <!-- Current balance & total transactions cards-->
-    {{-- <div class="row vertical-modern-dashboard">
-        <div class="col s12 m4 l4">
-            <!-- Current Balance -->
-            <div class="card animate fadeLeft">
-                <div class="card-content">
-                    <h6 class="mb-0 mt-0 display-flex justify-content-between">
-                        Sales
-                        <i class="material-icons float-right">more_vert</i>
-                    </h6>
-                    <p class="medium-small">Sales Accumulation</p>
-                    <div class="current-balance-container">
-                        <div id="current-balance-donut-chart" class="current-balance-shadow"></div>
-                    </div>
-                    <h5 class="center-align">TK 50,150.00</h5>
-                    <p class="medium-small center-align">Sales of all time</p>
-                </div>
-            </div>
-        </div>
-        <div class="col s12 m8 l8 animate fadeRight">
-            <!-- Total Transaction -->
-            <div class="card">
-                <div class="card-content">
-                    <h4 class="card-title mb-0">Total Transaction <i class="material-icons float-right">more_vert</i></h4>
-                    <p class="medium-small">This month transaction</p>
-                    <div class="total-transaction-container">
-                        <div id="total-transaction-line-chart" class="total-transaction-shadow"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> --}}
     <!--/ Current balance & total transactions cards-->
 
     <!-- User statistics & appointment cards-->
@@ -112,37 +82,7 @@
                </div>
             </div>
          </div>
-        {{-- <div class="col s12 l5">
-            <!-- User Statistics -->
-            <div class="card user-statistics-card animate fadeLeft">
-                <div class="card-content">
-                    <h4 class="card-title mb-0">User Statistics <i class="material-icons float-right">more_vert</i></h4>
-                    <div class="row">
-                        <div class="col s12 m6">
-                            <ul class="collection border-none mb-0">
-                                <li class="collection-item avatar">
-                                    <i class="material-icons circle pink accent-2">trending_up</i>
-                                    <p class="medium-small">This year</p>
-                                    <h5 class="mt-0 mb-0">60%</h5>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col s12 m6">
-                            <ul class="collection border-none mb-0">
-                                <li class="collection-item avatar">
-                                    <i class="material-icons circle purple accent-4">trending_down</i>
-                                    <p class="medium-small">Last year</p>
-                                    <h5 class="mt-0 mb-0">40%</h5>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="user-statistics-container">
-                        <div id="user-statistics-bar-chart" class="user-statistics-shadow ct-golden-section"></div>
-                    </div>
-                </div>
-            </div>
-        </div> --}}
+
         <div class="col s12 l4">
             <!-- Recent Users -->
             <div class="card recent-buyers-card animate fadeUp">
@@ -165,18 +105,7 @@
             </div>
         </div>
         
-        {{-- <div class="col s12 l3">
-            <div class="card animate fadeRight">
-                <div class="card-content">
-                    <h4 class="card-title mb-0">Conversion Ratio</h4>
-                    <div class="conversion-ration-container mt-8">
-                        <div id="conversion-ration-bar-chart" class="conversion-ration-shadow"></div>
-                    </div>
-                    <p class="medium-small center-align">This month conversion ratio</p>
-                    <h5 class="center-align mb-0 mt-0">62%</h5>
-                </div>
-            </div>
-        </div> --}}
+
         <div class="col s12 m6 l8">
             <div class="card subscriber-list-card animate fadeRight">
                 <div class="card-content pb-1">
@@ -198,8 +127,10 @@
                             <td>{{$buyer->buyer_name}}</td>
                             <td>{{$buyer->buyer_address}}</td>
                             <td>{{$buyer->buyer_company}}</td>
-                        <td><span class="{{$buyer->buyer_status=="Active"? "badge pink lighten-5 pink-text text-accent-2":"badge green lighten-5 green-text text-accent-4"}}">{{$buyer->buyer_status}}</span></td>
-                            <td class="center-align"><a href="#"><i class="material-icons pink-text">clear</i></a></td>
+                            <td><span class="{{$buyer->buyer_status=="Active"? "badge pink lighten-5 pink-text text-accent-2":"badge green lighten-5 green-text text-accent-4"}}">{{$buyer->buyer_status}}</span></td>
+                            <td><a class="border-primary" href="{{ route('buyer.edit', $buyer->id)}}"><i class="material-icons  edit-icon" style="margin-right: 5px;
+                                ">edit</i></a><a href="{{ route('buyer.show', $buyer->id)}}"><i class="material-icons">remove_red_eye</i></a></td>
+
                         </tr>
                         @endforeach
                     
@@ -214,9 +145,53 @@
         </div>
     </div>
     <!--/ Current balance & appointment cards-->
-
+    <div class="col s12 m6 l6">
+        <canvas id="myChart" width="400" height="200"></canvas>
+    </div>
      
 </div>
+
+
+
+<script>
+var ctx = document.getElementById('myChart').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: [ 'Division', 'District','Area'],
+        datasets: [{
+            label: 'Location',
+            data: [ {{$division}},{{$district}},{{$area}}],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+  </script>
 @endsection
 
 @push('script')

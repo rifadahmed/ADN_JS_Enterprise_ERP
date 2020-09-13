@@ -7,6 +7,7 @@ use App\Brand;
 use App\Buyer;
 use App\Location;
 use App\Supplier;
+use App\LocationType;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -38,7 +39,16 @@ class DashboardController extends Controller
         //Suppliers
         $data['totalsupplier']=count(Supplier::all());
         $data['totalOpeningBalance']=Supplier::sum('supplier_opening_balance');
+
+        //Division
+        $data['division']=count(Location::where('location_type_id',LocationType::where("location_type_name","Division")->first()->id)->get());
+        $data['district']=count(Location::where('location_type_id',LocationType::where("location_type_name","district")->first()->id)->get());
+        $data['area']=count(Location::where('location_type_id',LocationType::where("location_type_name","area")->first()->id)->get());
+
+        
         return view('dashboard.dashboard',$data);
+
+        
     }
 
     /**
