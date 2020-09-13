@@ -9,9 +9,9 @@
                 <div class="divider mb-3"></div>
                 <div class="row">
                     <div class="col s12 active" id="account">
-                        <form method="POST" action="">
+                    <form method="POST" action="{{route('supplier.update',$data->id)}}">
                             @csrf
-                            @include('warehouses._form')
+                            @include('suppliers._form')
                             <div class="col s12 display-flex justify-content-end mt-3">
                                 <button type="submit" class="btn indigo">Save Changes</button> &nbsp;
                                 <a href="{{route('warehouse.list') }}"type="button" class="btn btn-light">Cancel</a>
