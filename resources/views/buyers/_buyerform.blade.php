@@ -1,7 +1,7 @@
 <div class="row">
     <div class="input-field col s12 m6">
         <label for="buyer_name"> Name * @if ($errors->has('buyer_name')) <small class="red-text"> [ {{ $errors->first('buyer_name') }} ] </small> @endif</label>
-        <input class="validate"  id="buyer_name" name="buyer_name" value="{{ old('buyer_name',isset($data) ? $data->buyer_name : null ) }}" type="text">
+        <input class="validate"  required="" id="buyer_name" name="buyer_name" value="{{ old('buyer_name',isset($data) ? $data->buyer_name : null ) }}" type="text">
     </div>
     <div class="input-field col s12 m6">
         <label for="buyer_company"> Company @if ($errors->has('buyer_company')) <small class="red-text"> [ {{ $errors->first('buyer_company') }} ] </small> @endif</label>
@@ -31,7 +31,7 @@
             <option value="Active" @if(old('buyer_status', (isset($data ) && $data->buyer_status == 'Active'))) selected @endif>Active</option>
             <option value="Inactive" @if(old('buyer_status', (isset($data ) && $data->buyer_status == 'Inactive'))) selected @endif>Inactive</option>
         </select>
-        <label for="status">Buyer type Status *</label>
+        <label for="status">Buyer Status * @if ($errors->has('buyer_status')) <small class="red-text"> [ {{ $errors->first('buyer_status') }} ] </small> @endif</label>
     </div>
     
     <div class="input-field col s12 m6">
@@ -96,8 +96,6 @@
         <label for="buyer_type_id">Buyer Type  *</label>
     </div>  
 </div>
-
-
 
 
 
