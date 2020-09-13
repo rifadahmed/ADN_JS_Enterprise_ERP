@@ -9,7 +9,6 @@ class SupplierController extends Controller
 {
     public function index(Request $request ){
         $data['title'] = "List Of Suppliers";
-        // $data['suppliers']=Supplier::all();
         $suppliers = New Supplier();
 
         /** Search with status */
@@ -38,5 +37,11 @@ class SupplierController extends Controller
         $data['serial']     = managePagination($suppliers);
 
         return view('suppliers.index', $data);
+    }
+
+    public function show($id){
+        $data['title'] = "Supplier Details";
+        $data['supplier']=Supplier::find($id);
+        return view('suppliers.show', $data);
     }
 }
