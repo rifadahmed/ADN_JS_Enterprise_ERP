@@ -83,6 +83,28 @@
             </div>
         </li>
 
+        <!-- ** Suuplier -->
+        <li class="@if(Request::segment(1) == 'supplier') active @endif bold"><a class="collapsible-header waves-effect waves-cyan " href="JavaScript:void(0)"><i class="material-icons">home</i><span class="menu-title" data-i18n="Dashboard">Manage Supplier</span></a>
+            <div class="collapsible-body">
+                <ul class="collapsible collapsible-sub" data-collapsible="accordion">
+                    <li class="">
+                    <a class="@if(Request::segment(1) == 'supplier' &&  Request::segment(2) == 'list'||Request::segment(1) == 'supplier' &&  Request::segment(2) == 'edit'&&  Request::segment(3) == Request::segment(3)||Request::segment(1) == 'supplier' &&  Request::segment(2) == 'show'&&  Request::segment(3) == Request::segment(3)) active @endif" href="{{route('supplier.list')}}">
+                            <i class="material-icons">radio_button_unchecked</i>
+                            <span data-i18n="Modern">Supplier List</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="@if(Request::segment(1) == 'supplier' &&  Request::segment(2) == 'create') active @endif" href="{{route('supplier.create')}}">
+                            <i class="material-icons">radio_button_unchecked</i>
+                            <span data-i18n="eCommerce">Add New Supplier</span>
+                        </a>
+                    </li>
+
+
+                </ul>
+            </div>
+        </li>
+        
         <!-- ** Warehouse -->
         <li class="@if(Request::segment(1) == 'warehouse') active @endif bold"><a class="collapsible-header waves-effect waves-cyan " href="JavaScript:void(0)"><i class="material-icons">home</i><span class="menu-title" data-i18n="Dashboard">Manage Warehouse</span></a>
             <div class="collapsible-body">
