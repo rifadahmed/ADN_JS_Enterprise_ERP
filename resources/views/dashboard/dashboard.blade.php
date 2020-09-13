@@ -127,7 +127,7 @@
                             <td>{{$buyer->buyer_name}}</td>
                             <td>{{$buyer->buyer_address}}</td>
                             <td>{{$buyer->buyer_company}}</td>
-                            <td><span class="{{$buyer->buyer_status=="Active"? "badge pink lighten-5 pink-text text-accent-2":"badge green lighten-5 green-text text-accent-4"}}">{{$buyer->buyer_status}}</span></td>
+                            <td><span class="{{$buyer->buyer_status=="Active"? "badge green lighten-5 green-text text-accent-4":"badge pink lighten-5 pink-text text-accent-2"}}">{{$buyer->buyer_status}}</span></td>
                             <td><a class="border-primary" href="{{ route('buyer.edit', $buyer->id)}}"><i class="material-icons  edit-icon" style="margin-right: 5px;
                                 ">edit</i></a><a href="{{ route('buyer.show', $buyer->id)}}"><i class="material-icons">remove_red_eye</i></a></td>
 
