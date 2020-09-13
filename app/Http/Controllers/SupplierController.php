@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Location;
 use App\Supplier;
 use Illuminate\Http\Request;
 
@@ -43,5 +44,42 @@ class SupplierController extends Controller
         $data['title'] = "Supplier Details";
         $data['supplier']=Supplier::find($id);
         return view('suppliers.show', $data);
+    }
+
+    public function create(){
+        $data['title'] = "Add New Supplier";
+        $data['locations'] = Location::where('location_status','Active')->get();
+        return view('suppliers.create', $data);
+    }
+
+    public function store(Request $request)
+    {
+        $request->validate([
+            'supplier_name' => 'required|unique:suppliers',
+            'supplier_company' => 'required',
+            'supplier_address' => 'required',
+            'supplier_opening_balance' => 'required',
+            'supplier_division_id' => 'required',
+            'supplier_district_id' => 'required',
+            'supplier_area_id' => 'required',
+            'supplier_phone' => 'required',
+            'supplier_email' => 'required',
+        ]);
+
+        $supplierModel = new Supplier();
+        $supplierModel->supplier_name = $request->supplier_name;
+        $supplierModel->supplier_company = $request->supplier_company;
+        $supplierModel->supplier_address = $request->supplier_address;
+        $supplierModel->supplier_opening_balance =  $request->supplier_opening_balance;
+        $supplierModel->supplier_division_id = $request->supplier_division_id;
+        $supplierModel->supplier_district_id = $request->supplier_district_id;
+        $supplierModel->supplier_area_id = $request->supplier_area_id;
+        $supplierModel->supplier_phone = $request->supplier_phone;
+        $supplierModel->supplier_email = $request->supplier_email;
+        $supplierModel->supplier_status = $request->supplier_status;
+
+        $supplierModel->save();
+
+        return redirect()->route('supplier.create')->with('success','Supplier has been created successfully!');
     }
 }

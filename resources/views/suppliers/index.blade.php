@@ -123,7 +123,7 @@
                                                             <span class="{{$supplier->supplier_status=="Active"? "green-text":"red-text"}}">{{$supplier->supplier_status}}</span>
                                                           </span>
                                                         </td>
-                                                        <td><a class="border-primary" href="{{ route('supplier.edit', 1)}}"><i class="material-icons  edit-icon">edit</i></a><a href="{{ route('supplier.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
+                                                        <td><a class="border-primary" href="{{ route('supplier.edit',$supplier->id )}}"><i class="material-icons  edit-icon">edit</i></a><a href="{{ route('supplier.show', $supplier->id)}}"><i class="material-icons">remove_red_eye</i></a></td>
                                                        
                                                     </tr>
                                                     @endforeach
