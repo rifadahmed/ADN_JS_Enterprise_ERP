@@ -12,6 +12,8 @@ Website: http://adndigital.com.bd
     <meta name="description" content="ADN ERP Solution">
     <meta name="keywords" content="">
     <meta name="author" content="ADN Digital">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
     <title>{{ config('app.name', 'JS ERP') }}</title>
     <link rel="apple-touch-icon" href={{asset("app-assets/images/favicon/apple-touch-icon-152x152.png")}}>
     <link rel="shortcut icon" type="image/x-icon" href={{asset("app-assets/images/favicon/favicon-32x32.png")}}>

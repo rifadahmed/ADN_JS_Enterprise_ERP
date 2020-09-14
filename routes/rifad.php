@@ -1,5 +1,9 @@
 <?php
 
+use App\Division;
+use App\Location;
+use App\LocationType;
+
 
 Route::get('/location/list', 'LocationController@index')->name('location.list');
 Route::get('/location/create', 'LocationController@create')->name('location.create');
@@ -23,6 +27,24 @@ Route::post('/buyer/store', 'BuyerController@store')->name('buyer.store');
 Route::get('/buyer/edit/{id}', 'BuyerController@edit')->name('buyer.edit');
 Route::post('/buyer/update/{id}', 'BuyerController@update')->name('buyer.update');
 Route::get('/buyer/show/{id}', 'BuyerController@show')->name('buyer.show');
+
+// Route::post('/ajaxcall', 'BuyerController@ajaxCall')->name('buyer.ajaxcall');
+
+Route::post('/subcat', function (Request $request) {
+
+    $parent_id = $request->cat_id;
+    
+    $subcategories = Division::where('id',$parent_id)
+                          ->with('districts')
+                          ->get();
+
+    return response()->json([
+        'subcategories' => $subcategories
+    ]);
+   
+})->name('subcat');
+
+
 
 
 Route::get('/buyer/type/list', 'BuyerController@indexBuyerType')->name('buyer.type.list');
