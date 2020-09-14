@@ -87,3 +87,11 @@ Route::post('/user/store', 'UserController@store')->name('user.store');
 Route::get('/user/edit/{id}', 'UserController@edit')->name('user.edit');
 Route::post('/user/update/{id}', 'UserController@update')->name('user.update');
 Route::get('/user/show/{id}', 'UserController@show')->name('user.show');
+
+/*** Routes for Supplier */
+Route::get('/supplier/list', 'SupplierController@index')->name('supplier.list');
+Route::get('/supplier/create', 'SupplierController@create')->name('supplier.create');
+Route::post('/supplier/store', 'SupplierController@store')->name('supplier.store');
+Route::get('/supplier/edit/{id}', 'SupplierController@edit')->name('supplier.edit');
+Route::post('/supplier/update/{id}', 'SupplierController@update')->name('supplier.update');
+Route::get('/supplier/show/{id}', 'SupplierController@show')->name('supplier.show');

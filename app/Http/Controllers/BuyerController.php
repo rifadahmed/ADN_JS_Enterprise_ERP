@@ -74,12 +74,20 @@ class BuyerController extends Controller
     }
     
     public function store(Request $request){
-        // $request->validate([
-        //     'buyer_type_name' => 'required|unique:buyer_types',
-        //     'buyer_type_status' => 'required',
-        //     'buyer_type_order' => 'nullable|integer',
+        $request->validate([
+            'buyer_name' => 'required|unique:buyers',
+            'buyer_company' => 'required',
+            'buyer_address' => 'required',
+            'buyer_type_id' => 'required',
+            'buyer_division_id' => 'required',
+            'buyer_district_id' => 'required',
+            'buyer_area_id' => 'required',
+            'buyer_phone' => 'required',
+            'buyer_email' => 'required',
+            // 'buyer_type_status' => 'required',
 
-        // ]);
+
+        ]);
         $buyerModel = new Buyer();
         $buyerModel->buyer_name = $request->buyer_name;
         $buyerModel->buyer_company = $request->buyer_company;
@@ -98,12 +106,20 @@ class BuyerController extends Controller
         return redirect()->route('buyer.create')->with('success','Buyer has been created successfully!');
     }
     public function update(Request $request,$id){
-        // $request->validate([
-        //     'buyer_type_name' => 'required|unique:buyer_types',
-        //     'buyer_type_status' => 'required',
-        //     'buyer_type_order' => 'nullable|integer',
+        $request->validate([
+            'buyer_name' => 'unique:buyers,buyer_name,'.$id,
+            'buyer_company' => 'required',
+            'buyer_address' => 'required',
+            'buyer_type_id' => 'required',
+            'buyer_division_id' => 'required',
+            'buyer_district_id' => 'required',
+            'buyer_area_id' => 'required',
+            'buyer_phone' => 'required',
+            'buyer_email' => 'required',
+            //'buyer_status' => 'required',
 
-        // ]);
+
+        ]);
         $buyerModel = Buyer::find($id);
         $buyerModel->buyer_name = $request->buyer_name;
         $buyerModel->buyer_company = $request->buyer_company;
