@@ -229,7 +229,7 @@
                 },
                 { 
                     data: [3333,1200,1500,1306],
-                    label: "Purchase/Week(1 Month)",
+                    label: "Purchases/Week(1 Month)",
                     borderColor: "#8e5ea2",
                     fill: false
                 }
