@@ -1,6 +1,7 @@
 
 
 @extends('layouts.master')
+
 @push('css')
     <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/vendors/vendors.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/vendors/data-tables/css/jquery.dataTables.min.css') }}">
@@ -9,8 +10,10 @@
 @endpush
 
 
+
 @section('content')
 <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
+{{-- <link rel="stylesheet" type="text/css" href="{{ asset('css/select_2.css') }}"> --}}
 
     <!-- BEGIN: Page Main-->
         <div class="row">

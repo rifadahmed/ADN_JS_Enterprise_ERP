@@ -2,3 +2,6 @@
     .select-wrapper input.select-dropdown ,.select-wrapper .caret{
         display: none;
     }
+    .select2-search__field{
+        border:none !important;
+    }
