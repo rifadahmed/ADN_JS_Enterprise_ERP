@@ -52,7 +52,7 @@
       labels: ["January", "February", "March", "April", "May", "June"],
       datasets: [
          {
-            label: "This year",
+            label: "This yearrr",
             data: [45, 62, 15, 78, 58, 98],
             fill: false,
             pointRadius: 2.2,
