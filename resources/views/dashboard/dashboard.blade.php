@@ -160,14 +160,23 @@
         </div>
     </div>
     <!--/ Current balance & appointment cards-->
+
+    {{-- location chart --}}
     <div class="col s12 m6 l6">
         <canvas id="myChart" width="400" height="200"></canvas>
     </div>
+
+    {{-- Sale chart --}}
+    <div class="col s12 m6 l6">
+        <canvas id="line-chart" width="400" height="200"></canvas>
+    </div>
+
      
 </div>
 
 
 <script>
+        // Location chart
         var ctx = document.getElementById('myChart').getContext('2d');
         var myChart = new Chart(ctx, {
             type: 'bar',
@@ -205,6 +214,34 @@
                 }
             }
         });
+
+        
+             // Sale chart
+            new Chart(document.getElementById("line-chart"), {
+            type: 'line',
+            data: {
+                labels: ['1st','2nd','3rd','4th'],
+                datasets: [{ 
+                    data: [86,4414,2000,3306],
+                    label: "Sales/Week(1 Month)",
+                    borderColor: "#3e95cd",
+                    //fill: false
+                },
+                { 
+                    data: [3333,1200,1500,1306],
+                    label: "Purchase/Week(1 Month)",
+                    borderColor: "#8e5ea2",
+                    fill: false
+                }
+                ]
+            },
+            // options: {
+            //     title: {
+            //     display: true,
+            //     text: 'Sales Per Week(1 Month)'
+            //     }
+            // }
+            });
 </script> 
 @endsection
 
