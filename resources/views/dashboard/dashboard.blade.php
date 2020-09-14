@@ -98,6 +98,38 @@
              </div>
         </div>
 
+        <div class="row">
+            <div class="col s12 m4 l4">
+               <div class="card pt-0 pb-0 animate fadeLeft">
+                  <div class="dashboard-revenue-wrapper padding-2 ml-2">
+                     <span class="new badge gradient-45deg-light-blue-cyan gradient-shadow mt-2 mr-2">+ 42.6%</span>
+                     <p class="mt-2 mb-0">Members online*</p>
+                     <p class="no-margin grey-text lighten-3">360 avg</p>
+                     <h5>3,450</h5>
+                  </div>
+               </div>
+            </div>
+            <div class="col s12 m4 l4 animate fadeUp">
+               <div class="card pt-0 pb-0">
+                  <div class="dashboard-revenue-wrapper padding-2 ml-2">
+                     <span class="new badge gradient-45deg-purple-deep-orange gradient-shadow mt-2 mr-2">+ 12%</span>
+                     <p class="mt-2 mb-0">Current server load*</p>
+                     <p class="no-margin grey-text lighten-3">23.1% avg</p>
+                     <h5>+2500</h5>
+                  </div>
+               </div>
+            </div>
+            <div class="col s12 m4 l4">
+               <div class="card pt-0 pb-0 animate fadeRight">
+                  <div class="dashboard-revenue-wrapper padding-2 ml-2">
+                     <span class="new badge gradient-45deg-amber-amber gradient-shadow mt-2 mr-2">+ $900</span>
+                     <p class="mt-2 mb-0">Today's revenue*</p>
+                     <p class="no-margin grey-text lighten-3">$40,512 avg</p>
+                     <h5>$ 22,300</h5>
+                  </div>
+               </div>
+            </div>
+         </div>
         <div class="col s12 l4">
             <!-- Recent Users -->
             <div class="card recent-buyers-card animate fadeUp">
@@ -124,7 +156,7 @@
         <div class="col s12 m6 l8">
             <div class="card subscriber-list-card animate fadeRight">
                 <div class="card-content pb-1">
-                    <h4 class="card-title mb-0">Buyer List <i class="material-icons float-right">more_vert</i></h4>
+                    <h4 class="card-title mb-0">New Buyers<i class="material-icons float-right">more_vert</i></h4>
                 </div>
                 <table class="subscription-table responsive-table highlight">
                     <thead>
@@ -169,7 +201,7 @@
                 <ul id="projects-collection" class="collection z-depth-1 animate fadeLeft">
                 <li class="collection-item avatar">
                     <i class="material-icons cyan circle">card_travel</i>
-                    <h6 class="collection-header m-0">Products: static</h6>
+                    <h6 class="collection-header m-0">Products:*</h6>
                     <p>Trending Products</p>
                 </li>
                 <li class="collection-item">
@@ -223,10 +255,10 @@
                 </ul>
             </div>
             {{-- Weekly earning --}}
-            <div class="col s12 m4 l4">
+            <div class="col s12 m4 l5">
                 <div id="weekly-earning" class="card animate fadeUp">
                    <div class="card-content">
-                      <h4 class="header m-0">Earning: static<i class="material-icons right grey-text lighten-3">more_vert</i></h4>
+                      <h4 class="header m-0">Earning:*<i class="material-icons right grey-text lighten-3">more_vert</i></h4>
                       <p class="no-margin grey-text lighten-3 medium-small">Mon 15 - Sun 21</p>
                       <h3 class="header">$899.39 <i class="material-icons deep-orange-text text-accent-2">arrow_upward</i>
                       </h3>
@@ -304,13 +336,13 @@
                 labels: ['1st','2nd','3rd','4th'],
                 datasets: [{ 
                     data: [86,4414,2000,3306],
-                    label: "Sales/Week(1 Month):static",
+                    label: "Sales/Week(1 Month)*",
                     borderColor: "#3e95cd",
                     //fill: false
                 },
                 { 
                     data: [3333,1200,1500,1306],
-                    label: "Purchases/Week(1 Month):static",
+                    label: "Purchases/Week(1 Month)*",
                     borderColor: "#8e5ea2",
                     fill: false
                 }

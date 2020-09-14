@@ -24,7 +24,7 @@ class DashboardController extends Controller
         $data['users']=User::all()->take(3);
 
         //buyers
-        $data['buyers']=Buyer::all()->take(4);
+        $data['buyers']=Buyer::all()->take(3);
         $data['totalbuyer']=count(Buyer::all());
         $data['latestBuyer']=Buyer::whereDate('created_at', '>=', date('Y-m-d H:i:s',strtotime('-1 days')) )->count();
 
