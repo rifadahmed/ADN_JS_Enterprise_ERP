@@ -139,7 +139,7 @@
                     <ul class="collection mb-0">
                         @foreach ($users as $user)
                         <li class="collection-item avatar">
-                            <img src="https://www.shorturl.at/xJLTW" alt="" class="circle" />
+                            <img src="https://pipesak.com/wp-content/uploads/2019/09/Mike-Place-Holder-PipeSak-About-Page.jpg" alt="" class="circle" />
                             <p class="font-weight-600">{{$user->name}}</p>
                             <p class="medium-small">{{$user->created_at->diffForHumans()}}</p>
                             <a href="#!" class="secondary-content"><i class="material-icons">star_border</i></a>
