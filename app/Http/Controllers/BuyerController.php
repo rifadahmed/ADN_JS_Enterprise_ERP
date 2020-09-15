@@ -58,7 +58,6 @@ class BuyerController extends Controller
         $data['data']=Buyer::find($id);
         //$data['locations'] = Location::where('location_status','Active')->get();
         $data['divisions'] = Division::all();
-
          return view('buyers.edit', $data);
         
     }
@@ -92,7 +91,6 @@ class BuyerController extends Controller
             'buyer_area_id' => 'required',
             'buyer_phone' => 'required',
             'buyer_email' => 'required',
-            // 'buyer_type_status' => 'required',
 
 
         ]);

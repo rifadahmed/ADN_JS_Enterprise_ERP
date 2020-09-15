@@ -39,17 +39,12 @@
         <select class="validate js-example-basic-single" name="buyer_division_id" id="buyer_division_id" required="" >
             <option value="" disabled selected> - Select Division - </option>
 
-            {{-- @foreach($locations as $location)
-                @if($location->locationType)
-                    @if($location->locationType->location_type_name == 'Division')
-                        <option value={{$location->id}} @if(old('buyer_division_id', (isset($data ) && $data->buyer_division_id == $location->id))) selected @endif>{{$location->location_name}}</option>
-                    @endif
-                @endif
-            @endforeach   --}}
 
              @foreach($divisions as $division)
-                    <option value={{$division->id}} @if(old('buyer_division_id', (isset($data ) && $data->buyer_division_id == $division->id))) selected @endif>{{$division->name}}</option>       
-            @endforeach
+                    {{-- <option value={{$division->id}} @if(old('buyer_division_id', (isset($data ) && $data->buyer_division_id == $division->id))) selected @endif>{{$division->name}}</option>        --}}
+                    <option value={{$division->id}} >{{$division->name}}</option>       
+
+                    @endforeach
 
         </select>
         <label for="buyer_division_id">Division *</label>
@@ -71,7 +66,7 @@
             {{-- @foreach($districts as $district)      
                         <option value={{$district->id}} >{{$district->name}}</option>
             @endforeach --}}
-            {{-- @include('buyers._districtsform') --}}
+           
 
         </select>
         <label for="buyer_district_id">District *</label>
