@@ -21,12 +21,12 @@
                                         <p>Brands</p>
                                     </div>
                                     <div class="col s5 m5 right-align">
-                                        {{-- <h5 class="mb-0 white-text">{{$latestbrand}}</h5> --}}
-                                        <h5 class="mb-0 white-text">2</h5>
+                                         <h5 class="mb-0 white-text">{{$latestbrand}}</h5> 
+                                        {{-- <h5 class="mb-0 white-text">2</h5> --}}
 
                                         <p class="no-margin">New</p>
-                                        {{-- <p>{{$totalbrand}}</p> --}}
-                                        <p>3</p>
+                                         <p>{{$totalbrand}}</p> 
+                                       
 
                                     </div>
                                     </div>
@@ -46,12 +46,12 @@
                                         <p>Clients</p>
                                     </div>
                                     <div class="col s5 m5 right-align">
-                                        {{-- <h5 class="mb-0 white-text">{{$latestBuyer}}</h5> --}}
-                                        <h5 class="mb-0 white-text">4</h5>
+                                        <h5 class="mb-0 white-text">{{$latestBuyer}}</h5> 
+                                       
 
                                         <p class="no-margin">New</p>
-                                        {{-- <p>{{$totalbuyer}}</p> --}}
-                                        <p>4</p>
+                                        <p>{{$totalbuyer}}</p> 
+                                       
                                     </div>
                                     </div>
                                 </div>
@@ -93,11 +93,11 @@
                                             <p>Supplier</p>
                                         </div>
                                         <div class="col s5 m5 right-align">
-                                            {{-- <h5 class="mb-0 white-text">${{$totalOpeningBalance}}</h5> --}}
-                                            <h5 class="mb-0 white-text">6</h5>
+                                             <h5 class="mb-0 white-text">${{$totalOpeningBalance}}</h5> 
+                                            {{-- <h5 class="mb-0 white-text">6</h5> --}}
 
                                             <p class="no-margin">Today</p>
-                                        <p>2</p>
+                                        <p>{{$totalsupplier}}</p>
                                         </div>
                                         </div>
                                     </div>
