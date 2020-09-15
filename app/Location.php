@@ -13,4 +13,9 @@ class Location extends Model
     public function locationType(){
         return $this->belongsTo('App\LocationType','location_type_id');
     }
+    public function subcategories(){
+
+        return $this->hasMany('App\Location', 'parent_id');
+
+    }
 }

@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Buyer;
+use App\Upazila;
+use App\District;
+use App\Division;
 use App\Location;
 use App\BuyerType;
 use App\LocationType;
@@ -70,6 +73,9 @@ class BuyerController extends Controller
 
         $data['locations'] = Location::where('location_status','Active')->get();
 
+        $data['divisions'] = Division::all();
+        $data['districts'] = District::all();
+        $data['areas'] = Upazila::all();
         return view('buyers.create', $data);
     }
     
@@ -222,6 +228,10 @@ class BuyerController extends Controller
 
         return redirect()->route('buyer.type.edit',$id)->with('success','Buyer Type has been created successfully!');
     }
+
+
+   
+    
     
     
     

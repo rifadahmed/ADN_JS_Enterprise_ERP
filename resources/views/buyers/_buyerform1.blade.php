@@ -38,21 +38,15 @@
         <br>
         <select class="validate js-example-basic-single" name="buyer_division_id" id="buyer_division_id" required="" >
             <option value="" disabled selected> - Select Division - </option>
-
-            {{-- @foreach($locations as $location)
+            {{-- @foreach ($division_locations as $division_location)
+        <option value={{$division_location->id}} >{{$division_location->location_name}}</option>
+            @endforeach --}}
+            @foreach($locations as $location)
                 @if($location->locationType)
                     @if($location->locationType->location_type_name == 'Division')
                         <option value={{$location->id}} @if(old('buyer_division_id', (isset($data ) && $data->buyer_division_id == $location->id))) selected @endif>{{$location->location_name}}</option>
                     @endif
                 @endif
-            @endforeach --}}
-
-            @foreach($divisions as $division)
-                
-                   
-                        <option value={{$division->id}}>{{$division->name}}</option>
-                    
-                
             @endforeach
         </select>
         <label for="buyer_division_id">Division *</label>
@@ -62,18 +56,16 @@
         <br>
         <select class="validate js-example-basic-single" name="buyer_district_id" id="buyer_district_id" required="" >
             <option value="" disabled selected> - Select District - </option>
-
-            {{-- @foreach($locations as $location)
+            {{-- @foreach ($district_locations as $district_location)
+            <option value={{$district_location->id}}>{{$district_location->location_name}}</option>
+            @endforeach --}}
+            @foreach($locations as $location)
                 @if($location->locationType)
                     @if($location->locationType->location_type_name == 'District')
                         <option value={{$location->id}} @if(old('buyer_district_id', (isset($data ) && $data->buyer_district_id == $location->id))) selected @endif>{{$location->location_name}}</option>
                     @endif
                 @endif
-            @endforeach --}}
-
-            {{-- @foreach($districts as $district)      
-                        <option value={{$district->id}} >{{$district->name}}</option>
-            @endforeach --}}
+            @endforeach
         </select>
         <label for="buyer_district_id">District *</label>
     </div>
@@ -82,16 +74,12 @@
         <br>
         <select class="validate js-example-basic-single" name="buyer_area_id" id="buyer_area_id" required="" >
             <option value="" disabled selected> - Select Area - </option>
-            {{-- @foreach($locations as $location)
+            @foreach($locations as $location)
                 @if($location->locationType)
                     @if($location->locationType->location_type_name == 'Area')
                         <option value={{$location->id}} @if(old('buyer_area_id', (isset($data ) && $data->buyer_area_id == $location->id))) selected @endif>{{$location->location_name}}</option>
                     @endif
                 @endif
-            @endforeach --}}
-
-            @foreach($areas as $area)
-                        <option value={{$area->id}} >{{$area->name}}</option>
             @endforeach
         </select>
         <label for="buyer_area_id">Area *</label>
@@ -109,7 +97,7 @@
     </div>  
 </div>
 
- <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+ {{-- <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
  <script type="text/javascript">
     $.ajaxSetup({
         headers: {
@@ -123,9 +111,10 @@
          
          var cat_id = e.target.value;
 
-         $.ajax({
+         //alert(cat_id);
+           $.ajax({
                
-               url:"/subcat/"+cat_id,
+               url:"{{ route('subcat') }}",
                type:"POST",
                data: {
                    cat_id: cat_id
@@ -133,7 +122,7 @@
               
                success:function (data) {
 
-                $('#buyer_district_id').empty();
+                $('#subcategory').empty();
 
                 $.each(data.subcategories[0].subcategories,function(index,subcategory){
                     
@@ -142,9 +131,10 @@
 
                }
            })
+       
         });
 
     });
-</script>
+</script> --}}
 
 
