@@ -56,8 +56,9 @@ class BuyerController extends Controller
         $data['title'] = "Edit Buyer";
         $data['buyer_types']=BuyerType::all();
         $data['data']=Buyer::find($id);
-        $data['locations'] = Location::where('location_status','Active')->get();
-       
+        //$data['locations'] = Location::where('location_status','Active')->get();
+        $data['divisions'] = Division::all();
+
          return view('buyers.edit', $data);
         
     }

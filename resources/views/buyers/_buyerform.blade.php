@@ -45,15 +45,12 @@
                         <option value={{$location->id}} @if(old('buyer_division_id', (isset($data ) && $data->buyer_division_id == $location->id))) selected @endif>{{$location->location_name}}</option>
                     @endif
                 @endif
-            @endforeach --}}
+            @endforeach   --}}
 
-            @foreach($divisions as $division)
-                
-                   
-                        <option value={{$division->id}}>{{$division->name}}</option>
-                    
-                
+             @foreach($divisions as $division)
+                    <option value={{$division->id}} @if(old('buyer_division_id', (isset($data ) && $data->buyer_division_id == $division->id))) selected @endif>{{$division->name}}</option>       
             @endforeach
+
         </select>
         <label for="buyer_division_id">Division *</label>
     </div>
