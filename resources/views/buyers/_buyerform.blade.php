@@ -111,11 +111,13 @@
 
  <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
  <script type="text/javascript">
-    $.ajaxSetup({
-        headers: {
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+   $.ajaxSetup({
+    beforeSend: function(xhr, type) {
+        if (!type.crossDomain) {
+            xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'));
         }
-    });
+    },
+});
 
     $(document).ready(function () {
      
@@ -125,7 +127,7 @@
 
          $.ajax({
                
-               url:"/subcat/"+cat_id,
+               url:"/subcat",
                type:"POST",
                data: {
                    cat_id: cat_id
