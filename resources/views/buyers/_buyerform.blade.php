@@ -74,6 +74,8 @@
             {{-- @foreach($districts as $district)      
                         <option value={{$district->id}} >{{$district->name}}</option>
             @endforeach --}}
+            {{-- @include('buyers._districtsform') --}}
+
         </select>
         <label for="buyer_district_id">District *</label>
     </div>
@@ -81,7 +83,9 @@
      <div class="input-field col s12 m6">
         <br>
         <select class="validate js-example-basic-single" name="buyer_area_id" id="buyer_area_id" required="" >
-            <option value="" disabled selected> - Select Area - </option>
+            <option value="">- Select Upazila -</option>
+
+            {{-- <option value="" disabled selected> - Select Area - </option> --}}
             {{-- @foreach($locations as $location)
                 @if($location->locationType)
                     @if($location->locationType->location_type_name == 'Area')
@@ -90,9 +94,9 @@
                 @endif
             @endforeach --}}
 
-            @foreach($areas as $area)
+            {{-- @foreach($areas as $area)
                         <option value={{$area->id}} >{{$area->name}}</option>
-            @endforeach
+            @endforeach --}}
         </select>
         <label for="buyer_area_id">Area *</label>
     </div>
@@ -112,41 +116,32 @@
  <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
  <script type="text/javascript">
    $.ajaxSetup({
-    beforeSend: function(xhr, type) {
-        if (!type.crossDomain) {
-            xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'));
-        }
-    },
-});
+                    beforeSend: function(xhr, type) {
+                        if (!type.crossDomain) {
+                            xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'));
+                        }
+                    },
+            });
 
     $(document).ready(function () {
      
         $('#buyer_division_id').on('change',function(e) {
-         
-         var cat_id = e.target.value;
-
-         $.ajax({
-               
-               url:"/subcat",
-               type:"POST",
-               data: {
-                   cat_id: cat_id
-                },
-              
-               success:function (data) {
-
-                $('#buyer_district_id').empty();
-
-                $.each(data.subcategories[0].subcategories,function(index,subcategory){
-                    
-                    $('#buyer_district_id').append('<option value="'+subcategory.id+'">'+subcategory.name+'</option>');
-                })
-
-               }
-           })
+            var div_id = e.target.value;
+            $.post('{{ route('district.ajaxcall') }}', {_token:'{{ csrf_token() }}', div_id: div_id}, function(data){
+                //$(".loader2").hide();
+                $('#buyer_district_id').html(data);
+            });
         });
 
-    });
+        $('#buyer_district_id').on('change',function(e) {
+            var dis_id = e.target.value;
+            $.post('{{ route('upazila.ajaxcall') }}', {_token:'{{ csrf_token() }}', dis_id: dis_id}, function(data){
+                //$(".loader2").hide();
+                $('#buyer_area_id').html(data);
+            });
+        });
+
+});
 </script>
 
 

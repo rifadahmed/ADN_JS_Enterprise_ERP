@@ -28,21 +28,23 @@ Route::get('/buyer/edit/{id}', 'BuyerController@edit')->name('buyer.edit');
 Route::post('/buyer/update/{id}', 'BuyerController@update')->name('buyer.update');
 Route::get('/buyer/show/{id}', 'BuyerController@show')->name('buyer.show');
 
-// Route::post('/ajaxcall', 'BuyerController@ajaxCall')->name('buyer.ajaxcall');
+ Route::post('/district/ajaxcall', 'BuyerController@districtAjaxcall')->name('district.ajaxcall');
+ Route::post('/upazila/ajaxcall', 'BuyerController@upazilaAjaxcall')->name('upazila.ajaxcall');
 
-Route::post('/subcat', function (Request $request) {
 
-    $parent_id = $request->cat_id;
+// Route::post('/subcat', function (Request $request) {
+
+//     $parent_id = $request->cat_id;
     
-    $subcategories = Division::where('id',$parent_id)
-                          ->with('districts')
-                          ->get();
+//     $subcategories = Division::where('id',$parent_id)
+//                           ->with('districts')
+//                           ->get();
 
-    return response()->json([
-        'subcategories' => $subcategories
-    ]);
+//     return response()->json([
+//         'subcategories' => $subcategories
+//     ]);
    
-})->name('subcat');
+// })->name('subcat');
 
 
 

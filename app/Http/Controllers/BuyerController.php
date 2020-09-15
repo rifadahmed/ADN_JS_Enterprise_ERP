@@ -230,8 +230,21 @@ class BuyerController extends Controller
     }
 
 
+   public function districtAjaxcall(Request $request){
+        $div_id = $request->div_id;
+        $districts = District::where('division_id',$div_id)->get();
+                           
+        return view('buyers._ajax_districtform',compact('districts'));
+
+   }
+   public function upazilaAjaxcall(Request $request){
+    $dis_id = $request->dis_id;
+    $upazilas = Upazila::where('district_id',$dis_id)->get();
+                       
+    return view('buyers._ajax_upazilaform',compact('upazilas'));
+
+}
    
-    
     
     
     
