@@ -21,7 +21,7 @@ class CreateOperationalExpensesTable extends Migration
             $table->integer('operational_expense_order')->nullable();
             $table->enum('operational_expense_status',['Active','Inactive'])->default('Active');
             $table->integer('created_by')->nullable();
-            $table->integer('updated_by')->nullable(); 
+            $table->integer('updated_by')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });
