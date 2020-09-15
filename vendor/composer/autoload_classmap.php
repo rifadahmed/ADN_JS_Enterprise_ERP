@@ -6,8 +6,13 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\Brand' => $baseDir . '/app/Brand.php',
+    'App\\Buyer' => $baseDir . '/app/Buyer.php',
+    'App\\BuyerType' => $baseDir . '/app/BuyerType.php',
     'App\\Category' => $baseDir . '/app/Category.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
+    'App\\District' => $baseDir . '/app/District.php',
+    'App\\Division' => $baseDir . '/app/Division.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
     'App\\Http\\Controllers\\BrandController' => $baseDir . '/app/Http/Controllers/BrandController.php',
     'App\\Http\\Controllers\\BuyerController' => $baseDir . '/app/Http/Controllers/BuyerController.php',
@@ -19,6 +24,7 @@ return array(
     'App\\Http\\Controllers\\PurchaseController' => $baseDir . '/app/Http/Controllers/PurchaseController.php',
     'App\\Http\\Controllers\\SaleController' => $baseDir . '/app/Http/Controllers/SaleController.php',
     'App\\Http\\Controllers\\SubCategoryController' => $baseDir . '/app/Http/Controllers/SubCategoryController.php',
+    'App\\Http\\Controllers\\SupplierController' => $baseDir . '/app/Http/Controllers/SupplierController.php',
     'App\\Http\\Controllers\\UserController' => $baseDir . '/app/Http/Controllers/UserController.php',
     'App\\Http\\Controllers\\WarehouseController' => $baseDir . '/app/Http/Controllers/WarehouseController.php',
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
@@ -38,6 +44,8 @@ return array(
     'App\\Providers\\EventServiceProvider' => $baseDir . '/app/Providers/EventServiceProvider.php',
     'App\\Providers\\RouteServiceProvider' => $baseDir . '/app/Providers/RouteServiceProvider.php',
     'App\\SubCategory' => $baseDir . '/app/SubCategory.php',
+    'App\\Supplier' => $baseDir . '/app/Supplier.php',
+    'App\\Upazila' => $baseDir . '/app/Upazila.php',
     'App\\User' => $baseDir . '/app/User.php',
     'ArithmeticError' => $vendorDir . '/symfony/polyfill-php70/Resources/stubs/ArithmeticError.php',
     'Asm89\\Stack\\Cors' => $vendorDir . '/asm89/stack-cors/src/Cors.php',

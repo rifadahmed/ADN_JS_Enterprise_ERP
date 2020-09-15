@@ -487,8 +487,13 @@ class ComposerStaticInit7c726eb1f174d77222dc08347390abee
     );
 
     public static $classMap = array (
+        'App\\Brand' => __DIR__ . '/../..' . '/app/Brand.php',
+        'App\\Buyer' => __DIR__ . '/../..' . '/app/Buyer.php',
+        'App\\BuyerType' => __DIR__ . '/../..' . '/app/BuyerType.php',
         'App\\Category' => __DIR__ . '/../..' . '/app/Category.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
+        'App\\District' => __DIR__ . '/../..' . '/app/District.php',
+        'App\\Division' => __DIR__ . '/../..' . '/app/Division.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\BrandController' => __DIR__ . '/../..' . '/app/Http/Controllers/BrandController.php',
         'App\\Http\\Controllers\\BuyerController' => __DIR__ . '/../..' . '/app/Http/Controllers/BuyerController.php',
@@ -500,6 +505,7 @@ class ComposerStaticInit7c726eb1f174d77222dc08347390abee
         'App\\Http\\Controllers\\PurchaseController' => __DIR__ . '/../..' . '/app/Http/Controllers/PurchaseController.php',
         'App\\Http\\Controllers\\SaleController' => __DIR__ . '/../..' . '/app/Http/Controllers/SaleController.php',
         'App\\Http\\Controllers\\SubCategoryController' => __DIR__ . '/../..' . '/app/Http/Controllers/SubCategoryController.php',
+        'App\\Http\\Controllers\\SupplierController' => __DIR__ . '/../..' . '/app/Http/Controllers/SupplierController.php',
         'App\\Http\\Controllers\\UserController' => __DIR__ . '/../..' . '/app/Http/Controllers/UserController.php',
         'App\\Http\\Controllers\\WarehouseController' => __DIR__ . '/../..' . '/app/Http/Controllers/WarehouseController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
@@ -519,6 +525,8 @@ class ComposerStaticInit7c726eb1f174d77222dc08347390abee
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
         'App\\SubCategory' => __DIR__ . '/../..' . '/app/SubCategory.php',
+        'App\\Supplier' => __DIR__ . '/../..' . '/app/Supplier.php',
+        'App\\Upazila' => __DIR__ . '/../..' . '/app/Upazila.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
         'ArithmeticError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/ArithmeticError.php',
         'Asm89\\Stack\\Cors' => __DIR__ . '/..' . '/asm89/stack-cors/src/Cors.php',

@@ -57,7 +57,7 @@ class BuyerController extends Controller
         $data['buyer_types']=BuyerType::all();
         $data['data']=Buyer::find($id);
         $data['locations'] = Location::where('location_status','Active')->get();
-
+       
          return view('buyers.edit', $data);
         
     }
@@ -80,6 +80,7 @@ class BuyerController extends Controller
     }
     
     public function store(Request $request){
+       // return $request->all();
         $request->validate([
             'buyer_name' => 'required|unique:buyers',
             'buyer_company' => 'required',
@@ -229,21 +230,22 @@ class BuyerController extends Controller
         return redirect()->route('buyer.type.edit',$id)->with('success','Buyer Type has been created successfully!');
     }
 
+    // *****************************Location AJAX Call *****************************
+    public function districtAjaxcall(Request $request){
+            $div_id = $request->div_id;
+            $districts = District::where('division_id',$div_id)->get();
+                            
+            return view('buyers._ajax_districtform',compact('districts'));
 
-   public function districtAjaxcall(Request $request){
-        $div_id = $request->div_id;
-        $districts = District::where('division_id',$div_id)->get();
-                           
-        return view('buyers._ajax_districtform',compact('districts'));
+    }
 
-   }
-   public function upazilaAjaxcall(Request $request){
-    $dis_id = $request->dis_id;
-    $upazilas = Upazila::where('district_id',$dis_id)->get();
-                       
-    return view('buyers._ajax_upazilaform',compact('upazilas'));
+    public function upazilaAjaxcall(Request $request){
+        $dis_id = $request->dis_id;
+        $upazilas = Upazila::where('district_id',$dis_id)->get();
+                        
+        return view('buyers._ajax_upazilaform',compact('upazilas'));
 
-}
+    }
    
     
     
