@@ -33,17 +33,17 @@ class DashboardController extends Controller
         $data['latestbrand']=Brand::whereDate('created_at', '>=', date('Y-m-d H:i:s',strtotime('-1 days')) )->count();
 
         //Locations
-        $data['totallocation']=count(Location::all());
-        $data['latestlocation']=Location::whereDate('created_at', '>=', date('Y-m-d H:i:s',strtotime('-1 days')) )->count();
+        // $data['totallocation']=count(Location::all());
+        // $data['latestlocation']=Location::whereDate('created_at', '>=', date('Y-m-d H:i:s',strtotime('-1 days')) )->count();
 
         //Suppliers
         $data['totalsupplier']=count(Supplier::all());
         $data['totalOpeningBalance']=Supplier::sum('supplier_opening_balance');
 
         //Division
-        $data['division']=count(Location::where('location_type_id',LocationType::where("location_type_name","Division")->first()->id)->get());
-        $data['district']=count(Location::where('location_type_id',LocationType::where("location_type_name","district")->first()->id)->get());
-        $data['area']=count(Location::where('location_type_id',LocationType::where("location_type_name","area")->first()->id)->get());
+        // $data['division']=count(Location::where('location_type_id',LocationType::where("location_type_name","Division")->first()->id)->get());
+        // $data['district']=count(Location::where('location_type_id',LocationType::where("location_type_name","district")->first()->id)->get());
+        // $data['area']=count(Location::where('location_type_id',LocationType::where("location_type_name","area")->first()->id)->get());
 
         
         return view('dashboard.dashboard',$data);

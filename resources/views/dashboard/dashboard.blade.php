@@ -21,9 +21,13 @@
                                         <p>Brands</p>
                                     </div>
                                     <div class="col s5 m5 right-align">
-                                        <h5 class="mb-0 white-text">{{$latestbrand}}</h5>
+                                        {{-- <h5 class="mb-0 white-text">{{$latestbrand}}</h5> --}}
+                                        <h5 class="mb-0 white-text">2</h5>
+
                                         <p class="no-margin">New</p>
-                                        <p>{{$totalbrand}}</p>
+                                        {{-- <p>{{$totalbrand}}</p> --}}
+                                        <p>3</p>
+
                                     </div>
                                     </div>
                                 </div>
@@ -42,9 +46,12 @@
                                         <p>Clients</p>
                                     </div>
                                     <div class="col s5 m5 right-align">
-                                        <h5 class="mb-0 white-text">{{$latestBuyer}}</h5>
+                                        {{-- <h5 class="mb-0 white-text">{{$latestBuyer}}</h5> --}}
+                                        <h5 class="mb-0 white-text">4</h5>
+
                                         <p class="no-margin">New</p>
-                                        <p>{{$totalbuyer}}</p>
+                                        {{-- <p>{{$totalbuyer}}</p> --}}
+                                        <p>4</p>
                                     </div>
                                     </div>
                                 </div>
@@ -63,9 +70,12 @@
                                             <p>Loactions</p>
                                         </div>
                                         <div class="col s5 m5 right-align">
-                                        <h5 class="mb-0 white-text">{{$latestlocation}}</h5>
+                                        {{-- <h5 class="mb-0 white-text">{{$latestlocation}}</h5> --}}
+                                        <h5 class="mb-0 white-text">5</h5>
+
                                             <p class="no-margin">New</p>
-                                            <p>{{$totallocation}}</p>
+                                            {{-- <p>{{$totallocation}}</p> --}}
+                                            <p>5</p>
                                         </div>
                                         </div>
                                     </div>
@@ -83,9 +93,11 @@
                                             <p>Supplier</p>
                                         </div>
                                         <div class="col s5 m5 right-align">
-                                            <h5 class="mb-0 white-text">${{$totalOpeningBalance}}</h5>
+                                            {{-- <h5 class="mb-0 white-text">${{$totalOpeningBalance}}</h5> --}}
+                                            <h5 class="mb-0 white-text">6</h5>
+
                                             <p class="no-margin">Today</p>
-                                        <p>{{$totalsupplier}}</p>
+                                        <p>2</p>
                                         </div>
                                         </div>
                                     </div>
@@ -295,7 +307,8 @@
                 labels: [ 'Division', 'District','Area'],
                 datasets: [{
                     label: 'Location',
-                    data: [ {{$division}},{{$district}},{{$area}}],
+                    data: [ 8,6,4],
+
                     backgroundColor: [
                         'rgba(255, 99, 132, 0.2)',
                         'rgba(54, 162, 235, 0.2)',
