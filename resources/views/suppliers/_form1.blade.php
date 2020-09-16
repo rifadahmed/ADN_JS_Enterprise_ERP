@@ -52,10 +52,12 @@
         <select class="validate js-example-basic-single" name="supplier_division_id" id="supplier_division_id" required="" >
             <option value="" disabled selected> - Select Division - </option>
 
-            @foreach($divisions as $division)
-                        {{-- <option value={{$division->id}} @if(old('supplier_division_id', (isset($data ) && $data->supplier_division_id == $division->id))) selected @endif>{{$division->name}}</option> --}}
-                        <option value={{$division->id}}>{{$division->name}}</option>
-
+            @foreach($locations as $location)
+                @if($location->locationType)
+                    @if($location->locationType->location_type_name == 'Division')
+                        <option value={{$location->id}} @if(old('supplier_division_id', (isset($data ) && $data->supplier_division_id == $location->id))) selected @endif>{{$location->location_name}}</option>
+                    @endif
+                @endif
             @endforeach
         </select>
         <label for="supplier_division_id">Division *</label>
@@ -66,6 +68,13 @@
         <select class="validate js-example-basic-single" name="supplier_district_id" id="supplier_district_id" required="" >
             <option value="" disabled selected> - Select District - </option>
 
+            @foreach($locations as $location)
+                @if($location->locationType)
+                    @if($location->locationType->location_type_name == 'District')
+                        <option value={{$location->id}} @if(old('supplier_district_id', (isset($data ) && $data->supplier_district_id == $location->id))) selected @endif>{{$location->location_name}}</option>
+                    @endif
+                @endif
+            @endforeach
         </select>
         <label for="supplier_district_id">District *</label>
     </div>
@@ -73,45 +82,17 @@
      <div class="input-field col s12 m6">
         <br>
         <select class="validate js-example-basic-single" name="supplier_area_id" id="supplier_area_id" required="" >
-            <option value="" disabled selected> - Select Upazila - </option>
-
+            <option value="" disabled selected> - Select Area - </option>
+            @foreach($locations as $location)
+                @if($location->locationType)
+                    @if($location->locationType->location_type_name == 'Area')
+                        <option value={{$location->id}} @if(old('supplier_area_id', (isset($data ) && $data->supplier_area_id == $location->id))) selected @endif>{{$location->location_name}}</option>
+                    @endif
+                @endif
+            @endforeach
         </select>
-        <label for="supplier_area_id">Upazila *</label>
+        <label for="supplier_area_id">Area *</label>
     </div>
 
 
 </div>
-
-
-
-
-<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-<script type="text/javascript">
-  $.ajaxSetup({
-                   beforeSend: function(xhr, type) {
-                       if (!type.crossDomain) {
-                           xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'));
-                       }
-                   },
-           });
-
-   $(document).ready(function () {
-    
-       $('#supplier_division_id').on('change',function(e) {
-           var div_id = e.target.value;
-           $.post('{{ route('district.ajaxcall') }}', {_token:'{{ csrf_token() }}', div_id: div_id}, function(data){
-               //$(".loader2").hide();
-               $('#supplier_district_id').html(data);
-           });
-       });
-
-       $('#supplier_district_id').on('change',function(e) {
-           var dis_id = e.target.value;
-           $.post('{{ route('upazila.ajaxcall') }}', {_token:'{{ csrf_token() }}', dis_id: dis_id}, function(data){
-               //$(".loader2").hide();
-               $('#supplier_area_id').html(data);
-           });
-       });
-
-});
-</script>

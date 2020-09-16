@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Division;
 use App\Location;
 use App\Supplier;
 use Illuminate\Http\Request;
@@ -48,7 +49,7 @@ class SupplierController extends Controller
 
     public function create(){
         $data['title'] = "Add New Supplier";
-        $data['locations'] = Location::where('location_status','Active')->get();
+        $data['divisions'] = Division::all();
         return view('suppliers.create', $data);
     }
 
@@ -87,8 +88,8 @@ class SupplierController extends Controller
     {
         $data['title'] = "Edit Supplier";
         $data['data']=Supplier::find($id);
-        $data['locations'] = Location::where('location_status','Active')->get();
-
+        $data['divisions'] = Division::all();
+        
          return view('suppliers.edit', $data);
     }
     public function update(Request $request,$id)

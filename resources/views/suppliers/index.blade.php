@@ -113,9 +113,9 @@
                                                         <td>{{$supplier->supplier_name}}</td>
                                                         <td>{{$supplier->supplier_company}}</td>
                                                         <td>{{$supplier->supplier_address}}</td>
-                                                        <td>{{$supplier->division->location_name}}</td>
-                                                        <td>{{$supplier->district->location_name}}</td>
-                                                        <td>{{$supplier->area->location_name}}</td>
+                                                        <td>{{$supplier->division->name}}</td>
+                                                        <td>{{$supplier->district->name}}</td>
+                                                        <td>{{$supplier->area->name}}</td>
                                                         <td>{{$supplier->supplier_phone}}</td>
                                                         <td>{{$supplier->supplier_email}}</td>
                                                         <td>{{$supplier->supplier_opening_balance}}</td>

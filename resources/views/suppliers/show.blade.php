@@ -38,15 +38,15 @@
                                                         </tr>
                                                         <tr>
                                                             <td>Supplier Division:</td>
-                                                            <td class="location_type">{{$supplier->division->location_name}}</td>
+                                                            <td class="location_type">{{$supplier->division->name}}</td>
                                                         </tr>
                                                         <tr>
                                                             <td>Supplier District:</td>
-                                                            <td class="location_type">{{$supplier->district->location_name}}</td>
+                                                            <td class="location_type">{{$supplier->district->name}}</td>
                                                         </tr>
                                                         <tr>
                                                             <td>Supplier Area:</td>
-                                                            <td class="location_type">{{$supplier->area->location_name}}</td>
+                                                            <td class="location_type">{{$supplier->area->name}}</td>
                                                         </tr>
                                                         <tr>
                                                             <td>Supplier Phone:</td>
