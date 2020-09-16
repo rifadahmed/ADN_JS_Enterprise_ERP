@@ -116,7 +116,7 @@
                      <span class="new badge gradient-45deg-light-blue-cyan gradient-shadow mt-2 mr-2">+ 42.6%</span>
                      <p class="mt-2 mb-0">Total Purchase</p>
                      <p class="no-margin grey-text lighten-3">360 avg</p>
-                     <h5>3,450</h5>
+                     <h5>$3,450</h5>
                   </div>
                </div>
             </div>
@@ -127,7 +127,7 @@
                      <span class="new badge gradient-45deg-purple-deep-orange gradient-shadow mt-2 mr-2">+ 12%</span>
                      <p class="mt-2 mb-0">Total Sales</p>
                      <p class="no-margin grey-text lighten-3">23.1% avg</p>
-                     <h5>+2500</h5>
+                     <h5>$2,500</h5>
                   </div>
                </div>
             </div>
