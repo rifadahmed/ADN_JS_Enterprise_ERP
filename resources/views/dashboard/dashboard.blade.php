@@ -8,7 +8,7 @@
 
     <!-- User statistics & appointment cards-->
     <div class="row">
-            <div id="card-stats" class="pt-0" style="margin-bottom:15px">
+            <div id="card-stats" class="pt-0" >
                         
                         <div class="col s12 m6 l6 xl3">
                             <a href="{{route('brand.list')}}">
@@ -108,7 +108,9 @@
 
             </div>
 
-            <div class="col s12 m4 l3 ">
+
+
+            <div class="col s12 m4 l3 " style="margin-top:30px">
                <div class="card pt-0 pb-0 animate fadeLeft">
                   <div class="dashboard-revenue-wrapper padding-2 ml-2">
                      <span class="new badge gradient-45deg-light-blue-cyan gradient-shadow mt-2 mr-2">+ 42.6%</span>
@@ -119,7 +121,7 @@
                </div>
             </div>
             
-            <div class="col s12 m4 l3 animate fadeUp">
+            <div class="col s12 m4 l3 animate fadeUp" style="margin-top:30px">
                <div class="card pt-0 pb-0">
                   <div class="dashboard-revenue-wrapper padding-2 ml-2">
                      <span class="new badge gradient-45deg-purple-deep-orange gradient-shadow mt-2 mr-2">+ 12%</span>
@@ -130,7 +132,7 @@
                </div>
             </div>
 
-            <div class="col s12 m4 l3">
+            <div class="col s12 m4 l3" style="margin-top:30px">
                <div class="card pt-0 pb-0 animate fadeRight">
                   <div class="dashboard-revenue-wrapper padding-2 ml-2">
                      <span class="new badge gradient-45deg-amber-amber gradient-shadow mt-2 mr-2">+ $900</span>
@@ -141,7 +143,7 @@
                </div>
             </div>
  
-            <div class="col s12 m4 l3">
+            <div class="col s12 m4 l3" style="margin-top:30px">
                 <div class="card pt-0 pb-0 animate fadeRight">
                    <div class="dashboard-revenue-wrapper padding-2 ml-2">
                       <span class="new badge gradient-45deg-green-teal gradient-shadow mt-2 mr-2">+ $900</span>
