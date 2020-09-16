@@ -26,7 +26,11 @@
 
                                                         <tr>
                                                             <td>User Name:</td>
-                                                            <td class="sale_name">X</td>
+                                                            <td class="sale_name">{{$user->name}}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Email:</td>
+                                                            <td class="sale_name">{{$user->email}}</td>
                                                         </tr>
 
                                                     </tbody>

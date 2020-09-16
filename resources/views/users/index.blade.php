@@ -87,156 +87,24 @@
                                             <table id="users-list-datatable" class="table">
                                                 <thead>
                                                 <tr>
-                                                    <th></th>
+                                                    
                                                     <th>SL</th>
                                                     <th>User Name</th>                                                    
+                                                    <th>Email</th>
                                                     <th>Action</th>
-                                                    <th></th>
+                                                   
                                                 </tr>
                                                 </thead>
                                                 <tbody>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>300</td>
-                                                    <td>X</td>
-                                                    
-                                                    <td><a class="border-primary" href="{{ route('user.edit', 1)}}"><i class="material-icons  edit-icon">edit</i></a><a href="{{ route('user.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    {{-- <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td> --}}
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>301</td>
-                                                    <td>Z</td>
-                                                    
-                                                    <td><a href="{{ route('user.edit', 1)}}"><i class="material-icons  edit-icon">edit</i></a><a href="{{ route('user.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>302</td>                                                 
-                                                    <td>X</td>
-                                                    
-                                                    <td><a href="{{ route('user.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('user.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>303</td>
-                                                    <td>Y</td>
-                                                    <td><a href="{{ route('user.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('user.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>304</td>
-                                                    <td>Y</td>
-                                                    <td><a href="{{ route('user.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('user.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
+                                                    @foreach ($users as $user)
+                                                    <tr>
+                                                            <td>{{$user->id}}</td>
+                                                            <td>{{$user->name}}</td>
+                                                            <td>{{$user->email}}</td>
+                                                            <td><a class="border-primary" href="{{ route('user.edit', $user->id)}}"><i class="material-icons  edit-icon">edit</i></a><a href="{{ route('user.show', $user->id)}}"><i class="material-icons">remove_red_eye</i></a></td>
 
-
-                                                <tr>
-                                                    <td></td>
-                                                    <td>307</td>
-                                                    <td>Z</td>
-                                                    
-                                                    <td><a href="{{ route('user.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('user.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>308</td>
-                                                    <td>Y</td>
-                                                    <td><a href="{{ route('user.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('user.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>309</td>
-                                                    <td>Z</td>
-
-                                                    <td><a href="{{ route('user.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('user.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>310</td>
-                                                    <td>Y</td>
-                                                    <td><a href="{{ route('user.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('user.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>311</td>
-                                                    <td>Y</td>
-                                                    <td><a href="{{ route('user.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('user.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>312</td>
-                                                    <td>Y</td>
-                                                    <td><a href="{{ route('user.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('user.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>313</td>
-                                                    <td>Z</td>
-
-                                                    <td><a href="{{ route('user.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('user.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>314</td>
-                                                    <td>Y</td>
-                                                    <td><a href="{{ route('user.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('user.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>315</td>
-                                                    <td>Z</td>
-                                                   
-                                                    <td><a href="{{ route('user.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('user.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>316</td>
-                                                    <td>Z</td>
-                                                   
-                                                    <td><a href="{{ route('user.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('user.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>317</td>
-                                                    <td>Y</td>
-                                                    <td><a href="{{ route('user.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('user.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>318</td>
-                                                    <td>Y</td>
-                                                    <td><a href="{{ route('user.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('user.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>319</td>
-                                                    <td>Y</td>
-                                                    <td><a href="{{ route('user.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('user.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-
-
-
+                                                        </tr>
+                                                    @endforeach
                                                 </tbody>
                                             </table>
                                         </div>
