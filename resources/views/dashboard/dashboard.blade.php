@@ -161,14 +161,17 @@
                         <h4 class="card-title mb-0">Recent Users <i class="material-icons float-right">more_vert</i></h4>
                         {{-- <p class="medium-small pt-2">Today</p> --}}
                         <ul class="collection mb-0">
+                            
                             @foreach ($users as $user)
                             <li class="collection-item avatar">
                                 <img src="https://pipesak.com/wp-content/uploads/2019/09/Mike-Place-Holder-PipeSak-About-Page.jpg" alt="" class="circle" />
                                 <p class="font-weight-600">{{$user->name}}</p>
-                                <p class="medium-small">{{$user->created_at->diffForHumans()}}</p>
+                                <p class="medium-small">{{ $user->created_at?$user->created_at->diffForHumans():"Null"}}</p>
                                 <a href="#!" class="secondary-content"><i class="material-icons">star_border</i></a>
                             </li>   
                             @endforeach
+                           
+                            
                             
 
                         </ul>

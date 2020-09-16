@@ -18,7 +18,7 @@
             <div class="breadcrumbs-dark pb-0 pt-4" id="breadcrumbs-wrapper">
                 <!-- Search for small screen-->
                 <div class="container">
-                    <div class="row">
+                    <div class="row" style="margin-top: -20px;">
                         <div class="col s10 m6 l6">
                             <h5 class="breadcrumbs-title mt-0 mb-0"><span>{{ isset($title) ? $title : "Title Not Found" }}</span></h5>
                             <ol class="breadcrumbs mb-0">
