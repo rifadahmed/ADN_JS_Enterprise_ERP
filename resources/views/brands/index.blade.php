@@ -50,7 +50,7 @@
                                                 </div>
                                             </div>
                                             
-                                            <div class="col s12 m6 l4">
+                                            <div class="col s12 m6 l4 dropdownbar">
                                                 <label for="users-list-status">Status</label>
                                                 <div class="input-field">
                                                     <br>

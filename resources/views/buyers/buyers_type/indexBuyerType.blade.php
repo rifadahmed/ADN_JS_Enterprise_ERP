@@ -19,7 +19,7 @@
                 <!-- Search for small screen-->
                 <div class="container">
                     <div class="row">
-                        <div class="col s10 m6 l6">
+                        <div class="col s10 m6 l6 ">
                             <h5 class="breadcrumbs-title mt-0 mb-0"><span>{{ isset($title) ? $title : "Title Not Found" }}</span></h5>
                             <ol class="breadcrumbs mb-0">
                             <li class="breadcrumb-item"><a href="{{route('buyer.type.list') }}">Manage Buyer</a>
@@ -60,7 +60,7 @@
                                                     </select>
                                                 </div>
                                             </div> --}}
-                                            <div class="col s12 m6 l4">
+                                            <div class="col s12 m6 l4 dropdownbar">
                                                 <label for="users-list-status">Status</label>
                                                 <div class="input-field">
                                                     <br>
