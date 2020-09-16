@@ -93,7 +93,7 @@
                                             <p>Supplier</p>
                                         </div>
                                         <div class="col s5 m5 right-align">
-                                             <h5 class="mb-0 white-text">${{$totalOpeningBalance}}</h5> 
+                                             <h5 class="mb-0 white-text">{{$totalOpeningBalance}}</h5> 
                                             {{-- <h5 class="mb-0 white-text">6</h5> --}}
 
                                             <p class="no-margin">Today</p>
@@ -116,7 +116,7 @@
                      <span class="new badge gradient-45deg-light-blue-cyan gradient-shadow mt-2 mr-2">+ 42.6%</span>
                      <p class="mt-2 mb-0">Total Purchase</p>
                      <p class="no-margin grey-text lighten-3">360 avg</p>
-                     <h5>$3,450</h5>
+                     <h5>BDT 3,450</h5>
                   </div>
                </div>
             </div>
@@ -127,7 +127,7 @@
                      <span class="new badge gradient-45deg-purple-deep-orange gradient-shadow mt-2 mr-2">+ 12%</span>
                      <p class="mt-2 mb-0">Total Sales</p>
                      <p class="no-margin grey-text lighten-3">23.1% avg</p>
-                     <h5>$2,500</h5>
+                     <h5> BDT 2,500</h5>
                   </div>
                </div>
             </div>
@@ -135,10 +135,10 @@
             <div class="col s12 m4 l3" style="margin-top:30px">
                <div class="card pt-0 pb-0 animate fadeRight">
                   <div class="dashboard-revenue-wrapper padding-2 ml-2">
-                     <span class="new badge gradient-45deg-amber-amber gradient-shadow mt-2 mr-2">+ $900</span>
+                     <span class="new badge gradient-45deg-amber-amber gradient-shadow mt-2 mr-2">+ BDT900</span>
                      <p class="mt-2 mb-0">Sales Due</p>
-                     <p class="no-margin grey-text lighten-3">$40,512 avg</p>
-                     <h5>$ 22,300</h5>
+                     <p class="no-margin grey-text lighten-3">BDT 40,512 avg</p>
+                     <h5>BDT 22,300</h5>
                   </div>
                </div>
             </div>
@@ -146,10 +146,10 @@
             <div class="col s12 m4 l3" style="margin-top:30px">
                 <div class="card pt-0 pb-0 animate fadeRight">
                    <div class="dashboard-revenue-wrapper padding-2 ml-2">
-                      <span class="new badge gradient-45deg-green-teal gradient-shadow mt-2 mr-2">+ $900</span>
+                      <span class="new badge gradient-45deg-green-teal gradient-shadow mt-2 mr-2">BDT 900</span>
                       <p class="mt-2 mb-0">Purchases Due</p>
-                      <p class="no-margin grey-text lighten-3">$30,512 avg</p>
-                      <h5>$ 11,300</h5>
+                      <p class="no-margin grey-text lighten-3">BDT 30,512 avg</p>
+                      <h5>BDT 11,300</h5>
                    </div>
                 </div>
             </div> 
@@ -286,7 +286,7 @@
                    <div class="card-content">
                       <h4 class="header m-0">Total Expenses:<i class="material-icons right grey-text lighten-3">more_vert</i></h4>
                       <p class="no-margin grey-text lighten-3 medium-small">Mon 15 - Sun 21</p>
-                      <h3 class="header">$899.39 <i class="material-icons deep-orange-text text-accent-2">arrow_upward</i>
+                      <h3 class="header">BDT 899.39 <i class="material-icons deep-orange-text text-accent-2">arrow_upward</i>
                       </h3>
                       <div class="center-align">
                          <p class="lighten-3">Total Weekly Earning</p> <br>
