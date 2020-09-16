@@ -8,7 +8,7 @@
 
     <!-- User statistics & appointment cards-->
     <div class="row">
-            <div id="card-stats" class="pt-0">
+            <div id="card-stats" class="pt-0" style="margin-bottom:15px">
                         
                         <div class="col s12 m6 l6 xl3">
                             <a href="{{route('brand.list')}}">
@@ -108,38 +108,49 @@
 
             </div>
 
-            <div class="col s12 m4 l4">
+            <div class="col s12 m4 l3 ">
                <div class="card pt-0 pb-0 animate fadeLeft">
                   <div class="dashboard-revenue-wrapper padding-2 ml-2">
                      <span class="new badge gradient-45deg-light-blue-cyan gradient-shadow mt-2 mr-2">+ 42.6%</span>
-                     <p class="mt-2 mb-0">Total Purchase*</p>
+                     <p class="mt-2 mb-0">Total Purchase</p>
                      <p class="no-margin grey-text lighten-3">360 avg</p>
                      <h5>3,450</h5>
                   </div>
                </div>
             </div>
             
-            <div class="col s12 m4 l4 animate fadeUp">
+            <div class="col s12 m4 l3 animate fadeUp">
                <div class="card pt-0 pb-0">
                   <div class="dashboard-revenue-wrapper padding-2 ml-2">
                      <span class="new badge gradient-45deg-purple-deep-orange gradient-shadow mt-2 mr-2">+ 12%</span>
-                     <p class="mt-2 mb-0">Total Sales*</p>
+                     <p class="mt-2 mb-0">Total Sales</p>
                      <p class="no-margin grey-text lighten-3">23.1% avg</p>
                      <h5>+2500</h5>
                   </div>
                </div>
             </div>
 
-            <div class="col s12 m4 l4">
+            <div class="col s12 m4 l3">
                <div class="card pt-0 pb-0 animate fadeRight">
                   <div class="dashboard-revenue-wrapper padding-2 ml-2">
                      <span class="new badge gradient-45deg-amber-amber gradient-shadow mt-2 mr-2">+ $900</span>
-                     <p class="mt-2 mb-0">Total Dues*</p>
+                     <p class="mt-2 mb-0">Sales Due</p>
                      <p class="no-margin grey-text lighten-3">$40,512 avg</p>
                      <h5>$ 22,300</h5>
                   </div>
                </div>
             </div>
+ 
+            <div class="col s12 m4 l3">
+                <div class="card pt-0 pb-0 animate fadeRight">
+                   <div class="dashboard-revenue-wrapper padding-2 ml-2">
+                      <span class="new badge gradient-45deg-green-teal gradient-shadow mt-2 mr-2">+ $900</span>
+                      <p class="mt-2 mb-0">Purchases Due</p>
+                      <p class="no-margin grey-text lighten-3">$30,512 avg</p>
+                      <h5>$ 11,300</h5>
+                   </div>
+                </div>
+            </div> 
 
             <div class="col s12 l4">
                 <!-- Recent Users -->
@@ -211,7 +222,7 @@
                 <ul id="projects-collection" class="collection z-depth-1 animate fadeLeft">
                 <li class="collection-item avatar">
                     <i class="material-icons cyan circle">card_travel</i>
-                    <h6 class="collection-header m-0">Products:*</h6>
+                    <h6 class="collection-header m-0">Products:</h6>
                     <p>Most Popular Products</p>
                 </li>
                 <li class="collection-item">
@@ -268,7 +279,7 @@
             <div class="col s12 m4 l5">
                 <div id="weekly-earning" class="card animate fadeUp">
                    <div class="card-content">
-                      <h4 class="header m-0">Total Expenses:*<i class="material-icons right grey-text lighten-3">more_vert</i></h4>
+                      <h4 class="header m-0">Total Expenses:<i class="material-icons right grey-text lighten-3">more_vert</i></h4>
                       <p class="no-margin grey-text lighten-3 medium-small">Mon 15 - Sun 21</p>
                       <h3 class="header">$899.39 <i class="material-icons deep-orange-text text-accent-2">arrow_upward</i>
                       </h3>
@@ -347,13 +358,13 @@
                 labels: ['1st','2nd','3rd','4th'],
                 datasets: [{ 
                     data: [86,4414,2000,3306],
-                    label: "Sales/Week(1 Month)*",
+                    label: "Sales/Week(1 Month)",
                     borderColor: "#3e95cd",
                     //fill: false
                 },
                 { 
                     data: [3333,1200,1500,1306],
-                    label: "Purchases/Week(1 Month)*",
+                    label: "Purchases/Week(1 Month)",
                     borderColor: "#8e5ea2",
                     fill: false
                 }
