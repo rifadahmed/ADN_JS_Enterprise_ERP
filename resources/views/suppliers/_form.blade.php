@@ -53,9 +53,7 @@
             <option value="" disabled selected> - Select Division - </option>
 
             @foreach($divisions as $division)
-                        {{-- <option value={{$division->id}} @if(old('supplier_division_id', (isset($data ) && $data->supplier_division_id == $division->id))) selected @endif>{{$division->name}}</option> --}}
-                        <option value={{$division->id}}>{{$division->name}}</option>
-
+                        <option value={{$division->id}} @if(old('supplier_division_id', (isset($data ) && $data->supplier_division_id == $division->id))) selected @endif>{{$division->name}}</option>
             @endforeach
         </select>
         <label for="supplier_division_id">Division *</label>
@@ -65,7 +63,9 @@
         <br>
         <select class="validate js-example-basic-single" name="supplier_district_id" id="supplier_district_id" required="" >
             <option value="" disabled selected> - Select District - </option>
-
+                @foreach($districts as $district)
+                    <option value={{$district->id}} @if(old('supplier_district_id', (isset($data ) && $data->supplier_division_id == $district->id))) selected @endif>{{$district->name}}</option>
+                @endforeach
         </select>
         <label for="supplier_district_id">District *</label>
     </div>
@@ -74,7 +74,9 @@
         <br>
         <select class="validate js-example-basic-single" name="supplier_area_id" id="supplier_area_id" required="" >
             <option value="" disabled selected> - Select Upazila - </option>
-
+                @foreach($areas as $area)
+                        <option value={{$area->id}} @if(old('supplier_area_id', (isset($data ) && $data->supplier_area_id == $area->id))) selected @endif>{{$area->name}}</option>
+                @endforeach
         </select>
         <label for="supplier_area_id">Upazila *</label>
     </div>

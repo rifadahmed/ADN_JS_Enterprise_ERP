@@ -41,8 +41,8 @@
 
 
              @foreach($divisions as $division)
-                    {{-- <option value={{$division->id}} @if(old('buyer_division_id', (isset($data ) && $data->buyer_division_id == $division->id))) selected @endif>{{$division->name}}</option>        --}}
-                    <option value={{$division->id}} >{{$division->name}}</option>       
+                    <option value={{$division->id}} @if(old('buyer_division_id', (isset($data ) && $data->buyer_division_id == $division->id))) selected @endif>{{$division->name}}</option>       
+                    {{-- <option value={{$division->id}} >{{$division->name}}</option>        --}}
 
                     @endforeach
 
@@ -54,20 +54,9 @@
         <br>
         <select class="validate js-example-basic-single" name="buyer_district_id" id="buyer_district_id" required="" >
             <option value="" disabled selected> - Select District - </option>
-
-            {{-- @foreach($locations as $location)
-                @if($location->locationType)
-                    @if($location->locationType->location_type_name == 'District')
-                        <option value={{$location->id}} @if(old('buyer_district_id', (isset($data ) && $data->buyer_district_id == $location->id))) selected @endif>{{$location->location_name}}</option>
-                    @endif
-                @endif
-            @endforeach --}}
-
-            {{-- @foreach($districts as $district)      
-                        <option value={{$district->id}} >{{$district->name}}</option>
-            @endforeach --}}
-           
-
+                @foreach($districts as $district)
+                        <option value={{$district->id}} @if(old('buyer_district_id', (isset($data ) && $data->buyer_district_id == $district->id))) selected @endif>{{$district->name}}</option>       
+                @endforeach
         </select>
         <label for="buyer_district_id">District *</label>
     </div>
@@ -76,19 +65,9 @@
         <br>
         <select class="validate js-example-basic-single" name="buyer_area_id" id="buyer_area_id" required="" >
             <option value="">- Select Upazila -</option>
-
-            {{-- <option value="" disabled selected> - Select Area - </option> --}}
-            {{-- @foreach($locations as $location)
-                @if($location->locationType)
-                    @if($location->locationType->location_type_name == 'Area')
-                        <option value={{$location->id}} @if(old('buyer_area_id', (isset($data ) && $data->buyer_area_id == $location->id))) selected @endif>{{$location->location_name}}</option>
-                    @endif
-                @endif
-            @endforeach --}}
-
-            {{-- @foreach($areas as $area)
-                        <option value={{$area->id}} >{{$area->name}}</option>
-            @endforeach --}}
+                @foreach($areas as $area)
+                    <option value={{$area->id}} @if(old('buyer_area_id', (isset($data ) && $data->buyer_area_id == $area->id))) selected @endif>{{$area->name}}</option>       
+                @endforeach
         </select>
         <label for="buyer_area_id">Area *</label>
     </div>

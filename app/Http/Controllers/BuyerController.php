@@ -58,6 +58,8 @@ class BuyerController extends Controller
         $data['data']=Buyer::find($id);
         //$data['locations'] = Location::where('location_status','Active')->get();
         $data['divisions'] = Division::all();
+        $data['districts'] = District::all();
+        $data['areas'] = Upazila::all();
          return view('buyers.edit', $data);
         
     }

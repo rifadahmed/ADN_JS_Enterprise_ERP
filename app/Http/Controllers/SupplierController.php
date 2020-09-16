@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Upazila;
+use App\District;
 use App\Division;
 use App\Location;
 use App\Supplier;
@@ -89,7 +91,8 @@ class SupplierController extends Controller
         $data['title'] = "Edit Supplier";
         $data['data']=Supplier::find($id);
         $data['divisions'] = Division::all();
-        
+        $data['districts'] = District::all();
+        $data['areas'] = Upazila::all();
          return view('suppliers.edit', $data);
     }
     public function update(Request $request,$id)
