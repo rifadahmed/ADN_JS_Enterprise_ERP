@@ -4,16 +4,6 @@
         <input class="validate"  required="" id="buyer_name" name="buyer_name" value="{{ old('buyer_name',isset($data) ? $data->buyer_name : null ) }}" type="text">
     </div>
     <div class="input-field col s12 m6">
-        <label for="buyer_company"> Company @if ($errors->has('buyer_company')) <small class="red-text"> [ {{ $errors->first('buyer_company') }} ] </small> @endif</label>
-        <input class="validate" id="buyer_company" name="buyer_company" value="{{ old('buyer_company',isset($data) ? $data->buyer_company : null ) }}" type="text">
-    </div>
-
-    <div class="input-field col s12 " style="width: 51%">
-        <textarea id="buyer_address" class="materialize-textarea" name="buyer_address" value="{{ old('buyer_address',isset($data) ? $data->buyer_address : null ) }}">@if(isset($data)){{$data->buyer_address}}@endif</textarea>
-        <label for="buyer_address">Address @if ($errors->has('buyer_address')) <small class="red-text"> [ {{ $errors->first('buyer_address') }} ] </small> @endif</label>
-    </div>
-      
-    <div class="input-field col s12 m6">
         <label for="buyer_phone"> Phone @if ($errors->has('buyer_phone')) <small class="red-text"> [ {{ $errors->first('buyer_phone') }} ] </small> @endif</label>
         <input class="validate" id="buyer_phone" name="buyer_phone" value="{{ old('buyer_phone',isset($data) ? $data->buyer_phone : null ) }}" type="text">
     </div>
@@ -21,6 +11,28 @@
         <label for="buyer_email"> Email @if ($errors->has('buyer_email')) <small class="red-text"> [ {{ $errors->first('buyer_email') }} ] </small> @endif</label>
         <input class="validate" id="buyer_email" name="buyer_email" value="{{ old('buyer_email',isset($data) ? $data->buyer_email : null ) }}" type="text">
     </div>
+    <div class="input-field col s12 m6">
+        <label for="buyer_company"> Company @if ($errors->has('buyer_company')) <small class="red-text"> [ {{ $errors->first('buyer_company') }} ] </small> @endif</label>
+        <input class="validate" id="buyer_company" name="buyer_company" value="{{ old('buyer_company',isset($data) ? $data->buyer_company : null ) }}" type="text">
+    </div>
+
+    <div class="input-field col s12 m6" >
+        <textarea id="buyer_address" class="materialize-textarea" name="buyer_address" value="{{ old('buyer_address',isset($data) ? $data->buyer_address : null ) }}">@if(isset($data)){{$data->buyer_address}}@endif</textarea>
+        <label for="buyer_address">Address @if ($errors->has('buyer_address')) <small class="red-text"> [ {{ $errors->first('buyer_address') }} ] </small> @endif</label>
+    </div>
+    <div class="input-field col s12 m6" style="margin-top:8px !important;">
+        <br>
+        <select class="validate js-example-basic-single" name="buyer_type_id" id="buyer_type_id" required="" >
+            <option value="" disabled selected> - Select Buyer Type - </option>
+            @foreach ($buyer_types as $buyer_type)
+            <option value={{$buyer_type->id}} @if(old('buyer_type_id', (isset($data ) && $data->buyer_type_id == $buyer_type->id))) selected @endif>{{$buyer_type->buyer_type_name}}</option>
+            @endforeach
+        </select>
+        <label for="buyer_type_id">Buyer Type  *</label>
+    </div>  
+      
+    
+    
 
 </div>
 <div class="row">
@@ -72,16 +84,7 @@
         <label for="buyer_area_id">Area *</label>
     </div>
 
-    <div class="input-field col s12 m6">
-        <br>
-        <select class="validate js-example-basic-single" name="buyer_type_id" id="buyer_type_id" required="" >
-            <option value="" disabled selected> - Select Buyer Type - </option>
-            @foreach ($buyer_types as $buyer_type)
-            <option value={{$buyer_type->id}} @if(old('buyer_type_id', (isset($data ) && $data->buyer_type_id == $buyer_type->id))) selected @endif>{{$buyer_type->buyer_type_name}}</option>
-            @endforeach
-        </select>
-        <label for="buyer_type_id">Buyer Type  *</label>
-    </div>  
+  
 </div>
 
  <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>

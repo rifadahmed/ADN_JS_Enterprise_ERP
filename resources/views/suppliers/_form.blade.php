@@ -6,30 +6,32 @@
         <input class="validate" required="" id="supplier_name" name="supplier_name" value="{{ old('supplier_name',isset($data) ? $data->supplier_name : null ) }}" type="text">
     </div>
     <div class="input-field col s12 m6">
-        <label for="supplier_email"> Email @if ($errors->has('supplier_email')) <small class="red-text"> [ {{ $errors->first('supplier_email') }} ] </small> @endif</label>
-        <input class="validate" id="supplier_email" name="supplier_email" value="{{ old('supplier_email',isset($data) ? $data->supplier_email : null ) }}" type="text">
-    </div>
-    <div class="input-field col s12 m6">
         <label for="supplier_phone"> Phone @if ($errors->has('supplier_phone')) <small class="red-text"> [ {{ $errors->first('supplier_phone') }} ] </small> @endif</label>
         <input class="validate" id="supplier_phone" name="supplier_phone" value="{{ old('supplier_phone',isset($data) ? $data->supplier_phone : null ) }}" type="text">
     </div>
     <div class="input-field col s12 m6">
+        <label for="supplier_email"> Email @if ($errors->has('supplier_email')) <small class="red-text"> [ {{ $errors->first('supplier_email') }} ] </small> @endif</label>
+        <input class="validate" id="supplier_email" name="supplier_email" value="{{ old('supplier_email',isset($data) ? $data->supplier_email : null ) }}" type="text">
+    </div>
+    
+    <div class="input-field col s12 m6">
         <label for="supplier_company"> Company @if ($errors->has('supplier_company')) <small class="red-text"> [ {{ $errors->first('supplier_company') }} ] </small> @endif</label>
         <input class="validate" id="supplier_company" name="supplier_company" value="{{ old('supplier_company',isset($data) ? $data->supplier_company : null ) }}" type="text">
+    </div>
+    
+      
+ 
+
+    
+    <div class="input-field col s12 m6">
+        <textarea id="supplier_address" class="materialize-textarea" name="supplier_address" value="{{ old('supplier_address',isset($data) ? $data->supplier_address : null ) }}">@if(isset($data)){{$data->supplier_address}}@endif</textarea>
+        <label for="supplier_address">Address @if ($errors->has('supplier_address')) <small class="red-text"> [ {{ $errors->first('supplier_address') }} ] </small> @endif</label>
     </div>
     <div class="input-field col s12 m6">
         <label for="supplier_opening_balance"> Opening Balance @if ($errors->has('supplier_opening_balance')) <small class="red-text"> [ {{ $errors->first('supplier_opening_balance') }} ] </small> @endif</label>
         <input class="validate"  required="" id="supplier_opening_balance" name="supplier_opening_balance" value="{{ old('supplier_opening_balance',isset($data) ? $data->supplier_opening_balance : null ) }}" type="text">
     </div>
 
-      
- 
-
-    
-    <div class="input-field col s12 " style="width: 50%">
-        <textarea id="supplier_address" class="materialize-textarea" name="supplier_address" value="{{ old('supplier_address',isset($data) ? $data->supplier_address : null ) }}">@if(isset($data)){{$data->supplier_address}}@endif</textarea>
-        <label for="supplier_address">Address @if ($errors->has('supplier_address')) <small class="red-text"> [ {{ $errors->first('supplier_address') }} ] </small> @endif</label>
-    </div>
 
 </div>
 

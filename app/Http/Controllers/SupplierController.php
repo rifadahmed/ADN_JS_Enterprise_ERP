@@ -52,6 +52,8 @@ class SupplierController extends Controller
     public function create(){
         $data['title'] = "Add New Supplier";
         $data['divisions'] = Division::all();
+        $data['districts'] = District::all();
+        $data['areas'] = Upazila::all();
         return view('suppliers.create', $data);
     }
 
