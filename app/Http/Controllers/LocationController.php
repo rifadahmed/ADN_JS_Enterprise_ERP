@@ -218,5 +218,41 @@ class LocationController extends Controller
         return redirect()->route('location.types.edit',$id)->with('success','Location Type has been Updated successfully!');
     }
     
-    
+     /***
+     * Trash Location
+     */
+    public function trash($id)
+    {
+        Location::findOrFail($id)->delete();
+        return redirect()->route('location.index')->with('success','Location trashed successfully');
+    }
+
+    /***
+     * Restore Location
+     */
+    public function restore($id)
+    {
+        Location::withTrashed()->where('id', $id)->first()->restore();
+        return redirect()->back()->with('success','Location has been restored successfully');
+    }
+
+    /***
+     * Delete Location Permanently
+     */
+    public function destroy($id)
+    {
+        try {
+            Location::where('id', $id)->withTrashed()->forceDelete();
+            return redirect()->back()->with('success','Location has been deleted successfully');
+        } catch (\Exception $exception) {
+            if ($exception->getCode() == 23000) {
+                $status = 'warning';
+                $alert = 'You can\'t delete this item because lot\'s of dependency exist on system';
+            } else {
+                $status = 'danger';
+                $alert = $exception->getMessage();
+            }
+            return redirect()->back()->with($status,$alert);
+        }
+    }
 }

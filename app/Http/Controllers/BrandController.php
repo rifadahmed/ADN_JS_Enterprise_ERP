@@ -88,4 +88,43 @@ class BrandController extends Controller
 
         return redirect()->route('brand.edit',$id)->with('success','Brand has been Updated successfully!');
     }
+
+
+     /***
+     * Trash Brand
+     */
+    public function trash($id)
+    {
+        Brand::findOrFail($id)->delete();
+        return redirect()->route('brand.index')->with('success','Brand trashed successfully');
+    }
+
+    /***
+     * Restore Brand
+     */
+    public function restore($id)
+    {
+        Brand::withTrashed()->where('id', $id)->first()->restore();
+        return redirect()->back()->with('success','Brand has been restored successfully');
+    }
+
+    /***
+     * Delete Brand Permanently
+     */
+    public function destroy($id)
+    {
+        try {
+            Brand::where('id', $id)->withTrashed()->forceDelete();
+            return redirect()->back()->with('success','Brand has been deleted successfully');
+        } catch (\Exception $exception) {
+            if ($exception->getCode() == 23000) {
+                $status = 'warning';
+                $alert = 'You can\'t delete this item because lot\'s of dependency exist on system';
+            } else {
+                $status = 'danger';
+                $alert = $exception->getMessage();
+            }
+            return redirect()->back()->with($status,$alert);
+        }
+    }
 }

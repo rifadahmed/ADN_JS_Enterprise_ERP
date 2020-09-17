@@ -94,4 +94,41 @@ class SubCategoryController extends Controller
         return redirect()->back()->with('success','Sub Category has been Updated successfully!');
 
     }
+    /***
+     * Trash SubCategory
+     */
+    public function trash($id)
+    {
+        SubCategory::findOrFail($id)->delete();
+        return redirect()->route('subcategory.index')->with('success','SubCategory trashed successfully');
+    }
+
+    /***
+     * Restore SubCategory
+     */
+    public function restore($id)
+    {
+        SubCategory::withTrashed()->where('id', $id)->first()->restore();
+        return redirect()->back()->with('success','SubCategory has been restored successfully');
+    }
+
+    /***
+     * Delete SubCategory Permanently
+     */
+    public function destroy($id)
+    {
+        try {
+            SubCategory::where('id', $id)->withTrashed()->forceDelete();
+            return redirect()->back()->with('success','SubCategory has been deleted successfully');
+        } catch (\Exception $exception) {
+            if ($exception->getCode() == 23000) {
+                $status = 'warning';
+                $alert = 'You can\'t delete this item because lot\'s of dependency exist on system';
+            } else {
+                $status = 'danger';
+                $alert = $exception->getMessage();
+            }
+            return redirect()->back()->with($status,$alert);
+        }
+    }
 }

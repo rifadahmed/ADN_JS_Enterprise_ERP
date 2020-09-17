@@ -22,4 +22,41 @@ class SaleController extends Controller
         $data['title'] = "Create Sale";
         return view('sales.create', $data);
     }
+    /***
+     * Trash Sale
+     */
+    public function trash($id)
+    {
+        Sale::findOrFail($id)->delete();
+        return redirect()->route('sale.index')->with('success','Sale trashed successfully');
+    }
+
+    /***
+     * Restore Sale
+     */
+    public function restore($id)
+    {
+        Sale::withTrashed()->where('id', $id)->first()->restore();
+        return redirect()->back()->with('success','Sale has been restored successfully');
+    }
+
+    /***
+     * Delete Sale Permanently
+     */
+    public function destroy($id)
+    {
+        try {
+            Sale::where('id', $id)->withTrashed()->forceDelete();
+            return redirect()->back()->with('success','Sale has been deleted successfully');
+        } catch (\Exception $exception) {
+            if ($exception->getCode() == 23000) {
+                $status = 'warning';
+                $alert = 'You can\'t delete this item because lot\'s of dependency exist on system';
+            } else {
+                $status = 'danger';
+                $alert = $exception->getMessage();
+            }
+            return redirect()->back()->with($status,$alert);
+        }
+    }
 }

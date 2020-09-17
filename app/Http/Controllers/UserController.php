@@ -62,4 +62,42 @@ class UserController extends Controller
         $userModel->save();
         return redirect()->route('user.edit',$id)->with('success','User has been Updated successfully!');
     }
+
+    /***
+     * Trash User
+     */
+    public function trash($id)
+    {
+        User::findOrFail($id)->delete();
+        return redirect()->route('user.index')->with('success','User trashed successfully');
+    }
+
+    /***
+     * Restore User
+     */
+    public function restore($id)
+    {
+        User::withTrashed()->where('id', $id)->first()->restore();
+        return redirect()->back()->with('success','User has been restored successfully');
+    }
+
+    /***
+     * Delete User Permanently
+     */
+    public function destroy($id)
+    {
+        try {
+            User::where('id', $id)->withTrashed()->forceDelete();
+            return redirect()->back()->with('success','User has been deleted successfully');
+        } catch (\Exception $exception) {
+            if ($exception->getCode() == 23000) {
+                $status = 'warning';
+                $alert = 'You can\'t delete this item because lot\'s of dependency exist on system';
+            } else {
+                $status = 'danger';
+                $alert = $exception->getMessage();
+            }
+            return redirect()->back()->with($status,$alert);
+        }
+    }
 }

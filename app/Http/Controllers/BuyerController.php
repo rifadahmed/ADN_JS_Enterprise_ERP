@@ -248,7 +248,44 @@ class BuyerController extends Controller
 
     }
    
-    
+
+     /***
+     * Trash Buyer
+     */
+    public function trash($id)
+    {
+        Buyer::findOrFail($id)->delete();
+        return redirect()->route('buyer.index')->with('success','Buyer trashed successfully');
+    }
+
+    /***
+     * Restore Buyer
+     */
+    public function restore($id)
+    {
+        Buyer::withTrashed()->where('id', $id)->first()->restore();
+        return redirect()->back()->with('success','Buyer has been restored successfully');
+    }
+
+    /***
+     * Delete Buyer Permanently
+     */
+    public function destroy($id)
+    {
+        try {
+            Buyer::where('id', $id)->withTrashed()->forceDelete();
+            return redirect()->back()->with('success','Buyer has been deleted successfully');
+        } catch (\Exception $exception) {
+            if ($exception->getCode() == 23000) {
+                $status = 'warning';
+                $alert = 'You can\'t delete this item because lot\'s of dependency exist on system';
+            } else {
+                $status = 'danger';
+                $alert = $exception->getMessage();
+            }
+            return redirect()->back()->with($status,$alert);
+        }
+    }
     
     
 }

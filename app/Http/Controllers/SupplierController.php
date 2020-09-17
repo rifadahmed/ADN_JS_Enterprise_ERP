@@ -128,4 +128,42 @@ class SupplierController extends Controller
 
         return redirect()->route('supplier.edit',$id)->with('success','Supplier has been updated successfully!');
     }
+
+    /***
+     * Trash Supplier
+     */
+    public function trash($id)
+    {
+        Supplier::findOrFail($id)->delete();
+        return redirect()->route('supplier.index')->with('success','Supplier trashed successfully');
+    }
+
+    /***
+     * Restore Supplier
+     */
+    public function restore($id)
+    {
+        Supplier::withTrashed()->where('id', $id)->first()->restore();
+        return redirect()->back()->with('success','Supplier has been restored successfully');
+    }
+
+    /***
+     * Delete Supplier Permanently
+     */
+    public function destroy($id)
+    {
+        try {
+            Supplier::where('id', $id)->withTrashed()->forceDelete();
+            return redirect()->back()->with('success','Supplier has been deleted successfully');
+        } catch (\Exception $exception) {
+            if ($exception->getCode() == 23000) {
+                $status = 'warning';
+                $alert = 'You can\'t delete this item because lot\'s of dependency exist on system';
+            } else {
+                $status = 'danger';
+                $alert = $exception->getMessage();
+            }
+            return redirect()->back()->with($status,$alert);
+        }
+    }
 }
