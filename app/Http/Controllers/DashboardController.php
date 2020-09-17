@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\User;
 use App\Brand;
 use App\Buyer;
+use App\Upazila;
+use App\District;
+use App\Division;
 use App\Location;
 use App\Supplier;
 use App\LocationType;
@@ -40,10 +43,13 @@ class DashboardController extends Controller
         $data['totalsupplier']=count(Supplier::all());
         $data['totalOpeningBalance']=Supplier::sum('supplier_opening_balance');
 
-        //Division
+        //Locations
         // $data['division']=count(Location::where('location_type_id',LocationType::where("location_type_name","Division")->first()->id)->get());
         // $data['district']=count(Location::where('location_type_id',LocationType::where("location_type_name","district")->first()->id)->get());
         // $data['area']=count(Location::where('location_type_id',LocationType::where("location_type_name","area")->first()->id)->get());
+           $data['division']=count(Division::all());
+           $data['district']=count(District::all());
+           $data['area']=count(Upazila::all());
 
         
         return view('dashboard.dashboard',$data);

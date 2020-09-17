@@ -323,7 +323,7 @@
                 labels: [ 'Division', 'District','Area'],
                 datasets: [{
                     label: 'Location',
-                    data: [ 8,6,4],
+                    data: [ {{$division}},{{$district}},{{$area}}],
 
                     backgroundColor: [
                         'rgba(255, 99, 132, 0.2)',
