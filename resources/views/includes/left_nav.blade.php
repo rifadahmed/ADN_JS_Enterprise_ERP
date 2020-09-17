@@ -105,27 +105,26 @@
             </div>
         </li>
         
-        <!-- ** Warehouse -->
-        <li class="@if(Request::segment(1) == 'warehouse') active @endif bold"><a class="collapsible-header waves-effect waves-cyan " href="JavaScript:void(0)"><i class="material-icons">home</i><span class="menu-title" data-i18n="Dashboard">Manage Warehouse</span></a>
+        <!-- ** Users -->
+        <li class="@if(Request::segment(1) == 'user') active @endif bold"><a class="collapsible-header waves-effect waves-cyan " href="JavaScript:void(0)"><i class="material-icons">verified_user</i><span class="menu-title" data-i18n="Dashboard">Manage User</span></a>
             <div class="collapsible-body">
                 <ul class="collapsible collapsible-sub" data-collapsible="accordion">
                     <li class="">
-                    <a class="@if(Request::segment(1) == 'warehouse' &&  Request::segment(2) == 'list'||Request::segment(1) == 'warehouse' &&  Request::segment(2) == 'edit'&&  Request::segment(3) == Request::segment(3)||Request::segment(1) == 'warehouse' &&  Request::segment(2) == 'show'&&  Request::segment(3) == Request::segment(3)) active @endif" href="{{route('warehouse.list')}}">
+                        <a class="@if(Request::segment(1) == 'user' &&  Request::segment(2) == 'list'||Request::segment(1) == 'user' &&  Request::segment(2) == 'edit'&&  Request::segment(3) ==Request::segment(3)||Request::segment(1) == 'user' &&  Request::segment(2) == 'show'&&  Request::segment(3) ==Request::segment(3) ) active @endif" href="{{route('user.list')}}">
                             <i class="material-icons">radio_button_unchecked</i>
-                            <span data-i18n="Modern">Warehouse List</span>
+                            <span data-i18n="Modern">User List</span>
                         </a>
                     </li>
                     <li>
-                        <a class="@if(Request::segment(1) == 'warehouse' &&  Request::segment(2) == 'create') active @endif" href="{{route('warehouse.create')}}">
+                        <a class="@if(Request::segment(1) == 'user' &&  Request::segment(2) == 'create') active @endif" href="{{route('user.create')}}">
                             <i class="material-icons">radio_button_unchecked</i>
-                            <span data-i18n="eCommerce">Add New warehouse</span>
+                            <span data-i18n="eCommerce">Add New User</span>
                         </a>
                     </li>
-
-
                 </ul>
             </div>
         </li>
+        
 
         <!-- ** Category -->
         <li class="@if(Request::segment(1) == 'category' || Request::segment(1) == 'subcategory') active @endif bold"><a class="collapsible-header waves-effect waves-cyan " href="JavaScript:void(0)"><i class="material-icons">grain</i><span class="menu-title" data-i18n="Dashboard">Manage Category</span></a>
@@ -269,22 +268,24 @@
             </div>
         </li>
 
-        <!-- ** Users -->
-        <li class="@if(Request::segment(1) == 'user') active @endif bold"><a class="collapsible-header waves-effect waves-cyan " href="JavaScript:void(0)"><i class="material-icons">verified_user</i><span class="menu-title" data-i18n="Dashboard">Manage User</span></a>
+        <!-- ** Warehouse -->
+        <li class="@if(Request::segment(1) == 'warehouse') active @endif bold"><a class="collapsible-header waves-effect waves-cyan " href="JavaScript:void(0)"><i class="material-icons">home</i><span class="menu-title" data-i18n="Dashboard">Manage Warehouse</span></a>
             <div class="collapsible-body">
                 <ul class="collapsible collapsible-sub" data-collapsible="accordion">
                     <li class="">
-                        <a class="@if(Request::segment(1) == 'user' &&  Request::segment(2) == 'list'||Request::segment(1) == 'user' &&  Request::segment(2) == 'edit'&&  Request::segment(3) ==Request::segment(3)||Request::segment(1) == 'user' &&  Request::segment(2) == 'show'&&  Request::segment(3) ==Request::segment(3) ) active @endif" href="{{route('user.list')}}">
+                    <a class="@if(Request::segment(1) == 'warehouse' &&  Request::segment(2) == 'list'||Request::segment(1) == 'warehouse' &&  Request::segment(2) == 'edit'&&  Request::segment(3) == Request::segment(3)||Request::segment(1) == 'warehouse' &&  Request::segment(2) == 'show'&&  Request::segment(3) == Request::segment(3)) active @endif" href="{{route('warehouse.list')}}">
                             <i class="material-icons">radio_button_unchecked</i>
-                            <span data-i18n="Modern">User List</span>
+                            <span data-i18n="Modern">Warehouse List</span>
                         </a>
                     </li>
                     <li>
-                        <a class="@if(Request::segment(1) == 'user' &&  Request::segment(2) == 'create') active @endif" href="{{route('user.create')}}">
+                        <a class="@if(Request::segment(1) == 'warehouse' &&  Request::segment(2) == 'create') active @endif" href="{{route('warehouse.create')}}">
                             <i class="material-icons">radio_button_unchecked</i>
-                            <span data-i18n="eCommerce">Add New User</span>
+                            <span data-i18n="eCommerce">Add New warehouse</span>
                         </a>
                     </li>
+
+
                 </ul>
             </div>
         </li>
@@ -297,13 +298,13 @@
                     <li class="">
                         <a class="" href="#">
                             <i class="material-icons">radio_button_unchecked</i>
-                            <span data-i18n="Modern">X</span>
+                            <span data-i18n="Modern">UI Adjustment</span>
                         </a>
                     </li>
                     <li>
                         <a class="" href="#">
                             <i class="material-icons">radio_button_unchecked</i>
-                            <span data-i18n="eCommerce">Y</span>
+                            <span data-i18n="eCommerce">Admin Adjustment</span>
                         </a>
                     </li>
                 </ul>
