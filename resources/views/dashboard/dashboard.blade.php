@@ -93,10 +93,10 @@
                                             <p>Supplier</p>
                                         </div>
                                         <div class="col s5 m5 right-align">
-                                             <h5 class="mb-0 white-text">{{$totalOpeningBalance}}</h5> 
+                                             <h5 class="mb-0 white-text">{{$latestsupplier}}</h5> 
                                             {{-- <h5 class="mb-0 white-text">6</h5> --}}
 
-                                            <p class="no-margin">Today</p>
+                                            <p class="no-margin">New</p>
                                         <p>{{$totalsupplier}}</p>
                                         </div>
                                         </div>

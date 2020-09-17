@@ -41,7 +41,9 @@ class DashboardController extends Controller
 
         //Suppliers
         $data['totalsupplier']=count(Supplier::all());
-        $data['totalOpeningBalance']=Supplier::sum('supplier_opening_balance');
+        $data['latestsupplier']=Supplier::whereDate('created_at', '>=', date('Y-m-d H:i:s',strtotime('-1 days')) )->count();
+
+        // $data['totalOpeningBalance']=Supplier::sum('supplier_opening_balance');
 
         //Locations
         // $data['division']=count(Location::where('location_type_id',LocationType::where("location_type_name","Division")->first()->id)->get());
