@@ -57,6 +57,7 @@ class SubCategoryController extends Controller
         $request->validate([
             'sub_category_name' => 'required|unique:sub_categories,sub_category_name|regex:/^[\pL\s\-]+$/u' ,
             'sub_category_status' => 'required',
+            'category_id' => 'required',
             'sub_category_order' => 'nullable|integer',
         ]);
         //dd($request->all());
@@ -80,6 +81,7 @@ class SubCategoryController extends Controller
         $request->validate([
             'sub_category_name' => 'regex:/^[\pL\s\-]+$/u|unique:sub_categories,sub_category_name,'.$id ,
             'sub_category_status' => 'required',
+            'category_id' => 'required',
             'sub_category_order' => 'nullable|integer',
         ]);
 
