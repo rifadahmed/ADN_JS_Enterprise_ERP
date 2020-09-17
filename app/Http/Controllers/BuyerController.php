@@ -84,15 +84,16 @@ class BuyerController extends Controller
     public function store(Request $request){
        // return $request->all();
         $request->validate([
-            'buyer_name' => 'required|unique:buyers',
+            'buyer_name' => 'required|unique:buyers|regex:/^[\pL\s\.]+$/u',
+            'buyer_phone' => 'required|max:13',
+            'buyer_email' => 'required|email',
             'buyer_company' => 'required',
             'buyer_address' => 'required',
             'buyer_type_id' => 'required',
             'buyer_division_id' => 'required',
             'buyer_district_id' => 'required',
             'buyer_area_id' => 'required',
-            'buyer_phone' => 'required',
-            'buyer_email' => 'required',
+            
 
 
         ]);
@@ -115,15 +116,16 @@ class BuyerController extends Controller
     }
     public function update(Request $request,$id){
         $request->validate([
-            'buyer_name' => 'unique:buyers,buyer_name,'.$id,
+            'buyer_name' => 'regex:/^[\pL\s\.]+$/u|unique:buyers,buyer_name,'.$id,
+            'buyer_phone' => 'required|max:13',
+            'buyer_email' => 'required|email',
             'buyer_company' => 'required',
             'buyer_address' => 'required',
             'buyer_type_id' => 'required',
             'buyer_division_id' => 'required',
             'buyer_district_id' => 'required',
             'buyer_area_id' => 'required',
-            'buyer_phone' => 'required',
-            'buyer_email' => 'required',
+            
             //'buyer_status' => 'required',
 
 
@@ -197,7 +199,7 @@ class BuyerController extends Controller
     }
     public function storeBuyerType(Request $request){
         $request->validate([
-            'buyer_type_name' => 'required|unique:buyer_types',
+            'buyer_type_name' => 'required|unique:buyer_types|regex:/^[\pL\s\-]+$/u',
             'buyer_type_status' => 'required',
             'buyer_type_order' => 'nullable|integer',
 
@@ -214,7 +216,7 @@ class BuyerController extends Controller
     }
     public function updateBuyerType(Request $request,$id){
         $request->validate([
-            'buyer_type_name' => 'unique:buyer_types,buyer_type_name,'.$id ,
+            'buyer_type_name' => 'regex:/^[\pL\s\-]+$/u|unique:buyer_types,buyer_type_name,'.$id ,
 
             'buyer_type_status' => 'required',
             'buyer_type_order' => 'nullable|integer',

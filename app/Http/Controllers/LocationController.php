@@ -57,8 +57,9 @@ class LocationController extends Controller
     }
     public function store(Request $request){
         $request->validate([
-            'location_name' => 'required|unique:locations',
+            'location_name' => 'required|unique:locations|regex:/^[\pL\s\-]+$/u',
             'location_status' => 'required',
+            'location_type_id' => 'required',
             'location_order' => 'nullable|integer',
 
         ]);
@@ -93,7 +94,7 @@ class LocationController extends Controller
     public function update(Request $request,$id)
     { 
         $request->validate([
-            'location_name' => 'unique:locations,location_name,'.$id ,
+            'location_name' => 'regex:/^[\pL\s\-]+$/u|unique:locations,location_name,'.$id ,
             'location_status' => 'required',
             'location_order' => 'nullable|integer',
 
@@ -164,7 +165,7 @@ class LocationController extends Controller
      {  
        
         $request->validate([
-            'location_type_name' => 'required|unique:location_types',
+            'location_type_name' => 'required|unique:location_types|regex:/^[\pL\s\-]+$/u',
             'location_type_status' => 'required',
             'location_type_order' => 'nullable|integer',
 
@@ -200,7 +201,7 @@ class LocationController extends Controller
     public function updateTypesList(Request $request,$id)
     { 
         $request->validate([
-            'location_type_name' => 'unique:location_types,location_type_name,'.$id,
+            'location_type_name' => 'regex:/^[\pL\s\-]+$/u|unique:location_types,location_type_name,'.$id,
             'location_type_status' => 'required',
             'location_type_order' => 'nullable|integer',
 

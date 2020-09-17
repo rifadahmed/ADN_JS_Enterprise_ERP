@@ -66,7 +66,7 @@ class CategoryController extends Controller
      */
     public function store(Request $request){
         $request->validate([
-            'category_name' => 'required|unique:categories',
+            'category_name' => 'required|unique:categories|regex:/^[\pL\s\-]+$/u',
             'category_status' => 'required',
             'category_order' => 'nullable|integer',
 
@@ -99,7 +99,7 @@ class CategoryController extends Controller
     public function update(Request $request,$id){
 
         $request->validate([
-            'category_name' => 'unique:categories,category_name,'.$id ,
+            'category_name' => 'regex:/^[\pL\s\-]+$/u|unique:categories,category_name,'.$id ,
             'category_status' => 'required',
             'category_order' => 'nullable|integer',
         ]);

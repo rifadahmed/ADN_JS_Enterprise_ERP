@@ -60,15 +60,15 @@ class SupplierController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'supplier_name' => 'required|unique:suppliers',
+            'supplier_name' => 'required|unique:suppliers|regex:/^[\pL\s\.]+$/u',
             'supplier_company' => 'required',
             'supplier_address' => 'required',
-            'supplier_opening_balance' => 'required',
+            'supplier_opening_balance' => 'required|regex:/^\d+(\.\d{1,2})?$/',
             'supplier_division_id' => 'required',
             'supplier_district_id' => 'required',
             'supplier_area_id' => 'required',
-            'supplier_phone' => 'required',
-            'supplier_email' => 'required',
+            'supplier_phone' => 'required|max:13',
+            'supplier_email' => 'required|email',
         ]);
 
         $supplierModel = new Supplier();
@@ -100,15 +100,15 @@ class SupplierController extends Controller
     public function update(Request $request,$id)
     {
         $request->validate([
-            'supplier_name' => 'unique:suppliers,supplier_name,'.$id,
+            'supplier_name' => 'regex:/^[\pL\s\.]+$/u|unique:suppliers,supplier_name,'.$id,
             'supplier_company' => 'required',
             'supplier_address' => 'required',
-            'supplier_opening_balance' => 'required',
+            'supplier_opening_balance' => 'required|regex:/^\d+(\.\d{1,2})?$/',
             'supplier_division_id' => 'required',
             'supplier_district_id' => 'required',
             'supplier_area_id' => 'required',
-            'supplier_phone' => 'required',
-            'supplier_email' => 'required',
+            'supplier_phone' => 'required|max:13',
+            'supplier_email' => 'required|email',
 
 
         ]);

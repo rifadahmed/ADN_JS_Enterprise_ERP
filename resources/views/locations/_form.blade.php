@@ -21,7 +21,7 @@
                      <option  value="{{$location_type->id}}" @if(isset($data) && $location_type->id == $data->location_type_id) selected @endif>{{$location_type->location_type_name}}</option>
             @endforeach
         </select>
-        <label for="status">Select Location Type * @if ($errors->has('category')) <small class="red-text"> [ {{ $errors->first('sub_category_status') }} ] </small> @endif</label>
+        <label for="status">Select Location Type * @if ($errors->has('location_type_id')) <small class="red-text"> [ {{ $errors->first('location_type_id') }} ] </small> @endif</label>
     </div>
     <div class="input-field col s12 m6">
         <br>
@@ -30,7 +30,7 @@
             <option value="Active" @if(old('location_status', (isset($data ) && $data->location_status == 'Active'))) selected @endif>Active</option>
             <option value="Inactive" @if(old('location_status', (isset($data ) && $data->location_status == 'Inactive'))) selected @endif>Inactive</option>
         </select>
-        <label for="status">Location Status *</label>
+        <label for="status">Location Status * @if ($errors->has('location_status')) <small class="red-text"> [ {{ $errors->first('location_status') }} ] </small> @endif</label>
     </div>
 </div>
 

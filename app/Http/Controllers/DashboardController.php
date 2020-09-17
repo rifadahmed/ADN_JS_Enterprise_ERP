@@ -24,10 +24,10 @@ class DashboardController extends Controller
     public function index()
     {
         // recent users
-        $data['users']=User::all()->take(3);
+        $data['users']=User::all()->take(5);
 
         //buyers
-        $data['buyers']=Buyer::all()->take(3);
+        $data['buyers']=Buyer::all()->take(4);
         $data['totalbuyer']=count(Buyer::all());
         $data['latestBuyer']=Buyer::whereDate('created_at', '>=', date('Y-m-d H:i:s',strtotime('-1 days')) )->count();
 

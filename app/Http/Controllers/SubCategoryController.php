@@ -55,7 +55,7 @@ class SubCategoryController extends Controller
     }
     public function store(Request $request){
         $request->validate([
-            'sub_category_name' => 'unique:sub_categories,sub_category_name,' ,
+            'sub_category_name' => 'required|unique:sub_categories,sub_category_name|regex:/^[\pL\s\-]+$/u' ,
             'sub_category_status' => 'required',
             'sub_category_order' => 'nullable|integer',
         ]);
@@ -78,7 +78,7 @@ class SubCategoryController extends Controller
     public function update(Request $request,$id){
 
         $request->validate([
-            'sub_category_name' => 'required',
+            'sub_category_name' => 'regex:/^[\pL\s\-]+$/u|unique:sub_categories,sub_category_name,'.$id ,
             'sub_category_status' => 'required',
             'sub_category_order' => 'nullable|integer',
         ]);

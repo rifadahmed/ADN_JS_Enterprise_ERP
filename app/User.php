@@ -5,26 +5,10 @@ namespace App;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Database\Eloquent\SoftDeletes;
+
 class User extends Authenticatable
 {
-    use SoftDeletes;
-
-    /*** Created by and Updated by id insertion*/
-    public static function boot(){
-        parent::boot();
-        static::creating(function($query){
-            if(Auth::check()){
-                $query->created_by = Auth::user()->id;
-            }
-        });
-        static::updating(function($query){
-            if(Auth::check()){
-                $query->updated_by = Auth::user()->id;
-            }
-        });
-    }
+ 
     use Notifiable;
 
     /**

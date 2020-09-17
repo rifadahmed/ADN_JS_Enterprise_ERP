@@ -60,7 +60,7 @@
 
                                                         <tr>
                                                             <td>Status:</td>
-                                                            <td><span class=" users-view-status chip green lighten-5 green-text">Active</span></td>
+                                                            <td><span class="{{($location->location_status=="Active")?"green-text":"red-text"}}">{{$location->location_status}}</span></td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
