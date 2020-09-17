@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class WarehouseController extends Controller
 {
     public function index(){
-        $data['title'] = "List Of Warehouse";
+        $data['title'] = "List Of Warehouses";
         return view('warehouses.index', $data);
     }
     public function edit(){

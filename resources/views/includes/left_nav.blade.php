@@ -160,7 +160,7 @@
         </li>
 
         <!-- ** Brand -->
-        <li class="@if(Request::segment(1) == 'brand') active @endif bold"><a class="collapsible-header waves-effect waves-cyan " href="JavaScript:void(0)"><i class="material-icons">filter_vintage</i><span class="menu-title" data-i18n="Dashboard">Manage Brands</span></a>
+        <li class="@if(Request::segment(1) == 'brand') active @endif bold"><a class="collapsible-header waves-effect waves-cyan " href="JavaScript:void(0)"><i class="material-icons">filter_vintage</i><span class="menu-title" data-i18n="Dashboard">Manage Brand</span></a>
             <div class="collapsible-body">
                 <ul class="collapsible collapsible-sub" data-collapsible="accordion">
                     <li class="">
@@ -180,7 +180,7 @@
         </li>
 
         <!-- ** Product -->
-        <li class="@if(Request::segment(1) == 'product') active @endif bold"><a class="collapsible-header waves-effect waves-cyan " href="JavaScript:void(0)"><i class="material-icons">card_giftcard</i><span class="menu-title" data-i18n="Dashboard">Manage Products</span></a>
+        <li class="@if(Request::segment(1) == 'product') active @endif bold"><a class="collapsible-header waves-effect waves-cyan " href="JavaScript:void(0)"><i class="material-icons">card_giftcard</i><span class="menu-title" data-i18n="Dashboard">Manage Product</span></a>
             <div class="collapsible-body">
                 <ul class="collapsible collapsible-sub" data-collapsible="accordion">
                     <li class="">
@@ -227,7 +227,7 @@
         </li>
 
         <!-- ** Sales -->
-        <li class="@if(Request::segment(1) == 'sale') active @endif bold"><a class="collapsible-header waves-effect waves-cyan " href="JavaScript:void(0)"><i class="material-icons">local_mall</i><span class="menu-title" data-i18n="Dashboard">Manage Sales</span></a>
+        <li class="@if(Request::segment(1) == 'sale') active @endif bold"><a class="collapsible-header waves-effect waves-cyan " href="JavaScript:void(0)"><i class="material-icons">local_mall</i><span class="menu-title" data-i18n="Dashboard">Manage Sale</span></a>
             <div class="collapsible-body">
                 <ul class="collapsible collapsible-sub" data-collapsible="accordion">
                     <li class="">

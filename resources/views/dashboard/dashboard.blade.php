@@ -121,7 +121,7 @@
                </div>
             </div>
             
-            <div class="col s12 m4 l3 animate fadeUp" style="margin-top:30px">
+            <div class="col s12 m4 l3 animate fadeUp" style="margin-top:30px;">
                <div class="card pt-0 pb-0">
                   <div class="dashboard-revenue-wrapper padding-2 ml-2">
                      <span class="new badge gradient-45deg-purple-deep-orange gradient-shadow mt-2 mr-2">+ 12%</span>
@@ -157,7 +157,7 @@
             <div class="col s12 l4">
                 <!-- Recent Users -->
                 <div class="card recent-buyers-card animate fadeUp">
-                    <div class="card-content">
+                    <div class="card-content" style="height: 356px">
                         <h4 class="card-title mb-0">Recent Users <i class="material-icons float-right">more_vert</i></h4>
                         {{-- <p class="medium-small pt-2">Today</p> --}}
                         <ul class="collection mb-0">
@@ -181,7 +181,7 @@
         
             <div class="col s12 m6 l8">
                 <div class="card subscriber-list-card animate fadeRight">
-                    <div class="card-content pb-1">
+                    <div class="card-content pb-1" >
                         <h4 class="card-title mb-0">New Buyers<i class="material-icons float-right">more_vert</i></h4>
                     </div>
                     <table class="subscription-table responsive-table highlight">
@@ -281,10 +281,10 @@
                 </ul>
             </div>
             {{-- Weekly earning --}}
-            <div class="col s12 m4 l5">
-                <div id="weekly-earning" class="card animate fadeUp">
-                   <div class="card-content">
-                      <h4 class="header m-0">Total Expenses:<i class="material-icons right grey-text lighten-3">more_vert</i></h4>
+            <div class="col s12 m4 l5" >
+                <div id="weekly-earning" class="card animate fadeUp" style="margin-top:8px ">
+                   <div class="card-content" style="height:345px;text-align: center">
+                      <h4 class="header m-0 ">Total Expenses:<i class="material-icons right grey-text lighten-3">more_vert</i></h4>
                       <p class="no-margin grey-text lighten-3 medium-small">Mon 15 - Sun 21</p>
                       <h3 class="header">BDT 899.39 <i class="material-icons deep-orange-text text-accent-2">arrow_upward</i>
                       </h3>

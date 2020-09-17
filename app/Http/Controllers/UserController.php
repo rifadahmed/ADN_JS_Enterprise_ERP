@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class UserController extends Controller
 {
     public function index(){
-        $data['title'] = "List Of User";
+        $data['title'] = "List Of Users";
         $data['users']=User::all();
         return view('users.index', $data);
     }

@@ -125,7 +125,7 @@ class LocationController extends Controller
     // ****************************************** Location Type ******************************************
     public function indexTypesList(Request $request)
     {
-        $data['title'] = "List of Location Type";
+        $data['title'] = "List of Location Types";
         $locationTypes = New LocationType();
 
         /** Search with status */

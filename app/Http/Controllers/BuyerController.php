@@ -14,7 +14,7 @@ use Illuminate\Http\Request;
 class BuyerController extends Controller
 {
     public function index(Request $request){
-        $data['title'] = "List Of Buyer";
+        $data['title'] = "List Of Buyers";
         // $data['buyers']=Buyer::all();
         $data['buyer_types']=BuyerType::all();
         $buyers = New Buyer();

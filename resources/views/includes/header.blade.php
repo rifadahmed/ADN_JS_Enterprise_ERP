@@ -6,9 +6,9 @@
                     
                      <div class="header-search-wrapper hide-on-med-and-down" style="margin: 0px auto 0 255px">
                         <ul id="nav-mobile" class="left ">
-                            <li><a href="#"> <i class="material-icons" style="margin: 10px 0 0 10px;">attach_money</i><p style="margin: 0 0 0 42px;">Total Sales :<span style="color: #0288d1; "> BDT 18,000</span></p> </a></li> 
+                            <li><a href="#"> <i class="material-icons" style="margin: 10px 0 0 -13px;">attach_money</i><p style="margin: 0 0 0 18px;">Total Sales :<span style="color: #0288d1; "> BDT 18,000</span></p> </a></li> 
 
-                            <li><a href=""> <i class="material-icons" style="margin: 10px 0 0 245px;">add_shopping_cart</i><p style="margin: 0 0 0 42px;">  Total Purchases :<span style="color: #F086A3"> BDT 30,000</p></span></a></li>
+                            <li><a href="#"> <i class="material-icons" style="margin: 10px 0 0 215px;">add_shopping_cart</i><p style="margin: 0 0 0 33px;">  Total Purchases :<span style="color: #F086A3"> BDT 30,000</p></span></a></li>
                         </ul>                 
                     </div>  
                   
