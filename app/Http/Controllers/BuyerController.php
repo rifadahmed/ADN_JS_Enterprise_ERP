@@ -87,6 +87,7 @@ class BuyerController extends Controller
             'buyer_name' => 'required|unique:buyers|regex:/^[\pL\s\.]+$/u',
             'buyer_phone' => 'required|max:13',
             'buyer_email' => 'required|email',
+            'buyer_status' => 'required',
             'buyer_company' => 'required',
             'buyer_address' => 'required',
             'buyer_type_id' => 'required',

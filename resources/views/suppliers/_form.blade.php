@@ -42,45 +42,45 @@
 
     <div class="input-field col s12 m6">
         <br>
-        <select class="validate js-example-basic-single" name="supplier_status" id="supplier_status" required="" >
+        <select class="validate js-example-basic-single" name="supplier_status" id="supplier_status"  >
             <option value="" disabled selected> - Select Supplier Status - </option>
             <option value="Active" @if(old('supplier_status', (isset($data ) && $data->supplier_status == 'Active'))) selected @endif>Active</option>
             <option value="Inactive" @if(old('supplier_status', (isset($data ) && $data->supplier_status == 'Inactive'))) selected @endif>Inactive</option>
         </select>
-        <label for="supplier_status">Supplier type Status *</label>
+        <label for="supplier_status">Supplier type Status * @if ($errors->has('supplier_status')) <small class="red-text"> [ {{ $errors->first('supplier_status') }} ] </small> @endif</label>
     </div>
     <div class="input-field col s12 m6">
         <br>
-        <select class="validate js-example-basic-single" name="supplier_division_id" id="supplier_division_id" required="" >
+        <select class="validate js-example-basic-single" name="supplier_division_id" id="supplier_division_id"  >
             <option value="" disabled selected> - Select Division - </option>
 
             @foreach($divisions as $division)
                         <option value={{$division->id}} @if(old('supplier_division_id', (isset($data ) && $data->supplier_division_id == $division->id))) selected @endif>{{$division->name}}</option>
             @endforeach
         </select>
-        <label for="supplier_division_id">Division *</label>
+        <label for="supplier_division_id">Division * @if ($errors->has('supplier_division_id')) <small class="red-text"> [ {{ $errors->first('supplier_division_id') }} ] </small> @endif</label>
     </div>
 
      <div class="input-field col s12 m6">
         <br>
-        <select class="validate js-example-basic-single" name="supplier_district_id" id="supplier_district_id" required="" >
+        <select class="validate js-example-basic-single" name="supplier_district_id" id="supplier_district_id"  >
             <option value="" disabled selected> - Select District - </option>
                 @foreach($districts as $district)
                     <option value={{$district->id}} @if(old('supplier_district_id', (isset($data ) && $data->supplier_division_id == $district->id))) selected @endif>{{$district->name}}</option>
                 @endforeach
         </select>
-        <label for="supplier_district_id">District *</label>
+        <label for="supplier_district_id">District * @if ($errors->has('supplier_district_id')) <small class="red-text"> [ {{ $errors->first('supplier_district_id') }} ] </small> @endif</label>
     </div>
     
      <div class="input-field col s12 m6">
         <br>
-        <select class="validate js-example-basic-single" name="supplier_area_id" id="supplier_area_id" required="" >
+        <select class="validate js-example-basic-single" name="supplier_area_id" id="supplier_area_id"  >
             <option value="" disabled selected> - Select Upazila - </option>
                 @foreach($areas as $area)
                         <option value={{$area->id}} @if(old('supplier_area_id', (isset($data ) && $data->supplier_area_id == $area->id))) selected @endif>{{$area->name}}</option>
                 @endforeach
         </select>
-        <label for="supplier_area_id">Upazila *</label>
+        <label for="supplier_area_id">Upazila * @if ($errors->has('supplier_area_id')) <small class="red-text"> [ {{ $errors->first('supplier_area_id') }} ] </small> @endif</label>
     </div>
 
 

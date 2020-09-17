@@ -22,13 +22,13 @@
     </div>
     <div class="input-field col s12 m6" style="margin-top:8px !important;">
         <br>
-        <select class="validate js-example-basic-single" name="buyer_type_id" id="buyer_type_id" required="" >
+        <select class="validate js-example-basic-single" name="buyer_type_id" id="buyer_type_id" >
             <option value="" disabled selected> - Select Buyer Type - </option>
             @foreach ($buyer_types as $buyer_type)
             <option value={{$buyer_type->id}} @if(old('buyer_type_id', (isset($data ) && $data->buyer_type_id == $buyer_type->id))) selected @endif>{{$buyer_type->buyer_type_name}}</option>
             @endforeach
         </select>
-        <label for="buyer_type_id">Buyer Type  *</label>
+        <label for="buyer_type_id">Buyer Type  * @if ($errors->has('buyer_type_id')) <small class="red-text"> [ {{ $errors->first('buyer_type_id') }} ] </small> @endif</label>
     </div>  
       
     
@@ -38,7 +38,7 @@
 <div class="row">
     <div class="input-field col s12 m6">
         <br>
-        <select class="validate js-example-basic-single" name="buyer_status" id="status" required="" >
+        <select class="validate js-example-basic-single" name="buyer_status" id="status"  >
             <option value="" disabled selected> - Select Buyer Status - </option>
             <option value="Active" @if(old('buyer_status', (isset($data ) && $data->buyer_status == 'Active'))) selected @endif>Active</option>
             <option value="Inactive" @if(old('buyer_status', (isset($data ) && $data->buyer_status == 'Inactive'))) selected @endif>Inactive</option>
@@ -48,7 +48,7 @@
     
     <div class="input-field col s12 m6">
         <br>
-        <select class="validate js-example-basic-single" name="buyer_division_id" id="buyer_division_id" required="" >
+        <select class="validate js-example-basic-single" name="buyer_division_id" id="buyer_division_id"  >
             <option value="" disabled selected> - Select Division - </option>
 
 
@@ -59,29 +59,29 @@
                     @endforeach
 
         </select>
-        <label for="buyer_division_id">Division *</label>
+        <label for="buyer_division_id">Division * @if ($errors->has('buyer_division_id')) <small class="red-text"> [ {{ $errors->first('buyer_division_id') }} ] </small> @endif</label>
     </div>
 
      <div class="input-field col s12 m6">
         <br>
-        <select class="validate js-example-basic-single" name="buyer_district_id" id="buyer_district_id" required="" >
+        <select class="validate js-example-basic-single" name="buyer_district_id" id="buyer_district_id"  >
             <option value="" disabled selected> - Select District - </option>
                 @foreach($districts as $district)
                         <option value={{$district->id}} @if(old('buyer_district_id', (isset($data ) && $data->buyer_district_id == $district->id))) selected @endif>{{$district->name}}</option>       
                 @endforeach
         </select>
-        <label for="buyer_district_id">District *</label>
+        <label for="buyer_district_id">District *  @if ($errors->has('buyer_district_id')) <small class="red-text"> [ {{ $errors->first('buyer_district_id') }} ] </small> @endif</label>
     </div>
     
      <div class="input-field col s12 m6">
         <br>
-        <select class="validate js-example-basic-single" name="buyer_area_id" id="buyer_area_id" required="" >
+        <select class="validate js-example-basic-single" name="buyer_area_id" id="buyer_area_id"  >
             <option value="">- Select Upazila -</option>
                 @foreach($areas as $area)
                     <option value={{$area->id}} @if(old('buyer_area_id', (isset($data ) && $data->buyer_area_id == $area->id))) selected @endif>{{$area->name}}</option>       
                 @endforeach
         </select>
-        <label for="buyer_area_id">Area *</label>
+        <label for="buyer_area_id">Upazila *  @if ($errors->has('buyer_area_id')) <small class="red-text"> [ {{ $errors->first('buyer_area_id') }} ] </small> @endif</label>
     </div>
 
   
