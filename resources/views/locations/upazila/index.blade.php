@@ -104,7 +104,8 @@
                                                         
                                                     </tr> 
                                                     @endforeach
-                                                
+                                                    
+
 
                                                 </tbody>
                                             </table>
@@ -118,10 +119,14 @@
 
                     </div>
                 </div>
+                
                 <div class="content-overlay"></div>
+                
             </div>
+           
         </div>
     <!-- END: Page Main-->
+    {{-- {!! $upazilas->render() !!} --}}
 
 @endsection
 

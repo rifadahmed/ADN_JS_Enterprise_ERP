@@ -133,7 +133,7 @@
             <div class="col s12 m4 l3" style="margin-top:30px">
                <div class="card pt-0 pb-0 animate fadeRight">
                   <div class="dashboard-revenue-wrapper padding-2 ml-2">
-                     <span class="new badge gradient-45deg-amber-amber gradient-shadow mt-2 mr-2">+ BDT900</span>
+                     <span class="new badge gradient-45deg-amber-amber gradient-shadow mt-2 mr-2">+ 22.6%</span>
                      <p class="mt-2 mb-0">Sales Due</p>
                      <p class="no-margin grey-text lighten-3">BDT 40,512 avg</p>
                      <h5>BDT 22,300</h5>
@@ -144,7 +144,7 @@
             <div class="col s12 m4 l3" style="margin-top:30px">
                 <div class="card pt-0 pb-0 animate fadeRight">
                    <div class="dashboard-revenue-wrapper padding-2 ml-2">
-                      <span class="new badge gradient-45deg-green-teal gradient-shadow mt-2 mr-2">BDT 900</span>
+                      <span class="new badge gradient-45deg-green-teal gradient-shadow mt-2 mr-2">+ 34.6%</span>
                       <p class="mt-2 mb-0">Purchases Due</p>
                       <p class="no-margin grey-text lighten-3">BDT 30,512 avg</p>
                       <h5>BDT 11,300</h5>
