@@ -1,8 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\LocationType;
+use App\Division;
 use App\Location;
+use App\LocationType;
 use Illuminate\Http\Request;
 
 class LocationController extends Controller
@@ -219,6 +220,62 @@ class LocationController extends Controller
         return redirect()->route('location.types.edit',$id)->with('success','Location Type has been Updated successfully!');
     }
     
+    /////////////////////// For Division,District,Upazila ///////////////////////
+    public function create_division(){
+        $data['title'] = "Create New Division";
+        //$data['location_types']=LocationType::all();
+
+        return view('locations.division.create', $data);
+    }
+    public function store_division(Request $request){
+        
+        $request->validate([
+            'name' => 'required|unique:divisions|regex:/^[\pL\s\-]+$/u',
+            'status' => 'required',
+            'bn_name' => 'required',
+
+        ]);
+
+        $divisionTypeModel = new division ;
+        $divisionTypeModel->name = $request->name;
+        $divisionTypeModel->bn_name = $request->bn_name;
+        $divisionTypeModel->code = 00;
+        $divisionTypeModel->status = $request->status;
+
+        $divisionTypeModel->save();
+        return redirect()->route('location.division.create')->with('success','Division has been Added successfully!');
+
+    }
+
+    public function create_district(){
+        $data['title'] = "Create New District";
+        $data['divisions']=Division::all();
+
+        return view('locations.district.create', $data);
+    }
+    public function create_upazila(){
+        $data['title'] = "Create New Upazila";
+        //$data['location_types']=LocationType::all();
+
+        return view('locations.upazila.create', $data);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
      /***
      * Trash Location
      */

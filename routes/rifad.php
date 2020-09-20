@@ -4,13 +4,23 @@ use App\Division;
 use App\Location;
 use App\LocationType;
 
-
+// Route for Location
 Route::get('/location/list', 'LocationController@index')->name('location.list');
 Route::get('/location/create', 'LocationController@create')->name('location.create');
 Route::get('/location/show/{id}', 'LocationController@show')->name('location.show');
 Route::post('/location/store', 'LocationController@store')->name('location.store');
 Route::get('/location/edit/{id}', 'LocationController@edit')->name('location.edit');
 Route::post('/location/update/{id}', 'LocationController@update')->name('location.update');
+
+// Route for Division district and upazila
+Route::get('/location/division/create', 'LocationController@create_division')->name('location.division.create');
+Route::post('/location/division/store', 'LocationController@store_division')->name('location.division.store');
+
+Route::get('/location/district/create', 'LocationController@create_district')->name('location.district.create');
+Route::post('/location/district/store', 'LocationController@store_district')->name('location.district.store');
+
+Route::get('/location/upazila/create', 'LocationController@create_upazila')->name('location.upazila.create');
+Route::post('/location/upazila/store', 'LocationController@store_upazila')->name('location.upazila.store');
 
 
 Route::get('/location/types/list', 'LocationController@indexTypesList')->name('location.types.list');
@@ -30,23 +40,6 @@ Route::get('/buyer/show/{id}', 'BuyerController@show')->name('buyer.show');
 
  Route::post('/district/ajaxcall', 'BuyerController@districtAjaxcall')->name('district.ajaxcall');
  Route::post('/upazila/ajaxcall', 'BuyerController@upazilaAjaxcall')->name('upazila.ajaxcall');
-
-
-// Route::post('/subcat', function (Request $request) {
-
-//     $parent_id = $request->cat_id;
-    
-//     $subcategories = Division::where('id',$parent_id)
-//                           ->with('districts')
-//                           ->get();
-
-//     return response()->json([
-//         'subcategories' => $subcategories
-//     ]);
-   
-// })->name('subcat');
-
-
 
 
 Route::get('/buyer/type/list', 'BuyerController@indexBuyerType')->name('buyer.type.list');
@@ -119,3 +112,5 @@ Route::post('/supplier/store', 'SupplierController@store')->name('supplier.store
 Route::get('/supplier/edit/{id}', 'SupplierController@edit')->name('supplier.edit');
 Route::post('/supplier/update/{id}', 'SupplierController@update')->name('supplier.update');
 Route::get('/supplier/show/{id}', 'SupplierController@show')->name('supplier.show');
+
+

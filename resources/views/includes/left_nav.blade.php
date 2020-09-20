@@ -34,7 +34,7 @@
                             <span data-i18n="eCommerce">Add New Location</span>
                         </a>
                     </li>
-                    <li>
+                    {{-- <li>
                         <a  class="@if(Request::segment(1) == 'location' &&  Request::segment(2) == 'types' &&  Request::segment(3) == 'list' || Request::segment(1) == 'location' && Request::segment(2) == 'types' && Request::segment(3) =="edit" && Request::segment(4) ==Request::segment(4) || Request::segment(1) == 'location' && Request::segment(2) == 'types' && Request::segment(3) =="show" && Request::segment(4) ==Request::segment(4)) active @endif" href="{{route('location.types.list')}}"><i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="Analytics">Location Types List</span>
                         </a>
@@ -42,6 +42,22 @@
                     <li>
                         <a class="@if(Request::segment(1) == 'location' &&  Request::segment(2) == 'types' &&  Request::segment(3) == 'create') active @endif" href="{{route('location.types.create')}}"><i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="Analytics">Add New Location Type</span>
+                        </a>
+                    </li> --}}
+                    <li>
+                        <a  class="@if(Request::segment(1) == 'location' &&  Request::segment(2) == 'division' &&  Request::segment(3) == 'create' ) active @endif" href="{{route('location.division.create')}}"><i class="material-icons">radio_button_unchecked</i>
+                            <span data-i18n="Analytics">Add Division</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a  class="@if(Request::segment(1) == 'location' &&  Request::segment(2) == 'district' &&  Request::segment(3) == 'create' ) active @endif" href="{{route('location.district.create')}}"><i class="material-icons">radio_button_unchecked</i>
+                            <span data-i18n="Analytics">Add District</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a  class="@if(Request::segment(1) == 'location' &&  Request::segment(2) == 'upazila' &&  Request::segment(3) == 'create' ) active @endif" href="{{route('location.upazila.create')}}"><i class="material-icons">radio_button_unchecked</i>
+                            <span data-i18n="Analytics">Add Upazila</span>
                         </a>
                     </li>
                 </ul>
