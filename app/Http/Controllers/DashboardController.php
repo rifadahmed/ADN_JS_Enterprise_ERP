@@ -6,6 +6,7 @@ use App\User;
 use App\Brand;
 use App\Buyer;
 use App\Upazila;
+use App\Category;
 use App\District;
 use App\Division;
 use App\Location;
@@ -25,6 +26,12 @@ class DashboardController extends Controller
     {
         // recent users
         $data['users']=User::all()->take(4);
+
+        //Total categories
+        $data['totalcategories']=count(Category::all());
+
+        //Categories
+        $data['categories']=Category::all();
 
         //buyers
         $data['buyers']=Buyer::all()->take(4);
