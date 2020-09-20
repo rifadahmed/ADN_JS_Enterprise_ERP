@@ -22,18 +22,18 @@
         <li class="@if(Request::segment(1) == 'location') active @endif bold"><a class="collapsible-header waves-effect waves-cyan " href="JavaScript:void(0)"><i class="material-icons">my_location</i><span class="menu-title" data-i18n="Dashboard">Manage Location</span></a>
             <div class="collapsible-body">
                 <ul class="collapsible collapsible-sub" data-collapsible="accordion">
-                    <li class="">
+                    {{-- <li class="">
                         <a class="@if(Request::segment(1) == 'location' && Request::segment(2) == 'list' || Request::segment(1) == 'location' && Request::segment(2) == 'edit' && Request::segment(3) ==Request::segment(3)|| Request::segment(1) == 'location' && Request::segment(2) == 'show' && Request::segment(3) ==Request::segment(3)) active @endif" href="{{route('location.list')}}">
                             <i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="Modern">Locations List</span>
                         </a>
-                    </li>
-                    <li>
+                    </li> --}}
+                    {{-- <li>
                         <a class="@if(Request::segment(1) == 'location' &&  Request::segment(2) == 'create') active @endif" href="{{route('location.create')}}">
                             <i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="eCommerce">Add New Location</span>
                         </a>
-                    </li>
+                    </li> --}}
                     {{-- <li>
                         <a  class="@if(Request::segment(1) == 'location' &&  Request::segment(2) == 'types' &&  Request::segment(3) == 'list' || Request::segment(1) == 'location' && Request::segment(2) == 'types' && Request::segment(3) =="edit" && Request::segment(4) ==Request::segment(4) || Request::segment(1) == 'location' && Request::segment(2) == 'types' && Request::segment(3) =="show" && Request::segment(4) ==Request::segment(4)) active @endif" href="{{route('location.types.list')}}"><i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="Analytics">Location Types List</span>
