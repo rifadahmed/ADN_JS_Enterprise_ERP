@@ -263,7 +263,7 @@
             <div id="work-collections">
                 <div class="row">
                     {{-- Most brought productcs --}}
-                    <div class="col s12 m12 l5">
+                    <div class="col s12 m12 l5" >
                         <ul id="projects-collection" class="collection z-depth-1 animate fadeLeft">
                         <li class="collection-item avatar">
                             <i class="material-icons cyan circle">card_travel</i>
@@ -339,7 +339,7 @@
                     </div>
                 {{-- Most Popular category --}}
                 <div class="col s12 m12 l3">
-                    <ul id="projects-collection" class="collection z-depth-1 animate fadeLeft">
+                    <ul id="projects-collection" class="collection z-depth-1 animate fadeLeft" style="height: 348px">
                     <li class="collection-item avatar" >
                         <i class="material-icons red circle">palette</i>
                         <h6 class="collection-header m-0">Category:</h6>
