@@ -216,7 +216,7 @@
                     </table>
                 </div>
             </div>
-        
+            
     </div>
     <!--/ Current balance & appointment cards-->
   
@@ -299,15 +299,28 @@
         
         </div>
     </div>
-    
-    {{-- location chart --}}
-    <div class="col s12 m6 l6">
-        <canvas id="myChart" width="400" height="200"></canvas>
-    </div>
 
-    {{-- Sale chart --}}
-    <div class="col s12 m6 l6">
-        <canvas id="line-chart" width="400" height="200"></canvas>
+
+    <div class="row">
+            <div id="card-stats" class="pt-0" >
+                
+                <div class="col s12 m6 l6">
+                    <div class="card subscriber-list-card animate fadeRight">
+                        <div class="card-content pb-1" >
+                            {{-- <h4 class="card-title mb-0">New Buyers<i class="material-icons float-right">more_vert</i></h4> --}}
+                                <canvas id="myChart" width="400" height="200"></canvas>
+                        </div>                       
+                    </div>
+                </div>
+                <div class="col s12 m6 l6">
+                    <div class="card subscriber-list-card animate fadeRight">
+                        <div class="card-content pb-1" >
+                            {{-- <h4 class="card-title mb-0">New Buyers<i class="material-icons float-right">more_vert</i></h4> --}}
+                            <canvas id="line-chart" width="400" height="200"></canvas>
+                        </div>                       
+                    </div>
+                </div>
+            </div>
     </div>
 
      

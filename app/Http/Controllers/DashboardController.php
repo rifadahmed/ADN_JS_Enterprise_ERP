@@ -24,7 +24,7 @@ class DashboardController extends Controller
     public function index()
     {
         // recent users
-        $data['users']=User::all()->take(5);
+        $data['users']=User::all()->take(4);
 
         //buyers
         $data['buyers']=Buyer::all()->take(4);
