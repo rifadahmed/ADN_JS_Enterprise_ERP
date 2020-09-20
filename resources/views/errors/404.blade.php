@@ -15,7 +15,7 @@
                                 {{__('Sorry, but the page you are looking for has not been found on our server.')}}
                             </div>
                             <br>
-                            <div class=""><a class="btn btn-primary" href="{{env('APP_URL')}}">{{__('Return To Dashboard')}}</a></div>
+                            <div class=""><a class="btn btn-primary" href="{{route('dashboard')}}">{{__('Return To Dashboard')}}</a></div>
                             <br>
                         </div>
                     </div>
