@@ -320,88 +320,9 @@
                         </li>
                         </ul>
                     </div>
-                    {{-- Most Popular category --}}
-                    <div class="col s12 m12 l4">
-                        <ul id="projects-collection" class="collection z-depth-1 animate fadeLeft">
-                        <li class="collection-item avatar">
-                            <i class="material-icons red circle">palette</i>
-                            <h6 class="collection-header m-0">Category:</h6>
-                            <p>Most Popular Category</p>
-                        </li>
-                        @foreach ($categories as $category)
-                        <li class="collection-item">
-                            <div class="row">
-                                <div class="col s6">
-                                    <span class="badge gradient-45deg-light-blue-cyan gradient-shadow mt-2 mr-2">{{$category->category_name}}</span>
-                                </div>
-                                
-                            </div>
-                        </li>
-                        @endforeach
-                        {{-- <li class="collection-item">
-                            <div class="row">
-                                <div class="col s6">
-                                    <span class="badge gradient-45deg-light-blue-cyan gradient-shadow mt-2 mr-2">Health</span>
-                                </div>
-                                
-                            </div>
-                        </li>
-                        <li class="collection-item">
-                            <div class="row">
-                                <div class="col s6">
-                                    <span class="badge gradient-45deg-light-blue-cyan gradient-shadow mt-2 mr-2">Personal</span>
-                                </div>
-                                <div class="col s3">
-                                    <div id="project-line-2"></div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="collection-item">
-                            <div class="row">
-                                <div class="col s6">
-                                    <span class=" badge gradient-45deg-light-blue-cyan gradient-shadow mt-2 mr-2">Men's Wear</span>
-                                </div>
-                                <div class="col s3">
-                                    <div id="project-line-3"></div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="collection-item">
-                            <div class="row">
-                                <div class="col s6">
-                                    <span class=" badge gradient-45deg-light-blue-cyan gradient-shadow mt-2 mr-2">Furniture</span>
-                                </div>
-                                <div class="col s3">
-                                    <div id="project-line-3"></div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="collection-item">
-                            <div class="row">
-                                <div class="col s6">
-                                    <span class=" badge gradient-45deg-light-blue-cyan gradient-shadow mt-2 mr-2">Mobile</span>
-                                </div>
-                                <div class="col s3">
-                                    <div id="project-line-3"></div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="collection-item">
-                            <div class="row">
-                                <div class="col s6">
-                                    <span class=" badge gradient-45deg-light-blue-cyan gradient-shadow mt-2 mr-2">Jewellery</span>
-                                </div>
-                                <div class="col s3">
-                                    <div id="project-line-3"></div>
-                                </div>
-                            </div>
-                        </li> --}}
-                        
-
-                        </ul>
-                    </div>
+                    
                     {{-- Weekly earning --}}
-                    <div class="col s12 m4 l3" >
+                    <div class="col s12 m4 l4" >
                         <div id="weekly-earning" class="card animate fadeUp" style="margin-top:8px ">
                         <div class="card-content" style="height:345px;text-align: center">
                             <h4 class="header m-0 ">Total Expenses:<i class="material-icons right grey-text lighten-3">more_vert</i></h4>
@@ -416,7 +337,29 @@
                         </div>
                         </div>
                     </div>
-                
+                {{-- Most Popular category --}}
+                <div class="col s12 m12 l3">
+                    <ul id="projects-collection" class="collection z-depth-1 animate fadeLeft">
+                    <li class="collection-item avatar" >
+                        <i class="material-icons red circle">palette</i>
+                        <h6 class="collection-header m-0">Category:</h6>
+                        <p>Most Popular Category</p>
+                    </li>
+                    @foreach ($categories as $category)
+                    <li class="collection-item">
+                        <div class="row">
+                            <div class="col s6 " style="float:right">
+                                <span class="badge gradient-45deg-light-blue-cyan gradient-shadow mt-2 mr-2">{{$category->category_name}}</span>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    @endforeach
+
+                    
+
+                    </ul>
+                </div>
                 </div>
             </div>
 
