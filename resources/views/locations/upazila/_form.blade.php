@@ -1,7 +1,7 @@
 
 <div class="row">
     <div class="input-field col s12 m6">
-        <label for="name">Name * </label>
+        <label for="name">Name * @if ($errors->has('name')) <small class="red-text"> [ {{ $errors->first('name') }} ] </small> @endif</label>
 
         <input class="validate" required="" id="name" name="name" value="{{ old('name',isset($data) ? $data->name : null ) }}" type="text">
     </div>

@@ -49,7 +49,7 @@
                         <div class="collapsible-body">
                             <ul class="collapsible collapsible-sub" data-collapsible="accordion">
                                 <li>
-                                    <a  class="@if(Request::segment(1) == 'location' &&  Request::segment(2) == 'division' &&  Request::segment(3) == 'list' ) active @endif" href="{{route('location.division.list')}}"><i class="material-icons">radio_button_unchecked</i>
+                                    <a  class="@if(Request::segment(1) == 'location' &&  Request::segment(2) == 'division' &&  Request::segment(3) == 'list' ||Request::segment(1) == 'location' &&  Request::segment(2) == 'division' &&  Request::segment(3) == 'show' &&  Request::segment(4) == Request::segment(4) ||Request::segment(1) == 'location' &&  Request::segment(2) == 'division' &&  Request::segment(3) == 'edit' &&  Request::segment(4) == Request::segment(4) ) active @endif" href="{{route('location.division.list')}}"><i class="material-icons">radio_button_unchecked</i>
                                         <span data-i18n="Analytics">Division List</span>
                                     </a>
                                 </li>
@@ -67,7 +67,7 @@
                         <div class="collapsible-body">
                             <ul class="collapsible collapsible-sub" data-collapsible="accordion">
                                 <li>
-                                    <a  class="@if(Request::segment(1) == 'location' &&  Request::segment(2) == 'district' &&  Request::segment(3) == 'list' ) active @endif" href="{{route('location.district.list')}}"><i class="material-icons">radio_button_unchecked</i>
+                                    <a  class="@if(Request::segment(1) == 'location' &&  Request::segment(2) == 'district' &&  Request::segment(3) == 'list' ||Request::segment(1) == 'location' &&  Request::segment(2) == 'district' &&  Request::segment(3) == 'show' &&  Request::segment(4) == Request::segment(4) ||Request::segment(1) == 'location' &&  Request::segment(2) == 'district' &&  Request::segment(3) == 'edit' &&  Request::segment(4) == Request::segment(4)) active @endif" href="{{route('location.district.list')}}"><i class="material-icons">radio_button_unchecked</i>
                                         <span data-i18n="Analytics">District List</span>
                                     </a>
                                 </li>
@@ -84,7 +84,7 @@
             <div class="collapsible-body">
                 <ul class="collapsible collapsible-sub" data-collapsible="accordion">
                     <li>
-                        <a  class="@if(Request::segment(1) == 'location' &&  Request::segment(2) == 'upazila' &&  Request::segment(3) == 'list' ) active @endif" href="{{route('location.upazila.list')}}"><i class="material-icons">radio_button_unchecked</i>
+                        <a  class="@if(Request::segment(1) == 'location' &&  Request::segment(2) == 'upazila' &&  Request::segment(3) == 'list' ||Request::segment(1) == 'location' &&  Request::segment(2) == 'upazila' &&  Request::segment(3) == 'show' &&  Request::segment(4) == Request::segment(4) ||Request::segment(1) == 'location' &&  Request::segment(2) == 'upazila' &&  Request::segment(3) == 'edit' &&  Request::segment(4) == Request::segment(4)) active @endif" href="{{route('location.upazila.list')}}"><i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="Analytics">Upazila List</span>
                         </a>
                     </li>

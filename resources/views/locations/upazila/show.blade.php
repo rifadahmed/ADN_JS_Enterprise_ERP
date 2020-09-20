@@ -6,7 +6,7 @@
     <div class="section users-edit">
         <div class="card">
             <div class="card-content">
-            <h5 class="card-title">{{ isset($title) ? $title : "Title Not Found" }} <a href="{{route('location.district.list')}}" class="btn btn-primary float-right">Back</a></h5>
+            <h5 class="card-title">{{ isset($title) ? $title : "Title Not Found" }} <a href="{{route('location.upazila.list')}}" class="btn btn-primary float-right">Back</a></h5>
                 
                 <div class="divider mb-3"></div>
                 <div class="row">
@@ -23,21 +23,21 @@
                                                     <tbody>
 
                                                         <tr>
-                                                            <td>District Name:</td>
-                                                            <td class="location_name">{{$district->name}}</td>
+                                                            <td>Upazila Name:</td>
+                                                            <td class="location_name">{{$upazila->name}}</td>
                                                         </tr>
                                                         <tr>
                                                             <td>BN Name:</td>
-                                                            <td class="location_type">{{$district->bn_name}}</td>
+                                                            <td class="location_type">{{$upazila->bn_name}}</td>
                                                         </tr>
                                                         <tr>
-                                                            <td>Division:</td>
-                                                            <td class="location_type">{{$district->division->name}}</td>
+                                                            <td>District:</td>
+                                                            <td class="location_type">{{$upazila->district->name}}</td>
                                                         </tr>
 
                                                         <tr>
                                                             <td>Status:</td>
-                                                            <td><span class="{{($district->status=="Active")?"green-text":"red-text"}}">{{$district->status}}</span></td>
+                                                            <td><span class="{{($upazila->status=="Active")?"green-text":"red-text"}}">{{$upazila->status}}</span></td>
                                                         </tr>
                                                     </tbody>
                                                 </table>

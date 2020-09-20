@@ -436,6 +436,37 @@ class LocationController extends Controller
        // $data['locationTypes']=LocationType::all();
         return view('locations.upazila.index', $data);
     }
+    public function show_upazila($id){
+        $title="Upazila Details";
+        $upazila=Upazila::find($id);
+        return view('locations.upazila.show', compact('title','upazila'));
+
+    }
+    public function edit_upazila($id){
+        $data['title']="Edit Upazila";
+        $data['data']=Upazila::find($id);
+        $data['districts']=District::all();
+        return view('locations.upazila.edit',$data);
+    }
+    public function update_upazila(Request $request,$id)
+    {
+        $request->validate([
+            'name'=>'regex:/^[\pL\s\-]+$/u|unique:upazilas,name,'.$id,
+            'status'=>'required',
+            'district_id'=>'required',
+            'bn_name'=>'required'
+
+        ]);
+        $upazilaTypeModel =Upazila::find($id) ;
+        $upazilaTypeModel->name = $request->name;
+        $upazilaTypeModel->bn_name = $request->bn_name;
+        $upazilaTypeModel->district_id = $request->district_id;
+        $upazilaTypeModel->code = 00;
+        $upazilaTypeModel->status = $request->status;
+        $upazilaTypeModel->save();
+        return redirect()->route('location.upazila.edit',$id)->with('success','Upazila has been Updated successfully!');
+
+    }
     public function create_upazila(){
         $data['title'] = "Create New Upazila";
         $data['districts']=District::all();

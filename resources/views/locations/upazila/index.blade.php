@@ -84,7 +84,7 @@
                                                     <th>SL</th>
                                                     <th>Upazila Name</th>
                                                     <th>BN Name</th>
-                                                    <th>Division Name</th>
+                                                    <th>District Name</th>
                                                     <th>Status</th>
                                                     <th>Action</th>
                                                 </tr>
