@@ -312,6 +312,43 @@ class LocationController extends Controller
     }
 
     // District
+    public function index_district(Request $request){
+        $data['title'] = "List of Districts";
+        $districts = New District();
+
+        /** Search with status */
+        if ($request->status == 'Active') {
+            $districts = $districts->where('status', 'Active');
+        } else if ($request->status == 'Inactive') {
+            $districts = $districts->where('status', 'Inactive');
+        }
+
+         /** Search with name */
+         if (isset($request->search)) {
+            $districts = $districts->where(function ($query) use ($request) {
+                $query->where('name', 'like', '%' . $request->search . '%');
+            });
+        }
+
+        $districts = $districts->orderBy('id', 'DESC')->paginate(10);
+
+        if (isset($request->search) || $request->status) {
+            $render['status'] = $request->status;
+            $render['search'] = $request->search;
+            $districts       = $districts->appends($render);
+        }
+        $data['districts'] = $districts;
+        $data['serial']     = managePagination($districts);
+
+       // $data['locationTypes']=LocationType::all();
+        return view('locations.district.index', $data);
+    }
+    public function show_district($id){
+        $title="District Details";
+        $district=District::find($id);
+        return view('locations.district.show', compact('title','district'));
+
+    }
     public function create_district(){
         $data['title'] = "Create New District";
         $data['divisions']=Division::all();
@@ -341,7 +378,64 @@ class LocationController extends Controller
 
     }
 
+    public function edit_district($id){
+        $data['title']="Edit District";
+        $data['data']=District::find($id);
+        $data['divisions']=Division::all();
+        return view('locations.district.edit',$data);
+    }
+    public function update_district(Request $request,$id)
+    {
+        $request->validate([
+            'name'=>'regex:/^[\pL\s\-]+$/u|unique:districts,name,'.$id,
+            'status'=>'required',
+            'division_id'=>'required',
+            'bn_name'=>'required'
 
+        ]);
+        $districtTypeModel =District::find($id) ;
+        $districtTypeModel->name = $request->name;
+        $districtTypeModel->bn_name = $request->bn_name;
+        $districtTypeModel->division_id = $request->division_id;
+        $districtTypeModel->code = 00;
+        $districtTypeModel->status = $request->status;
+        $districtTypeModel->save();
+        return redirect()->route('location.district.edit',$id)->with('success','District has been Updated successfully!');
+
+    }
+
+    //Upazila
+    public function index_upazila(Request $request){
+        $data['title'] = "List of Upazilas";
+        $upazilas = New Upazila();
+
+        /** Search with status */
+        if ($request->status == 'Active') {
+            $upazilas = $upazilas->where('status', 'Active');
+        } else if ($request->status == 'Inactive') {
+            $upazilas = $upazilas->where('status', 'Inactive');
+        }
+
+         /** Search with name */
+         if (isset($request->search)) {
+            $upazilas = $upazilas->where(function ($query) use ($request) {
+                $query->where('name', 'like', '%' . $request->search . '%');
+            });
+        }
+
+        $upazilas = $upazilas->orderBy('id', 'DESC')->paginate(10);
+
+        if (isset($request->search) || $request->status) {
+            $render['status'] = $request->status;
+            $render['search'] = $request->search;
+            $upazilas       = $upazilas->appends($render);
+        }
+        $data['upazilas'] = $upazilas;
+        $data['serial']     = managePagination($upazilas);
+
+       // $data['locationTypes']=LocationType::all();
+        return view('locations.upazila.index', $data);
+    }
     public function create_upazila(){
         $data['title'] = "Create New Upazila";
         $data['districts']=District::all();

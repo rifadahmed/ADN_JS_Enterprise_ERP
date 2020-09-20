@@ -23,4 +23,8 @@ class District extends Model
             }
         });
     }
+
+    public function division(){
+        return $this->belongsTo('App\Division','division_id');
+    }
 }

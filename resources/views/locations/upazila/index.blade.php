@@ -25,15 +25,15 @@
                         <div class="col s10 m6 l6" >
                             <h5 class="breadcrumbs-title mt-0 mb-0"><span>{{ isset($title) ? $title : "Title Not Found" }}</span></h5>
                             <ol class="breadcrumbs mb-0">
-                                <li class="breadcrumb-item"><a href="{{route('location.division.list') }}">Division</a>
+                                <li class="breadcrumb-item"><a href="{{route('location.upazila.list') }}">Upazila</a>
                                 </li>
-                                <li class="breadcrumb-item active">Division List
+                                <li class="breadcrumb-item active">Upazila List
                                 </li>
                             </ol>
                         </div>
 
                         <div class="col s2 m6 l6">
-                            <a href="{{ route('location.division.create') }}" class="btn indigo waves-effect waves-light breadcrumbs-btn right"> Create New Division </a>
+                            <a href="{{ route('location.upazila.create') }}" class="btn indigo waves-effect waves-light breadcrumbs-btn right"> Create New upazila </a>
                         </div>
                     </div>
                 </div>
@@ -49,7 +49,7 @@
                                         <form method="GET" action="">
                                             
                                             <div class="col s12 m6 l3">
-                                                <label for="users-list-verified">Division Name</label>
+                                                <label for="users-list-verified">Upazila Name</label>
                                                 <div class="input-field">
                                                     <input type="text" name="search" value="{{ (Request::get('search')) ? Request::get('search') : null }}">
                                                 </div>
@@ -82,25 +82,25 @@
                                                 <thead>
                                                 <tr>
                                                     <th>SL</th>
-                                                    <th>Division Name</th>
+                                                    <th>Upazila Name</th>
                                                     <th>BN Name</th>
+                                                    <th>Division Name</th>
                                                     <th>Status</th>
                                                     <th>Action</th>
-                                                    <th></th>
                                                 </tr>
                                                 </thead>
                                                 <tbody>
-                                                    @foreach ($divisions as $division)
+                                                    @foreach ($upazilas as $upazila)
                                                     <tr>
                                                         <td>{{$serial++}}</td>
-                                                        <td>{{$division->name}}</td>
-                                                        <td>{{$division->bn_name}}</td>
-                                                        
+                                                        <td>{{$upazila->name}}</td>                                                        
+                                                        <td>{{$upazila->bn_name}}</td>
+                                                        <td>{{$upazila->district->name}}</td>
                                                         <td><span class="chip green lighten-5">
-                                                            <span class="{{($division->status=="Active")?"green-text":"red-text"}}">{{$division->status}}</span>
+                                                            <span class="{{($upazila->status=="Active")?"green-text":"red-text"}}">{{$upazila->status}}</span>
                                                           </span>
                                                         </td>
-                                                        <td><a class="border-primary" href="{{ route('location.division.edit', $division->id) }}"><i class="material-icons  edit-icon">edit</i></a><a href="{{ route('location.division.show',$division->id)}}"><i class="material-icons">remove_red_eye</i></a></td>
+                                                        <td><a class="border-primary" href="{{ route('location.upazila.edit', $upazila->id) }}"><i class="material-icons  edit-icon">edit</i></a><a href="{{ route('location.upazila.show',$upazila->id)}}"><i class="material-icons">remove_red_eye</i></a></td>
                                                         
                                                     </tr> 
                                                     @endforeach

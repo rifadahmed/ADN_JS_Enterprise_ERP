@@ -13,6 +13,7 @@ Route::get('/location/edit/{id}', 'LocationController@edit')->name('location.edi
 Route::post('/location/update/{id}', 'LocationController@update')->name('location.update');
 
 // Route for Division district and upazila
+//Division
 Route::get('/location/division/list', 'LocationController@index_division')->name('location.division.list');
 Route::get('/location/division/create', 'LocationController@create_division')->name('location.division.create');
 Route::post('/location/division/store', 'LocationController@store_division')->name('location.division.store');
@@ -20,11 +21,21 @@ Route::get('/location/division/edit/{id}', 'LocationController@edit_division')->
 Route::post('/location/division/update/{id}', 'LocationController@update_division')->name('location.division.update');
 Route::get('/location/division/show/{id}', 'LocationController@show_division')->name('location.division.show');
 
+//District
+Route::get('/location/district/list', 'LocationController@index_district')->name('location.district.list');
 Route::get('/location/district/create', 'LocationController@create_district')->name('location.district.create');
 Route::post('/location/district/store', 'LocationController@store_district')->name('location.district.store');
+Route::get('/location/district/edit/{id}', 'LocationController@edit_district')->name('location.district.edit');
+Route::post('/location/district/update/{id}', 'LocationController@update_district')->name('location.district.update');
+Route::get('/location/district/show/{id}', 'LocationController@show_district')->name('location.district.show');
 
+//Upazila
+Route::get('/location/upazila/list', 'LocationController@index_upazila')->name('location.upazila.list');
 Route::get('/location/upazila/create', 'LocationController@create_upazila')->name('location.upazila.create');
 Route::post('/location/upazila/store', 'LocationController@store_upazila')->name('location.upazila.store');
+Route::get('/location/upazila/edit/{id}', 'LocationController@edit_upazila')->name('location.upazila.edit');
+Route::post('/location/upazila/update/{id}', 'LocationController@update_upazila')->name('location.upazila.update');
+Route::get('/location/upazila/show/{id}', 'LocationController@show_upazila')->name('location.upazila.show');
 
 
 Route::get('/location/types/list', 'LocationController@indexTypesList')->name('location.types.list');

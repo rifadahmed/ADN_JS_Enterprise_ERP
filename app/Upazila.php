@@ -23,4 +23,8 @@ class Upazila extends Model
             }
         });
     }
+
+    public function district(){
+        return $this->belongsTo('App\District','district_id');
+    }
 }
