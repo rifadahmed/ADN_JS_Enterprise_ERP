@@ -31,7 +31,7 @@ class DashboardController extends Controller
         $data['totalcategories']=count(Category::all());
 
         //Categories
-        $data['categories']=Category::all();
+        $data['categories']=Category::all()->take(5);
 
         //buyers
         $data['buyers']=Buyer::all()->take(4);
