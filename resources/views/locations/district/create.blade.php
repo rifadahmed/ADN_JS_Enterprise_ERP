@@ -9,7 +9,7 @@
                 <div class="divider mb-3"></div>
                 <div class="row">
                     <div class="col s12 active" id="account">
-                    <form method="POST" action="{{route('location.types.store')}}">
+                    <form method="POST" action="{{route('location.district.store')}}">
                             @csrf
                             @include('locations.district._form')
                             <div class="col s12 display-flex justify-content-end mt-3">

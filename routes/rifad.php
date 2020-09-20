@@ -13,8 +13,12 @@ Route::get('/location/edit/{id}', 'LocationController@edit')->name('location.edi
 Route::post('/location/update/{id}', 'LocationController@update')->name('location.update');
 
 // Route for Division district and upazila
+Route::get('/location/division/list', 'LocationController@index_division')->name('location.division.list');
 Route::get('/location/division/create', 'LocationController@create_division')->name('location.division.create');
 Route::post('/location/division/store', 'LocationController@store_division')->name('location.division.store');
+Route::get('/location/division/edit/{id}', 'LocationController@edit_division')->name('location.division.edit');
+Route::post('/location/division/update/{id}', 'LocationController@update_division')->name('location.division.update');
+Route::get('/location/division/show/{id}', 'LocationController@show_division')->name('location.division.show');
 
 Route::get('/location/district/create', 'LocationController@create_district')->name('location.district.create');
 Route::post('/location/district/store', 'LocationController@store_district')->name('location.district.store');

@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Upazila;
+use App\District;
 use App\Division;
 use App\Location;
 use App\LocationType;
@@ -221,11 +223,50 @@ class LocationController extends Controller
     }
     
     /////////////////////// For Division,District,Upazila ///////////////////////
+    // Division
+    public function index_division(Request $request)
+    {
+        $data['title'] = "List of Divisions";
+        $divisions = New Division();
+
+        /** Search with status */
+        if ($request->status == 'Active') {
+            $divisions = $divisions->where('status', 'Active');
+        } else if ($request->status == 'Inactive') {
+            $divisions = $divisions->where('status', 'Inactive');
+        }
+
+         /** Search with name */
+         if (isset($request->search)) {
+            $divisions = $divisions->where(function ($query) use ($request) {
+                $query->where('name', 'like', '%' . $request->search . '%');
+            });
+        }
+
+        $divisions = $divisions->orderBy('id', 'DESC')->paginate(10);
+
+        if (isset($request->search) || $request->status) {
+            $render['status'] = $request->status;
+            $render['search'] = $request->search;
+            $divisions       = $divisions->appends($render);
+        }
+        $data['divisions'] = $divisions;
+        $data['serial']     = managePagination($divisions);
+
+       // $data['locationTypes']=LocationType::all();
+        return view('locations.division.index', $data);
+
+    }
     public function create_division(){
         $data['title'] = "Create New Division";
-        //$data['location_types']=LocationType::all();
 
         return view('locations.division.create', $data);
+    }
+    public function show_division($id){
+        $title="Division Details";
+        $division=Division::find($id);
+        return view('locations.division.show', compact('title','division'));
+
     }
     public function store_division(Request $request){
         
@@ -247,17 +288,86 @@ class LocationController extends Controller
 
     }
 
+    public function edit_division($id){
+        $data['title']="Edit Division";
+        $data['data']=Division::find($id);
+        return view('locations.division.edit',$data);
+    }
+    public function update_division(Request $request,$id)
+    {
+        $request->validate([
+            'name'=>'regex:/^[\pL\s\-]+$/u|unique:divisions,name,'.$id,
+            'status'=>'required',
+            'bn_name'=>'required'
+
+        ]);
+        $divisionTypeModel =Division::find($id) ;
+        $divisionTypeModel->name = $request->name;
+        $divisionTypeModel->bn_name = $request->bn_name;
+        $divisionTypeModel->code = 00;
+        $divisionTypeModel->status = $request->status;
+        $divisionTypeModel->save();
+        return redirect()->route('location.division.edit',$id)->with('success','Division has been Updated successfully!');
+
+    }
+
+    // District
     public function create_district(){
         $data['title'] = "Create New District";
         $data['divisions']=Division::all();
 
         return view('locations.district.create', $data);
     }
+    public function store_district(Request $request){
+        
+        $request->validate([
+            'name' => 'required|unique:districts|regex:/^[\pL\s\-]+$/u',
+            'division_id' => 'required',
+            'bn_name' => 'required',
+            'status' => 'required',
+
+        ]);
+
+        $districtTypeModel = new District ;
+        $districtTypeModel->division_id = $request->division_id;
+        $districtTypeModel->name = $request->name;
+        $districtTypeModel->bn_name = $request->bn_name;
+        $districtTypeModel->code = 00;
+       
+        $districtTypeModel->status = $request->status;
+
+        $districtTypeModel->save();
+        return redirect()->route('location.district.create')->with('success','District has been Added successfully!');
+
+    }
+
+
     public function create_upazila(){
         $data['title'] = "Create New Upazila";
-        //$data['location_types']=LocationType::all();
+        $data['districts']=District::all();
 
         return view('locations.upazila.create', $data);
+    }
+    public function store_upazila(Request $request){
+        
+        $request->validate([
+            'name' => 'required|unique:upazilas|regex:/^[\pL\s\-]+$/u',
+            'district_id' => 'required',
+            'bn_name' => 'required',
+            'status' => 'required',
+
+        ]);
+
+        $districtTypeModel = new Upazila ;
+        $districtTypeModel->district_id = $request->district_id;
+        $districtTypeModel->name = $request->name;
+        $districtTypeModel->bn_name = $request->bn_name;
+        $districtTypeModel->code = 00;
+        $districtTypeModel->status = $request->status;
+
+        $districtTypeModel->save();
+        return redirect()->route('location.upazila.create')->with('success','Upazila has been Added successfully!');
+
     }
 
 

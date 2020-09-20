@@ -44,17 +44,39 @@
                             <span data-i18n="Analytics">Add New Location Type</span>
                         </a>
                     </li> --}}
-                    <li>
-                        <a  class="@if(Request::segment(1) == 'location' &&  Request::segment(2) == 'division' &&  Request::segment(3) == 'create' ) active @endif" href="{{route('location.division.create')}}"><i class="material-icons">radio_button_unchecked</i>
-                            <span data-i18n="Analytics">Add Division</span>
-                        </a>
+
+                    <li class="@if(Request::segment(1) == 'location') active @endif bold"><a class="collapsible-header waves-effect waves-cyan " href="JavaScript:void(0)"><i class="material-icons">my_location</i><span class="menu-title" data-i18n="Dashboard">Division</span></a>
+                        <div class="collapsible-body">
+                            <ul class="collapsible collapsible-sub" data-collapsible="accordion">
+                                <li>
+                                    <a  class="@if(Request::segment(1) == 'location' &&  Request::segment(2) == 'division' &&  Request::segment(3) == 'list' ) active @endif" href="{{route('location.division.list')}}"><i class="material-icons">radio_button_unchecked</i>
+                                        <span data-i18n="Analytics">Division List</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a  class="@if(Request::segment(1) == 'location' &&  Request::segment(2) == 'division' &&  Request::segment(3) == 'create' ) active @endif" href="{{route('location.division.create')}}"><i class="material-icons">radio_button_unchecked</i>
+                                        <span data-i18n="Analytics">Add Division</span>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
                     </li>
+                    
+                    <li class="@if(Request::segment(1) == 'location') active @endif bold"><a class="collapsible-header waves-effect waves-cyan " href="JavaScript:void(0)"><i class="material-icons">my_location</i><span class="menu-title" data-i18n="Dashboard">District</span></a>
+                        <div class="collapsible-body">
+                            <ul class="collapsible collapsible-sub" data-collapsible="accordion">
                     <li>
                         <a  class="@if(Request::segment(1) == 'location' &&  Request::segment(2) == 'district' &&  Request::segment(3) == 'create' ) active @endif" href="{{route('location.district.create')}}"><i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="Analytics">Add District</span>
                         </a>
                     </li>
-
+                </ul>
+            </div>
+        </li>
+        <li class="@if(Request::segment(1) == 'location') active @endif bold"><a class="collapsible-header waves-effect waves-cyan " href="JavaScript:void(0)"><i class="material-icons">my_location</i><span class="menu-title" data-i18n="Dashboard">Upazila</span></a>
+            <div class="collapsible-body">
+                <ul class="collapsible collapsible-sub" data-collapsible="accordion">
                     <li>
                         <a  class="@if(Request::segment(1) == 'location' &&  Request::segment(2) == 'upazila' &&  Request::segment(3) == 'create' ) active @endif" href="{{route('location.upazila.create')}}"><i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="Analytics">Add Upazila</span>
@@ -63,7 +85,9 @@
                 </ul>
             </div>
         </li>
-
+    </ul>
+</div>
+</li>
         <!-- ** Buyers -->
         <li class="@if(Request::segment(1) == 'buyer') active @endif bold"><a class="collapsible-header waves-effect waves-cyan " href="JavaScript:void(0)"><i class="material-icons">person</i><span class="menu-title" data-i18n="Dashboard">Manage Buyer</span></a>
             <div class="collapsible-body">
