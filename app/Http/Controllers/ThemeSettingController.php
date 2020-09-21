@@ -95,5 +95,24 @@ class ThemeSettingController extends Controller
            }
 
 
+           //value6 column
+           public function updateFixNav(Request $request){
+            
+            $fixNav=ThemeSetting::find(1);
+           if($fixNav->value6==1)
+              {
+            $fixNav->value6= 0;
+            
+              }
+              elseif($fixNav->value6==0)
+              {
+            $fixNav->value6= 1;
+              }
+              
+              $fixNav->save();
+
+          return $fixNav->value6;
+          }
+
        
 }

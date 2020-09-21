@@ -140,3 +140,5 @@ Route::get('/supplier/show/{id}', 'SupplierController@show')->name('supplier.sho
     Route::post('/selectionmenu', 'ThemeSettingController@updateSelectionMenu')->name('selection.menu');
     Route::post('/navclassname', 'ThemeSettingController@updateNavClassName')->name('nav.class.name');
     Route::post('/darknav', 'ThemeSettingController@updateDarkNav')->name('dark.nav');
+    Route::post('/fixnav', 'ThemeSettingController@updateFixNav')->name('fix.nav');
+

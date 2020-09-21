@@ -431,5 +431,11 @@ $(document).ready(function () {
                         //$(".loader2").hide();
                     });
             });
+            
+            $( "#navFix" ).click(function() {
+                $.post('{{ route('fix.nav') }}', {_token:'{{ csrf_token() }}'}, function(data){
+                        //$(".loader2").hide();
+                    });
+            });
 });
 </script>

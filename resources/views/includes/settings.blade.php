@@ -198,7 +198,7 @@
                 </div>
             </div>
             <div class="input-field col s12">
-                <div class="switch">
+                <div class="switch" id="navFix">
                     Navbar Fixed
                     <label class="float-right"
                     ><input class="navbar-fixed-checkbox" type="checkbox" checked/> <span class="lever ml-0"></span
