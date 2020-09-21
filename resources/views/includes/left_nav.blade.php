@@ -13,7 +13,7 @@
     <ul class="sidenav sidenav-collapsible leftside-navigation collapsible sidenav-fixed menu-shadow" id="slide-out" data-menu="menu-navigation" data-collapsible="menu-accordion">
         <!-- ** Dashboard -->
         <li class="bold">
-            <a class="waves-effect waves-cyan @if(Request::segment(1) == '') active @endif" href="{{ route('dashboard') }}">
+            <a class="menu-color-option gradient-45deg-purple-deep-orange @if(Request::segment(1) == '') active @endif" href="{{ route('dashboard') }}">
                 <i class="material-icons">dashboard</i><span class="menu-title" data-i18n="Mail">Dashboard</span>
             </a>
         </li>

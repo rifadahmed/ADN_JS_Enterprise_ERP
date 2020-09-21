@@ -158,7 +158,7 @@
             <div class="col s12 l4">
                 <!-- Recent Users -->
                 <div class="card recent-buyers-card animate fadeUp">
-                    <div class="card-content" style="height: 356px">
+                    <div class="card-content" style="height: 350px">
                         <h4 class="card-title mb-0">Recent Users <i class="material-icons float-right">more_vert</i></h4>
                         {{-- <p class="medium-small pt-2">Today</p> --}}
                         <ul class="collection mb-0">
@@ -206,17 +206,24 @@
                                     ">edit</i></a><a href="{{ route('buyer.show', $buyer->id)}}"><i class="material-icons">remove_red_eye</i></a></td>
 
                             </tr>
-                            @endforeach
-                        
-                        
-                            
-                            {{-- <td><span class="badge green lighten-5 green-text text-accent-4">Open</span></td> --}}
-                            
+                            @endforeach                            
 
                         </tbody>
                     </table>
                 </div>
             </div>
+           
+            
+                <div class="col s12 m4 l4">
+                    <div class="card pt-0 pb-0 animate fadeRight">
+                       <div class="dashboard-revenue-wrapper padding-2 ml-2">
+                          <span class="new badge gradient-45deg-amber-amber gradient-shadow mt-2 mr-2">+ 21%</span>
+                          <p class="mt-2 mb-0">Total Products</p>
+                          <p class="no-margin grey-text lighten-3">33.1% avg</p>
+                          <h5>22300</h5>
+                       </div>
+                    </div>
+                </div>
             <div class="col s12 m4 l4 " >
                     <div class="card pt-0 pb-0 animate fadeLeft">
                        <div class="dashboard-revenue-wrapper padding-2 ml-2">
@@ -239,21 +246,13 @@
                     </div>
                  </div>
      
-                 <div class="col s12 m4 l4">
-                    <div class="card pt-0 pb-0 animate fadeRight">
-                       <div class="dashboard-revenue-wrapper padding-2 ml-2">
-                          <span class="new badge gradient-45deg-amber-amber gradient-shadow mt-2 mr-2">+ 21%</span>
-                          <p class="mt-2 mb-0">Total Products</p>
-                          <p class="no-margin grey-text lighten-3">33.1% avg</p>
-                          <h5>22300</h5>
-                       </div>
-                    </div>
-                 </div>
+                 
       
                  
             
             
             </div>
+           
 
     {{-- Total Category product and warehouse --}}
 
