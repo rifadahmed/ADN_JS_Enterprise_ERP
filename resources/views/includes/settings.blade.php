@@ -210,7 +210,7 @@
         <hr class="customize-devider" />
         <div class="navbar-options row">
             <div class="input-field col s12">
-                <div class="switch">
+                <div class="switch" id="footerDark">
                     Footer Dark
                     <label class="float-right"
                     ><input class="footer-dark-checkbox" type="checkbox"/> <span class="lever ml-0"></span
@@ -218,7 +218,7 @@
                 </div>
             </div>
             <div class="input-field col s12">
-                <div class="switch">
+                <div class="switch" id="footerFix">
                     Footer Fixed
                     <label class="float-right"
                     ><input class="footer-fixed-checkbox" type="checkbox"/> <span class="lever ml-0"></span

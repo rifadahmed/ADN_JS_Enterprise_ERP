@@ -437,5 +437,11 @@ $(document).ready(function () {
                         //$(".loader2").hide();
                     });
             });
+            
+            $( "#footerDark" ).click(function() {
+                $.post('{{ route('dark.footer') }}', {_token:'{{ csrf_token() }}'}, function(data){
+                        //$(".loader2").hide();
+                    });
+            });
 });
 </script>

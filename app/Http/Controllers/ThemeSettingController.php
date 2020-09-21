@@ -114,5 +114,24 @@ class ThemeSettingController extends Controller
           return $fixNav->value6;
           }
 
+          //value7 column
+          public function updateDarkFooter(Request $request){
+            
+            $darkFooter=ThemeSetting::find(1);
+           if($darkFooter->value7                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ==1)
+              {
+            $darkFooter->value7                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              = 0;
+            
+              }
+              elseif($darkFooter->value7                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ==0)
+              {
+            $darkFooter->value7                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              = 1;
+              }
+              
+              $darkFooter->save();
+
+          return $darkFooter->value7                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ;
+          }
+          
        
 }
