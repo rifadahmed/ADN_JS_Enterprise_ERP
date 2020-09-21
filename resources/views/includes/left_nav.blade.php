@@ -1,5 +1,5 @@
 <!-- BEGIN: SideNav-->
-<aside class="sidenav-main nav-expanded nav-lock nav-collapsible sidenav-light sidenav-active-square">
+<aside class="sidenav-main nav-expanded nav-lock nav-collapsible sidenav-light sidenav-active-square" >
     <div class="brand-sidebar">
         <h1 class="logo-wrapper">
             <a class="brand-logo darken-1" href="{{ route('dashboard') }}">
@@ -13,7 +13,8 @@
     <ul class="sidenav sidenav-collapsible leftside-navigation collapsible sidenav-fixed menu-shadow" id="slide-out" data-menu="menu-navigation" data-collapsible="menu-accordion">
         <!-- ** Dashboard -->
         <li class="bold">
-            <a class="menu-color-option gradient-45deg-purple-deep-orange @if(Request::segment(1) == '') active @endif" href="{{ route('dashboard') }}">
+            <a class="@if(Request::segment(1) == '') active @endif" href="{{ route('dashboard') }}"> 
+
                 <i class="material-icons">dashboard</i><span class="menu-title" data-i18n="Mail">Dashboard</span>
             </a>
         </li>
@@ -366,3 +367,69 @@
     <div class="navigation-background"></div><a class="sidenav-trigger btn-sidenav-toggle btn-floating btn-medium waves-effect waves-light hide-on-large-only" href="#" data-target="slide-out"><i class="material-icons">menu</i></a>
 </aside>
 <!-- END: SideNav-->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script type="text/javascript">
+  $.ajaxSetup({
+                   beforeSend: function(xhr, type) {
+                       if (!type.crossDomain) {
+                           xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'));
+                       }
+                   },
+           });
+
+$(document).ready(function () {
+    
+
+                // value 
+            $( ".menu-color-option" ).click(function() {
+                var menuClassName=this.className;
+                $.post('{{ route('menu.class.name') }}', {_token:'{{ csrf_token() }}', menuClassName: menuClassName}, function(data){
+                        //$(".loader2").hide();
+                    // alert(data)
+                    });
+            });
+            
+            // value1 
+            $( "#menuDark" ).click(function() {
+                $.post('{{ route('dark.menu') }}', {_token:'{{ csrf_token() }}'}, function(data){
+                        //$(".loader2").hide();
+                    //alert(data)
+                    });
+            });
+
+
+            // value2
+            $( "#menuCollapse" ).click(function() {
+                $.post('{{ route('collapse.menu') }}', {_token:'{{ csrf_token() }}'}, function(data){
+                        //$(".loader2").hide();
+                    //alert(data)
+                    });
+            });
+            
+            // value3
+            $( ".menuSelect" ).click(function() {
+                var menuSelection=this.value;
+                $.post('{{ route('selection.menu') }}', {_token:'{{ csrf_token() }}', menuSelection: menuSelection}, function(data){
+                        //$(".loader2").hide();
+                    // alert(data)
+                    });
+            });
+
+            // value4
+            $( ".navbar-color-option").click(function() {
+                var navClassName=this.className;
+                $.post('{{ route('nav.class.name') }}', {_token:'{{ csrf_token() }}', navClassName: navClassName}, function(data){
+                        //$(".loader2").hide();
+                    // alert(data)
+                    });
+               
+            });
+
+            // value5 
+            $( "#navDark" ).click(function() {
+                $.post('{{ route('dark.nav') }}', {_token:'{{ csrf_token() }}'}, function(data){
+                        //$(".loader2").hide();
+                    });
+            });
+});
+</script>

@@ -53,8 +53,9 @@ Route::get('/buyer/edit/{id}', 'BuyerController@edit')->name('buyer.edit');
 Route::post('/buyer/update/{id}', 'BuyerController@update')->name('buyer.update');
 Route::get('/buyer/show/{id}', 'BuyerController@show')->name('buyer.show');
 
- Route::post('/district/ajaxcall', 'BuyerController@districtAjaxcall')->name('district.ajaxcall');
- Route::post('/upazila/ajaxcall', 'BuyerController@upazilaAjaxcall')->name('upazila.ajaxcall');
+
+        // Route::get('/menu', 'ThemeSettingController@menu')->name('storemenu');
+        // Route::post('/storemenu', 'ThemeSettingController@storemenu')->name('storemenu.store');
 
 
 Route::get('/buyer/type/list', 'BuyerController@indexBuyerType')->name('buyer.type.list');
@@ -129,3 +130,13 @@ Route::post('/supplier/update/{id}', 'SupplierController@update')->name('supplie
 Route::get('/supplier/show/{id}', 'SupplierController@show')->name('supplier.show');
 
 
+    //ajax route
+    Route::post('/district/ajaxcall', 'BuyerController@districtAjaxcall')->name('district.ajaxcall');
+    Route::post('/upazila/ajaxcall', 'BuyerController@upazilaAjaxcall')->name('upazila.ajaxcall');
+
+    Route::post('/menuclassname', 'ThemeSettingController@updateMenuClassName')->name('menu.class.name');
+    Route::post('/darkmenu', 'ThemeSettingController@updateDarkMenu')->name('dark.menu');
+    Route::post('/collapsemenu', 'ThemeSettingController@updateCollapseMenu')->name('collapse.menu');
+    Route::post('/selectionmenu', 'ThemeSettingController@updateSelectionMenu')->name('selection.menu');
+    Route::post('/navclassname', 'ThemeSettingController@updateNavClassName')->name('nav.class.name');
+    Route::post('/darknav', 'ThemeSettingController@updateDarkNav')->name('dark.nav');

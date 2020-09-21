@@ -24,6 +24,8 @@ class DashboardController extends Controller
      */
     public function index()
     {
+
+
         // recent users
         $data['users']=User::whereDate('created_at', '>=', date('Y-m-d H:i:s',strtotime('-7 days')) )->get()->take(4);
         //Total categories

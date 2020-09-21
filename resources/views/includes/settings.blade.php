@@ -15,7 +15,7 @@
                 <div class="input-field col s12 menu-color mb-0">
                     <p class="mt-0">Menu Color</p>
                     <div class="gradient-color center-align">
-                        <span class="menu-color-option gradient-45deg-indigo-blue" data-color="gradient-45deg-indigo-blue"></span>
+                        <span class="menu-color-option gradient-45deg-indigo-blue" value="dummy" data-color="gradient-45deg-indigo-blue"></span>
                         <span
                             class="menu-color-option gradient-45deg-purple-deep-orange"
                             data-color="gradient-45deg-purple-deep-orange"
@@ -102,7 +102,7 @@
                     </div>
                 </div>
                 <div class="input-field col s12">
-                    <div class="switch">
+                    <div class="switch" id="menuDark">
                         Menu Dark
                         <label class="float-right"
                         ><input class="menu-dark-checkbox" type="checkbox"/> <span class="lever ml-0"></span
@@ -110,7 +110,7 @@
                     </div>
                 </div>
                 <div class="input-field col s12">
-                    <div class="switch">
+                    <div class="switch" id="menuCollapse">
                         Menu Collapsed
                         <label class="float-right"
                         ><input class="menu-collapsed-checkbox" type="checkbox"/> <span class="lever ml-0"></span
@@ -121,7 +121,7 @@
                     <div class="switch">
                         <p class="mt-0">Menu Selection</p>
                         <label>
-                            <input
+                            <input  class="menuSelect"
                                 class="menu-selection-radio with-gap"
                                 value="sidenav-active-square"
                                 name="menu-selection"
@@ -130,7 +130,7 @@
                             <span>Square</span>
                         </label>
                         <label>
-                            <input
+                            <input class="menuSelect"
                                 class="menu-selection-radio with-gap"
                                 value="sidenav-active-rounded"
                                 name="menu-selection"
@@ -139,7 +139,7 @@
                             <span>Rounded</span>
                         </label>
                         <label>
-                            <input class="menu-selection-radio with-gap" value="" name="menu-selection" type="radio" />
+                            <input class="menu-selection-radio with-gap" class="menuSelect" value="" name="menu-selection" type="radio" />
                             <span>Normal</span>
                         </label>
                     </div>
@@ -152,7 +152,7 @@
             <div class="input-field col s12 navbar-color mb-0">
                 <p class="mt-0">Navbar Color</p>
                 <div class="gradient-color center-align">
-                    <span class="navbar-color-option gradient-45deg-indigo-blue" data-color="gradient-45deg-indigo-blue"></span>
+                    <span class="navbar-color-option gradient-45deg-indigo-blue"  value="rifad" data-color="gradient-45deg-indigo-blue"></span>
                     <span
                         class="navbar-color-option gradient-45deg-purple-deep-orange"
                         data-color="gradient-45deg-purple-deep-orange"
@@ -190,7 +190,7 @@
                 </div>
             </div>
             <div class="input-field col s12">
-                <div class="switch">
+                <div class="switch" id="navDark">
                     Navbar Dark
                     <label class="float-right"
                     ><input class="navbar-dark-checkbox" type="checkbox"/> <span class="lever ml-0"></span
