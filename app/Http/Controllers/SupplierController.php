@@ -41,6 +41,7 @@ class SupplierController extends Controller
         $data['suppliers'] = $suppliers;
         $data['serial']     = managePagination($suppliers);
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+        $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
 
         return view('suppliers.index', $data);
     }
@@ -49,6 +50,7 @@ class SupplierController extends Controller
         $data['title'] = "Supplier Details";
         $data['supplier']=Supplier::find($id);
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+        $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
 
         return view('suppliers.show', $data);
     }
@@ -59,6 +61,7 @@ class SupplierController extends Controller
         $data['districts'] = District::all();
         $data['areas'] = Upazila::all();
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+        $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
 
         return view('suppliers.create', $data);
     }
@@ -102,6 +105,7 @@ class SupplierController extends Controller
         $data['districts'] = District::all();
         $data['areas'] = Upazila::all();
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+        $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
 
          return view('suppliers.edit', $data);
     }

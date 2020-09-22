@@ -43,6 +43,7 @@ class CategoryController extends Controller
         $data['categories'] = $categories;
         $data['serial']     = managePagination($categories);
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+        $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
 
         return view('categories.index',$data);
     }
@@ -54,6 +55,7 @@ class CategoryController extends Controller
         $data['title'] = "Category Details";
         $data['data'] = Category::findOrFail($id);
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+        $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
 
         return view('categories.show', $data);
     }
@@ -64,6 +66,7 @@ class CategoryController extends Controller
     public function create(){
         $data['title'] = "Create Category";
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+        $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
 
         return view('categories.create', $data);
     }
@@ -98,6 +101,7 @@ class CategoryController extends Controller
         $data['title'] = "Edit Category";
         $data['data'] = Category::where('id',$id)->first();
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+        $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
 
         return view('categories.edit', $data);
     }

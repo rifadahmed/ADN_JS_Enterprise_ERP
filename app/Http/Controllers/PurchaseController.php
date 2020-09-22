@@ -10,24 +10,28 @@ class PurchaseController extends Controller
     public function index(){
         $data['title'] = "List Of Purchases";
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+        $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
 
         return view('purchases.index', $data);
     }
     public function edit(){
         $data['title'] = "Edit Purchase";
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+        $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
 
         return view('purchases.edit', $data);
     }
     public function show(){
         $data['title'] = "Purchase Details";
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+        $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
 
         return view('purchases.show', $data);
     }
     public function create(){
         $data['title'] = "Create Purchase";
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+        $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
 
         return view('purchases.create', $data);
     }

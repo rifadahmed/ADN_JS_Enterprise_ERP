@@ -37,6 +37,7 @@ class BrandController extends Controller
         $data['brands'] = $brands;
         $data['serial']     = managePagination($brands);
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+        $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
 
         return view('brands.index', $data);
     }
@@ -44,6 +45,7 @@ class BrandController extends Controller
         $data['title'] = "Edit Brand";
         $data['data'] =Brand::findOrFail($id);
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+        $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
 
         return view('brands.edit', $data);
     }
@@ -51,12 +53,14 @@ class BrandController extends Controller
         $data['title'] = "Brand Details";
         $data['brand'] =Brand::findOrFail($id);
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+        $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
 
         return view('brands.show', $data);
     }
     public function create(){
         $data['title'] = "Create Brand";
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+        $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
 
         return view('brands.create', $data);
     }

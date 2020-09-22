@@ -254,6 +254,8 @@ class LocationController extends Controller
         $data['divisions'] = $divisions;
         $data['serial']     = managePagination($divisions);
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+        $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
+
 
         return view('locations.division.index', $data);
 
@@ -261,6 +263,8 @@ class LocationController extends Controller
     public function create_division(){
         $data['title'] = "Create New Division";
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+        $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
+
 
         return view('locations.division.create', $data);
     }
@@ -268,6 +272,8 @@ class LocationController extends Controller
         $data['title']="Division Details";
         $data['division']=Division::find($id);
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+        $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
+
         return view('locations.division.show', $data);
 
     }
@@ -286,6 +292,8 @@ class LocationController extends Controller
         $divisionTypeModel->code = 00;
         $divisionTypeModel->status = $request->status;
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+        $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
+
 
         $divisionTypeModel->save();
         return redirect()->route('location.division.create')->with('success','Division has been Added successfully!');
@@ -296,6 +304,8 @@ class LocationController extends Controller
         $data['title']="Edit Division";
         $data['data']=Division::find($id);
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+        $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
+
 
         return view('locations.division.edit',$data);
     }
@@ -314,6 +324,8 @@ class LocationController extends Controller
         $divisionTypeModel->status = $request->status;
         $divisionTypeModel->save();
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+        $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
+
 
         return redirect()->route('location.division.edit',$id)->with('success','Division has been Updated successfully!');
 
@@ -349,12 +361,16 @@ class LocationController extends Controller
         $data['serial']     = managePagination($districts);
 
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+        $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
+
         return view('locations.district.index', $data);
     }
     public function show_district($id){
         $data['title']="District Details";
         $data['district']=District::find($id);
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+        $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
+
 
         return view('locations.district.show', $data);
 
@@ -363,6 +379,8 @@ class LocationController extends Controller
         $data['title'] = "Create New District";
         $data['divisions']=Division::all();
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+        $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
+
 
         return view('locations.district.create', $data);
     }
@@ -392,9 +410,11 @@ class LocationController extends Controller
 
     public function edit_district($id){
         $data['title']="Edit District";
-        $data['data']=District::find($id);
+        $data['ta']=District::find($id);
         $data['divisions']=Division::all();
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+                $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
+
 
         return view('locations.district.edit',$data);
     }
@@ -448,12 +468,16 @@ class LocationController extends Controller
         $data['serial']     = managePagination($upazilas);
 
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+        $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
+
         return view('locations.upazila.index', $data);
     }
     public function show_upazila($id){
         $data['title']="Upazila Details";
         $data['upazila']=Upazila::find($id);
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+        $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
+
         return view('locations.upazila.show', $data);
 
     }
@@ -462,6 +486,8 @@ class LocationController extends Controller
         $data['data']=Upazila::find($id);
         $data['districts']=District::all();
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+        $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
+
 
         return view('locations.upazila.edit',$data);
     }
@@ -488,6 +514,8 @@ class LocationController extends Controller
         $data['title'] = "Create New Upazila";
         $data['districts']=District::all();
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+        $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
+
 
         return view('locations.upazila.create', $data);
     }

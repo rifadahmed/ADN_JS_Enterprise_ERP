@@ -38,6 +38,7 @@ class SubCategoryController extends Controller
         $data['sub_categories'] = $sub_categories;
         $data['serial']     = managePagination($sub_categories);
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+        $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
 
         return view('categories.subcategories.index', $data);
     }
@@ -46,6 +47,7 @@ class SubCategoryController extends Controller
         $data['data'] = SubCategory::findOrFail($id);
         $data['categories'] = Category::all();
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+        $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
 
         return view('categories.subcategories.edit', $data);
     }
@@ -53,6 +55,7 @@ class SubCategoryController extends Controller
         $data['title'] = "SubCategory Details";
         $data['sub_category']=SubCategory::findOrFail($id);
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+        $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
 
         return view('categories.subcategories.show', $data);
     }
@@ -60,6 +63,7 @@ class SubCategoryController extends Controller
         $data['title'] = "Create SubCategory";
         $data['categories'] = Category::all();
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+        $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
 
         return view('categories.subcategories.create', $data);
     }

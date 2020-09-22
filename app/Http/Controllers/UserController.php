@@ -12,6 +12,7 @@ class UserController extends Controller
         $data['title'] = "List Of Users";
         $data['users']=User::all();
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+        $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
 
         return view('users.index', $data);
     }
@@ -19,6 +20,7 @@ class UserController extends Controller
         $data['title'] = "Edit User";
         $data['data']=User::find($id);
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+        $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
 
         return view('users.edit', $data);
     }
@@ -26,12 +28,14 @@ class UserController extends Controller
         $data['title'] = "User Details";
         $data['user']=User::find($id);
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+        $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
 
         return view('users.show', $data);
     }
     public function create(){
         $data['title'] = "Create User";
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+        $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
 
         return view('users.create', $data);
     }

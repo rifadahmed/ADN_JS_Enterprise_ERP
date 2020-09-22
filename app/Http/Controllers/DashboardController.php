@@ -63,6 +63,8 @@ class DashboardController extends Controller
            $data['area']=count(Upazila::all());
 
             $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+            $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
+
         return view('dashboard.dashboard',$data);
 
         

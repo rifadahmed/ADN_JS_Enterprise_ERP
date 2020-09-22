@@ -1,11 +1,12 @@
 <!-- BEGIN: SideNav-->
-<aside class="sidenav-main nav-expanded nav-lock nav-collapsible sidenav-light sidenav-active-square" >
+
+<aside class="sidenav-main nav-expanded nav-lock nav-collapsible {{$menu_dark==1?'sidenav-light':'sidenav-dark'}} sidenav-active-square" >
     <div class="brand-sidebar">
         <h1 class="logo-wrapper">
             <a class="brand-logo darken-1" href="{{ route('dashboard') }}">
                 <img class="hide-on-med-and-down" src={{asset("app-assets/images/logo/js-enterprise-logo.png")}} alt="logo">
                 <img class="show-on-medium-and-down hide-on-med-and-up" src={{asset("app-assets/images/logo/js-enterprise-logo.png")}} alt="logo">
-                <span class="logo-text hide-on-med-and-down">Enterprise</span>
+            <span class="logo-text hide-on-med-and-down">Enterprise </span>
             </a>
             <a class="navbar-toggler" href="#"><i class="material-icons">radio_button_checked</i></a>
         </h1>
@@ -14,7 +15,7 @@
         <!-- ** Dashboard -->
         <li class="bold">
              
-            <a class=" @if(Request::segment(1) == '') {{$menu_color}} active @endif" href="{{ route('dashboard') }}" id="dash" > 
+            <a class=" @if(Request::segment(1) == '') {{$menu_color}} active @endif" href="{{ route('dashboard') }}" id="dash" style="background: none; box-shadow: none;"> 
 
             <i class="material-icons">dashboard</i><span class="menu-title" data-i18n="Mail">Dashboard</span>
             </a>
@@ -51,12 +52,12 @@
                         <div class="collapsible-body">
                             <ul class="collapsible collapsible-sub" data-collapsible="accordion">
                                 <li>
-                                <a  class="@if(Request::segment(1) == 'location' &&  Request::segment(2) == 'division' &&  Request::segment(3) == 'list' ||Request::segment(1) == 'location' &&  Request::segment(2) == 'division' &&  Request::segment(3) == 'show' &&  Request::segment(4) == Request::segment(4) ||Request::segment(1) == 'location' &&  Request::segment(2) == 'division' &&  Request::segment(3) == 'edit' &&  Request::segment(4) == Request::segment(4) ) {{$menu_color}}   active @endif" href="{{route('location.division.list')}}"><i class="material-icons">radio_button_unchecked</i>
+                                <a  class="@if(Request::segment(1) == 'location' &&  Request::segment(2) == 'division' &&  Request::segment(3) == 'list' ||Request::segment(1) == 'location' &&  Request::segment(2) == 'division' &&  Request::segment(3) == 'show' &&  Request::segment(4) == Request::segment(4) ||Request::segment(1) == 'location' &&  Request::segment(2) == 'division' &&  Request::segment(3) == 'edit' &&  Request::segment(4) == Request::segment(4) ) {{$menu_color}}   active @endif" href="{{route('location.division.list')}}" style="background: none; box-shadow: none;"><i class="material-icons">radio_button_unchecked</i>
                                         <span data-i18n="Analytics">Division List </span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a  class="@if(Request::segment(1) == 'location' &&  Request::segment(2) == 'division' &&  Request::segment(3) == 'create' ) {{$menu_color}} active @endif" href="{{route('location.division.create')}} "><i class="material-icons">radio_button_unchecked</i>
+                                    <a  class="@if(Request::segment(1) == 'location' &&  Request::segment(2) == 'division' &&  Request::segment(3) == 'create' ) {{$menu_color}} active @endif" href="{{route('location.division.create')}}" style="background: none; box-shadow: none;"><i class="material-icons">radio_button_unchecked</i>
                                         <span data-i18n="Analytics">Add Division</span>
                                     </a>
                                 </li>
@@ -69,12 +70,12 @@
                         <div class="collapsible-body">
                             <ul class="collapsible collapsible-sub" data-collapsible="accordion">
                                 <li>
-                                    <a  class="@if(Request::segment(1) == 'location' &&  Request::segment(2) == 'district' &&  Request::segment(3) == 'list' ||Request::segment(1) == 'location' &&  Request::segment(2) == 'district' &&  Request::segment(3) == 'show' &&  Request::segment(4) == Request::segment(4) ||Request::segment(1) == 'location' &&  Request::segment(2) == 'district' &&  Request::segment(3) == 'edit' &&  Request::segment(4) == Request::segment(4)) {{$menu_color}} active @endif" href="{{route('location.district.list')}}"><i class="material-icons">radio_button_unchecked</i>
+                                    <a  class="@if(Request::segment(1) == 'location' &&  Request::segment(2) == 'district' &&  Request::segment(3) == 'list' ||Request::segment(1) == 'location' &&  Request::segment(2) == 'district' &&  Request::segment(3) == 'show' &&  Request::segment(4) == Request::segment(4) ||Request::segment(1) == 'location' &&  Request::segment(2) == 'district' &&  Request::segment(3) == 'edit' &&  Request::segment(4) == Request::segment(4)) {{$menu_color}} active @endif" href="{{route('location.district.list')}}" style="background: none; box-shadow: none;"><i class="material-icons">radio_button_unchecked</i>
                                         <span data-i18n="Analytics">District List</span>
                                     </a>
                                 </li>
                                  <li>
-                                 <a  class="@if(Request::segment(1) == 'location' &&  Request::segment(2) == 'district' &&  Request::segment(3) == 'create' ) {{$menu_color}} active @endif" href="{{route('location.district.create')}}"><i class="material-icons">radio_button_unchecked</i>
+                                 <a  class="@if(Request::segment(1) == 'location' &&  Request::segment(2) == 'district' &&  Request::segment(3) == 'create' ) {{$menu_color}} active @endif" href="{{route('location.district.create')}}" style="background: none; box-shadow: none;"><i class="material-icons">radio_button_unchecked</i>
                                         <span data-i18n="Analytics">Add District</span>
                                     </a>
                                 </li>
@@ -82,16 +83,17 @@
                         </ul>
                         </div>
                     </li>
+
                     <li class="@if(Request::segment(1) == 'location') active @endif bold"><a class="collapsible-header waves-effect waves-cyan " href="JavaScript:void(0)"><i class="material-icons">my_location</i><span class="menu-title" data-i18n="Dashboard">Upazila</span></a>
                         <div class="collapsible-body">
                             <ul class="collapsible collapsible-sub" data-collapsible="accordion">
                                 <li>
-                                    <a  class="@if(Request::segment(1) == 'location' &&  Request::segment(2) == 'upazila' &&  Request::segment(3) == 'list' ||Request::segment(1) == 'location' &&  Request::segment(2) == 'upazila' &&  Request::segment(3) == 'show' &&  Request::segment(4) == Request::segment(4) ||Request::segment(1) == 'location' &&  Request::segment(2) == 'upazila' &&  Request::segment(3) == 'edit' &&  Request::segment(4) == Request::segment(4)) {{$menu_color}} active @endif" href="{{route('location.upazila.list')}}"><i class="material-icons">radio_button_unchecked</i>
+                                    <a  class="@if(Request::segment(1) == 'location' &&  Request::segment(2) == 'upazila' &&  Request::segment(3) == 'list' ||Request::segment(1) == 'location' &&  Request::segment(2) == 'upazila' &&  Request::segment(3) == 'show' &&  Request::segment(4) == Request::segment(4) ||Request::segment(1) == 'location' &&  Request::segment(2) == 'upazila' &&  Request::segment(3) == 'edit' &&  Request::segment(4) == Request::segment(4)) {{$menu_color}} active @endif" href="{{route('location.upazila.list')}} " style="background: none; box-shadow: none;"><i class="material-icons">radio_button_unchecked</i>
                                         <span data-i18n="Analytics">Upazila List</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a  class="@if(Request::segment(1) == 'location' &&  Request::segment(2) == 'upazila' &&  Request::segment(3) == 'create' ) {{$menu_color}} active @endif" href="{{route('location.upazila.create')}}"><i class="material-icons">radio_button_unchecked</i>
+                                    <a  class="@if(Request::segment(1) == 'location' &&  Request::segment(2) == 'upazila' &&  Request::segment(3) == 'create' ) {{$menu_color}} active @endif" href="{{route('location.upazila.create')}}" style="background: none; box-shadow: none;"><i class="material-icons">radio_button_unchecked</i>
                                         <span data-i18n="Analytics">Add Upazila</span>
                                     </a>
                                 </li>
@@ -106,25 +108,25 @@
             <div class="collapsible-body">
                 <ul class="collapsible collapsible-sub" data-collapsible="accordion">
                     <li class="">
-                    <a class="@if(Request::segment(1) == 'buyer' &&  Request::segment(2) == 'list' ||Request::segment(1) == 'buyer' &&  Request::segment(2) == 'edit' &&  Request::segment(3) == Request::segment(3)||Request::segment(1) == 'buyer' &&  Request::segment(2) == 'show' &&  Request::segment(3) == Request::segment(3)) {{$menu_color}} active @endif" href="{{route('buyer.list')}}">
+                    <a class="@if(Request::segment(1) == 'buyer' &&  Request::segment(2) == 'list' ||Request::segment(1) == 'buyer' &&  Request::segment(2) == 'edit' &&  Request::segment(3) == Request::segment(3)||Request::segment(1) == 'buyer' &&  Request::segment(2) == 'show' &&  Request::segment(3) == Request::segment(3)) {{$menu_color}} active @endif" href="{{route('buyer.list')}}" style="background: none; box-shadow: none;">
                             <i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="Modern">Buyer List</span>
                         </a>
                     </li>
                     <li>
-                        <a class="@if(Request::segment(1) == 'buyer' &&  Request::segment(2) == 'create') {{$menu_color}} active @endif" href="{{route('buyer.create')}}">
+                        <a class="@if(Request::segment(1) == 'buyer' &&  Request::segment(2) == 'create') {{$menu_color}} active @endif" href="{{route('buyer.create')}}" style="background: none; box-shadow: none;">
                             <i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="eCommerce">Add New Buyer</span>
                         </a>
                     </li>
                     <li >
-                        <a class="@if(Request::segment(1) == 'buyer' &&  Request::segment(2) == 'type' &&  Request::segment(3) == 'list'||Request::segment(1) == 'buyer' &&  Request::segment(2) == 'type' &&  Request::segment(3) == 'edit'&&  Request::segment(4) == Request::segment(4)||Request::segment(1) == 'buyer' &&  Request::segment(2) == 'type' &&  Request::segment(3) == 'show'&&  Request::segment(4) == Request::segment(4)) {{$menu_color}} active @endif" href="{{route('buyer.type.list')}}">
+                        <a class="@if(Request::segment(1) == 'buyer' &&  Request::segment(2) == 'type' &&  Request::segment(3) == 'list'||Request::segment(1) == 'buyer' &&  Request::segment(2) == 'type' &&  Request::segment(3) == 'edit'&&  Request::segment(4) == Request::segment(4)||Request::segment(1) == 'buyer' &&  Request::segment(2) == 'type' &&  Request::segment(3) == 'show'&&  Request::segment(4) == Request::segment(4)) {{$menu_color}} active @endif" href="{{route('buyer.type.list')}}" style="background: none; box-shadow: none;">
                                 <i class="material-icons">radio_button_unchecked</i>
                                 <span data-i18n="Modern">Buyer Types List</span>
                             </a>
                         </li>
                         <li>
-                        <a class="@if(Request::segment(1) == 'buyer' &&  Request::segment(2) == 'type' &&  Request::segment(3) == 'create') {{$menu_color}} active @endif" href="{{route('buyer.type.create')}}">
+                        <a class="@if(Request::segment(1) == 'buyer' &&  Request::segment(2) == 'type' &&  Request::segment(3) == 'create') {{$menu_color}} active @endif" href="{{route('buyer.type.create')}}" style="background: none; box-shadow: none;">
 
                                 <i class="material-icons">radio_button_unchecked</i>
                                 <span data-i18n="eCommerce">Add New Buyer Type</span>
@@ -141,13 +143,13 @@
             <div class="collapsible-body">
                 <ul class="collapsible collapsible-sub" data-collapsible="accordion">
                     <li class="">
-                    <a class="@if(Request::segment(1) == 'supplier' &&  Request::segment(2) == 'list'||Request::segment(1) == 'supplier' &&  Request::segment(2) == 'edit'&&  Request::segment(3) == Request::segment(3)||Request::segment(1) == 'supplier' &&  Request::segment(2) == 'show'&&  Request::segment(3) == Request::segment(3)) {{$menu_color}} active @endif" href="{{route('supplier.list')}}">
+                    <a class="@if(Request::segment(1) == 'supplier' &&  Request::segment(2) == 'list'||Request::segment(1) == 'supplier' &&  Request::segment(2) == 'edit'&&  Request::segment(3) == Request::segment(3)||Request::segment(1) == 'supplier' &&  Request::segment(2) == 'show'&&  Request::segment(3) == Request::segment(3)) {{$menu_color}} active @endif" href="{{route('supplier.list')}}" style="background: none; box-shadow: none;">
                             <i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="Modern">Supplier List</span>
                         </a>
                     </li>
                     <li>
-                        <a class="@if(Request::segment(1) == 'supplier' &&  Request::segment(2) == 'create') {{$menu_color}} active @endif" href="{{route('supplier.create')}}">
+                        <a class="@if(Request::segment(1) == 'supplier' &&  Request::segment(2) == 'create') {{$menu_color}} active @endif" href="{{route('supplier.create')}}" style="background: none; box-shadow: none;">
                             <i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="eCommerce">Add New Supplier</span>
                         </a>
@@ -163,13 +165,13 @@
             <div class="collapsible-body">
                 <ul class="collapsible collapsible-sub" data-collapsible="accordion">
                     <li class="">
-                        <a class="@if(Request::segment(1) == 'user' &&  Request::segment(2) == 'list'||Request::segment(1) == 'user' &&  Request::segment(2) == 'edit'&&  Request::segment(3) ==Request::segment(3)||Request::segment(1) == 'user' &&  Request::segment(2) == 'show'&&  Request::segment(3) ==Request::segment(3)) {{$menu_color}} active @endif" href="{{route('user.list')}}">
+                        <a class="@if(Request::segment(1) == 'user' &&  Request::segment(2) == 'list'||Request::segment(1) == 'user' &&  Request::segment(2) == 'edit'&&  Request::segment(3) ==Request::segment(3)||Request::segment(1) == 'user' &&  Request::segment(2) == 'show'&&  Request::segment(3) ==Request::segment(3)) {{$menu_color}} active @endif" href="{{route('user.list')}}" style="background: none; box-shadow: none;">
                             <i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="Modern">User List</span>
                         </a>
                     </li>
                     <li>
-                        <a class="@if(Request::segment(1) == 'user' &&  Request::segment(2) == 'create') {{$menu_color}} active @endif" href="{{route('user.create')}}">
+                        <a class="@if(Request::segment(1) == 'user' &&  Request::segment(2) == 'create') {{$menu_color}} active @endif" href="{{route('user.create')}}" style="background: none; box-shadow: none;">
                             <i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="eCommerce">Add New User</span>
                         </a>
@@ -184,25 +186,25 @@
             <div class="collapsible-body">
                 <ul class="collapsible collapsible-sub" data-collapsible="accordion">
                     <li class="">
-                    <a class="@if(Request::segment(1) == 'category' &&  Request::segment(2) == 'list'||Request::segment(1) == 'category' &&  Request::segment(2) == 'edit'&&  Request::segment(3) ==Request::segment(3)||Request::segment(1) == 'category' &&  Request::segment(2) == 'show'&&  Request::segment(3) ==Request::segment(3) ) {{$menu_color}} active @endif" href="{{route('category.list')}} ">
+                    <a class="@if(Request::segment(1) == 'category' &&  Request::segment(2) == 'list'||Request::segment(1) == 'category' &&  Request::segment(2) == 'edit'&&  Request::segment(3) ==Request::segment(3)||Request::segment(1) == 'category' &&  Request::segment(2) == 'show'&&  Request::segment(3) ==Request::segment(3) ) {{$menu_color}} active @endif" href="{{route('category.list')}}" style="background: none; box-shadow: none;">
                             <i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="Modern">Category List</span>
                         </a>
                     </li>
                     <li>
-                        <a class="@if(Request::segment(1) == 'category' &&  Request::segment(2) == 'create') {{$menu_color}} active @endif" href="{{route('category.create')}}">
+                        <a class="@if(Request::segment(1) == 'category' &&  Request::segment(2) == 'create') {{$menu_color}} active @endif" href="{{route('category.create')}}" style="background: none; box-shadow: none;">
                             <i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="eCommerce">Add New Category</span>
                         </a>
                     </li>
                     <li>
-                        <a class="@if(Request::segment(1) == 'subcategory' &&  Request::segment(2) == 'list' ||Request::segment(1) == 'subcategory' &&  Request::segment(2) == 'edit'&&  Request::segment(3) ==Request::segment(3)||Request::segment(1) == 'subcategory' &&  Request::segment(2) == 'show'&&  Request::segment(3) ==Request::segment(3) ) {{$menu_color}} active @endif" href="{{route('subcategory.list')}}">
+                        <a class="@if(Request::segment(1) == 'subcategory' &&  Request::segment(2) == 'list' ||Request::segment(1) == 'subcategory' &&  Request::segment(2) == 'edit'&&  Request::segment(3) ==Request::segment(3)||Request::segment(1) == 'subcategory' &&  Request::segment(2) == 'show'&&  Request::segment(3) ==Request::segment(3) ) {{$menu_color}} active @endif" href="{{route('subcategory.list')}}" style="background: none; box-shadow: none;">
                             <i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="Modern">Sub Category List</span>
                         </a>
                     </li>
                     <li>
-                        <a class="@if(Request::segment(1) == 'subcategory' &&  Request::segment(2) == 'create') {{$menu_color}} active @endif" href="{{route('subcategory.create')}}">
+                        <a class="@if(Request::segment(1) == 'subcategory' &&  Request::segment(2) == 'create') {{$menu_color}} active @endif" href="{{route('subcategory.create')}}" style="background: none; box-shadow: none;">
                             <i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="eCommerce">Add New Sub Category</span>
                         </a>
@@ -216,13 +218,13 @@
             <div class="collapsible-body">
                 <ul class="collapsible collapsible-sub" data-collapsible="accordion">
                     <li class="">
-                        <a class="@if(Request::segment(1) == 'brand' &&  Request::segment(2) == 'list'||Request::segment(1) == 'brand' &&  Request::segment(2) == 'edit'&&  Request::segment(3) ==Request::segment(3)||Request::segment(1) == 'brand' &&  Request::segment(2) == 'show'&&  Request::segment(3) ==Request::segment(3) ) {{$menu_color}} active @endif" href="{{route('brand.list')}}">
+                        <a class="@if(Request::segment(1) == 'brand' &&  Request::segment(2) == 'list'||Request::segment(1) == 'brand' &&  Request::segment(2) == 'edit'&&  Request::segment(3) ==Request::segment(3)||Request::segment(1) == 'brand' &&  Request::segment(2) == 'show'&&  Request::segment(3) ==Request::segment(3) ) {{$menu_color}} active @endif" href="{{route('brand.list')}}" style="background: none; box-shadow: none;">
                             <i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="Modern">Brand List</span>
                         </a>
                     </li>
                     <li>
-                        <a class="@if(Request::segment(1) == 'brand' &&  Request::segment(2) == 'create') {{$menu_color}} active @endif" href="{{route('brand.create')}}">
+                        <a class="@if(Request::segment(1) == 'brand' &&  Request::segment(2) == 'create') {{$menu_color}} active @endif" href="{{route('brand.create')}}" style="background: none; box-shadow: none;">
                             <i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="eCommerce">Add New Brand</span>
                         </a>
@@ -236,7 +238,7 @@
             <div class="collapsible-body">
                 <ul class="collapsible collapsible-sub" data-collapsible="accordion">
                     <li class="">
-                    <a class="@if(Request::segment(1) == 'product' &&  Request::segment(2) == 'list' ||Request::segment(1) == 'product' &&  Request::segment(2) == 'edit'&&  Request::segment(3) ==Request::segment(3)||Request::segment(1) == 'product' &&  Request::segment(2) == 'show'&&  Request::segment(3) ==Request::segment(3)) {{$menu_color}} active @endif" href="{{route('product.list')}}">
+                    <a class="@if(Request::segment(1) == 'product' &&  Request::segment(2) == 'list' ||Request::segment(1) == 'product' &&  Request::segment(2) == 'edit'&&  Request::segment(3) ==Request::segment(3)||Request::segment(1) == 'product' &&  Request::segment(2) == 'show'&&  Request::segment(3) ==Request::segment(3)) {{$menu_color}} active @endif" href="{{route('product.list')}}" style="background: none; box-shadow: none;">
                             <i class="material-icons">radio_button_unchecked</i>
 
                             <span data-i18n="Modern">Product List</span>
@@ -244,7 +246,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="@if(Request::segment(1) == 'product' &&  Request::segment(2) == 'create') {{$menu_color}} active @endif" href="{{route('product.create')}}">
+                        <a class="@if(Request::segment(1) == 'product' &&  Request::segment(2) == 'create') {{$menu_color}} active @endif" href="{{route('product.create')}}" style="background: none; box-shadow: none;">
                             <i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="eCommerce">Add New Product</span>
                         </a>
@@ -260,14 +262,14 @@
             <div class="collapsible-body">
                 <ul class="collapsible collapsible-sub" data-collapsible="accordion">
                     <li class="">
-                        <a class="@if(Request::segment(1) == 'purchase' &&  Request::segment(2) == 'list' ||Request::segment(1) == 'purchase' &&  Request::segment(2) == 'edit'&&  Request::segment(3) ==Request::segment(3)||Request::segment(1) == 'purchase' &&  Request::segment(2) == 'show'&&  Request::segment(3) ==Request::segment(3) ) {{$menu_color}} active @endif" href="{{route('purchase.list')}}">
+                        <a class="@if(Request::segment(1) == 'purchase' &&  Request::segment(2) == 'list' ||Request::segment(1) == 'purchase' &&  Request::segment(2) == 'edit'&&  Request::segment(3) ==Request::segment(3)||Request::segment(1) == 'purchase' &&  Request::segment(2) == 'show'&&  Request::segment(3) ==Request::segment(3) ) {{$menu_color}} active @endif" href="{{route('purchase.list')}}" style="background: none; box-shadow: none;">
                             <i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="Modern">Purchase List</span>
 
                         </a>
                     </li>
                     <li>
-                        <a class="@if(Request::segment(1) == 'purchase' &&  Request::segment(2) == 'create') {{$menu_color}} active @endif" href="{{route('purchase.create')}}">
+                        <a class="@if(Request::segment(1) == 'purchase' &&  Request::segment(2) == 'create') {{$menu_color}} active @endif" href="{{route('purchase.create')}}" style="background: none; box-shadow: none;">
                             <i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="eCommerce">Add New Purchase</span>
                         </a>
@@ -283,13 +285,13 @@
             <div class="collapsible-body">
                 <ul class="collapsible collapsible-sub" data-collapsible="accordion">
                     <li class="">
-                        <a class="@if(Request::segment(1) == 'sale' &&  Request::segment(2) == 'list'||Request::segment(1) == 'sale' &&  Request::segment(2) == 'edit'&&  Request::segment(3) ==Request::segment(3)||Request::segment(1) == 'sale' &&  Request::segment(2) == 'show'&&  Request::segment(3) ==Request::segment(3) ) {{$menu_color}} active @endif" href="{{route('sale.list')}}">
+                        <a class="@if(Request::segment(1) == 'sale' &&  Request::segment(2) == 'list'||Request::segment(1) == 'sale' &&  Request::segment(2) == 'edit'&&  Request::segment(3) ==Request::segment(3)||Request::segment(1) == 'sale' &&  Request::segment(2) == 'show'&&  Request::segment(3) ==Request::segment(3) ) {{$menu_color}} active @endif" href="{{route('sale.list')}}" style="background: none; box-shadow: none;">
                             <i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="Modern">Sales List</span>
                         </a>
                     </li>
                     <li>
-                        <a class="@if(Request::segment(1) == 'sale' &&  Request::segment(2) == 'create') {{$menu_color}} active @endif" href="{{route('sale.create')}}">
+                        <a class="@if(Request::segment(1) == 'sale' &&  Request::segment(2) == 'create') {{$menu_color}} active @endif" href="{{route('sale.create')}}" style="background: none; box-shadow: none;">
                             <i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="eCommerce">Add New Sales</span>
                         </a>
@@ -305,13 +307,13 @@
             <div class="collapsible-body">
                 <ul class="collapsible collapsible-sub" data-collapsible="accordion">
                     <li class="">
-                    <a class="@if(Request::segment(1) == 'warehouse' &&  Request::segment(2) == 'list'||Request::segment(1) == 'warehouse' &&  Request::segment(2) == 'edit'&&  Request::segment(3) == Request::segment(3)||Request::segment(1) == 'warehouse' &&  Request::segment(2) == 'show'&&  Request::segment(3) == Request::segment(3)) {{$menu_color}} active @endif" href="{{route('warehouse.list')}}">
+                    <a class="@if(Request::segment(1) == 'warehouse' &&  Request::segment(2) == 'list'||Request::segment(1) == 'warehouse' &&  Request::segment(2) == 'edit'&&  Request::segment(3) == Request::segment(3)||Request::segment(1) == 'warehouse' &&  Request::segment(2) == 'show'&&  Request::segment(3) == Request::segment(3)) {{$menu_color}} active @endif" href="{{route('warehouse.list')}}" style="background: none; box-shadow: none;">
                             <i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="Modern">Warehouse List</span>
                         </a>
                     </li>
                     <li>
-                        <a class="@if(Request::segment(1) == 'warehouse' &&  Request::segment(2) == 'create') {{$menu_color}} active @endif" href="{{route('warehouse.create')}}">
+                        <a class="@if(Request::segment(1) == 'warehouse' &&  Request::segment(2) == 'create') {{$menu_color}} active @endif" href="{{route('warehouse.create')}}" style="background: none; box-shadow: none;">
                             <i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="eCommerce">Add New warehouse</span>
                         </a>
