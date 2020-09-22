@@ -52,7 +52,7 @@ class BuyerController extends Controller
         $data['serial']     = managePagination($buyers);
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
         $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
-        
+        $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;        
         return view('buyers.index', $data);
     }
     public function edit($id){
@@ -65,7 +65,7 @@ class BuyerController extends Controller
         $data['areas'] = Upazila::all();
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
         $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
-        
+        $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;        
          return view('buyers.edit', $data);
         
     }
@@ -74,7 +74,7 @@ class BuyerController extends Controller
         $data['buyer']=Buyer::find($id);
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
         $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
-        
+        $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;        
         return view('buyers.show', $data);
     }
     public function create(){
@@ -89,7 +89,7 @@ class BuyerController extends Controller
         $data['areas'] = Upazila::all();
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
         $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
-        
+        $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;        
         return view('buyers.create', $data);
     }
     
@@ -126,7 +126,7 @@ class BuyerController extends Controller
         $buyerModel->save();
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
             $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
-        
+                $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;
         return redirect()->route('buyer.create')->with('success','Buyer has been created successfully!');
     }
     public function update(Request $request,$id){
@@ -195,7 +195,7 @@ class BuyerController extends Controller
         $data['serial']     = managePagination($buyer_types);
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
         $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
-        
+        $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;        
         return view('buyers.buyers_type.indexBuyerType', $data);
     }
     public function editBuyerType($id){
@@ -203,7 +203,8 @@ class BuyerController extends Controller
         $data['data']=BuyerType::findOrFail($id);
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
         $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
-        
+        $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;
+    
         return view('buyers.buyers_type.editBuyerType', $data);
     }
     public function showBuyerType($id){
@@ -211,7 +212,7 @@ class BuyerController extends Controller
         $data['buyer_type']=BuyerType::findOrFail($id);
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
         $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
-        
+        $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;        
         return view('buyers.buyers_type.showBuyerType', $data);
     }
     
@@ -219,7 +220,7 @@ class BuyerController extends Controller
         $data['title'] = "Create Buyer Types";
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
         $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
-        
+        $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;        
         return view('buyers.buyers_type.createBuyerType', $data);
     }
     public function storeBuyerType(Request $request){

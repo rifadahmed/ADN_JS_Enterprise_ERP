@@ -11,28 +11,28 @@ class SaleController extends Controller
         $data['title'] = "List Of Sales";
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
         $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
-
+        $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;
         return view('sales.index', $data);
     }
     public function edit(){
         $data['title'] = "Edit Sale";
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
         $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
-
+        $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;
         return view('sales.edit', $data);
     }
     public function show(){
         $data['title'] = "Sale Details";
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
         $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
-
+        $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;
         return view('sales.show', $data);
     }
     public function create(){
         $data['title'] = "Create Sale";
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
         $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
-
+        $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;
         return view('sales.create', $data);
     }
     /***

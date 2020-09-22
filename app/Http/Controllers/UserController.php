@@ -13,7 +13,7 @@ class UserController extends Controller
         $data['users']=User::all();
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
         $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
-
+        $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;
         return view('users.index', $data);
     }
     public function edit($id){
@@ -21,7 +21,7 @@ class UserController extends Controller
         $data['data']=User::find($id);
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
         $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
-
+        $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;
         return view('users.edit', $data);
     }
     public function show($id){
@@ -29,14 +29,14 @@ class UserController extends Controller
         $data['user']=User::find($id);
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
         $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
-
+        $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;
         return view('users.show', $data);
     }
     public function create(){
         $data['title'] = "Create User";
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
         $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
-
+        $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;
         return view('users.create', $data);
     }
     public function store(Request $request){

@@ -255,6 +255,7 @@ class LocationController extends Controller
         $data['serial']     = managePagination($divisions);
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
         $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
+        $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;
 
 
         return view('locations.division.index', $data);
@@ -264,6 +265,7 @@ class LocationController extends Controller
         $data['title'] = "Create New Division";
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
         $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
+        $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;
 
 
         return view('locations.division.create', $data);
@@ -273,6 +275,7 @@ class LocationController extends Controller
         $data['division']=Division::find($id);
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
         $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
+        $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;
 
         return view('locations.division.show', $data);
 
@@ -293,6 +296,7 @@ class LocationController extends Controller
         $divisionTypeModel->status = $request->status;
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
         $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
+        $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;
 
 
         $divisionTypeModel->save();
@@ -305,6 +309,7 @@ class LocationController extends Controller
         $data['data']=Division::find($id);
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
         $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
+        $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;
 
 
         return view('locations.division.edit',$data);
@@ -325,6 +330,7 @@ class LocationController extends Controller
         $divisionTypeModel->save();
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
         $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
+        $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;
 
 
         return redirect()->route('location.division.edit',$id)->with('success','Division has been Updated successfully!');
@@ -362,6 +368,7 @@ class LocationController extends Controller
 
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
         $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
+        $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;
 
         return view('locations.district.index', $data);
     }
@@ -370,6 +377,7 @@ class LocationController extends Controller
         $data['district']=District::find($id);
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
         $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
+        $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;
 
 
         return view('locations.district.show', $data);
@@ -380,6 +388,7 @@ class LocationController extends Controller
         $data['divisions']=Division::all();
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
         $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
+        $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;
 
 
         return view('locations.district.create', $data);
@@ -414,6 +423,7 @@ class LocationController extends Controller
         $data['divisions']=Division::all();
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
                 $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
+        $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;
 
 
         return view('locations.district.edit',$data);
@@ -469,6 +479,7 @@ class LocationController extends Controller
 
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
         $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
+        $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;
 
         return view('locations.upazila.index', $data);
     }
@@ -477,6 +488,7 @@ class LocationController extends Controller
         $data['upazila']=Upazila::find($id);
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
         $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
+        $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;
 
         return view('locations.upazila.show', $data);
 
@@ -487,6 +499,7 @@ class LocationController extends Controller
         $data['districts']=District::all();
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
         $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
+        $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;
 
 
         return view('locations.upazila.edit',$data);
@@ -515,6 +528,7 @@ class LocationController extends Controller
         $data['districts']=District::all();
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
         $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
+        $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;
 
 
         return view('locations.upazila.create', $data);

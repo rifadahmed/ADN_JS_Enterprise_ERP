@@ -24,14 +24,17 @@ class ThemeSettingController extends Controller
              if($darkMenu->status==1)
                 {
               $darkMenu->status= 0;
-              
+              $darkMenu->save();
+
                 }
-                elseif($darkMenu->status==0)
+                else
                 {
-              $darkMenu->status= 1;
+                  $darkMenu->status= 1;
+
+              $darkMenu->save();
+
                 }
                 
-                $darkMenu->save();
 
             }
 

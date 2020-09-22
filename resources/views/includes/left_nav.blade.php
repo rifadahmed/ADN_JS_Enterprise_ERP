@@ -1,6 +1,6 @@
 <!-- BEGIN: SideNav-->
 
-<aside class="sidenav-main nav-expanded nav-lock nav-collapsible {{$menu_dark==1?'sidenav-light':'sidenav-dark'}} sidenav-active-square" >
+<aside class="sidenav-main nav-expanded {{$menu_collapse==1?'nav-lock':'nav-collapse'}}  nav-collapsible {{$menu_dark==1?'sidenav-light':'sidenav-dark'}} sidenav-active-square" >
     <div class="brand-sidebar">
         <h1 class="logo-wrapper">
             <a class="brand-logo darken-1" href="{{ route('dashboard') }}">

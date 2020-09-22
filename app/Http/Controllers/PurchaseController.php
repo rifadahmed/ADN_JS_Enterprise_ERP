@@ -11,6 +11,7 @@ class PurchaseController extends Controller
         $data['title'] = "List Of Purchases";
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
         $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
+        $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;
 
         return view('purchases.index', $data);
     }
@@ -18,6 +19,7 @@ class PurchaseController extends Controller
         $data['title'] = "Edit Purchase";
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
         $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
+        $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;
 
         return view('purchases.edit', $data);
     }
@@ -25,6 +27,7 @@ class PurchaseController extends Controller
         $data['title'] = "Purchase Details";
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
         $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
+        $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;
 
         return view('purchases.show', $data);
     }
@@ -32,6 +35,7 @@ class PurchaseController extends Controller
         $data['title'] = "Create Purchase";
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
         $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
+        $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;
 
         return view('purchases.create', $data);
     }
