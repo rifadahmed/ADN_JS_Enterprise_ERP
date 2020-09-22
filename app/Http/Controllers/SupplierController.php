@@ -43,6 +43,7 @@ class SupplierController extends Controller
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
         $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
         $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;
+        $data['menu_selection']=ThemeSetting::where('key',"MENU_SELECTION")->get()->first()->value;
         return view('suppliers.index', $data);
     }
 
@@ -52,6 +53,7 @@ class SupplierController extends Controller
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
         $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
         $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;
+        $data['menu_selection']=ThemeSetting::where('key',"MENU_SELECTION")->get()->first()->value;
         return view('suppliers.show', $data);
     }
 
@@ -63,6 +65,7 @@ class SupplierController extends Controller
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
         $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
         $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;
+        $data['menu_selection']=ThemeSetting::where('key',"MENU_SELECTION")->get()->first()->value;
         return view('suppliers.create', $data);
     }
 
@@ -107,7 +110,8 @@ class SupplierController extends Controller
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
         $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
         $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;
-         return view('suppliers.edit', $data);
+        $data['menu_selection']=ThemeSetting::where('key',"MENU_SELECTION")->get()->first()->value;
+        return view('suppliers.edit', $data);
     }
     public function update(Request $request,$id)
     {

@@ -40,6 +40,7 @@ class SubCategoryController extends Controller
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
         $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
         $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;
+        $data['menu_selection']=ThemeSetting::where('key',"MENU_SELECTION")->get()->first()->value;
         return view('categories.subcategories.index', $data);
     }
     public function edit($id){
@@ -49,6 +50,7 @@ class SubCategoryController extends Controller
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
         $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
         $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;
+        $data['menu_selection']=ThemeSetting::where('key',"MENU_SELECTION")->get()->first()->value;
         return view('categories.subcategories.edit', $data);
     }
     public function show($id){
@@ -57,6 +59,7 @@ class SubCategoryController extends Controller
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
         $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
         $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;
+        $data['menu_selection']=ThemeSetting::where('key',"MENU_SELECTION")->get()->first()->value;
         return view('categories.subcategories.show', $data);
     }
     public function create(){
@@ -65,6 +68,7 @@ class SubCategoryController extends Controller
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
         $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
         $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;
+        $data['menu_selection']=ThemeSetting::where('key',"MENU_SELECTION")->get()->first()->value;
         return view('categories.subcategories.create', $data);
     }
     public function store(Request $request){

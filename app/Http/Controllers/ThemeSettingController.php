@@ -15,10 +15,10 @@ class ThemeSettingController extends Controller
          $menuClassModel->value= $request->menuClassName." "."gradient-shadow";;
          $menuClassModel->save(); 
         // return $menuClassName=$request->menuClassName;
-        }
+    }
 
         //MENU_DARK column
-        public function updateDarkMenu(Request $request){
+    public function updateDarkMenu(Request $request){
               
              $darkMenu=ThemeSetting::where('key',"MENU_DARK")->get()->first();
              if($darkMenu->status==1)
@@ -36,10 +36,10 @@ class ThemeSettingController extends Controller
                 }
                 
 
-            }
+    }
 
             //MENU_COLLAPSE column
-            public function updateCollapseMenu(Request $request){
+    public function updateCollapseMenu(Request $request){
               
               $collapseMenu=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first();
               if($collapseMenu->status==1)
@@ -55,28 +55,28 @@ class ThemeSettingController extends Controller
 
                   
    
-            }
+    }
             
             //MENU_SELECTION column
-            public function updateSelectionMenu(Request $request){
+    public function updateSelectionMenu(Request $request){
               
                 $menuSelection=ThemeSetting::where('key',"MENU_SELECTION")->get()->first();
                 $menuSelection->value=$request->menuSelection;
                 $menuSelection->save();
    
-            }
+    }
             
             //NAV_COLOR column
-            public function updateNavClassName(Request $request){
+    public function updateNavClassName(Request $request){
           
                 $navClassModel=ThemeSetting::where('key',"NAV_COLOR")->get()->first();
                 
                 $navClassModel->value= $request->navClassName." "."active";;
                 $navClassModel->save(); 
-               }
+    }
 
             //NAV_DARK column
-        public function updateDarkNav(Request $request){
+    public function updateDarkNav(Request $request){
             
              $darkNav=ThemeSetting::where('key',"NAV_DARK")->get()->first();
             if($darkNav->status==1)
@@ -91,11 +91,11 @@ class ThemeSettingController extends Controller
                
                $darkNav->save();
 
-           }
+    }
 
 
            //NAV_FIX column
-           public function updateFixNav(Request $request){
+    public function updateFixNav(Request $request){
             
             $fixNav=ThemeSetting::where('key',"NAV_FIX")->get()->first();
            if($fixNav->status==1)
@@ -110,10 +110,10 @@ class ThemeSettingController extends Controller
               
               $fixNav->save();
 
-          }
+    }
 
           //FOOTER_DARK column
-          public function updateDarkFooter(Request $request){
+    public function updateDarkFooter(Request $request){
             
             $darkFooter=ThemeSetting::where('key',"FOOTER_DARK")->get()->first();
             if($darkFooter->status==1)
@@ -128,11 +128,11 @@ class ThemeSettingController extends Controller
             
             $darkFooter->save();
 
-          }
+    }
 
           
           //FOOTER_DARK column
-          public function updateFixFooter(Request $request){
+    public function updateFixFooter(Request $request){
             
             $fixFooter=ThemeSetting::where('key',"FOOTER_FIX")->get()->first();
             if($fixFooter->status==1)
@@ -147,7 +147,7 @@ class ThemeSettingController extends Controller
             
             $fixFooter->save();
 
-          }
+    }
           
        
 }

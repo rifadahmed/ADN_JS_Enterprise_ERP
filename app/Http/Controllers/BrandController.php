@@ -39,7 +39,7 @@ class BrandController extends Controller
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
         $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
         $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;
-
+        $data['menu_selection']=ThemeSetting::where('key',"MENU_SELECTION")->get()->first()->value;
         return view('brands.index', $data);
     }
     public function edit($id){
@@ -48,7 +48,7 @@ class BrandController extends Controller
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
         $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
         $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;
-
+        $data['menu_selection']=ThemeSetting::where('key',"MENU_SELECTION")->get()->first()->value;
         return view('brands.edit', $data);
     }
     public function show($id){
@@ -57,7 +57,7 @@ class BrandController extends Controller
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
         $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
         $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;
-
+        $data['menu_selection']=ThemeSetting::where('key',"MENU_SELECTION")->get()->first()->value;
         return view('brands.show', $data);
     }
     public function create(){
@@ -65,7 +65,7 @@ class BrandController extends Controller
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
         $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
         $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;
-
+        $data['menu_selection']=ThemeSetting::where('key',"MENU_SELECTION")->get()->first()->value;
         return view('brands.create', $data);
     }
     public function store(Request $request){

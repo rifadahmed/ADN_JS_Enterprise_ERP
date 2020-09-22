@@ -139,7 +139,13 @@
                             <span>Rounded</span>
                         </label>
                         <label>
-                            <input class="menu-selection-radio with-gap" class="menuSelect" value="" name="menu-selection" type="radio" />
+                            <input 
+                            class="menuSelect"
+                                class="menu-selection-radio with-gap"
+                                value="sidenav-active-normal"
+                                name="menu-selection"
+                                type="radio"
+                             />
                             <span>Normal</span>
                         </label>
                     </div>
