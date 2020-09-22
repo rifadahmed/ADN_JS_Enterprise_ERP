@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Brand;
+use App\ThemeSetting;
 use Illuminate\Http\Request;
+
 class BrandController extends Controller
 {
     public function index(Request $request){
@@ -34,21 +36,28 @@ class BrandController extends Controller
 
         $data['brands'] = $brands;
         $data['serial']     = managePagination($brands);
+        $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
 
         return view('brands.index', $data);
     }
     public function edit($id){
         $data['title'] = "Edit Brand";
         $data['data'] =Brand::findOrFail($id);
+        $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+
         return view('brands.edit', $data);
     }
     public function show($id){
         $data['title'] = "Brand Details";
         $data['brand'] =Brand::findOrFail($id);
+        $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+
         return view('brands.show', $data);
     }
     public function create(){
         $data['title'] = "Create Brand";
+        $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+
         return view('brands.create', $data);
     }
     public function store(Request $request){

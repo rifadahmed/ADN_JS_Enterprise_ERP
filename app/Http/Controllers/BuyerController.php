@@ -9,6 +9,7 @@ use App\Division;
 use App\Location;
 use App\BuyerType;
 use App\LocationType;
+use App\ThemeSetting;
 use Illuminate\Http\Request;
 
 class BuyerController extends Controller
@@ -49,6 +50,7 @@ class BuyerController extends Controller
 
         $data['buyers'] = $buyers;
         $data['serial']     = managePagination($buyers);
+        $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
 
         return view('buyers.index', $data);
     }
@@ -60,12 +62,16 @@ class BuyerController extends Controller
         $data['divisions'] = Division::all();
         $data['districts'] = District::all();
         $data['areas'] = Upazila::all();
+        $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+
          return view('buyers.edit', $data);
         
     }
     public function show($id){
         $data['title'] = "Buyer Details";
         $data['buyer']=Buyer::find($id);
+        $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+
         return view('buyers.show', $data);
     }
     public function create(){
@@ -78,6 +84,8 @@ class BuyerController extends Controller
         $data['divisions'] = Division::all();
         $data['districts'] = District::all();
         $data['areas'] = Upazila::all();
+        $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+
         return view('buyers.create', $data);
     }
     
@@ -112,6 +120,7 @@ class BuyerController extends Controller
         $buyerModel->buyer_status = $request->buyer_status;
 
         $buyerModel->save();
+        $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
 
         return redirect()->route('buyer.create')->with('success','Buyer has been created successfully!');
     }
@@ -179,23 +188,29 @@ class BuyerController extends Controller
 
         $data['buyer_types'] = $buyer_types;
         $data['serial']     = managePagination($buyer_types);
+        $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
 
         return view('buyers.buyers_type.indexBuyerType', $data);
     }
     public function editBuyerType($id){
         $data['title'] = "Edit Buyer Types";
         $data['data']=BuyerType::findOrFail($id);
+        $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+
         return view('buyers.buyers_type.editBuyerType', $data);
     }
     public function showBuyerType($id){
         $data['title'] = "Edit Buyer Types";
         $data['buyer_type']=BuyerType::findOrFail($id);
+        $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+
         return view('buyers.buyers_type.showBuyerType', $data);
     }
     
     public function createBuyerType(){
         $data['title'] = "Create Buyer Types";
-        
+        $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+
         return view('buyers.buyers_type.createBuyerType', $data);
     }
     public function storeBuyerType(Request $request){

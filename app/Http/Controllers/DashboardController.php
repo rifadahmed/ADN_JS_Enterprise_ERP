@@ -12,6 +12,7 @@ use App\Division;
 use App\Location;
 use App\Supplier;
 use App\LocationType;
+use App\ThemeSetting;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -61,7 +62,7 @@ class DashboardController extends Controller
            $data['district']=count(District::all());
            $data['area']=count(Upazila::all());
 
-        
+            $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
         return view('dashboard.dashboard',$data);
 
         

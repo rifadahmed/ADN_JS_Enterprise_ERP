@@ -142,5 +142,6 @@ Route::get('/supplier/show/{id}', 'SupplierController@show')->name('supplier.sho
     Route::post('/darknav', 'ThemeSettingController@updateDarkNav')->name('dark.nav');
     Route::post('/fixnav', 'ThemeSettingController@updateFixNav')->name('fix.nav');
     Route::post('/darkfooter', 'ThemeSettingController@updateDarkFooter')->name('dark.footer');
+    Route::post('/fixfooter', 'ThemeSettingController@updateFixFooter')->name('fix.footer');
 
 

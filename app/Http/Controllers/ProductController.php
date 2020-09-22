@@ -3,25 +3,33 @@
 namespace App\Http\Controllers;
 
 use App\Product;
+use App\ThemeSetting;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
     public function index(Request $request){
         $data['title'] = "List Of Products";
-        
+        $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+
         return view('products.index', $data);
     }
     public function edit(){
         $data['title'] = "Edit Product";
+        $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+
         return view('products.edit', $data);
     }
     public function show(){
         $data['title'] = "Product Details";
+        $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+
         return view('products.show', $data);
     }
     public function create(){
         $data['title'] = "Create Product";
+        $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+
         return view('products.create', $data);
     }
      /***

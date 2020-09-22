@@ -7,130 +7,143 @@ use Illuminate\Http\Request;
 
 class ThemeSettingController extends Controller
 {
-    //value column
+    //MENU_COLOR column
     public function updateMenuClassName(Request $request){
           
-         $menuClassModel=ThemeSetting::find(1);
+         $menuClassModel=ThemeSetting::where('key',"MENU_COLOR")->get()->first();
          
-         $menuClassModel->value= $request->menuClassName." "."active";;
-         //$menuClassModel->navbar_class_name= "xyz";
+         $menuClassModel->value= $request->menuClassName." "."gradient-shadow";;
          $menuClassModel->save(); 
-        return $menuClassName=$request->menuClassName;
+        // return $menuClassName=$request->menuClassName;
         }
 
-        //value1 column
+        //MENU_DARK column
         public function updateDarkMenu(Request $request){
               
-             $darkMenu=ThemeSetting::find(1);
-             if($darkMenu->value1==1)
+             $darkMenu=ThemeSetting::where('key',"MENU_DARK")->get()->first();
+             if($darkMenu->status==1)
                 {
-              $darkMenu->value1= 0;
+              $darkMenu->status= 0;
               
                 }
-                elseif($darkMenu->value1==0)
+                elseif($darkMenu->status==0)
                 {
-              $darkMenu->value1= 1;
+              $darkMenu->status= 1;
                 }
                 
                 $darkMenu->save();
 
-            return $darkMenu->value1;
             }
 
-            //value2 column
+            //MENU_COLLAPSE column
             public function updateCollapseMenu(Request $request){
               
-                $collapseMenu=ThemeSetting::find(1);
-                if($collapseMenu->value2==1)
-                   {
-                 $collapseMenu->value2= 0;
-                 
-                   }
-                   elseif($collapseMenu->value2==0)
-                   {
-                 $collapseMenu->value2= 1;
-                   }
-                   
-                   $collapseMenu->save();
+              $collapseMenu=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first();
+              if($collapseMenu->status==1)
+                {
+              $collapseMenu->status= 0;
+              
+                }
+                elseif($collapseMenu->status==0)
+                {
+              $collapseMenu->status= 1;
+                }
+                $collapseMenu->save();
+
+                  
    
-               return $collapseMenu->value2;
             }
             
-            //value3 column
+            //MENU_SELECTION column
             public function updateSelectionMenu(Request $request){
               
-                $menuSelection=ThemeSetting::find(1);
-                $menuSelection->value3=$request->menuSelection;
+                $menuSelection=ThemeSetting::where('key',"MENU_SELECTION")->get()->first();
+                $menuSelection->value=$request->menuSelection;
                 $menuSelection->save();
    
-               return $menuSelection->value2;
             }
             
-            //value4 column
+            //NAV_COLOR column
             public function updateNavClassName(Request $request){
           
-                $navClassModel=ThemeSetting::find(1);
+                $navClassModel=ThemeSetting::where('key',"NAV_COLOR")->get()->first();
                 
-                $navClassModel->value4= $request->navClassName." "."active";;
+                $navClassModel->value= $request->navClassName." "."active";;
                 $navClassModel->save(); 
                }
 
-            //value5 column
+            //NAV_DARK column
         public function updateDarkNav(Request $request){
             
-             $darkNav=ThemeSetting::find(1);
-            if($darkNav->value5==1)
+             $darkNav=ThemeSetting::where('key',"NAV_DARK")->get()->first();
+            if($darkNav->status==1)
                {
-             $darkNav->value5= 0;
+             $darkNav->status= 0;
              
                }
-               elseif($darkNav->value5==0)
+               elseif($darkNav->status==0)
                {
-             $darkNav->value5= 1;
+             $darkNav->status= 1;
                }
                
                $darkNav->save();
 
-           return $darkNav->value5;
            }
 
 
-           //value6 column
+           //NAV_FIX column
            public function updateFixNav(Request $request){
             
-            $fixNav=ThemeSetting::find(1);
-           if($fixNav->value6==1)
+            $fixNav=ThemeSetting::where('key',"NAV_FIX")->get()->first();
+           if($fixNav->status==1)
               {
-            $fixNav->value6= 0;
+            $fixNav->status= 0;
             
               }
-              elseif($fixNav->value6==0)
+              elseif($fixNav->status==0)
               {
-            $fixNav->value6= 1;
+            $fixNav->status= 1;
               }
               
               $fixNav->save();
 
-          return $fixNav->value6;
           }
 
-          //value7 column
+          //FOOTER_DARK column
           public function updateDarkFooter(Request $request){
             
-            $darkFooter=ThemeSetting::find(1);
-           if($darkFooter->value7                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ==1)
-              {
-            $darkFooter->value7                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              = 0;
+            $darkFooter=ThemeSetting::where('key',"FOOTER_DARK")->get()->first();
+            if($darkFooter->status==1)
+            {
+          $darkFooter->status= 0;
+          
+            }
+            elseif($darkFooter->status==0)
+            {
+          $darkFooter->status= 1;
+            }
             
-              }
-              elseif($darkFooter->value7                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ==0)
-              {
-            $darkFooter->value7                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              = 1;
-              }
-              
-              $darkFooter->save();
+            $darkFooter->save();
 
-          return $darkFooter->value7                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ;
+          }
+
+          
+          //FOOTER_DARK column
+          public function updateFixFooter(Request $request){
+            
+            $fixFooter=ThemeSetting::where('key',"FOOTER_FIX")->get()->first();
+            if($fixFooter->status==1)
+            {
+          $fixFooter->status= 0;
+          
+            }
+            elseif($fixFooter->status==0)
+            {
+          $fixFooter->status= 1;
+            }
+            
+            $fixFooter->save();
+
           }
           
        

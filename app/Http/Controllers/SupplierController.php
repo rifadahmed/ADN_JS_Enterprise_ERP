@@ -7,6 +7,7 @@ use App\District;
 use App\Division;
 use App\Location;
 use App\Supplier;
+use App\ThemeSetting;
 use Illuminate\Http\Request;
 
 class SupplierController extends Controller
@@ -39,6 +40,7 @@ class SupplierController extends Controller
 
         $data['suppliers'] = $suppliers;
         $data['serial']     = managePagination($suppliers);
+        $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
 
         return view('suppliers.index', $data);
     }
@@ -46,6 +48,8 @@ class SupplierController extends Controller
     public function show($id){
         $data['title'] = "Supplier Details";
         $data['supplier']=Supplier::find($id);
+        $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+
         return view('suppliers.show', $data);
     }
 
@@ -54,6 +58,8 @@ class SupplierController extends Controller
         $data['divisions'] = Division::all();
         $data['districts'] = District::all();
         $data['areas'] = Upazila::all();
+        $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+
         return view('suppliers.create', $data);
     }
 
@@ -95,6 +101,8 @@ class SupplierController extends Controller
         $data['divisions'] = Division::all();
         $data['districts'] = District::all();
         $data['areas'] = Upazila::all();
+        $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+
          return view('suppliers.edit', $data);
     }
     public function update(Request $request,$id)

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\User;
+use App\ThemeSetting;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -10,20 +11,28 @@ class UserController extends Controller
     public function index(){
         $data['title'] = "List Of Users";
         $data['users']=User::all();
+        $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+
         return view('users.index', $data);
     }
     public function edit($id){
         $data['title'] = "Edit User";
         $data['data']=User::find($id);
+        $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+
         return view('users.edit', $data);
     }
     public function show($id){
         $data['title'] = "User Details";
         $data['user']=User::find($id);
+        $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+
         return view('users.show', $data);
     }
     public function create(){
         $data['title'] = "Create User";
+        $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+
         return view('users.create', $data);
     }
     public function store(Request $request){

@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\SubCategory;
 use App\Category;
+use App\SubCategory;
+use App\ThemeSetting;
+use Illuminate\Http\Request;
+
 class SubCategoryController extends Controller
 {
     public function index(Request $request){
@@ -35,22 +37,30 @@ class SubCategoryController extends Controller
 
         $data['sub_categories'] = $sub_categories;
         $data['serial']     = managePagination($sub_categories);
+        $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+
         return view('categories.subcategories.index', $data);
     }
     public function edit($id){
         $data['title'] = "Edit SubCategory";
         $data['data'] = SubCategory::findOrFail($id);
         $data['categories'] = Category::all();
+        $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+
         return view('categories.subcategories.edit', $data);
     }
     public function show($id){
         $data['title'] = "SubCategory Details";
         $data['sub_category']=SubCategory::findOrFail($id);
+        $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+
         return view('categories.subcategories.show', $data);
     }
     public function create(){
         $data['title'] = "Create SubCategory";
         $data['categories'] = Category::all();
+        $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+
         return view('categories.subcategories.create', $data);
     }
     public function store(Request $request){

@@ -3,24 +3,33 @@
 namespace App\Http\Controllers;
 
 use App\Warehouse;
+use App\ThemeSetting;
 use Illuminate\Http\Request;
 
 class WarehouseController extends Controller
 {
     public function index(){
         $data['title'] = "List Of Warehouses";
+        $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+
         return view('warehouses.index', $data);
     }
     public function edit(){
         $data['title'] = "Edit Warehouse";
+        $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+
         return view('warehouses.edit', $data);
     }
     public function show(){
         $data['title'] = "Warehouse Details";
+        $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+
         return view('warehouses.show', $data);
     }
     public function create(){
         $data['title'] = "Create Warehouse";
+        $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+
         return view('warehouses.create', $data);
     }
 

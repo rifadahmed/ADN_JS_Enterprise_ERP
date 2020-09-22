@@ -2,24 +2,33 @@
 
 namespace App\Http\Controllers;
 
+use App\ThemeSetting;
 use Illuminate\Http\Request;
 
 class SaleController extends Controller
 {
     public function index(){
         $data['title'] = "List Of Sales";
+        $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+
         return view('sales.index', $data);
     }
     public function edit(){
         $data['title'] = "Edit Sale";
+        $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+
         return view('sales.edit', $data);
     }
     public function show(){
         $data['title'] = "Sale Details";
+        $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+
         return view('sales.show', $data);
     }
     public function create(){
         $data['title'] = "Create Sale";
+        $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+
         return view('sales.create', $data);
     }
     /***

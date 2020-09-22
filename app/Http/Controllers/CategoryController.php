@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Category;
+use App\ThemeSetting;
+use Illuminate\Http\Request;
+
 class CategoryController extends Controller
 {
     /***
@@ -40,6 +42,7 @@ class CategoryController extends Controller
 
         $data['categories'] = $categories;
         $data['serial']     = managePagination($categories);
+        $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
 
         return view('categories.index',$data);
     }
@@ -50,6 +53,8 @@ class CategoryController extends Controller
     public function show($id){
         $data['title'] = "Category Details";
         $data['data'] = Category::findOrFail($id);
+        $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+
         return view('categories.show', $data);
     }
 
@@ -58,6 +63,8 @@ class CategoryController extends Controller
      */
     public function create(){
         $data['title'] = "Create Category";
+        $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+
         return view('categories.create', $data);
     }
 
@@ -90,6 +97,8 @@ class CategoryController extends Controller
     public function edit($id){
         $data['title'] = "Edit Category";
         $data['data'] = Category::where('id',$id)->first();
+        $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+
         return view('categories.edit', $data);
     }
 

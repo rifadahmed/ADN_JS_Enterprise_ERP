@@ -105,7 +105,7 @@
                                                         <span class="green-text">Active</span>
                                                       </span>
                                                     </td>
-                                                    <td><a class="border-primary" href="{{ route('product.edit', 1)}}"><i class="material-icons  edit-icon">edit</i></a><a href="{{ route('brand.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a class="border-primary" href="{{ route('product.edit', 1)}}"><i class="material-icons  edit-icon">edit</i></a><a href="{{ route('product.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
                                                     {{-- <td></td>
                                                     <td></td>
                                                     <td></td>
@@ -119,7 +119,7 @@
                     <span class="green-text">Active</span>
                   </span>
                                                     </td>
-                                                    <td><a href="{{ route('product.edit', 1)}}"><i class="material-icons  edit-icon">edit</i></a><a href="{{ route('brand.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="{{ route('product.edit', 1)}}"><i class="material-icons  edit-icon">edit</i></a><a href="{{ route('product.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
                                                     
                                                 </tr>
                                                 <tr>
@@ -130,7 +130,7 @@
                     <span class="green-text">Active</span>
                   </span>
                                                     </td>
-                                                    <td><a href="{{ route('product.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('brand.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="{{ route('product.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('product.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
                                                 <tr>
@@ -138,7 +138,7 @@
                                                     <td>303</td>
                                                     <td>Y</td>
                                                     <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('product.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('brand.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="{{ route('product.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('product.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
                                                 <tr>
@@ -146,7 +146,7 @@
                                                     <td>304</td>
                                                     <td>Y</td>
                                                     <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('product.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('brand.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="{{ route('product.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('product.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
                                                 <tr>
@@ -157,7 +157,7 @@
                     <span class="green-text">Active</span>
                   </span>
                                                     </td>
-                                                    <td><a href="{{ route('product.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('brand.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="{{ route('product.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('product.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
 
@@ -169,7 +169,7 @@
                     <span class="green-text">Active</span>
                   </span>
                                                     </td>
-                                                    <td><a href="{{ route('product.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('brand.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="{{ route('product.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('product.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
                                                 <tr>
@@ -177,7 +177,7 @@
                                                     <td>308</td>
                                                     <td>Y</td>
                                                     <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('product.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('brand.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="{{ route('product.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('product.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
                                                 <tr>
@@ -188,7 +188,7 @@
                     <span class="green-text">Active</span>
                   </span>
                                                     </td>
-                                                    <td><a href="{{ route('product.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('brand.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="{{ route('product.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('product.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
                                                 <tr>
@@ -196,7 +196,7 @@
                                                     <td>310</td>
                                                     <td>Y</td>
                                                     <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('product.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('brand.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="{{ route('product.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('product.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
                                                 <tr>
@@ -204,7 +204,7 @@
                                                     <td>311</td>
                                                     <td>Y</td>
                                                     <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('product.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('brand.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="{{ route('product.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('product.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
                                                 <tr>
@@ -212,7 +212,7 @@
                                                     <td>312</td>
                                                     <td>Y</td>
                                                     <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('product.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('brand.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="{{ route('product.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('product.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
                                                 <tr>
@@ -223,7 +223,7 @@
                     <span class="green-text">Active</span>
                   </span>
                                                     </td>
-                                                    <td><a href="{{ route('product.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('brand.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="{{ route('product.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('product.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
                                                 <tr>
@@ -231,7 +231,7 @@
                                                     <td>314</td>
                                                     <td>Y</td>
                                                     <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('product.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('brand.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="{{ route('product.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('product.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
                                                 <tr>
@@ -242,7 +242,7 @@
                     <span class="green-text">Active</span>
                   </span>
                                                     </td>
-                                                    <td><a href="{{ route('product.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('brand.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="{{ route('product.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('product.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
                                                 <tr>
@@ -253,7 +253,7 @@
                     <span class="green-text">Active</span>
                   </span>
                                                     </td>
-                                                    <td><a href="{{ route('product.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('brand.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="{{ route('product.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('product.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
                                                 <tr>
@@ -261,7 +261,7 @@
                                                     <td>317</td>
                                                     <td>Y</td>
                                                     <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('product.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('brand.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="{{ route('product.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('product.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
                                                 <tr>
@@ -269,7 +269,7 @@
                                                     <td>318</td>
                                                     <td>Y</td>
                                                     <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('product.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('brand.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="{{ route('product.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('product.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
                                                 <tr>
@@ -277,7 +277,7 @@
                                                     <td>319</td>
                                                     <td>Y</td>
                                                     <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('product.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('brand.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td><a href="{{ route('product.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('product.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
                                                     <td></td>
                                                 </tr>
 
