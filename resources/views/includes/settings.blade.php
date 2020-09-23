@@ -102,18 +102,18 @@
                     </div>
                 </div>
                 <div class="input-field col s12">
-                    <div class="switch" id="menuDark"><i class="fa fa-spin fa-spinner">Menu Dark</i>
+                    <div class="switch" >Menu Dark
                         
                         <label class="float-right"
-                        ><input class="menu-dark-checkbox" type="checkbox"/> <span class="lever ml-0"></span
+                        ><input class="menu-dark-checkbox" id="menuDark" type="checkbox"/> <span class="lever ml-0"></span
                             ></label>
                     </div>
                 </div>
                 <div class="input-field col s12">
-                    <div class="switch" id="menuCollapse">
+                    <div class="switch" >
                         Menu Collapsed
                         <label class="float-right"
-                        ><input class="menu-collapsed-checkbox" type="checkbox"/> <span class="lever ml-0"></span
+                        ><input class="menu-collapsed-checkbox" id="menuCollapse" type="checkbox"/> <span class="lever ml-0"></span
                             ></label>
                     </div>
                 </div>
