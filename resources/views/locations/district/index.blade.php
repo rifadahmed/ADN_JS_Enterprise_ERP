@@ -17,7 +17,6 @@
 
     <!-- BEGIN: Page Main-->
         <div class="row">
-            <div class="content-wrapper-before gradient-45deg-indigo-purple"></div>
             <div class="breadcrumbs-dark pb-0 pt-4" id="breadcrumbs-wrapper">
                 <!-- Search for small screen-->
                 <div class="container">
