@@ -14,6 +14,7 @@ class WarehouseController extends Controller
         $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
         $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;
         $data['menu_selection']=ThemeSetting::where('key',"MENU_SELECTION")->get()->first()->value;
+        $data['nav_selection']=ThemeSetting::where('key',"NAV_COLOR")->get()->first()->value;
         return view('warehouses.index', $data);
     }
     public function edit(){
@@ -22,6 +23,7 @@ class WarehouseController extends Controller
         $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
         $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;
         $data['menu_selection']=ThemeSetting::where('key',"MENU_SELECTION")->get()->first()->value;
+        $data['nav_selection']=ThemeSetting::where('key',"NAV_COLOR")->get()->first()->value;
         return view('warehouses.edit', $data);
     }
     public function show(){
@@ -30,6 +32,7 @@ class WarehouseController extends Controller
         $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
         $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;
         $data['menu_selection']=ThemeSetting::where('key',"MENU_SELECTION")->get()->first()->value;
+        $data['nav_selection']=ThemeSetting::where('key',"NAV_COLOR")->get()->first()->value;
         return view('warehouses.show', $data);
     }
     public function create(){
@@ -38,6 +41,7 @@ class WarehouseController extends Controller
         $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
         $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;
         $data['menu_selection']=ThemeSetting::where('key',"MENU_SELECTION")->get()->first()->value;
+        $data['nav_selection']=ThemeSetting::where('key',"NAV_COLOR")->get()->first()->value;
         return view('warehouses.create', $data);
     }
 

@@ -196,18 +196,18 @@
                 </div>
             </div>
             <div class="input-field col s12">
-                <div class="switch" id="navDark">
+                <div class="switch" >
                     Navbar Dark
                     <label class="float-right"
-                    ><input class="navbar-dark-checkbox" type="checkbox"/> <span class="lever ml-0"></span
+                    ><input class="navbar-dark-checkbox" id="navDark" type="checkbox"/> <span class="lever ml-0"></span
                         ></label>
                 </div>
             </div>
             <div class="input-field col s12">
-                <div class="switch" id="navFix">
+                <div class="switch" >
                     Navbar Fixed
                     <label class="float-right"
-                    ><input class="navbar-fixed-checkbox" type="checkbox" checked/> <span class="lever ml-0"></span
+                    ><input class="navbar-fixed-checkbox" id="navFix" type="checkbox" checked/> <span class="lever ml-0"></span
                         ></label>
                 </div>
             </div>
@@ -216,18 +216,18 @@
         <hr class="customize-devider" />
         <div class="navbar-options row">
             <div class="input-field col s12">
-                <div class="switch" id="footerDark">
+                <div class="switch" >
                     Footer Dark
                     <label class="float-right"
-                    ><input class="footer-dark-checkbox" type="checkbox"/> <span class="lever ml-0"></span
+                    ><input class="footer-dark-checkbox" id="footerDark" type="checkbox"/> <span class="lever ml-0"></span
                         ></label>
                 </div>
             </div>
             <div class="input-field col s12">
-                <div class="switch" id="footerFix">
+                <div class="switch" >
                     Footer Fixed
                     <label class="float-right"
-                    ><input class="footer-fixed-checkbox" type="checkbox"/> <span class="lever ml-0"></span
+                    ><input class="footer-fixed-checkbox" id="footerFix" type="checkbox"/> <span class="lever ml-0"></span
                         ></label>
                 </div>
             </div>

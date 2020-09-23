@@ -62,7 +62,7 @@ Website: http://adndigital.com.bd
     <!-- BEGIN: Page Main-->
     <div id="main">
       <div class="row">
-        <div class="content-wrapper-before gradient-45deg-indigo-purple"></div>
+      <div class="content-wrapper-before {{$nav_selection}}"></div>
         <div class="col s12">
           <div class="container">
               <!-- STAET : FLASH MESSAGE RK -->

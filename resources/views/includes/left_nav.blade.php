@@ -384,7 +384,7 @@
 $(document).ready(function () {
     
 
-                // value 
+                // MENU_COLOR 
             $( ".menu-color-option" ).click(function() {
                 var menuClassName=$(this).attr('data-color');
                 
@@ -393,7 +393,7 @@ $(document).ready(function () {
                     });
             });
             
-            // value1 onChange
+            // MENU_DARK
             $( "#menuDark" ).click(function() {
                 $.post('{{ route('dark.menu') }}', {_token:'{{ csrf_token() }}'}, function(data){
                         //$(".loader2").hide();
@@ -402,14 +402,14 @@ $(document).ready(function () {
             });
 
 
-            // value2
+            // MENU_COLLAPSE
             $( "#menuCollapse" ).click(function() {
                 $.post('{{ route('collapse.menu') }}', {_token:'{{ csrf_token() }}'}, function(data){
                         //$(".loader2").hide();
                     });
             });
             
-            // value3
+            // MENU_SELECTION
             $( ".menuSelect" ).click(function() {
                 var menuSelection=this.value;
                 $.post('{{ route('selection.menu') }}', {_token:'{{ csrf_token() }}', menuSelection: menuSelection}, function(data){
@@ -418,7 +418,7 @@ $(document).ready(function () {
                     });
             });
 
-            // value4
+            // NAV_COLOR
             $( ".navbar-color-option").click(function() {
                 var navClassName=this.className;
                 $.post('{{ route('nav.class.name') }}', {_token:'{{ csrf_token() }}', navClassName: navClassName}, function(data){
@@ -428,25 +428,28 @@ $(document).ready(function () {
                
             });
 
-            // value5 
+            // NAV_DARK 
             $( "#navDark" ).click(function() {
                 $.post('{{ route('dark.nav') }}', {_token:'{{ csrf_token() }}'}, function(data){
                         //$(".loader2").hide();
                     });
             });
             
+            // NAV_FIX
             $( "#navFix" ).click(function() {
                 $.post('{{ route('fix.nav') }}', {_token:'{{ csrf_token() }}'}, function(data){
                         //$(".loader2").hide();
                     });
             });
             
+            // FOOTER_DARK
             $( "#footerDark" ).click(function() {
                 $.post('{{ route('dark.footer') }}', {_token:'{{ csrf_token() }}'}, function(data){
                         //$(".loader2").hide();
                     });
             });
             
+            // FOOTER_DARK
             $( "#footerFix" ).click(function() {
                 $.post('{{ route('fix.footer') }}', {_token:'{{ csrf_token() }}'}, function(data){
                         //$(".loader2").hide();
