@@ -2,10 +2,7 @@
 <div class="navbar {{$nav_fix==1 ? "navbar-fixed" : "navbar"}}">
 
  
-        <nav class="navbar-main navbar-color nav-collapsible sideNav-lock navbar-light {{$nav_color}} no-shadow">
-
-
-
+ <nav class="navbar-main navbar-color nav-collapsible sideNav-lock  {{$nav_color}}  no-shadow"> 
             <div class="nav-wrapper">
                     
                      <div class="header-search-wrapper hide-on-med-and-down" style="margin: 0px auto 0 255px">

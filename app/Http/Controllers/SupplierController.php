@@ -46,6 +46,7 @@ class SupplierController extends Controller
         $data['menu_selection']=ThemeSetting::where('key',"MENU_SELECTION")->get()->first()->value;
         $data['nav_color']=ThemeSetting::where('key',"NAV_COLOR")->get()->first()->value;
         $data['nav_fix']=ThemeSetting::where('key',"NAV_FIX")->get()->first()->status;
+        $data['footer_fix']=ThemeSetting::where('key',"FOOTER_FIX")->get()->first()->status;
         return view('suppliers.index', $data);
     }
 
@@ -58,6 +59,7 @@ class SupplierController extends Controller
         $data['menu_selection']=ThemeSetting::where('key',"MENU_SELECTION")->get()->first()->value;
         $data['nav_color']=ThemeSetting::where('key',"NAV_COLOR")->get()->first()->value;
         $data['nav_fix']=ThemeSetting::where('key',"NAV_FIX")->get()->first()->status;
+        $data['footer_fix']=ThemeSetting::where('key',"FOOTER_FIX")->get()->first()->status;
         return view('suppliers.show', $data);
     }
 
@@ -72,6 +74,7 @@ class SupplierController extends Controller
         $data['menu_selection']=ThemeSetting::where('key',"MENU_SELECTION")->get()->first()->value;
         $data['nav_color']=ThemeSetting::where('key',"NAV_COLOR")->get()->first()->value;
         $data['nav_fix']=ThemeSetting::where('key',"NAV_FIX")->get()->first()->status;
+        $data['footer_fix']=ThemeSetting::where('key',"FOOTER_FIX")->get()->first()->status;
         return view('suppliers.create', $data);
     }
 
@@ -119,6 +122,7 @@ class SupplierController extends Controller
         $data['menu_selection']=ThemeSetting::where('key',"MENU_SELECTION")->get()->first()->value;
         $data['nav_color']=ThemeSetting::where('key',"NAV_COLOR")->get()->first()->value;
         $data['nav_fix']=ThemeSetting::where('key',"NAV_FIX")->get()->first()->status;
+        $data['footer_fix']=ThemeSetting::where('key',"FOOTER_FIX")->get()->first()->status;
         return view('suppliers.edit', $data);
     }
     public function update(Request $request,$id)

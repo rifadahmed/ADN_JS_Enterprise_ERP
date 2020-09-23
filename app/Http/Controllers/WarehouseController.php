@@ -16,6 +16,7 @@ class WarehouseController extends Controller
         $data['menu_selection']=ThemeSetting::where('key',"MENU_SELECTION")->get()->first()->value;
         $data['nav_color']=ThemeSetting::where('key',"NAV_COLOR")->get()->first()->value;
         $data['nav_fix']=ThemeSetting::where('key',"NAV_FIX")->get()->first()->status;
+        $data['footer_fix']=ThemeSetting::where('key',"FOOTER_FIX")->get()->first()->status;
         return view('warehouses.index', $data);
     }
     public function edit(){
@@ -26,6 +27,7 @@ class WarehouseController extends Controller
         $data['menu_selection']=ThemeSetting::where('key',"MENU_SELECTION")->get()->first()->value;
         $data['nav_color']=ThemeSetting::where('key',"NAV_COLOR")->get()->first()->value;
         $data['nav_fix']=ThemeSetting::where('key',"NAV_FIX")->get()->first()->status;
+        $data['footer_fix']=ThemeSetting::where('key',"FOOTER_FIX")->get()->first()->status;
         return view('warehouses.edit', $data);
     }
     public function show(){
@@ -36,6 +38,7 @@ class WarehouseController extends Controller
         $data['menu_selection']=ThemeSetting::where('key',"MENU_SELECTION")->get()->first()->value;
         $data['nav_color']=ThemeSetting::where('key',"NAV_COLOR")->get()->first()->value;
         $data['nav_fix']=ThemeSetting::where('key',"NAV_FIX")->get()->first()->status;
+        $data['footer_fix']=ThemeSetting::where('key',"FOOTER_FIX")->get()->first()->status;
         return view('warehouses.show', $data);
     }
     public function create(){
@@ -46,6 +49,7 @@ class WarehouseController extends Controller
         $data['menu_selection']=ThemeSetting::where('key',"MENU_SELECTION")->get()->first()->value;
         $data['nav_color']=ThemeSetting::where('key',"NAV_COLOR")->get()->first()->value;
         $data['nav_fix']=ThemeSetting::where('key',"NAV_FIX")->get()->first()->status;
+        $data['footer_fix']=ThemeSetting::where('key',"FOOTER_FIX")->get()->first()->status;
         return view('warehouses.create', $data);
     }
 

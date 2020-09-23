@@ -259,6 +259,7 @@ class LocationController extends Controller
         $data['menu_selection']=ThemeSetting::where('key',"MENU_SELECTION")->get()->first()->value;
         $data['nav_color']=ThemeSetting::where('key',"NAV_COLOR")->get()->first()->value;
         $data['nav_fix']=ThemeSetting::where('key',"NAV_FIX")->get()->first()->status;
+        $data['footer_fix']=ThemeSetting::where('key',"FOOTER_FIX")->get()->first()->status;
         return view('locations.division.index', $data);
 
     }
@@ -270,6 +271,7 @@ class LocationController extends Controller
         $data['menu_selection']=ThemeSetting::where('key',"MENU_SELECTION")->get()->first()->value;
         $data['nav_color']=ThemeSetting::where('key',"NAV_COLOR")->get()->first()->value;
         $data['nav_fix']=ThemeSetting::where('key',"NAV_FIX")->get()->first()->status;
+        $data['footer_fix']=ThemeSetting::where('key',"FOOTER_FIX")->get()->first()->status;
         return view('locations.division.create', $data);
     }
     public function show_division($id){
@@ -279,7 +281,10 @@ class LocationController extends Controller
         $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
         $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;
         $data['menu_selection']=ThemeSetting::where('key',"MENU_SELECTION")->get()->first()->value;
-    $data['nav_color']=ThemeSetting::where('key',"NAV_COLOR")->get()->first()->value;        return view('locations.division.show', $data);
+        $data['nav_color']=ThemeSetting::where('key',"NAV_COLOR")->get()->first()->value;   
+        $data['nav_fix']=ThemeSetting::where('key',"NAV_FIX")->get()->first()->status;
+        $data['footer_fix']=ThemeSetting::where('key',"FOOTER_FIX")->get()->first()->status;    
+        return view('locations.division.show', $data);
 
     }
     public function store_division(Request $request){
@@ -302,6 +307,7 @@ class LocationController extends Controller
         $data['menu_selection']=ThemeSetting::where('key',"MENU_SELECTION")->get()->first()->value;
         $data['nav_color']=ThemeSetting::where('key',"NAV_COLOR")->get()->first()->value;
         $data['nav_fix']=ThemeSetting::where('key',"NAV_FIX")->get()->first()->status;
+        $data['footer_fix']=ThemeSetting::where('key',"FOOTER_FIX")->get()->first()->status;
         $divisionTypeModel->save();
         return redirect()->route('location.division.create')->with('success','Division has been Added successfully!');
 
@@ -316,6 +322,7 @@ class LocationController extends Controller
         $data['menu_selection']=ThemeSetting::where('key',"MENU_SELECTION")->get()->first()->value;
         $data['nav_color']=ThemeSetting::where('key',"NAV_COLOR")->get()->first()->value;
         $data['nav_fix']=ThemeSetting::where('key',"NAV_FIX")->get()->first()->status;
+        $data['footer_fix']=ThemeSetting::where('key',"FOOTER_FIX")->get()->first()->status;
         return view('locations.division.edit',$data);
     }
     public function update_division(Request $request,$id)
@@ -338,6 +345,7 @@ class LocationController extends Controller
         $data['menu_selection']=ThemeSetting::where('key',"MENU_SELECTION")->get()->first()->value;
         $data['nav_color']=ThemeSetting::where('key',"NAV_COLOR")->get()->first()->value;
         $data['nav_fix']=ThemeSetting::where('key',"NAV_FIX")->get()->first()->status;
+        $data['footer_fix']=ThemeSetting::where('key',"FOOTER_FIX")->get()->first()->status;
         return redirect()->route('location.division.edit',$id)->with('success','Division has been Updated successfully!');
 
     }
@@ -376,7 +384,9 @@ class LocationController extends Controller
         $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;
         $data['menu_selection']=ThemeSetting::where('key',"MENU_SELECTION")->get()->first()->value;
         $data['nav_color']=ThemeSetting::where('key',"NAV_COLOR")->get()->first()->value; 
-        $data['nav_fix']=ThemeSetting::where('key',"NAV_FIX")->get()->first()->status;       
+        $data['nav_fix']=ThemeSetting::where('key',"NAV_FIX")->get()->first()->status;    
+        $data['footer_fix']=ThemeSetting::where('key',"FOOTER_FIX")->get()->first()->status;
+   
         return view('locations.district.index', $data);
     }
     public function show_district($id){
@@ -388,6 +398,7 @@ class LocationController extends Controller
         $data['menu_selection']=ThemeSetting::where('key',"MENU_SELECTION")->get()->first()->value;
         $data['nav_color']=ThemeSetting::where('key',"NAV_COLOR")->get()->first()->value;
         $data['nav_fix']=ThemeSetting::where('key',"NAV_FIX")->get()->first()->status;
+        $data['footer_fix']=ThemeSetting::where('key',"FOOTER_FIX")->get()->first()->status;
         return view('locations.district.show', $data);
 
     }
@@ -400,6 +411,7 @@ class LocationController extends Controller
         $data['menu_selection']=ThemeSetting::where('key',"MENU_SELECTION")->get()->first()->value;
         $data['nav_color']=ThemeSetting::where('key',"NAV_COLOR")->get()->first()->value;
         $data['nav_fix']=ThemeSetting::where('key',"NAV_FIX")->get()->first()->status;
+        $data['footer_fix']=ThemeSetting::where('key',"FOOTER_FIX")->get()->first()->status;
         return view('locations.district.create', $data);
     }
     public function store_district(Request $request){
@@ -436,6 +448,7 @@ class LocationController extends Controller
         $data['menu_selection']=ThemeSetting::where('key',"MENU_SELECTION")->get()->first()->value;
         $data['nav_color']=ThemeSetting::where('key',"NAV_COLOR")->get()->first()->value;
         $data['nav_fix']=ThemeSetting::where('key',"NAV_FIX")->get()->first()->status;
+        $data['footer_fix']=ThemeSetting::where('key',"FOOTER_FIX")->get()->first()->status;
         return view('locations.district.edit',$data);
     }
     public function update_district(Request $request,$id)
@@ -491,7 +504,10 @@ class LocationController extends Controller
         $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
         $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;
         $data['menu_selection']=ThemeSetting::where('key',"MENU_SELECTION")->get()->first()->value;
-    $data['nav_color']=ThemeSetting::where('key',"NAV_COLOR")->get()->first()->value;        return view('locations.upazila.index', $data);
+        $data['nav_color']=ThemeSetting::where('key',"NAV_COLOR")->get()->first()->value;
+        $data['nav_fix']=ThemeSetting::where('key',"NAV_FIX")->get()->first()->status;
+        $data['footer_fix']=ThemeSetting::where('key',"FOOTER_FIX")->get()->first()->status;    
+        return view('locations.upazila.index', $data);
     }
     public function show_upazila($id){
         $data['title']="Upazila Details";
@@ -502,6 +518,7 @@ class LocationController extends Controller
         $data['menu_selection']=ThemeSetting::where('key',"MENU_SELECTION")->get()->first()->value;
         $data['nav_color']=ThemeSetting::where('key',"NAV_COLOR")->get()->first()->value; 
         $data['nav_fix']=ThemeSetting::where('key',"NAV_FIX")->get()->first()->status;
+        $data['footer_fix']=ThemeSetting::where('key',"FOOTER_FIX")->get()->first()->status;
         return view('locations.upazila.show', $data);
 
     }
@@ -515,6 +532,7 @@ class LocationController extends Controller
         $data['menu_selection']=ThemeSetting::where('key',"MENU_SELECTION")->get()->first()->value;
         $data['nav_color']=ThemeSetting::where('key',"NAV_COLOR")->get()->first()->value;
         $data['nav_fix']=ThemeSetting::where('key',"NAV_FIX")->get()->first()->status;
+        $data['footer_fix']=ThemeSetting::where('key',"FOOTER_FIX")->get()->first()->status;
         return view('locations.upazila.edit',$data);
     }
     public function update_upazila(Request $request,$id)
@@ -545,6 +563,7 @@ class LocationController extends Controller
         $data['menu_selection']=ThemeSetting::where('key',"MENU_SELECTION")->get()->first()->value;
         $data['nav_color']=ThemeSetting::where('key',"NAV_COLOR")->get()->first()->value;
         $data['nav_fix']=ThemeSetting::where('key',"NAV_FIX")->get()->first()->status;
+        $data['footer_fix']=ThemeSetting::where('key',"FOOTER_FIX")->get()->first()->status;
         return view('locations.upazila.create', $data);
     }
     public function store_upazila(Request $request){
