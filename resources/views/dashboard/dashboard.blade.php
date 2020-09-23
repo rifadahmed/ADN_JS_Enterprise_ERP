@@ -60,7 +60,7 @@
                         </div>
                     
                         <div class="col s12 m6 l6 xl3">
-                                <a href="{{route('location.list')}}">
+                                <a href="#">
                                 <div class="card gradient-45deg-amber-amber gradient-shadow min-height-100 white-text animate fadeRight">
                                     <div class="padding-4">
                                         <div class="row">
