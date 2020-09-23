@@ -102,8 +102,8 @@
                     </div>
                 </div>
                 <div class="input-field col s12">
-                    <div class="switch" id="menuDark">
-                        Menu Dark
+                    <div class="switch" id="menuDark"><i class="fa fa-spin fa-spinner">Menu Dark</i>
+                        
                         <label class="float-right"
                         ><input class="menu-dark-checkbox" type="checkbox"/> <span class="lever ml-0"></span
                             ></label>

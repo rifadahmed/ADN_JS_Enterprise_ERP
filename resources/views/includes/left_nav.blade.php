@@ -8,7 +8,7 @@
                 <img class="show-on-medium-and-down hide-on-med-and-up" src={{asset("app-assets/images/logo/js-enterprise-logo.png")}} alt="logo">
             <span class="logo-text hide-on-med-and-down">Enterprise </span>
             </a>
-            <a class="navbar-toggler" href="#"><i class="material-icons">radio_button_checked</i></a>
+            <a class="navbar-toggler" href="#"><i class="material-icons">{{$menu_collapse==1?'radio_button_checked':'radio_button_unchecked'}} </i></a>
         </h1>
     </div>
     <ul class="sidenav sidenav-collapsible leftside-navigation collapsible sidenav-fixed menu-shadow" id="slide-out" data-menu="menu-navigation" data-collapsible="menu-accordion">
@@ -393,7 +393,7 @@ $(document).ready(function () {
                     });
             });
             
-            // value1 
+            // value1 onChange
             $( "#menuDark" ).click(function() {
                 $.post('{{ route('dark.menu') }}', {_token:'{{ csrf_token() }}'}, function(data){
                         //$(".loader2").hide();

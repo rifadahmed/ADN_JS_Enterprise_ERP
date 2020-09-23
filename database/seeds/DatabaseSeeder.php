@@ -10,8 +10,7 @@ class DatabaseSeeder extends Seeder
      * @return void
      */
     public function run()
-    {
-        // $this->call(UserSeeder::class);
-         $this->call(LocationTypesSeeder::class);
+    {    DB::table('theme_settings')->truncate();
+         $this->call(ThemeSettingsSeeder::class);
     }
 }
