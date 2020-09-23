@@ -195,14 +195,14 @@
                     <span class="navbar-color-option brown darken-2" data-color="brown darken-2"></span>
                 </div>
             </div>
-            <div class="input-field col s12">
+            {{-- <div class="input-field col s12">
                 <div class="switch" >
                     Navbar Dark
                     <label class="float-right"
                     ><input class="navbar-dark-checkbox" id="navDark" type="checkbox"/> <span class="lever ml-0"></span
                         ></label>
                 </div>
-            </div>
+            </div> --}}
             <div class="input-field col s12">
                 <div class="switch" >
                     Navbar Fixed
@@ -215,14 +215,14 @@
         <h6 class="mt-6">Footer Options</h6>
         <hr class="customize-devider" />
         <div class="navbar-options row">
-            <div class="input-field col s12">
+            {{-- <div class="input-field col s12">
                 <div class="switch" >
                     Footer Dark
                     <label class="float-right"
                     ><input class="footer-dark-checkbox" id="footerDark" type="checkbox"/> <span class="lever ml-0"></span
                         ></label>
                 </div>
-            </div>
+            </div> --}}
             <div class="input-field col s12">
                 <div class="switch" >
                     Footer Fixed

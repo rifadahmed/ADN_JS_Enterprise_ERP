@@ -1,21 +1,16 @@
 <header class="page-topbar" id="header">
 <div class="navbar {{$nav_fix==1 ? "navbar-fixed" : "navbar"}}">
 
- 
- <nav class="navbar-main navbar-color nav-collapsible sideNav-lock  {{$nav_color}}  no-shadow"> 
+    <nav class="navbar-main navbar-color nav-collapsible sideNav-lock no-shadow {{$nav_color}}"> 
+
+
             <div class="nav-wrapper">
-                    
-                     <div class="header-search-wrapper hide-on-med-and-down" style="margin: 0px auto 0 255px">
-                        <ul id="nav-mobile" class="left ">
-                            <li><a href="#"> <i class="material-icons" style="margin: 10px 0 0 -13px;">attach_money</i><p style="margin: 0 0 0 18px;">Total Sales :<span style="color: #0288d1; "> BDT 18,000</span></p> </a></li> 
-
-                            <li><a href="#"> <i class="material-icons" style="margin: 10px 0 0 215px;">add_shopping_cart</i><p style="margin: 0 0 0 33px;">  Total Purchases :<span style="color: #F086A3"> BDT 30,000</p></span></a></li>
-                        </ul>                 
-                    </div>  
-                  
-
 
                 <ul class="navbar-list right">
+                    <li><a href="#"> <i class="material-icons" style="margin: 0px 0 0 5px;">attach_money</i><p style="margin: -70px 0 0 33px;">Total Sales :<span style="color: #0288d1; "> BDT 18,000</span></p> </a></li> 
+
+                    <li ><a href="#"> <i class="material-icons" >add_shopping_cart</i><p style="margin: -70px 420px 0 33px ;">  Total Purchases :<span style="color: #F086A3"> BDT 30,000</p></span></a></li>
+
                     {{-- <li class="dropdown-language"><a class="waves-effect waves-block waves-light translation-button" href="#" data-target="translation-dropdown"><span class="flag-icon flag-icon-gb"></span></a></li> --}}
                     <li class="hide-on-med-and-down"><a class="waves-effect waves-block waves-light toggle-fullscreen" href="javascript:void(0);"><i class="material-icons">settings_overscan</i></a></li>
                     <li class="hide-on-large-only search-input-wrapper"><a class="waves-effect waves-block waves-light search-button" href="javascript:void(0);"><i class="material-icons">search</i></a></li>
