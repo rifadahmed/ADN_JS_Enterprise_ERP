@@ -15,7 +15,8 @@ class UserController extends Controller
         $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
         $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;
         $data['menu_selection']=ThemeSetting::where('key',"MENU_SELECTION")->get()->first()->value;
-        $data['nav_selection']=ThemeSetting::where('key',"NAV_COLOR")->get()->first()->value;
+        $data['nav_color']=ThemeSetting::where('key',"NAV_COLOR")->get()->first()->value;
+        $data['nav_fix']=ThemeSetting::where('key',"NAV_FIX")->get()->first()->status;
         return view('users.index', $data);
     }
     public function edit($id){
@@ -25,7 +26,8 @@ class UserController extends Controller
         $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
         $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;
         $data['menu_selection']=ThemeSetting::where('key',"MENU_SELECTION")->get()->first()->value;
-        $data['nav_selection']=ThemeSetting::where('key',"NAV_COLOR")->get()->first()->value;
+        $data['nav_color']=ThemeSetting::where('key',"NAV_COLOR")->get()->first()->value;
+        $data['nav_fix']=ThemeSetting::where('key',"NAV_FIX")->get()->first()->status;
         return view('users.edit', $data);
     }
     public function show($id){
@@ -35,7 +37,8 @@ class UserController extends Controller
         $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
         $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;
         $data['menu_selection']=ThemeSetting::where('key',"MENU_SELECTION")->get()->first()->value;
-        $data['nav_selection']=ThemeSetting::where('key',"NAV_COLOR")->get()->first()->value;
+        $data['nav_color']=ThemeSetting::where('key',"NAV_COLOR")->get()->first()->value;
+        $data['nav_fix']=ThemeSetting::where('key',"NAV_FIX")->get()->first()->status;
         return view('users.show', $data);
     }
     public function create(){
@@ -44,7 +47,8 @@ class UserController extends Controller
         $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
         $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;
         $data['menu_selection']=ThemeSetting::where('key',"MENU_SELECTION")->get()->first()->value;
-        $data['nav_selection']=ThemeSetting::where('key',"NAV_COLOR")->get()->first()->value;
+        $data['nav_color']=ThemeSetting::where('key',"NAV_COLOR")->get()->first()->value;
+        $data['nav_fix']=ThemeSetting::where('key',"NAV_FIX")->get()->first()->status;
         return view('users.create', $data);
     }
     public function store(Request $request){

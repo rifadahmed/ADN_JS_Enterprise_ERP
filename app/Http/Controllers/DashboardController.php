@@ -67,6 +67,7 @@ class DashboardController extends Controller
             $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;
             $data['menu_selection']=ThemeSetting::where('key',"MENU_SELECTION")->get()->first()->value;
             $data['nav_color']=ThemeSetting::where('key',"NAV_COLOR")->get()->first()->value;
+            $data['nav_fix']=ThemeSetting::where('key',"NAV_FIX")->get()->first()->status;
 
         return view('dashboard.dashboard',$data);
 

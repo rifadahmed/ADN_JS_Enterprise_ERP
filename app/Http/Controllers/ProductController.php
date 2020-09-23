@@ -15,6 +15,7 @@ class ProductController extends Controller
         $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;
         $data['menu_selection']=ThemeSetting::where('key',"MENU_SELECTION")->get()->first()->value;
         $data['nav_color']=ThemeSetting::where('key',"NAV_COLOR")->get()->first()->value;
+        $data['nav_fix']=ThemeSetting::where('key',"NAV_FIX")->get()->first()->status;
         return view('products.index', $data);
     }
     public function edit(){
@@ -24,6 +25,7 @@ class ProductController extends Controller
         $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;
         $data['menu_selection']=ThemeSetting::where('key',"MENU_SELECTION")->get()->first()->value;
         $data['nav_color']=ThemeSetting::where('key',"NAV_COLOR")->get()->first()->value;
+        $data['nav_fix']=ThemeSetting::where('key',"NAV_FIX")->get()->first()->status;
         return view('products.edit', $data);
     }
     public function show(){
@@ -33,6 +35,7 @@ class ProductController extends Controller
         $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;
         $data['menu_selection']=ThemeSetting::where('key',"MENU_SELECTION")->get()->first()->value;
         $data['nav_color']=ThemeSetting::where('key',"NAV_COLOR")->get()->first()->value;
+        $data['nav_fix']=ThemeSetting::where('key',"NAV_FIX")->get()->first()->status;
         return view('products.show', $data);
     }
     public function create(){
@@ -42,6 +45,7 @@ class ProductController extends Controller
         $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;
         $data['menu_selection']=ThemeSetting::where('key',"MENU_SELECTION")->get()->first()->value;
         $data['nav_color']=ThemeSetting::where('key',"NAV_COLOR")->get()->first()->value;
+        $data['nav_fix']=ThemeSetting::where('key',"NAV_FIX")->get()->first()->status;
         return view('products.create', $data);
     }
      /***

@@ -1,7 +1,11 @@
 <header class="page-topbar" id="header">
-    <div class="navbar navbar-fixed">
-        <nav class="navbar-main navbar-color nav-collapsible sideNav-lock navbar-dark {{$nav_color}} no-shadow">
-            
+<div class="navbar {{$nav_fix==1 ? "navbar-fixed" : "navbar"}}">
+
+ 
+        <nav class="navbar-main navbar-color nav-collapsible sideNav-lock navbar-light {{$nav_color}} no-shadow">
+
+
+
             <div class="nav-wrapper">
                     
                      <div class="header-search-wrapper hide-on-med-and-down" style="margin: 0px auto 0 255px">
