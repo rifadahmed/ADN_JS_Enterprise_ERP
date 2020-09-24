@@ -145,6 +145,8 @@ Route::get('/supplier/show/{id}', 'SupplierController@show')->name('supplier.sho
     Route::post('/fixfooter', 'ThemeSettingController@updateFixFooter')->name('fix.footer');
     Route::post('/menureset', 'ThemeSettingController@menuReset')->name('menu.reset');
     Route::post('/navreset', 'ThemeSettingController@navReset')->name('nav.reset');
+    Route::post('/footerreset', 'ThemeSettingController@footerReset')->name('footer.reset');
+
 
 
 

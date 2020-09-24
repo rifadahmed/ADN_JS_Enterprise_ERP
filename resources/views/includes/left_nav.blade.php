@@ -474,5 +474,14 @@ $(document).ready(function () {
                 });
             })
             
+            //FOOTER RESET
+            $('#footerReset').click(function(){
+                this.style.color="green";
+                this.innerHTML="Done!";
+                $.post('{{route('footer.reset')}}',{_token:'{{csrf_token()}}'},function(data){
+                    
+                });
+            })
+            
 });
 </script>

@@ -214,7 +214,7 @@
                 </div>
             </div>
         </div>
-        <h6 class="mt-6">Footer Options</h6>
+        <h6 class="mt-6">Footer Options <a href="#" id="footerReset" style="margin-left:10px">Reset</a></h6>
         <hr class="customize-devider" />
         <div class="navbar-options row">
             {{-- <div class="input-field col s12">

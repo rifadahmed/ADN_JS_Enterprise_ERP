@@ -179,9 +179,14 @@ class ThemeSettingController extends Controller
             $navDark=ThemeSetting::where('key',"NAV_FIX")->get()->first();
             $navDark->status=1;
             $navDark->save();
+    }
 
+          //MENU RESET column    
+          public function footerReset(Request $request){             
 
-            $navSection->save();
+            $footerFix=ThemeSetting::where('key',"FOOTER_FIX")->get()->first();
+            $footerFix->status=1;
+            $footerFix->save();
     }
        
 }
