@@ -147,6 +147,41 @@ class ThemeSettingController extends Controller
             $fixFooter->save();
 
     }
-          
+
+          //MENU RESET column    
+    public function menuReset(Request $request){
+            
+            $menuColor=ThemeSetting::where('key',"MENU_COLOR")->get()->first();
+            $menuColor->value="content-wrapper-before gradient-45deg-indigo-purple";
+            $menuColor->save();
+
+            $menuDark=ThemeSetting::where('key',"MENU_DARK")->get()->first();
+            $menuDark->status=1;
+            $menuDark->save();
+
+            $menuCollapse=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first();
+            $menuCollapse->status=1;
+            $menuCollapse->save();
+
+            $menuSection=ThemeSetting::where('key',"MENU_SELECTION")->get()->first();
+            $menuSection->value="sidenav-active-normal";
+            $menuSection->save();
+    }
+
+
+          //MENU RESET column    
+          public function navreset(Request $request){
+            
+            $navColor=ThemeSetting::where('key',"NAV_COLOR")->get()->first();
+            $navColor->value="content-wrapper-before gradient-45deg-indigo-purple";
+            $navColor->save();
+
+            $navDark=ThemeSetting::where('key',"NAV_FIX")->get()->first();
+            $navDark->status=1;
+            $navDark->save();
+
+
+            $navSection->save();
+    }
        
 }

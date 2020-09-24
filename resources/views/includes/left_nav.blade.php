@@ -455,5 +455,24 @@ $(document).ready(function () {
                         //$(".loader2").hide();
                     });
             });
+
+            //MENU RESET
+            $('#menuReset').click(function(){
+                this.style.color="green";
+                this.innerHTML="Done!";
+                $.post('{{route('menu.reset')}}',{_token:'{{csrf_token()}}'},function(data){
+                    
+                });
+            })
+
+            //NAV RESET
+            $('#navReset').click(function(){
+                this.style.color="green";
+                this.innerHTML="Done!";
+                $.post('{{route('nav.reset')}}',{_token:'{{csrf_token()}}'},function(data){
+                    
+                });
+            })
+            
 });
 </script>

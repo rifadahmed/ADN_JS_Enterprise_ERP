@@ -9,7 +9,9 @@
         <h5 class="theme-cutomizer-title">Theme Customizer</h5>
         <p class="medium-small">Customize & Preview in Real Time</p>
         <div class="menu-options">
-            <h6 class="mt-6">Menu Options</h6>
+            <h6 class="mt-6">Menu Options <a href="#" id="menuReset" style="margin-left:10px">Reset</a>
+
+            </h6>
             <hr class="customize-devider" />
             <div class="menu-options-form row">
                 <div class="input-field col s12 menu-color mb-0">
@@ -152,7 +154,7 @@
                 </div>
             </div>
         </div>
-        <h6 class="mt-6">Navbar Options</h6>
+        <h6 class="mt-6">Navbar Options <a href="#" id="navReset" style="margin-left:10px">Reset</a></h6>
         <hr class="customize-devider" />
         <div class="navbar-options row">
             <div class="input-field col s12 navbar-color mb-0">
