@@ -154,103 +154,107 @@
 
             
             
-
-            <div class="col s12 l4">
-                <!-- Recent Users -->
-                <div class="card recent-buyers-card animate fadeUp">
-                    <div class="card-content" style="height: 350px">
-                        <h4 class="card-title mb-0">Recent Users <i class="material-icons float-right">more_vert</i></h4>
-                        {{-- <p class="medium-small pt-2">Today</p> --}}
-                        <ul class="collection mb-0">
-                            
-                            @foreach ($users as $user)
-                            <li class="collection-item avatar">
-                                <img src="https://pipesak.com/wp-content/uploads/2019/09/Mike-Place-Holder-PipeSak-About-Page.jpg" alt="" class="circle" />
-                                <p class="font-weight-600">{{$user->name}}</p>
-                                <p class="medium-small">{{ $user->created_at?$user->created_at->diffForHumans():"Null"}}</p>
-                                <a href="#!" class="secondary-content"><i class="material-icons">star_border</i></a>
-                            </li>   
-                            @endforeach
-                           
-                            
-                            
-
-                        </ul>
+            <div class="row">
+                <div class="col s12 l4">
+                    <!-- Recent Users -->
+                    <div class="card recent-buyers-card animate fadeUp">
+                        <div class="card-content" style="height: 350px">
+                            <h4 class="card-title mb-0">Recent Users <i class="material-icons float-right">more_vert</i></h4>
+                            {{-- <p class="medium-small pt-2">Today</p> --}}
+                            <ul class="collection mb-0">
+                                
+                                @foreach ($users as $user)
+                                <li class="collection-item avatar">
+                                    <img src="https://pipesak.com/wp-content/uploads/2019/09/Mike-Place-Holder-PipeSak-About-Page.jpg" alt="" class="circle" />
+                                    <p class="font-weight-600">{{$user->name}}</p>
+                                    <p class="medium-small">{{ $user->created_at?$user->created_at->diffForHumans():"Null"}}</p>
+                                    <a href="#!" class="secondary-content"><i class="material-icons">star_border</i></a>
+                                </li>   
+                                @endforeach
+                               
+                                
+                                
+    
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-        
-            <div class="col s12 m6 l8">
-                <div class="card subscriber-list-card animate fadeRight">
-                    <div class="card-content pb-1" >
-                        <h4 class="card-title mb-0">New Buyers<i class="material-icons float-right">more_vert</i></h4>
-                    </div>
-                    <table class="subscription-table responsive-table highlight">
-                        <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Address</th>
-                            <th>Company</th>
-                            <th>Status</th>
-                            <th>Action</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                            @foreach ($buyers as $buyer)
+            
+                <div class="col s12 m6 l8">
+                    <div class="card subscriber-list-card animate fadeRight">
+                        <div class="card-content pb-1" >
+                            <h4 class="card-title mb-0">New Buyers<i class="material-icons float-right">more_vert</i></h4>
+                        </div>
+                        <table class="subscription-table responsive-table highlight">
+                            <thead>
                             <tr>
-                                <td>{{$buyer->buyer_name}}</td>
-                                <td>{{$buyer->buyer_address}}</td>
-                                <td>{{$buyer->buyer_company}}</td>
-                                <td><span class="{{$buyer->buyer_status=="Active"? "badge green lighten-5 green-text text-accent-4":"badge pink lighten-5 pink-text text-accent-2"}}">{{$buyer->buyer_status}}</span></td>
-                                <td><a class="border-primary" href="{{ route('buyer.edit', $buyer->id)}}"><i class="material-icons  edit-icon" style="margin-right: 5px;
-                                    ">edit</i></a><a href="{{ route('buyer.show', $buyer->id)}}"><i class="material-icons">remove_red_eye</i></a></td>
-
+                                <th>Name</th>
+                                <th>Address</th>
+                                <th>Company</th>
+                                <th>Status</th>
+                                <th>Action</th>
                             </tr>
-                            @endforeach                            
-
-                        </tbody>
-                    </table>
+                            </thead>
+                            <tbody>
+                                @foreach ($buyers as $buyer)
+                                <tr>
+                                    <td>{{$buyer->buyer_name}}</td>
+                                    <td>{{$buyer->buyer_address}}</td>
+                                    <td>{{$buyer->buyer_company}}</td>
+                                    <td><span class="{{$buyer->buyer_status=="Active"? "badge green lighten-5 green-text text-accent-4":"badge pink lighten-5 pink-text text-accent-2"}}">{{$buyer->buyer_status}}</span></td>
+                                    <td><a class="border-primary" href="{{ route('buyer.edit', $buyer->id)}}"><i class="material-icons  edit-icon" style="margin-right: 5px;
+                                        ">edit</i></a><a href="{{ route('buyer.show', $buyer->id)}}"><i class="material-icons">remove_red_eye</i></a></td>
+    
+                                </tr>
+                                @endforeach                            
+    
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
+            
            
+
             
-                <div class="col s12 m4 l4">
-                    <div class="card pt-0 pb-0 animate fadeRight">
-                       <div class="dashboard-revenue-wrapper padding-2 ml-2">
-                          <span class="new badge gradient-45deg-amber-amber gradient-shadow mt-2 mr-2">+ 21%</span>
-                          <p class="mt-2 mb-0">Total Products</p>
-                          <p class="no-margin grey-text lighten-3">33.1% avg</p>
-                          <h5>22300</h5>
-                       </div>
+            <div class="col s12 m4 l4">
+                <div class="card pt-0 pb-0 animate fadeRight">
+                    <div class="dashboard-revenue-wrapper padding-2 ml-2">
+                        <span class="new badge gradient-45deg-amber-amber gradient-shadow mt-2 mr-2">+ 21%</span>
+                        <p class="mt-2 mb-0">Total Products</p>
+                        <p class="no-margin grey-text lighten-3">33.1% avg</p>
+                        <h5>22300</h5>
                     </div>
                 </div>
-            <div class="col s12 m4 l4 " >
-                    <div class="card pt-0 pb-0 animate fadeLeft">
-                       <div class="dashboard-revenue-wrapper padding-2 ml-2">
-                          <span class="new badge gradient-45deg-light-blue-cyan gradient-shadow mt-2 mr-2">+ 42.6%</span>
-                          <p class="mt-2 mb-0">Total Categories</p>
-                          <p class="no-margin grey-text lighten-3">360 avg</p>
-                          <h5>{{$totalcategories}}</h5>
-                       </div>
-                    </div>
             </div>
-                 
-            <div class="col s12 m4 l4 animate fadeUp">
-                    <div class="card pt-0 pb-0">
-                       <div class="dashboard-revenue-wrapper padding-2 ml-2">
-                          <span class="new badge gradient-45deg-purple-deep-orange gradient-shadow mt-2 mr-2">+ 12%</span>
-                          <p class="mt-2 mb-0">Total Warehouses</p>
-                          <p class="no-margin grey-text lighten-3">23.1% avg</p>
-                          <h5>2500</h5>
-                       </div>
+            
+            <div class="col s12 m4 l4 " >
+                <div class="card pt-0 pb-0 animate fadeLeft">
+                    <div class="dashboard-revenue-wrapper padding-2 ml-2">
+                        <span class="new badge gradient-45deg-light-blue-cyan gradient-shadow mt-2 mr-2">+ 42.6%</span>
+                        <p class="mt-2 mb-0">Total Categories</p>
+                        <p class="no-margin grey-text lighten-3">360 avg</p>
+                        <h5>{{$totalcategories}}</h5>
                     </div>
-                 </div>
-     
-                 
-      
-                 
-            
-            
+                </div>
+            </div>
+                
+            <div class="col s12 m4 l4 animate fadeUp">
+                <div class="card pt-0 pb-0">
+                    <div class="dashboard-revenue-wrapper padding-2 ml-2">
+                        <span class="new badge gradient-45deg-purple-deep-orange gradient-shadow mt-2 mr-2">+ 12%</span>
+                        <p class="mt-2 mb-0">Total Warehouses</p>
+                        <p class="no-margin grey-text lighten-3">23.1% avg</p>
+                        <h5>2500</h5>
+                    </div>
+                </div>
+                </div>
+    
+                
+    
+                
+        
+        
             </div>
            
 
