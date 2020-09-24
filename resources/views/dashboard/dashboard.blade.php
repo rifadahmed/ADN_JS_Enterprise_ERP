@@ -153,11 +153,10 @@
             </div> 
 
             
-            
             <div class="row">
                 <div class="col s12 l4">
                     <!-- Recent Users -->
-                    <div class="card recent-buyers-card animate fadeUp">
+                    <div class="card recent-buyers-card animate fadeUp" style="margin-left: 12px">
                         <div class="card-content" style="height: 350px">
                             <h4 class="card-title mb-0">Recent Users <i class="material-icons float-right">more_vert</i></h4>
                             {{-- <p class="medium-small pt-2">Today</p> --}}
@@ -181,7 +180,7 @@
                 </div>
             
                 <div class="col s12 m6 l8">
-                    <div class="card subscriber-list-card animate fadeRight">
+                    <div class="card subscriber-list-card animate fadeRight" style="margin-right: 12px">
                         <div class="card-content pb-1" >
                             <h4 class="card-title mb-0">New Buyers<i class="material-icons float-right">more_vert</i></h4>
                         </div>
@@ -213,6 +212,9 @@
                     </div>
                 </div>
             </div>
+            
+                
+            
             
            
 

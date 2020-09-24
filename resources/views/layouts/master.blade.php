@@ -125,7 +125,7 @@ Website: http://adndigital.com.bd
 
         
       });
-      </script>
+    </script>
     @stack('script')
 
   </body>
