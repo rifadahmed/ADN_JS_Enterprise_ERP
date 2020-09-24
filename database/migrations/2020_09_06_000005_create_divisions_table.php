@@ -13,18 +13,18 @@ class CreateDivisionsTable extends Migration
      */
     public function up()
     {
-        // Schema::create('divisions', function (Blueprint $table) {
-        //     $table->bigIncrements('id');
-        //     $table->string('name',100);
-        //     $table->string('bn_name',100);
-        //     $table->string('code',100);
-        //     $table->integer('created_by')->nullable();
-        //     $table->integer('updated_by')->nullable();
-        //     $table->softDeletes();
-        //     $table->timestamps();
-        //     $table->enum('status',['Active','Inactive'])->default('Active');
+        Schema::create('divisions', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('name',100);
+            $table->string('bn_name',100);
+            $table->string('code',100);
+            $table->integer('created_by')->nullable();
+            $table->integer('updated_by')->nullable();
+            $table->softDeletes();
+            $table->timestamps();
+            $table->enum('status',['Active','Inactive'])->default('Active');
 
-        // });
+        });
     }
 
     /**

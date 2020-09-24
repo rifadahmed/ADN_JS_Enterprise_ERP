@@ -87,9 +87,6 @@
                                             <table id="users-list-datatable" class="table">
                                                 <thead>
                                                 <tr>
-                                                    
-                                                    
-                                                    
                                                     <th>SL</th>
                                                     <th>Name</th>
                                                     <th>Company</th>
@@ -120,12 +117,13 @@
                                                         <td>{{$supplier->supplier_opening_balance}}</td>
                                                         <td><span class="chip green lighten-5">
                                                             <span class="{{$supplier->supplier_status=="Active"? "green-text":"red-text"}}">{{$supplier->supplier_status}}</span>
-                                                          </span>
+                                                            </span>
                                                         </td>
                                                         <td><a class="border-primary" href="{{ route('supplier.edit',$supplier->id )}}"><i class="material-icons  edit-icon">edit</i></a><a href="{{ route('supplier.show', $supplier->id)}}"><i class="material-icons">remove_red_eye</i></a></td>
                                                        
                                                     </tr>
-                                                    @endforeach
+                                                    @endforeach  
+                                                    
                                               
 
                                                 </tbody>

@@ -14,7 +14,8 @@ class CreateGeneralSettingsTable extends Migration
     public function up()
     {
         Schema::create('general_settings', function (Blueprint $table) {
-            
+            $table->id();
+            $table->timestamps();
         });
     }
 

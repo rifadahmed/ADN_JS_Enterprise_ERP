@@ -105,7 +105,7 @@
                     <div class="switch" >Menu Dark
                         
                         <label class="float-right"
-                        ><input class="menu-dark-checkbox" id="menuDark" type="checkbox"/> <span class="lever ml-0"></span
+                        ><input class="menu-dark-checkbox" id="menuDark" type="checkbox" {{$menu_dark==1?'':'checked'}}> <span class="lever ml-0"></span
                             ></label>
                     </div>
                 </div>
@@ -113,7 +113,7 @@
                     <div class="switch" >
                         Menu Collapsed
                         <label class="float-right"
-                        ><input class="menu-collapsed-checkbox" id="menuCollapse" type="checkbox"/> <span class="lever ml-0"></span
+                        ><input class="menu-collapsed-checkbox" id="menuCollapse" type="checkbox" {{$menu_collapse==1?'':'checked'}}/> <span class="lever ml-0"></span
                             ></label>
                     </div>
                 </div>
@@ -125,7 +125,7 @@
                                 class="menu-selection-radio with-gap"
                                 value="sidenav-active-square"
                                 name="menu-selection"
-                                type="radio"
+                                type="radio" {{$menu_selection=="sidenav-active-square" ?'checked':''}}
                             />
                             <span>Square</span>
                         </label>
@@ -134,7 +134,7 @@
                                 class="menu-selection-radio with-gap"
                                 value="sidenav-active-rounded"
                                 name="menu-selection"
-                                type="radio"
+                                type="radio" {{$menu_selection=="sidenav-active-rounded" ?'checked':''}}
                             />
                             <span>Rounded</span>
                         </label>
@@ -144,7 +144,7 @@
                                 class="menu-selection-radio with-gap"
                                 value="sidenav-active-normal"
                                 name="menu-selection"
-                                type="radio"
+                                type="radio" {{$menu_selection=="sidenav-active-normal" ?'checked':''}}
                              />
                             <span>Normal</span>
                         </label>
@@ -207,7 +207,7 @@
                 <div class="switch" >
                     Navbar Fixed
                     <label class="float-right"
-                    ><input class="navbar-fixed-checkbox" id="navFix" type="checkbox" checked/> <span class="lever ml-0"></span
+                    ><input class="navbar-fixed-checkbox" id="navFix" type="checkbox" {{$nav_fix==1 ?'checked':''}}/> <span class="lever ml-0"></span
                         ></label>
                 </div>
             </div>
@@ -227,7 +227,7 @@
                 <div class="switch" >
                     Footer Fixed
                     <label class="float-right"
-                    ><input class="footer-fixed-checkbox" id="footerFix" type="checkbox"/> <span class="lever ml-0"></span
+                    ><input class="footer-fixed-checkbox" id="footerFix" type="checkbox" {{$footer_fix==0 ?'checked':''}}/> <span class="lever ml-0"></span
                         ></label>
                 </div>
             </div>
