@@ -87,200 +87,42 @@
                                             <table id="users-list-datatable" class="table">
                                                 <thead>
                                                 <tr>
-                                                    <th></th>
+                                                    
                                                     <th>SL</th>
-                                                    <th>Product Name</th>                                                    
+                                                    <th>Name</th>   
+                                                    <th>Category</th> 
+                                                    <th>Sub Category</th> 
+                                                    <th>Brand</th>                                                  
+                                                    <th>Sku</th> 
+                                                    <th>Retail Price</th> 
+                                                    <th>Wholesale Price</th> 
                                                     <th>Status</th>
                                                     <th>Action</th>
                                                     <th></th>
                                                 </tr>
                                                 </thead>
                                                 <tbody>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>300</td>
-                                                    <td>X</td>
-                                                    <td><span class="chip green lighten-5">
-                                                        <span class="green-text">Active</span>
-                                                      </span>
-                                                    </td>
-                                                    <td><a class="border-primary" href="{{ route('product.edit', 1)}}"><i class="material-icons  edit-icon">edit</i></a><a href="{{ route('product.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    {{-- <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td> --}}
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>301</td>
-                                                    <td>Z</td>
-                                                    <td><span class="chip green lighten-5">
-                    <span class="green-text">Active</span>
-                  </span>
-                                                    </td>
-                                                    <td><a href="{{ route('product.edit', 1)}}"><i class="material-icons  edit-icon">edit</i></a><a href="{{ route('product.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
+                                                    @foreach ($products as $product)
+                                                    <tr>
+                                                    <td>{{$product->id}}</td>
+                                                    <td>{{$product->product_name}}</td>
+                                                    <td>{{$product->category->category_name}}</td>
+                                                    <td>{{$product->subcategory->sub_category_name}}</td>
+                                                    <td>{{$product->brand->brand_name}}</td>
+                                                    <td>{{$product->product_sku}}</td>
+                                                    <td>{{$product->product_retail_price}}</td>
+                                                    <td>{{$product->product_wholesale_price}}</td>
+
                                                     
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>302</td>                                                 
-                                                    <td>X</td>
                                                     <td><span class="chip green lighten-5">
-                    <span class="green-text">Active</span>
-                  </span>
+                                                    <span class="{{$product->product_status=="Active"? 'green-text' : 'red-text'}}">{{$product->product_status}}</span>
+                                                          </span>
                                                     </td>
-                                                    <td><a href="{{ route('product.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('product.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>303</td>
-                                                    <td>Y</td>
-                                                    <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('product.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('product.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>304</td>
-                                                    <td>Y</td>
-                                                    <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('product.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('product.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>305</td>
-                                                    <td>Z</td>
-                                                    <td><span class="chip green lighten-5">
-                    <span class="green-text">Active</span>
-                  </span>
-                                                    </td>
-                                                    <td><a href="{{ route('product.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('product.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td></td>
-                                                    <td>307</td>
-                                                    <td>Z</td>
-                                                    <td><span class="chip green lighten-5">
-                    <span class="green-text">Active</span>
-                  </span>
-                                                    </td>
-                                                    <td><a href="{{ route('product.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('product.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>308</td>
-                                                    <td>Y</td>
-                                                    <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('product.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('product.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>309</td>
-                                                    <td>Z</td>
-                                                    <td><span class="chip green lighten-5">
-                    <span class="green-text">Active</span>
-                  </span>
-                                                    </td>
-                                                    <td><a href="{{ route('product.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('product.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>310</td>
-                                                    <td>Y</td>
-                                                    <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('product.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('product.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>311</td>
-                                                    <td>Y</td>
-                                                    <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('product.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('product.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>312</td>
-                                                    <td>Y</td>
-                                                    <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('product.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('product.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>313</td>
-                                                    <td>Z</td>
-                                                    <td><span class="chip green lighten-5">
-                    <span class="green-text">Active</span>
-                  </span>
-                                                    </td>
-                                                    <td><a href="{{ route('product.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('product.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>314</td>
-                                                    <td>Y</td>
-                                                    <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('product.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('product.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>315</td>
-                                                    <td>Z</td>
-                                                    <td><span class="chip green lighten-5">
-                    <span class="green-text">Active</span>
-                  </span>
-                                                    </td>
-                                                    <td><a href="{{ route('product.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('product.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>316</td>
-                                                    <td>Z</td>
-                                                    <td><span class="chip green lighten-5">
-                    <span class="green-text">Active</span>
-                  </span>
-                                                    </td>
-                                                    <td><a href="{{ route('product.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('product.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>317</td>
-                                                    <td>Y</td>
-                                                    <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('product.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('product.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>318</td>
-                                                    <td>Y</td>
-                                                    <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('product.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('product.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>319</td>
-                                                    <td>Y</td>
-                                                    <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('product.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('product.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-
-
+                                                    <td><a class="border-primary" href="{{ route('product.edit', $product->id)}}"><i class="material-icons  edit-icon">edit</i></a><a href="{{ route('product.show', $product->id)}}"><i class="material-icons">remove_red_eye</i></a></td>
+       
+                                                    </tr> 
+                                                    @endforeach
+                                               
 
                                                 </tbody>
                                             </table>

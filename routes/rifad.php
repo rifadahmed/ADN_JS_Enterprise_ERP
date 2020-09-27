@@ -130,9 +130,11 @@ Route::post('/supplier/update/{id}', 'SupplierController@update')->name('supplie
 Route::get('/supplier/show/{id}', 'SupplierController@show')->name('supplier.show');
 
 
-    //ajax route
+    //ajax route 
     Route::post('/district/ajaxcall', 'BuyerController@districtAjaxcall')->name('district.ajaxcall');
     Route::post('/upazila/ajaxcall', 'BuyerController@upazilaAjaxcall')->name('upazila.ajaxcall');
+    Route::post('/subcat/ajaxcall', 'ProductController@subcategoryAjaxcall')->name('subcategory.ajaxcall');
+
 
     Route::post('/menuclassname', 'ThemeSettingController@updateMenuClassName')->name('menu.class.name');
     Route::post('/darkmenu', 'ThemeSettingController@updateDarkMenu')->name('dark.menu');

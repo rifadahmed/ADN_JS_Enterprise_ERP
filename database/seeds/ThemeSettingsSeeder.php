@@ -14,7 +14,7 @@ class ThemeSettingsSeeder extends Seeder
         DB::table('theme_settings')->insert([
             [
                 'key' => 'MENU_COLOR',
-                'value' => 'gradient-45deg-purple-amber gradient-shadow',
+                'value' => 'content-wrapper-before gradient-45deg-indigo-purple',
                 'type' => "Menu",
                 'status' => 1,
             ],[
@@ -31,12 +31,12 @@ class ThemeSettingsSeeder extends Seeder
             ],
             [
                 'key' => 'MENU_SELECTION',
-                'value' => 'sidenav-active-rounded',              
+                'value' => 'sidenav-active-normal',              
                 'type' => "Menu",
                 'status' => 1,
             ],[
                 'key' => 'NAV_COLOR',  
-                'value' => null,             
+                'value' => "content-wrapper-before gradient-45deg-indigo-purple",             
                 'type' => "navbar",
                 'status' => 1,
             ],[
@@ -62,7 +62,7 @@ class ThemeSettingsSeeder extends Seeder
                 'key' => 'FOOTER_FIX',
                 'value' => null,
 
-                'type' => "footerxx",
+                'type' => "footer",
                 'status' => 1,
             ]
 

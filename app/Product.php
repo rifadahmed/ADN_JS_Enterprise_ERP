@@ -23,4 +23,15 @@ class Product extends Model
             }
         });
     }
+
+    public function category(){
+        return $this->belongsTo('App\Category','product_category_id');
+    }
+    
+    public function subcategory(){
+        return $this->belongsTo('App\SubCategory','product_sub_category_id');
+    }
+    public function brand(){
+        return $this->belongsTo('App\Brand','product_brand_id');
+    }
 }

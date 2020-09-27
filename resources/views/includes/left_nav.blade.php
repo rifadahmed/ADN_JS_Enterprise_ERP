@@ -233,6 +233,28 @@
             </div>
         </li>
 
+        <!-- ** Warehouse -->
+        <li class="@if(Request::segment(1) == 'warehouse') active @endif bold"><a class="collapsible-header waves-effect waves-cyan " href="JavaScript:void(0)"><i class="material-icons">home</i><span class="menu-title" data-i18n="Dashboard">Manage Warehouse</span></a>
+            <div class="collapsible-body">
+                <ul class="collapsible collapsible-sub" data-collapsible="accordion">
+                    <li class="">
+                    <a class="@if(Request::segment(1) == 'warehouse' &&  Request::segment(2) == 'list'||Request::segment(1) == 'warehouse' &&  Request::segment(2) == 'edit'&&  Request::segment(3) == Request::segment(3)||Request::segment(1) == 'warehouse' &&  Request::segment(2) == 'show'&&  Request::segment(3) == Request::segment(3)) {{$menu_color}} active @endif" href="{{route('warehouse.list')}}" style="background: none; box-shadow: none;">
+                            <i class="material-icons">radio_button_unchecked</i>
+                            <span data-i18n="Modern">Warehouse List</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="@if(Request::segment(1) == 'warehouse' &&  Request::segment(2) == 'create') {{$menu_color}} active @endif" href="{{route('warehouse.create')}}" style="background: none; box-shadow: none;">
+                            <i class="material-icons">radio_button_unchecked</i>
+                            <span data-i18n="eCommerce">Add New warehouse</span>
+                        </a>
+                    </li>
+
+
+                </ul>
+            </div>
+        </li>
+        
         <!-- ** Product -->
         <li class="@if(Request::segment(1) == 'product') active @endif bold"><a class="collapsible-header waves-effect waves-cyan " href="JavaScript:void(0)"><i class="material-icons">card_giftcard</i><span class="menu-title" data-i18n="Dashboard">Manage Product</span></a>
             <div class="collapsible-body">
@@ -302,27 +324,7 @@
             </div>
         </li>
 
-        <!-- ** Warehouse -->
-        <li class="@if(Request::segment(1) == 'warehouse') active @endif bold"><a class="collapsible-header waves-effect waves-cyan " href="JavaScript:void(0)"><i class="material-icons">home</i><span class="menu-title" data-i18n="Dashboard">Manage Warehouse</span></a>
-            <div class="collapsible-body">
-                <ul class="collapsible collapsible-sub" data-collapsible="accordion">
-                    <li class="">
-                    <a class="@if(Request::segment(1) == 'warehouse' &&  Request::segment(2) == 'list'||Request::segment(1) == 'warehouse' &&  Request::segment(2) == 'edit'&&  Request::segment(3) == Request::segment(3)||Request::segment(1) == 'warehouse' &&  Request::segment(2) == 'show'&&  Request::segment(3) == Request::segment(3)) {{$menu_color}} active @endif" href="{{route('warehouse.list')}}" style="background: none; box-shadow: none;">
-                            <i class="material-icons">radio_button_unchecked</i>
-                            <span data-i18n="Modern">Warehouse List</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="@if(Request::segment(1) == 'warehouse' &&  Request::segment(2) == 'create') {{$menu_color}} active @endif" href="{{route('warehouse.create')}}" style="background: none; box-shadow: none;">
-                            <i class="material-icons">radio_button_unchecked</i>
-                            <span data-i18n="eCommerce">Add New warehouse</span>
-                        </a>
-                    </li>
-
-
-                </ul>
-            </div>
-        </li>
+        
         <!-- ** Reports -->
         <li class="@if(Request::segment(1) == 'report') active @endif bold"><a class="collapsible-header waves-effect waves-cyan " href="JavaScript:void(0)"><i class="material-icons">insert_chart_outline</i><span class="menu-title" data-i18n="Dashboard">Reports</span></a>
             <div class="collapsible-body">

@@ -122,8 +122,6 @@ class BuyerController extends Controller
             'buyer_division_id' => 'required',
             'buyer_district_id' => 'required',
             'buyer_area_id' => 'required',
-            
-
 
         ]);
         $buyerModel = new Buyer();
@@ -141,8 +139,8 @@ class BuyerController extends Controller
 
         $buyerModel->save();
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
-            $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
-                $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;
+        $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
+        $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;
         return redirect()->route('buyer.create')->with('success','Buyer has been created successfully!');
     }
     public function update(Request $request,$id){

@@ -157,7 +157,7 @@
                 <div class="col s12 l4">
                     <!-- Recent Users -->
                     <div class="card recent-buyers-card animate fadeUp" style="margin-left: 12px">
-                        <div class="card-content" style="height: 350px">
+                        <div class="card-content" >
                             <h4 class="card-title mb-0">Recent Users <i class="material-icons float-right">more_vert</i></h4>
                             {{-- <p class="medium-small pt-2">Today</p> --}}
                             <ul class="collection mb-0">
@@ -165,7 +165,7 @@
                                 @foreach ($users as $user)
                                 <li class="collection-item avatar">
                                     <img src="https://pipesak.com/wp-content/uploads/2019/09/Mike-Place-Holder-PipeSak-About-Page.jpg" alt="" class="circle" />
-                                    <p class="font-weight-600">{{$user->name}}</p>
+                                <p class="font-weight-600"><a href="{{route('user.show',$user->id)}}">{{$user->name}}</a> </p>
                                     <p class="medium-small">{{ $user->created_at?$user->created_at->diffForHumans():"Null"}}</p>
                                     <a href="#!" class="secondary-content"><i class="material-icons">star_border</i></a>
                                 </li>   
@@ -343,28 +343,29 @@
                         </div>
                     </div>
                 {{-- Most Popular category --}}
-                <div class="col s12 m12 l3">
+                    <div class="col s12 m12 l3">
                     <ul id="projects-collection" class="collection z-depth-1 animate fadeLeft" style="height: 348px">
-                    <li class="collection-item avatar" >
-                        <i class="material-icons red circle">palette</i>
-                        <h6 class="collection-header m-0">Category:</h6>
-                        <p>Most Popular Category</p>
-                    </li>
-                    @foreach ($categories as $category)
-                    <li class="collection-item">
-                        <div class="row">
-                            <div class="col s6 " style="float:right">
-                                <span class="badge gradient-45deg-light-blue-cyan gradient-shadow mt-2 mr-2">{{$category->category_name}}</span>
+                        <li class="collection-item avatar" >
+                            <i class="material-icons red circle">palette</i>
+                            <h6 class="collection-header m-0">Category:</h6>
+                            <p>Most Popular Category</p>
+                        </li>
+                        @foreach ($categories as $category)
+                        <li class="collection-item">
+                            <div class="row">
+                                <div class="col s6 " style="float:right">
+                                    <span class="badge gradient-45deg-light-blue-cyan gradient-shadow mt-2 mr-2">{{$category->category_name}}</span>
+                                </div>
+                                
                             </div>
-                            
-                        </div>
-                    </li>
-                    @endforeach
+                        </li>
+                        @endforeach
 
                     
 
-                    </ul>
-                </div>
+                    </ul> 
+                   
+
                 </div>
             </div>
 
