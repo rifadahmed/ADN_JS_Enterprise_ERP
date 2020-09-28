@@ -129,6 +129,35 @@ Route::get('/supplier/edit/{id}', 'SupplierController@edit')->name('supplier.edi
 Route::post('/supplier/update/{id}', 'SupplierController@update')->name('supplier.update');
 Route::get('/supplier/show/{id}', 'SupplierController@show')->name('supplier.show');
 
+/*** Routes for Operational Expense Type */
+Route::get('/expense/list', 'OperationalExpenseController@index')->name('expense.list');
+Route::get('/expense/create', 'OperationalExpenseController@create')->name('expense.create');
+Route::post('/expense/store', 'OperationalExpenseController@store')->name('expense.store');
+Route::get('/expense/edit/{id}', 'OperationalExpenseController@edit')->name('expense.edit');
+Route::post('/expense/update/{id}', 'OperationalExpenseController@update')->name('expense.update');
+Route::get('/expense/show/{id}', 'OperationalExpenseController@show')->name('expense.show');
+
+/*** Routes for Operational Expense Type */
+Route::get('/expense/type/list', 'OperationalExpensetypeController@index')->name('expense.type.list');
+Route::get('/expense/type/create', 'OperationalExpensetypeController@create')->name('expense.type.create');
+Route::post('/expense/type/store', 'OperationalExpensetypeController@store')->name('expense.type.store');
+Route::get('/expense/type/edit/{id}', 'OperationalExpensetypeController@edit')->name('expense.type.edit');
+Route::post('/expense/type/update/{id}', 'OperationalExpensetypeController@update')->name('expense.type.update');
+Route::get('/expense/type/show/{id}', 'OperationalExpensetypeController@show')->name('expense.type.show');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     //ajax route 
     Route::post('/district/ajaxcall', 'BuyerController@districtAjaxcall')->name('district.ajaxcall');

@@ -279,6 +279,69 @@
             </div>
         </li>
 
+
+
+<!-- ** Operational Expense -->
+<li class="@if(Request::segment(1) == 'expense') active @endif bold"><a class="collapsible-header waves-effect waves-cyan " href="JavaScript:void(0)"><i class="material-icons">person</i><span class="menu-title" data-i18n="Dashboard">Manage Expense</span></a>
+    <div class="collapsible-body">
+        <ul class="collapsible collapsible-sub" data-collapsible="accordion">
+            <li class="">
+            <a class="@if(Request::segment(1) == 'expense' &&  Request::segment(2) == 'list' ||Request::segment(1) == 'expense' &&  Request::segment(2) == 'edit' &&  Request::segment(3) == Request::segment(3)||Request::segment(1) == 'expense' &&  Request::segment(2) == 'show' &&  Request::segment(3) == Request::segment(3)) {{$menu_color}} active @endif" href="{{route('expense.list')}}" style="background: none; box-shadow: none;">
+                    <i class="material-icons">radio_button_unchecked</i>
+                    <span data-i18n="Modern">Expense List</span>
+                </a>
+            </li>
+            <li>
+                <a class="@if(Request::segment(1) == 'expense' &&  Request::segment(2) == 'create') {{$menu_color}} active @endif" href="{{route('expense.create')}}" style="background: none; box-shadow: none;">
+                    <i class="material-icons">radio_button_unchecked</i>
+                    <span data-i18n="eCommerce">Add New Expense</span>
+                </a>
+            </li>
+            <li >
+                <a class="@if(Request::segment(1) == 'expense' &&  Request::segment(2) == 'type' &&  Request::segment(3) == 'list'||Request::segment(1) == 'expense' &&  Request::segment(2) == 'type' &&  Request::segment(3) == 'edit'&&  Request::segment(4) == Request::segment(4)||Request::segment(1) == 'expense' &&  Request::segment(2) == 'type' &&  Request::segment(3) == 'show'&&  Request::segment(4) == Request::segment(4)) {{$menu_color}} active @endif" href="{{route('expense.type.list')}}" style="background: none; box-shadow: none;">
+                        <i class="material-icons">radio_button_unchecked</i>
+                        <span data-i18n="Modern">Expense Types List</span>
+                    </a>
+                </li>
+                <li>
+                <a class="@if(Request::segment(1) == 'expense' &&  Request::segment(2) == 'type' &&  Request::segment(3) == 'create') {{$menu_color}} active @endif" href="{{route('expense.type.create')}}" style="background: none; box-shadow: none;">
+
+                        <i class="material-icons">radio_button_unchecked</i>
+                        <span data-i18n="eCommerce">Add New Expense Type</span>
+                    </a>
+                </li>
+
+
+        </ul>
+    </div>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
         <!-- ** Purchase -->
         <li class="@if(Request::segment(1) == 'purchase') active @endif bold"><a class="collapsible-header waves-effect waves-cyan " href="JavaScript:void(0)"><i class="material-icons">add_to_photos</i><span class="menu-title" data-i18n="Dashboard">Manage Purchase</span></a>
             <div class="collapsible-body">

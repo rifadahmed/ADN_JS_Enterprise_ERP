@@ -20,6 +20,8 @@ class ProductController extends Controller
             $data['nav_color']=ThemeSetting::where('key',"NAV_COLOR")->get()->first()->value;
             $data['nav_fix']=ThemeSetting::where('key',"NAV_FIX")->get()->first()->status;
             $data['footer_fix']=ThemeSetting::where('key',"FOOTER_FIX")->get()->first()->status;
+        
+        
         $data['products']=Product::all();
         return view('products.index', $data);
     }
