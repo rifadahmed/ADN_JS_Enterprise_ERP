@@ -26,8 +26,13 @@
                                                     <tbody>
 
                                                         <tr>
-                                                            <td>Expense Type Name:</td>
+                                                            <td>Expense  Name:</td>
                                                         <td class="location_type_name">{{$operational_expense->operational_expense_name}}</td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>Expense Type Name:</td>
+                                                        <td class="location_type_name">{{$operational_expense->type->operational_expense_type_name}}</td>
                                                         </tr>
 
                                                         <tr>

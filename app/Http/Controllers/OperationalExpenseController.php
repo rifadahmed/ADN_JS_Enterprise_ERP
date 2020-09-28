@@ -91,7 +91,7 @@ class OperationalExpenseController extends Controller
         //return $request->all();
     }
     public function edit($id){
-        $data['title'] = "Edit SubCategory";
+        $data['title'] = "Edit Operational Expense";
         $data['data'] = OperationalExpense::findOrFail($id);
         $data['operational_expense_types'] = OperationalExpenseType::all();
         $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
