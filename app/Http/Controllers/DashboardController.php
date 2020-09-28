@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\User;
 use App\Brand;
 use App\Buyer;
+use App\Product;
 use App\Upazila;
 use App\Category;
 use App\District;
@@ -25,6 +26,14 @@ class DashboardController extends Controller
      */
     public function index()
     {
+            $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+            $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
+            $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;
+            $data['menu_selection']=ThemeSetting::where('key',"MENU_SELECTION")->get()->first()->value;
+            $data['nav_color']=ThemeSetting::where('key',"NAV_COLOR")->get()->first()->value;
+            $data['nav_dark']=ThemeSetting::where('key',"NAV_DARK")->get()->first()->status;
+            $data['nav_fix']=ThemeSetting::where('key',"NAV_FIX")->get()->first()->status;
+            $data['footer_fix']=ThemeSetting::where('key',"FOOTER_FIX")->get()->first()->status;
 
 
         // recent users
@@ -44,33 +53,27 @@ class DashboardController extends Controller
         $data['totalbrand']=count(Brand::all());
         $data['latestbrand']=Brand::whereDate('created_at', '>=', date('Y-m-d H:i:s',strtotime('-1 days')) )->count();
 
-        //Locations
-        // $data['totallocation']=count(Location::all());
-        // $data['latestlocation']=Location::whereDate('created_at', '>=', date('Y-m-d H:i:s',strtotime('-1 days')) )->count();
+        
 
         //Suppliers
         $data['totalsupplier']=count(Supplier::all());
         $data['latestsupplier']=Supplier::whereDate('created_at', '>=', date('Y-m-d H:i:s',strtotime('-1 days')) )->count();
-
-        // $data['totalOpeningBalance']=Supplier::sum('supplier_opening_balance');
+        $data['supplierOpeningBalance']=Supplier::get()->sum('supplier_opening_balance');
+        $data['averageSupplierOpeningBalance']=round(Supplier::get()->avg('supplier_opening_balance'),1);
 
         //Locations
-        // $data['division']=count(Location::where('location_type_id',LocationType::where("location_type_name","Division")->first()->id)->get());
-        // $data['district']=count(Location::where('location_type_id',LocationType::where("location_type_name","district")->first()->id)->get());
-        // $data['area']=count(Location::where('location_type_id',LocationType::where("location_type_name","area")->first()->id)->get());
-           $data['division']=count(Division::all());
-           $data['district']=count(District::all());
-           $data['area']=count(Upazila::all());
+        $data['division']=count(Division::all());
+        $data['district']=count(District::all());
+        $data['area']=count(Upazila::all());
 
-            $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
-            $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
-            $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;
-            $data['menu_selection']=ThemeSetting::where('key',"MENU_SELECTION")->get()->first()->value;
-            $data['nav_color']=ThemeSetting::where('key',"NAV_COLOR")->get()->first()->value;
-            $data['nav_dark']=ThemeSetting::where('key',"NAV_DARK")->get()->first()->status;
-            $data['nav_fix']=ThemeSetting::where('key',"NAV_FIX")->get()->first()->status;
-            $data['footer_fix']=ThemeSetting::where('key',"FOOTER_FIX")->get()->first()->status;
-
+        // Total and new Product
+        $data['products']=Product::all()->take(4);
+        $data['newProducts']=Product::whereDate('created_at', '>=', date('Y-m-d H:i:s',strtotime('-1 days')) )->count();
+        $data['totalProducts']=count(Product::all());
+        $data['totalRetailPrice']=Product::get()->sum('product_retail_price');
+        $data['averageRetailPrice']=round(Product::get()->avg('product_retail_price'),1);
+   
+            
         return view('dashboard.dashboard',$data);
 
         

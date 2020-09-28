@@ -60,22 +60,22 @@
                                 </div>
                             
                                 <div class="col s12 m6 l6 xl3">
-                                        <a href="#">
+                                <a href="{{route('product.list')}}">
                                         <div class="card gradient-45deg-amber-amber gradient-shadow min-height-100 white-text animate fadeRight">
                                             <div class="padding-4">
                                                 <div class="row">
                                                 <div class="col s7 m7">
-                                                    <i class="material-icons background-round mt-5">location_on
+                                                    <i class="material-icons background-round mt-5">card_giftcard
                                                     </i>
-                                                    <p>Loactions</p>
+                                                    <p>Products</p>
                                                 </div>
                                                 <div class="col s5 m5 right-align">
                                                 {{-- <h5 class="mb-0 white-text">{{$latestlocation}}</h5> --}}
-                                                <h5 class="mb-0 white-text">5</h5>
+                                                <h5 class="mb-0 white-text">{{$newProducts}}</h5>
 
                                                     <p class="no-margin">New</p>
                                                     {{-- <p>{{$totallocation}}</p> --}}
-                                                    <p>5</p>
+                                                    <p>{{$totalProducts}}</p>
                                                 </div>
                                                 </div>
                                             </div>
@@ -160,8 +160,8 @@
                     <div class="dashboard-revenue-wrapper padding-2 ml-2">
                         <span class="new badge gradient-45deg-amber-amber gradient-shadow mt-2 mr-2">+ 21%</span>
                         <p class="mt-2 mb-0">Total Products</p>
-                        <p class="no-margin grey-text lighten-3">33.1% avg</p>
-                        <h5>22300</h5>
+                        <p class="no-margin grey-text lighten-3">BDT {{$averageRetailPrice}} avg</p>
+                        <h5>BDT <?php echo number_format($totalRetailPrice,2); ?></h5>
                     </div>
                 </div>
             </div>
@@ -170,9 +170,9 @@
                 <div class="card pt-0 pb-0 animate fadeLeft">
                     <div class="dashboard-revenue-wrapper padding-2 ml-2">
                         <span class="new badge gradient-45deg-light-blue-cyan gradient-shadow mt-2 mr-2">+ 42.6%</span>
-                        <p class="mt-2 mb-0">Total Categories</p>
-                        <p class="no-margin grey-text lighten-3">360 avg</p>
-                        <h5>{{$totalcategories}}</h5>
+                        <p class="mt-2 mb-0">Total Suppliers</p>
+                        <p class="no-margin grey-text lighten-3">BDT {{$averageSupplierOpeningBalance}} avg</p>
+                        <h5>BDT <?php echo number_format($supplierOpeningBalance,2); ?></h5>
                     </div>
                 </div>
             </div>
@@ -183,7 +183,7 @@
                         <span class="new badge gradient-45deg-purple-deep-orange gradient-shadow mt-2 mr-2">+ 12%</span>
                         <p class="mt-2 mb-0">Total Warehouses</p>
                         <p class="no-margin grey-text lighten-3">23.1% avg</p>
-                        <h5>2500</h5>
+                        <h5>BDT 2,500</h5>
                     </div>
                 </div>
                 </div>
@@ -194,7 +194,7 @@
         
         
             </div>
-
+            
             <div  id="work-collections">
                 <div class="row">
                     {{-- Most brought productcs --}}
@@ -205,19 +205,22 @@
                             <h6 class="collection-header m-0">Products:</h6>
                             <p>Most Popular Products</p>
                         </li>
+                        @foreach ($products as $product)
                         <li class="collection-item">
                             <div class="row">
                                 <div class="col s6">
-                                    <p class="collections-title">Iphone 12</p>
+                                    <p class="collections-title">{{$product->product_name}}</p>
                                     <p class="collections-content">Sold-80</p>
                                 </div>
-                                <div class="col s3"><span class="task-cat cyan">Mobile</span></div>
+                                <div class="col s3"><span class="task-cat cyan">{{$product->subcategory->sub_category_name}}</span></div>
                                 <div class="col s3">
                                     <div id="project-line-1"></div>
                                 </div>
                             </div>
                         </li>
-                        <li class="collection-item">
+                        @endforeach
+                        
+                        {{-- <li class="collection-item">
                             <div class="row">
                                 <div class="col s6">
                                     <p class="collections-title">Wood chair</p>
@@ -252,7 +255,7 @@
                                     <div id="project-line-4"></div>
                                 </div>
                             </div>
-                        </li>
+                        </li> --}}
                         </ul>
                     </div>
                     
