@@ -7,107 +7,106 @@
     <!--/ Current balance & total transactions cards-->
 
     <!-- User statistics & appointment cards-->
-    <div class="row">
-            <div id="card-stats" class="pt-0" >
-                        
-                        <div class="col s12 m6 l6 xl3">
-                            <a href="{{route('brand.list')}}">
-                            <div class="card gradient-45deg-light-blue-cyan gradient-shadow min-height-100 white-text animate fadeLeft">
-                                <div class="padding-4">
-                                    <div class="row">
-                                    <div class="col s7 m7">
-                                        <i class="material-icons background-round mt-5">branding_watermark
-                                        </i>
-                                        <p>Brands</p>
-                                    </div>
-                                    <div class="col s5 m5 right-align">
-                                         <h5 class="mb-0 white-text">{{$latestbrand}}</h5> 
-                                        {{-- <h5 class="mb-0 white-text">2</h5> --}}
+            <div class="row">
+                    <div id="card-stats" class="pt-0" >
+                                
+                                <div class="col s12 m6 l6 xl3">
+                                    <a href="{{route('brand.list')}}">
+                                    <div class="card gradient-45deg-light-blue-cyan gradient-shadow min-height-100 white-text animate fadeLeft">
+                                        <div class="padding-4">
+                                            <div class="row">
+                                            <div class="col s7 m7">
+                                                <i class="material-icons background-round mt-5">branding_watermark
+                                                </i>
+                                                <p>Brands</p>
+                                            </div>
+                                            <div class="col s5 m5 right-align">
+                                                <h5 class="mb-0 white-text">{{$latestbrand}}</h5> 
+                                                {{-- <h5 class="mb-0 white-text">2</h5> --}}
 
-                                        <p class="no-margin">New</p>
-                                         <p>{{$totalbrand}}</p> 
-                                       
+                                                <p class="no-margin">New</p>
+                                                <p>{{$totalbrand}}</p> 
+                                            
 
+                                            </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    </div>
+                                    </a>
                                 </div>
-                            </div>
-                            </a>
-                        </div>
-                    
-                        
-                        <div class="col s12 m6 l6 xl3">
-                            <a href="{{route('buyer.list')}}">
-                            <div class="card gradient-45deg-red-pink gradient-shadow min-height-100 white-text animate fadeLeft">
-                                <div class="padding-4">
-                                    <div class="row">
-                                    <div class="col s7 m7">
-                                        <i class="material-icons background-round mt-5">perm_identity</i>
-                                        <p>Clients</p>
-                                    </div>
-                                    <div class="col s5 m5 right-align">
-                                        <h5 class="mb-0 white-text">{{$latestBuyer}}</h5> 
-                                       
+                            
+                                
+                                <div class="col s12 m6 l6 xl3">
+                                    <a href="{{route('buyer.list')}}">
+                                    <div class="card gradient-45deg-red-pink gradient-shadow min-height-100 white-text animate fadeLeft">
+                                        <div class="padding-4">
+                                            <div class="row">
+                                            <div class="col s7 m7">
+                                                <i class="material-icons background-round mt-5">perm_identity</i>
+                                                <p>Clients</p>
+                                            </div>
+                                            <div class="col s5 m5 right-align">
+                                                <h5 class="mb-0 white-text">{{$latestBuyer}}</h5> 
+                                            
 
-                                        <p class="no-margin">New</p>
-                                        <p>{{$totalbuyer}}</p> 
-                                       
+                                                <p class="no-margin">New</p>
+                                                <p>{{$totalbuyer}}</p> 
+                                            
+                                            </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    </div>
+                                    </a>
                                 </div>
-                            </div>
-                            </a>
-                        </div>
-                    
-                        <div class="col s12 m6 l6 xl3">
-                                <a href="#">
-                                <div class="card gradient-45deg-amber-amber gradient-shadow min-height-100 white-text animate fadeRight">
-                                    <div class="padding-4">
-                                        <div class="row">
-                                        <div class="col s7 m7">
-                                            <i class="material-icons background-round mt-5">location_on
-                                            </i>
-                                            <p>Loactions</p>
-                                        </div>
-                                        <div class="col s5 m5 right-align">
-                                        {{-- <h5 class="mb-0 white-text">{{$latestlocation}}</h5> --}}
-                                        <h5 class="mb-0 white-text">5</h5>
+                            
+                                <div class="col s12 m6 l6 xl3">
+                                        <a href="#">
+                                        <div class="card gradient-45deg-amber-amber gradient-shadow min-height-100 white-text animate fadeRight">
+                                            <div class="padding-4">
+                                                <div class="row">
+                                                <div class="col s7 m7">
+                                                    <i class="material-icons background-round mt-5">location_on
+                                                    </i>
+                                                    <p>Loactions</p>
+                                                </div>
+                                                <div class="col s5 m5 right-align">
+                                                {{-- <h5 class="mb-0 white-text">{{$latestlocation}}</h5> --}}
+                                                <h5 class="mb-0 white-text">5</h5>
 
-                                            <p class="no-margin">New</p>
-                                            {{-- <p>{{$totallocation}}</p> --}}
-                                            <p>5</p>
+                                                    <p class="no-margin">New</p>
+                                                    {{-- <p>{{$totallocation}}</p> --}}
+                                                    <p>5</p>
+                                                </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        </div>
-                                    </div>
+                                        </a>
                                 </div>
-                                </a>
-                        </div>
 
-                        <div class="col s12 m6 l6 xl3">
-                            <a href="{{route('supplier.list')}}">
-                                <div class="card gradient-45deg-green-teal gradient-shadow min-height-100 white-text animate fadeRight">
-                                    <div class="padding-4">
-                                        <div class="row">
-                                        <div class="col s7 m7">
-                                            <i class="material-icons background-round mt-5">airport_shuttle</i>
-                                            <p>Supplier</p>
-                                        </div>
-                                        <div class="col s5 m5 right-align">
-                                             <h5 class="mb-0 white-text">{{$latestsupplier}}</h5> 
-                                            {{-- <h5 class="mb-0 white-text">6</h5> --}}
+                                <div class="col s12 m6 l6 xl3">
+                                    <a href="{{route('supplier.list')}}">
+                                        <div class="card gradient-45deg-green-teal gradient-shadow min-height-100 white-text animate fadeRight">
+                                            <div class="padding-4">
+                                                <div class="row">
+                                                <div class="col s7 m7">
+                                                    <i class="material-icons background-round mt-5">airport_shuttle</i>
+                                                    <p>Supplier</p>
+                                                </div>
+                                                <div class="col s5 m5 right-align">
+                                                    <h5 class="mb-0 white-text">{{$latestsupplier}}</h5> 
+                                                    {{-- <h5 class="mb-0 white-text">6</h5> --}}
 
-                                            <p class="no-margin">New</p>
-                                        <p>{{$totalsupplier}}</p>
+                                                    <p class="no-margin">New</p>
+                                                <p>{{$totalsupplier}}</p>
+                                                </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        </div>
-                                    </div>
+                                        </a>
                                 </div>
-                                </a>
-                        </div>
             </div>
 
-
-
+            
             <div class="col s12 m4 l3 " style="margin-top:30px">
                <div class="card pt-0 pb-0 animate fadeLeft">
                   <div class="dashboard-revenue-wrapper padding-2 ml-2">
@@ -151,74 +150,7 @@
                    </div>
                 </div>
             </div> 
-
-            
-            <div class="row">
-                <div class="col s12 l4">
-                    <!-- Recent Users -->
-                    <div class="card recent-buyers-card animate fadeUp" style="margin-left: 12px">
-                        <div class="card-content" >
-                            <h4 class="card-title mb-0">Recent Users <i class="material-icons float-right">more_vert</i></h4>
-                            {{-- <p class="medium-small pt-2">Today</p> --}}
-                            <ul class="collection mb-0">
-                                
-                                @foreach ($users as $user)
-                                <li class="collection-item avatar">
-                                    <img src="https://pipesak.com/wp-content/uploads/2019/09/Mike-Place-Holder-PipeSak-About-Page.jpg" alt="" class="circle" />
-                                <p class="font-weight-600"><a href="{{route('user.show',$user->id)}}">{{$user->name}}</a> </p>
-                                    <p class="medium-small">{{ $user->created_at?$user->created_at->diffForHumans():"Null"}}</p>
-                                    <a href="#!" class="secondary-content"><i class="material-icons">star_border</i></a>
-                                </li>   
-                                @endforeach
-                               
-                                
-                                
     
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            
-                <div class="col s12 m6 l8">
-                    <div class="card subscriber-list-card animate fadeRight" style="margin-right: 12px">
-                        <div class="card-content pb-1" >
-                            <h4 class="card-title mb-0">New Buyers<i class="material-icons float-right">more_vert</i></h4>
-                        </div>
-                        <table class="subscription-table responsive-table highlight">
-                            <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Address</th>
-                                <th>Company</th>
-                                <th>Status</th>
-                                <th>Action</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                                @foreach ($buyers as $buyer)
-                                <tr>
-                                    <td>{{$buyer->buyer_name}}</td>
-                                    <td>{{$buyer->buyer_address}}</td>
-                                    <td>{{$buyer->buyer_company}}</td>
-                                    <td><span class="{{$buyer->buyer_status=="Active"? "badge green lighten-5 green-text text-accent-4":"badge pink lighten-5 pink-text text-accent-2"}}">{{$buyer->buyer_status}}</span></td>
-                                    <td><a class="border-primary" href="{{ route('buyer.edit', $buyer->id)}}"><i class="material-icons  edit-icon" style="margin-right: 5px;
-                                        ">edit</i></a><a href="{{ route('buyer.show', $buyer->id)}}"><i class="material-icons">remove_red_eye</i></a></td>
-    
-                                </tr>
-                                @endforeach                            
-    
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-            
-                
-            
-            
-           
-
-            
             <div class="col s12 m4 l4">
                 <div class="card pt-0 pb-0 animate fadeRight">
                     <div class="dashboard-revenue-wrapper padding-2 ml-2">
@@ -258,13 +190,7 @@
         
         
             </div>
-           
 
-    {{-- Total Category product and warehouse --}}
-
-    
-    <!--/ Current balance & appointment cards-->
-  
             <div id="work-collections">
                 <div class="row">
                     {{-- Most brought productcs --}}
@@ -369,27 +295,84 @@
                 </div>
             </div>
 
+            <div class="row">
+                    <div id="card-stats" class="pt-0" >
+                        
+                        <div class="col s12 m6 l6">
+                            <div class="card subscriber-list-card animate fadeRight">
+                                <div class="card-content pb-1" >
+                                        <canvas id="myChart" width="400" height="200"></canvas>
+                                </div>                       
+                            </div>
+                        </div>
+                        <div class="col s12 m6 l6">
+                            <div class="card subscriber-list-card animate fadeRight">
+                                <div class="card-content pb-1" >
+                                    <canvas id="line-chart" width="400" height="200"></canvas>
+                                </div>                       
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="row">
+                <div class="col s12 l4">
+                    <!-- Recent Users -->
+                    <div class="card recent-buyers-card animate fadeUp" >
+                        <div class="card-content" >
+                            <h4 class="card-title mb-0">Recent Users <i class="material-icons float-right">more_vert</i></h4>
+                            {{-- <p class="medium-small pt-2">Today</p> --}}
+                            <ul class="collection mb-0">
+                                
+                                @foreach ($users as $user)
+                                <li class="collection-item avatar">
+                                    <img src="https://pipesak.com/wp-content/uploads/2019/09/Mike-Place-Holder-PipeSak-About-Page.jpg" alt="" class="circle" />
+                                <p class="font-weight-600"><a href="{{route('user.show',$user->id)}}">{{$user->name}}</a> </p>
+                                    <p class="medium-small">{{ $user->created_at?$user->created_at->diffForHumans():"Null"}}</p>
+                                    <a href="#!" class="secondary-content"><i class="material-icons">star_border</i></a>
+                                </li>   
+                                @endforeach
+                            
+                                
+                                
 
-    <div class="row">
-            <div id="card-stats" class="pt-0" >
-                
-                <div class="col s12 m6 l6">
-                    <div class="card subscriber-list-card animate fadeRight">
-                        <div class="card-content pb-1" >
-                                <canvas id="myChart" width="400" height="200"></canvas>
-                        </div>                       
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <div class="col s12 m6 l6">
-                    <div class="card subscriber-list-card animate fadeRight">
+
+                <div class="col s12 m6 l8">
+                    <div class="card subscriber-list-card animate fadeRight" >
                         <div class="card-content pb-1" >
-                            <canvas id="line-chart" width="400" height="200"></canvas>
-                        </div>                       
+                            <h4 class="card-title mb-0">New Buyers<i class="material-icons float-right">more_vert</i></h4>
+                        </div>
+                        <table class="subscription-table responsive-table highlight">
+                            <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Address</th>
+                                <th>Company</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                @foreach ($buyers as $buyer)
+                                <tr>
+                                    <td>{{$buyer->buyer_name}}</td>
+                                    <td>{{$buyer->buyer_address}}</td>
+                                    <td>{{$buyer->buyer_company}}</td>
+                                    <td><span class="{{$buyer->buyer_status=="Active"? "badge green lighten-5 green-text text-accent-4":"badge pink lighten-5 pink-text text-accent-2"}}">{{$buyer->buyer_status}}</span></td>
+                                    <td><a class="border-primary" href="{{ route('buyer.edit', $buyer->id)}}"><i class="material-icons  edit-icon" style="margin-right: 5px;
+                                        ">edit</i></a><a href="{{ route('buyer.show', $buyer->id)}}"><i class="material-icons">remove_red_eye</i></a></td>
+
+                                </tr>
+                                @endforeach                            
+
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
-    </div>
-
      
 </div>
 
@@ -400,7 +383,7 @@
         var myChart = new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: [ 'Division', 'District','Area'],
+                labels: [ 'Division', 'District','Upazila'],
                 datasets: [{
                     label: 'Location',
                     data: [ {{$division}},{{$district}},{{$area}}],
