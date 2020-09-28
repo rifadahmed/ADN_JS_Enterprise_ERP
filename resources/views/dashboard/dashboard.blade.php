@@ -107,6 +107,8 @@
             </div>
 
             
+
+
             <div class="col s12 m4 l3 " style="margin-top:30px">
                <div class="card pt-0 pb-0 animate fadeLeft">
                   <div class="dashboard-revenue-wrapper padding-2 ml-2">
@@ -150,6 +152,8 @@
                    </div>
                 </div>
             </div> 
+
+
     
             <div class="col s12 m4 l4">
                 <div class="card pt-0 pb-0 animate fadeRight">
@@ -191,7 +195,7 @@
         
             </div>
 
-            <div id="work-collections">
+            <div  id="work-collections">
                 <div class="row">
                     {{-- Most brought productcs --}}
                     <div class="col s12 m12 l5" >
@@ -268,7 +272,6 @@
                         </div>
                         </div>
                     </div>
-                {{-- Most Popular category --}}
                     <div class="col s12 m12 l3">
                     <ul id="projects-collection" class="collection z-depth-1 animate fadeLeft" style="height: 348px">
                         <li class="collection-item avatar" >
@@ -294,7 +297,7 @@
 
                 </div>
             </div>
-
+            
             <div class="row">
                     <div id="card-stats" class="pt-0" >
                         

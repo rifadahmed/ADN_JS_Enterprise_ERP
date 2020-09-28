@@ -8,16 +8,45 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-    public function index(){
+    public function index(Request $request){
         $data['title'] = "List Of Users";
-        $data['users']=User::all();
-        $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
-        $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
-        $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;
-        $data['menu_selection']=ThemeSetting::where('key',"MENU_SELECTION")->get()->first()->value;
-        $data['nav_color']=ThemeSetting::where('key',"NAV_COLOR")->get()->first()->value;
-        $data['nav_fix']=ThemeSetting::where('key',"NAV_FIX")->get()->first()->status;
-        $data['footer_fix']=ThemeSetting::where('key',"FOOTER_FIX")->get()->first()->status;
+
+
+            $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+            $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
+            $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;
+            $data['menu_selection']=ThemeSetting::where('key',"MENU_SELECTION")->get()->first()->value;
+            $data['nav_color']=ThemeSetting::where('key',"NAV_COLOR")->get()->first()->value;
+            $data['nav_fix']=ThemeSetting::where('key',"NAV_FIX")->get()->first()->status;
+            $data['footer_fix']=ThemeSetting::where('key',"FOOTER_FIX")->get()->first()->status;
+
+
+            $users = New User();
+
+            /** Search with status */
+            if ($request->status == 'Active') {
+                $suppliers = $users->where('status', 'Active');
+            } else if ($request->status == 'Inactive') {
+                $users = $users->where('status', 'Inactive');
+            }
+            /** Search with name */
+            if (isset($request->search)) {
+                $users = $users->where(function ($query) use ($request) {
+                    $query->where('name', 'like', '%' . $request->search . '%');
+                });
+            }
+    
+            $users = $users->orderBy('id', 'DESC')->paginate(10);
+    
+            if (isset($request->search) || $request->status) {
+                $render['status'] = $request->status;
+                $render['search'] = $request->search;
+                $users       = $users->appends($render);
+            }
+    
+    
+            $data['users'] = $users;
+            $data['serial']     = managePagination($users);
         return view('users.index', $data);
     }
     public function edit($id){
