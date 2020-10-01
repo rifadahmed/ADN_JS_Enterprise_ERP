@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Category;
+use App\ThemeSetting;
+use Illuminate\Http\Request;
+
 class CategoryController extends Controller
 {
     /***
@@ -40,7 +42,13 @@ class CategoryController extends Controller
 
         $data['categories'] = $categories;
         $data['serial']     = managePagination($categories);
-
+        $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+        $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
+        $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;
+        $data['menu_selection']=ThemeSetting::where('key',"MENU_SELECTION")->get()->first()->value;
+        $data['nav_color']=ThemeSetting::where('key',"NAV_COLOR")->get()->first()->value;
+        $data['nav_fix']=ThemeSetting::where('key',"NAV_FIX")->get()->first()->status;
+        $data['footer_fix']=ThemeSetting::where('key',"FOOTER_FIX")->get()->first()->status;
         return view('categories.index',$data);
     }
 
@@ -50,6 +58,13 @@ class CategoryController extends Controller
     public function show($id){
         $data['title'] = "Category Details";
         $data['data'] = Category::findOrFail($id);
+        $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+        $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
+        $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;
+        $data['menu_selection']=ThemeSetting::where('key',"MENU_SELECTION")->get()->first()->value;
+        $data['nav_color']=ThemeSetting::where('key',"NAV_COLOR")->get()->first()->value;
+        $data['nav_fix']=ThemeSetting::where('key',"NAV_FIX")->get()->first()->status;
+        $data['footer_fix']=ThemeSetting::where('key',"FOOTER_FIX")->get()->first()->status;
         return view('categories.show', $data);
     }
 
@@ -58,6 +73,13 @@ class CategoryController extends Controller
      */
     public function create(){
         $data['title'] = "Create Category";
+        $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+        $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
+        $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;
+        $data['menu_selection']=ThemeSetting::where('key',"MENU_SELECTION")->get()->first()->value;
+        $data['nav_color']=ThemeSetting::where('key',"NAV_COLOR")->get()->first()->value;
+        $data['nav_fix']=ThemeSetting::where('key',"NAV_FIX")->get()->first()->status;
+        $data['footer_fix']=ThemeSetting::where('key',"FOOTER_FIX")->get()->first()->status;
         return view('categories.create', $data);
     }
 
@@ -66,7 +88,7 @@ class CategoryController extends Controller
      */
     public function store(Request $request){
         $request->validate([
-            'category_name' => 'required|unique:categories',
+            'category_name' => 'required|unique:categories|regex:/^[\pL\s\-]+$/u',
             'category_status' => 'required',
             'category_order' => 'nullable|integer',
 
@@ -90,6 +112,13 @@ class CategoryController extends Controller
     public function edit($id){
         $data['title'] = "Edit Category";
         $data['data'] = Category::where('id',$id)->first();
+        $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+        $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
+        $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;
+        $data['menu_selection']=ThemeSetting::where('key',"MENU_SELECTION")->get()->first()->value;
+        $data['nav_color']=ThemeSetting::where('key',"NAV_COLOR")->get()->first()->value;
+        $data['nav_fix']=ThemeSetting::where('key',"NAV_FIX")->get()->first()->status;
+        $data['footer_fix']=ThemeSetting::where('key',"FOOTER_FIX")->get()->first()->status;
         return view('categories.edit', $data);
     }
 
@@ -99,7 +128,7 @@ class CategoryController extends Controller
     public function update(Request $request,$id){
 
         $request->validate([
-            'category_name' => 'unique:categories,category_name,'.$id ,
+            'category_name' => 'regex:/^[\pL\s\-]+$/u|unique:categories,category_name,'.$id ,
             'category_status' => 'required',
             'category_order' => 'nullable|integer',
         ]);

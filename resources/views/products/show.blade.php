@@ -25,13 +25,41 @@
                                                     <tbody>
 
                                                         <tr>
-                                                            <td>Product Name:</td>
-                                                            <td class="product_name">X</td>
+                                                            <td>Name:</td>
+                                                        <td class="product_name">{{$product->product_name}}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Category:</td>
+                                                            <td class="product_name">{{$product->category->category_name}}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Sub Category:</td>
+                                                            <td class="product_name">{{$product->subcategory->sub_category_name}}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Brand:</td>
+                                                            <td class="product_name">{{$product->brand->brand_name}}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Sku:</td>
+                                                            <td class="product_name">{{$product->product_sku}}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Retail Price:</td>
+                                                            <td class="product_name">{{$product->product_retail_price}}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Wholesale Price:</td>
+                                                            <td class="product_name">{{$product->product_wholesale_price}}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Details:</td>
+                                                            <td class="product_name">{{$product->product_description}}</td>
                                                         </tr>
 
                                                         <tr>
                                                             <td>Status:</td>
-                                                            <td><span class=" users-view-status chip green lighten-5 green-text">Active</span></td>
+                                                        <td><span class="{{$product->product_status=="Active" ?'green-text' : 'red-text'}}">{{$product->product_status}}</span></td>
                                                         </tr>
                                                     </tbody>
                                                 </table>

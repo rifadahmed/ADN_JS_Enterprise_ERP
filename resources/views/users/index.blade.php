@@ -14,11 +14,10 @@
 
     <!-- BEGIN: Page Main-->
         <div class="row">
-            <div class="content-wrapper-before gradient-45deg-indigo-purple"></div>
             <div class="breadcrumbs-dark pb-0 pt-4" id="breadcrumbs-wrapper">
                 <!-- Search for small screen-->
                 <div class="container">
-                    <div class="row">
+                    <div class="row" style="margin-top: -20px;">
                         <div class="col s10 m6 l6">
                             <h5 class="breadcrumbs-title mt-0 mb-0"><span>{{ isset($title) ? $title : "Title Not Found" }}</span></h5>
                             <ol class="breadcrumbs mb-0">
@@ -42,14 +41,14 @@
                             <div class="users-list-filter">
                                 <div class="card-panel">
                                     <div class="row">
-                                        <form>
+                                        <form  method="GET" action="">
                                             <div class="col s12 m6 l3">
                                                 <label for="users-list-verified">User Name</label>
                                                 <div class="input-field">
-                                                    <input type="text">
+                                                    <input type="text" name="search" value="{{ (Request::get('search')) ? Request::get('search') : null }}">
                                                 </div>
                                             </div>
-                                            <div class="col s12 m6 l3">
+                                            <div class="col s12 m6 l3 dropdownbar">
                                                 <label for="users-list-role">User Type</label>
                                                 <div class="input-field">
                                                     <br>
@@ -61,14 +60,14 @@
                                                     </select>
                                                 </div>
                                             </div>
-                                            <div class="col s12 m6 l3">
+                                            <div class="col s12 m6 l3 dropdownbar">
                                                 <label for="users-list-status">Status</label>
                                                 <div class="input-field">
                                                     <br>
-                                                    <select class="js-example-basic-single" id="users-list-status">
+                                                    <select class="js-example-basic-single" id="users-list-status" name="status">
                                                         <option value="">Any</option>
-                                                        <option value="Active">Active</option>
-                                                        <option value="Inactive">Inactive</option>
+                                                        <option value="Active" @if(Request::get('status') == 'Active') selected @endif>Active</option>
+                                                        <option value="Inactive" @if(Request::get('status') == 'Inactive') selected @endif>Inactive</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -87,156 +86,24 @@
                                             <table id="users-list-datatable" class="table">
                                                 <thead>
                                                 <tr>
-                                                    <th></th>
+                                                    
                                                     <th>SL</th>
                                                     <th>User Name</th>                                                    
+                                                    <th>Email</th>
                                                     <th>Action</th>
-                                                    <th></th>
+                                                   
                                                 </tr>
                                                 </thead>
                                                 <tbody>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>300</td>
-                                                    <td>X</td>
-                                                    
-                                                    <td><a class="border-primary" href="{{ route('user.edit', 1)}}"><i class="material-icons  edit-icon">edit</i></a><a href="{{ route('user.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    {{-- <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td> --}}
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>301</td>
-                                                    <td>Z</td>
-                                                    
-                                                    <td><a href="{{ route('user.edit', 1)}}"><i class="material-icons  edit-icon">edit</i></a><a href="{{ route('user.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>302</td>                                                 
-                                                    <td>X</td>
-                                                    
-                                                    <td><a href="{{ route('user.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('user.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>303</td>
-                                                    <td>Y</td>
-                                                    <td><a href="{{ route('user.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('user.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>304</td>
-                                                    <td>Y</td>
-                                                    <td><a href="{{ route('user.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('user.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
+                                                    @foreach ($users as $user)
+                                                    <tr>
+                                                            <td>{{$user->id}}</td>
+                                                            <td>{{$user->name}}</td>
+                                                            <td>{{$user->email}}</td>
+                                                            <td><a class="border-primary" href="{{ route('user.edit', $user->id)}}"><i class="material-icons  edit-icon">edit</i></a><a href="{{ route('user.show', $user->id)}}"><i class="material-icons">remove_red_eye</i></a></td>
 
-
-                                                <tr>
-                                                    <td></td>
-                                                    <td>307</td>
-                                                    <td>Z</td>
-                                                    
-                                                    <td><a href="{{ route('user.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('user.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>308</td>
-                                                    <td>Y</td>
-                                                    <td><a href="{{ route('user.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('user.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>309</td>
-                                                    <td>Z</td>
-
-                                                    <td><a href="{{ route('user.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('user.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>310</td>
-                                                    <td>Y</td>
-                                                    <td><a href="{{ route('user.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('user.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>311</td>
-                                                    <td>Y</td>
-                                                    <td><a href="{{ route('user.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('user.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>312</td>
-                                                    <td>Y</td>
-                                                    <td><a href="{{ route('user.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('user.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>313</td>
-                                                    <td>Z</td>
-
-                                                    <td><a href="{{ route('user.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('user.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>314</td>
-                                                    <td>Y</td>
-                                                    <td><a href="{{ route('user.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('user.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>315</td>
-                                                    <td>Z</td>
-                                                   
-                                                    <td><a href="{{ route('user.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('user.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>316</td>
-                                                    <td>Z</td>
-                                                   
-                                                    <td><a href="{{ route('user.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('user.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>317</td>
-                                                    <td>Y</td>
-                                                    <td><a href="{{ route('user.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('user.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>318</td>
-                                                    <td>Y</td>
-                                                    <td><a href="{{ route('user.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('user.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>319</td>
-                                                    <td>Y</td>
-                                                    <td><a href="{{ route('user.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('user.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-
-
-
+                                                        </tr>
+                                                    @endforeach
                                                 </tbody>
                                             </table>
                                         </div>

@@ -1,4 +1,22 @@
 
     .select-wrapper input.select-dropdown ,.select-wrapper .caret{
         display: none;
+
+    }
+
+    .select2-search__field{
+        border:none !important;
+    }
+    .select2-selection{
+        border-top:1px solid white !important;
+        border-left:1px solid white !important;
+        border-right:1px solid white !important;
+        
+       
+    }
+    .input-field{
+        margin-top:13px !important;
+    }
+    .dropdownbar{
+        margin-top:-3px;
     }

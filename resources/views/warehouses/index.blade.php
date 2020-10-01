@@ -13,8 +13,7 @@
 <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
 
     <!-- BEGIN: Page Main-->
-        <div class="row">
-            <div class="content-wrapper-before gradient-45deg-indigo-purple"></div>
+        <div class="row" style="margin-top: -20px;">
             <div class="breadcrumbs-dark pb-0 pt-4" id="breadcrumbs-wrapper">
                 <!-- Search for small screen-->
                 <div class="container">
@@ -42,14 +41,14 @@
                             <div class="users-list-filter">
                                 <div class="card-panel">
                                     <div class="row">
-                                        <form>
+                                        <form method="GET" action="">
                                             <div class="col s12 m6 l3">
                                                 <label for="users-list-verified">Warehouse Name</label>
                                                 <div class="input-field">
-                                                    <input type="text">
+                                                <input type="text" name='search' value="{{Request::get('search') ? Request::get('search') : null}}">
                                                 </div>
                                             </div>
-                                            <div class="col s12 m6 l3">
+                                            <div class="col s12 m6 l3 dropdownbar">
                                                 <label for="users-list-role">Warehouse Type</label>
                                                 <div class="input-field">
                                                     <br>
@@ -61,14 +60,14 @@
                                                     </select>
                                                 </div>
                                             </div>
-                                            <div class="col s12 m6 l3">
+                                            <div class="col s12 m6 l3 dropdownbar">
                                                 <label for="users-list-status">Status</label>
                                                 <div class="input-field">
                                                     <br>
-                                                    <select class="js-example-basic-single" id="users-list-status">
+                                                    <select class="js-example-basic-single" name='status' id="users-list-status">
                                                         <option value="">Any</option>
-                                                        <option value="Active">Active</option>
-                                                        <option value="Inactive">Inactive</option>
+                                                        <option value="Active" @if (Request::get('status')=="Active") selected @endif>Active</option>
+                                                        <option value="Inactive" @if (Request::get('status')=="Inactive") selected @endif>Inactive</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -87,198 +86,29 @@
                                             <table id="users-list-datatable" class="table">
                                                 <thead>
                                                 <tr>
-                                                    <th></th>
                                                     <th>SL</th>
-                                                    <th>Warehouse Name</th>                                                    
+                                                    <th>Warehouse Name</th>      
+                                                    <th>Warehouse Order</th>                                                 
                                                     <th>Status</th>
                                                     <th>Action</th>
-                                                    <th></th>
                                                 </tr>
                                                 </thead>
                                                 <tbody>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>300</td>
-                                                    <td>X</td>
+                                                    @foreach ($warehouses as $warehouse)
+                                                    <tr>
+                                                    <td>{{$serial++}}</td>
+                                                    <td>{{$warehouse->warehouse_name}}</td>
+                                                    <td>{{$warehouse->warehouse_order}}</td>
                                                     <td><span class="chip green lighten-5">
-                                                        <span class="green-text">Active</span>
-                                                      </span>
+                                                            <span class="{{$warehouse->warehouse_status=="Active" ? "green-text" : "red-text"}}">{{$warehouse->warehouse_status}}</span>
+                                                          </span>
                                                     </td>
-                                                    <td><a class="border-primary" href="{{ route('warehouse.edit', 1)}}"><i class="material-icons  edit-icon">edit</i></a><a href="{{ route('warehouse.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    {{-- <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td> --}}
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>301</td>
-                                                    <td>Z</td>
-                                                    <td><span class="chip green lighten-5">
-                    <span class="green-text">Active</span>
-                  </span>
-                                                    </td>
-                                                    <td><a href="{{ route('warehouse.edit', 1)}}"><i class="material-icons  edit-icon">edit</i></a><a href="{{ route('warehouse.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>302</td>                                                 
-                                                    <td>X</td>
-                                                    <td><span class="chip green lighten-5">
-                    <span class="green-text">Active</span>
-                  </span>
-                                                    </td>
-                                                    <td><a href="{{ route('warehouse.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('warehouse.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>303</td>
-                                                    <td>Y</td>
-                                                    <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('warehouse.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('warehouse.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>304</td>
-                                                    <td>Y</td>
-                                                    <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('warehouse.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('warehouse.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>305</td>
-                                                    <td>Z</td>
-                                                    <td><span class="chip green lighten-5">
-                    <span class="green-text">Active</span>
-                  </span>
-                                                    </td>
-                                                    <td><a href="{{ route('warehouse.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('warehouse.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
+                                                    <td><a class="border-primary" href="{{ route('warehouse.edit', $warehouse->id)}}"><i class="material-icons  edit-icon">edit</i></a><a href="{{ route('warehouse.show', $warehouse->id)}}"><i class="material-icons">remove_red_eye</i></a></td>
+                                                       
+                                                    </tr>
+                                                    @endforeach
+                                                
 
-                                                <tr>
-                                                    <td></td>
-                                                    <td>307</td>
-                                                    <td>Z</td>
-                                                    <td><span class="chip green lighten-5">
-                    <span class="green-text">Active</span>
-                  </span>
-                                                    </td>
-                                                    <td><a href="{{ route('warehouse.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('warehouse.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>308</td>
-                                                    <td>Y</td>
-                                                    <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('warehouse.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('warehouse.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>309</td>
-                                                    <td>Z</td>
-                                                    <td><span class="chip green lighten-5">
-                    <span class="green-text">Active</span>
-                  </span>
-                                                    </td>
-                                                    <td><a href="{{ route('warehouse.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('warehouse.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>310</td>
-                                                    <td>Y</td>
-                                                    <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('warehouse.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('warehouse.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>311</td>
-                                                    <td>Y</td>
-                                                    <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('warehouse.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('warehouse.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>312</td>
-                                                    <td>Y</td>
-                                                    <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('warehouse.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('warehouse.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>313</td>
-                                                    <td>Z</td>
-                                                    <td><span class="chip green lighten-5">
-                    <span class="green-text">Active</span>
-                  </span>
-                                                    </td>
-                                                    <td><a href="{{ route('warehouse.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('warehouse.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>314</td>
-                                                    <td>Y</td>
-                                                    <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('warehouse.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('warehouse.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>315</td>
-                                                    <td>Z</td>
-                                                    <td><span class="chip green lighten-5">
-                    <span class="green-text">Active</span>
-                  </span>
-                                                    </td>
-                                                    <td><a href="{{ route('warehouse.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('warehouse.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>316</td>
-                                                    <td>Z</td>
-                                                    <td><span class="chip green lighten-5">
-                    <span class="green-text">Active</span>
-                  </span>
-                                                    </td>
-                                                    <td><a href="{{ route('warehouse.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('warehouse.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>317</td>
-                                                    <td>Y</td>
-                                                    <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('warehouse.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('warehouse.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>318</td>
-                                                    <td>Y</td>
-                                                    <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('warehouse.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('warehouse.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>319</td>
-                                                    <td>Y</td>
-                                                    <td><span class="chip red lighten-5"><span class="red-text">Inactive</span></span></td>
-                                                    <td><a href="{{ route('warehouse.edit', 1)}}"><i class="material-icons edit-icon">edit</i></a><a href="{{ route('warehouse.show', 1)}}"><i class="material-icons">remove_red_eye</i></a></td>
-                                                    <td></td>
-                                                </tr>
 
 
 

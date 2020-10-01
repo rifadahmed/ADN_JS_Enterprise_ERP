@@ -20,11 +20,11 @@ class CreateBuyerTable extends Migration
             $table->text('buyer_address');
             $table->foreign('buyer_type_id')->references('id')->on('buyer_types');
             $table->unsignedBigInteger('buyer_type_id');
-            $table->foreign('buyer_division_id')->references('id')->on('locations');
+            $table->foreign('buyer_division_id')->references('id')->on('divisions');
             $table->unsignedBigInteger('buyer_division_id');
-            $table->foreign('buyer_district_id')->references('id')->on('locations');
+            $table->foreign('buyer_district_id')->references('id')->on('districts');
             $table->unsignedBigInteger('buyer_district_id');
-            $table->foreign('buyer_area_id')->references('id')->on('locations');
+            $table->foreign('buyer_area_id')->references('id')->on('upazilas');
             $table->unsignedBigInteger('buyer_area_id');
             $table->foreign('buyer_kam_id')->references('id')->on('users');
             $table->unsignedBigInteger('buyer_kam_id');

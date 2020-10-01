@@ -9,13 +9,15 @@
         <h5 class="theme-cutomizer-title">Theme Customizer</h5>
         <p class="medium-small">Customize & Preview in Real Time</p>
         <div class="menu-options">
-            <h6 class="mt-6">Menu Options</h6>
+            <h6 class="mt-6">Menu Options <a href="#" id="menuReset" style="margin-left:10px">Reset</a>
+
+            </h6>
             <hr class="customize-devider" />
             <div class="menu-options-form row">
                 <div class="input-field col s12 menu-color mb-0">
                     <p class="mt-0">Menu Color</p>
                     <div class="gradient-color center-align">
-                        <span class="menu-color-option gradient-45deg-indigo-blue" data-color="gradient-45deg-indigo-blue"></span>
+                        <span class="menu-color-option gradient-45deg-indigo-blue" value="dummy" data-color="gradient-45deg-indigo-blue"></span>
                         <span
                             class="menu-color-option gradient-45deg-purple-deep-orange"
                             data-color="gradient-45deg-purple-deep-orange"
@@ -102,18 +104,18 @@
                     </div>
                 </div>
                 <div class="input-field col s12">
-                    <div class="switch">
-                        Menu Dark
+                    <div class="switch" >Menu Dark
+                        
                         <label class="float-right"
-                        ><input class="menu-dark-checkbox" type="checkbox"/> <span class="lever ml-0"></span
+                        ><input class="menu-dark-checkbox" id="menuDark" type="checkbox" {{$menu_dark==1?'':'checked'}}> <span class="lever ml-0"></span
                             ></label>
                     </div>
                 </div>
                 <div class="input-field col s12">
-                    <div class="switch">
+                    <div class="switch" >
                         Menu Collapsed
                         <label class="float-right"
-                        ><input class="menu-collapsed-checkbox" type="checkbox"/> <span class="lever ml-0"></span
+                        ><input class="menu-collapsed-checkbox" id="menuCollapse" type="checkbox" {{$menu_collapse==1?'':'checked'}}/> <span class="lever ml-0"></span
                             ></label>
                     </div>
                 </div>
@@ -121,38 +123,44 @@
                     <div class="switch">
                         <p class="mt-0">Menu Selection</p>
                         <label>
-                            <input
+                            <input  class="menuSelect"
                                 class="menu-selection-radio with-gap"
                                 value="sidenav-active-square"
                                 name="menu-selection"
-                                type="radio"
+                                type="radio" {{$menu_selection=="sidenav-active-square" ?'checked':''}}
                             />
                             <span>Square</span>
                         </label>
                         <label>
-                            <input
+                            <input class="menuSelect"
                                 class="menu-selection-radio with-gap"
                                 value="sidenav-active-rounded"
                                 name="menu-selection"
-                                type="radio"
+                                type="radio" {{$menu_selection=="sidenav-active-rounded" ?'checked':''}}
                             />
                             <span>Rounded</span>
                         </label>
                         <label>
-                            <input class="menu-selection-radio with-gap" value="" name="menu-selection" type="radio" />
+                            <input 
+                            class="menuSelect"
+                                class="menu-selection-radio with-gap"
+                                value="sidenav-active-normal"
+                                name="menu-selection"
+                                type="radio" {{$menu_selection=="sidenav-active-normal" ?'checked':''}}
+                             />
                             <span>Normal</span>
                         </label>
                     </div>
                 </div>
             </div>
         </div>
-        <h6 class="mt-6">Navbar Options</h6>
+        <h6 class="mt-6">Navbar Options <a href="#" id="navReset" style="margin-left:10px">Reset</a></h6>
         <hr class="customize-devider" />
         <div class="navbar-options row">
             <div class="input-field col s12 navbar-color mb-0">
                 <p class="mt-0">Navbar Color</p>
                 <div class="gradient-color center-align">
-                    <span class="navbar-color-option gradient-45deg-indigo-blue" data-color="gradient-45deg-indigo-blue"></span>
+                    <span class="navbar-color-option gradient-45deg-indigo-blue"  value="rifad" data-color="gradient-45deg-indigo-blue"></span>
                     <span
                         class="navbar-color-option gradient-45deg-purple-deep-orange"
                         data-color="gradient-45deg-purple-deep-orange"
@@ -189,39 +197,39 @@
                     <span class="navbar-color-option brown darken-2" data-color="brown darken-2"></span>
                 </div>
             </div>
-            <div class="input-field col s12">
-                <div class="switch">
+            {{-- <div class="input-field col s12">
+                <div class="switch" >
                     Navbar Dark
                     <label class="float-right"
-                    ><input class="navbar-dark-checkbox" type="checkbox"/> <span class="lever ml-0"></span
+                    ><input class="navbar-dark-checkbox" id="navDark" type="checkbox"/> <span class="lever ml-0"></span
                         ></label>
                 </div>
-            </div>
+            </div> --}}
             <div class="input-field col s12">
-                <div class="switch">
+                <div class="switch" >
                     Navbar Fixed
                     <label class="float-right"
-                    ><input class="navbar-fixed-checkbox" type="checkbox" checked/> <span class="lever ml-0"></span
+                    ><input class="navbar-fixed-checkbox" id="navFix" type="checkbox" {{$nav_fix==1 ?'checked':''}}/> <span class="lever ml-0"></span
                         ></label>
                 </div>
             </div>
         </div>
-        <h6 class="mt-6">Footer Options</h6>
+        <h6 class="mt-6">Footer Options <a href="#" id="footerReset" style="margin-left:10px">Reset</a></h6>
         <hr class="customize-devider" />
         <div class="navbar-options row">
-            <div class="input-field col s12">
-                <div class="switch">
+            {{-- <div class="input-field col s12">
+                <div class="switch" >
                     Footer Dark
                     <label class="float-right"
-                    ><input class="footer-dark-checkbox" type="checkbox"/> <span class="lever ml-0"></span
+                    ><input class="footer-dark-checkbox" id="footerDark" type="checkbox"/> <span class="lever ml-0"></span
                         ></label>
                 </div>
-            </div>
+            </div> --}}
             <div class="input-field col s12">
-                <div class="switch">
+                <div class="switch" >
                     Footer Fixed
                     <label class="float-right"
-                    ><input class="footer-fixed-checkbox" type="checkbox"/> <span class="lever ml-0"></span
+                    ><input class="footer-fixed-checkbox" id="footerFix" type="checkbox" {{$footer_fix==0 ?'checked':''}}/> <span class="lever ml-0"></span
                         ></label>
                 </div>
             </div>

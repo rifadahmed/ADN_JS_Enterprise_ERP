@@ -12,6 +12,8 @@ Website: http://adndigital.com.bd
     <meta name="description" content="ADN ERP Solution">
     <meta name="keywords" content="">
     <meta name="author" content="ADN Digital">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
     <title>{{ config('app.name', 'JS ERP') }}</title>
     <link rel="apple-touch-icon" href={{asset("app-assets/images/favicon/apple-touch-icon-152x152.png")}}>
     <link rel="shortcut icon" type="image/x-icon" href={{asset("app-assets/images/favicon/favicon-32x32.png")}}>
@@ -43,6 +45,7 @@ Website: http://adndigital.com.bd
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>--}}
     <!-- END: Bootstrap-->
     {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" integrity="sha512-nMNlpuaDPrqlEls3IX/Q56H36qvBASwb3ipuo3MxeWbsQB1881ox0cRv7UPTgBlriqoynt35KjEwgGUeUXIPnw==" crossorigin="anonymous" /> --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
 
   </head>
   <!-- END: Head-->
@@ -59,7 +62,7 @@ Website: http://adndigital.com.bd
     <!-- BEGIN: Page Main-->
     <div id="main">
       <div class="row">
-        <div class="content-wrapper-before gradient-45deg-indigo-purple"></div>
+       <div class="content-wrapper-before {{$nav_color}}"></div> 
         <div class="col s12">
           <div class="container">
               <!-- STAET : FLASH MESSAGE RK -->
@@ -114,6 +117,7 @@ Website: http://adndigital.com.bd
 
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
     
+
     <script>
       $(document).ready(function() {
     
@@ -121,7 +125,7 @@ Website: http://adndigital.com.bd
 
         
       });
-      </script>
+    </script>
     @stack('script')
 
   </body>

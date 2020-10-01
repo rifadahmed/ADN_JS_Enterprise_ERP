@@ -13,8 +13,7 @@
 <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
 
     <!-- BEGIN: Page Main-->
-        <div class="row">
-            <div class="content-wrapper-before gradient-45deg-indigo-purple"></div>
+        <div class="row" style="margin-top: -20px;">
             <div class="breadcrumbs-dark pb-0 pt-4" id="breadcrumbs-wrapper">
                 <!-- Search for small screen-->
                 <div class="container">
@@ -49,7 +48,7 @@
                                                     <input type="text" name="search" value="{{ (Request::get('search')) ? Request::get('search') : null }}">
                                                 </div>
                                             </div>
-                                            <div class="col s12 m6 l3">
+                                            <div class="col s12 m6 l3 dropdownbar">
                                                 <label for="users-list-role">Buyer Type</label>
                                                 <div class="input-field">
                                                     <br>
@@ -62,7 +61,7 @@
                                                     </select>
                                                 </div>
                                             </div>
-                                            <div class="col s12 m6 l3">
+                                            <div class="col s12 m6 l3 dropdownbar">
                                                 <label for="users-list-status">Status</label>
                                                 <div class="input-field">
                                                     <br>
@@ -115,9 +114,9 @@
                                                         <td>{{$buyer->buyer_company}}</td>
                                                         <td>{{$buyer->buyer_address}}</td>
                                                         <td>{{$buyer->buyer_type->buyer_type_name}}</td>
-                                                        <td>{{$buyer->division->location_name}}</td>
-                                                        <td>{{$buyer->district->location_name}}</td>
-                                                        <td>{{$buyer->area->location_name}}</td>
+                                                        <td>{{$buyer->division->name}}</td>
+                                                        <td>{{$buyer->district->name}}</td>
+                                                        <td>{{$buyer->area->name}}</td>
                                                         <td>{{$buyer->buyer_phone}}</td>
                                                         <td>{{$buyer->buyer_email}}</td>
                                                         <td><span class="chip green lighten-5">

@@ -11,12 +11,12 @@
 <div class="row">
     <div class="input-field col s12 m6">
         <br>
-        <select class="validate js-example-basic-single" name="brand_status" id="status" required="" >
+        <select class="validate js-example-basic-single" name="brand_status" id="status"  >
             <option value="" disabled selected> - Select Brand Status - </option>
             <option value="Active" @if(old('brand_status', (isset($data ) && $data->brand_status == 'Active'))) selected @endif>Active</option>
             <option value="Inactive" @if(old('brand_status', (isset($data ) && $data->brand_status == 'Inactive'))) selected @endif>Inactive</option>
         </select>
-        <label for="status">Brand Status * </label>
+        <label for="status">Brand Status * @if ($errors->has('brand_status')) <small class="red-text"> [ {{ $errors->first('brand_status') }} ] </small> @endif</label>
     </div>
 </div>
 

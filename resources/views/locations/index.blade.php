@@ -1,6 +1,7 @@
 
 
 @extends('layouts.master')
+
 @push('css')
     <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/vendors/vendors.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/vendors/data-tables/css/jquery.dataTables.min.css') }}">
@@ -9,8 +10,10 @@
 @endpush
 
 
+
 @section('content')
 <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
+{{-- <link rel="stylesheet" type="text/css" href="{{ asset('css/select_2.css') }}"> --}}
 
     <!-- BEGIN: Page Main-->
         <div class="row">
@@ -18,8 +21,8 @@
             <div class="breadcrumbs-dark pb-0 pt-4" id="breadcrumbs-wrapper">
                 <!-- Search for small screen-->
                 <div class="container">
-                    <div class="row">
-                        <div class="col s10 m6 l6">
+                    <div class="row" style="margin-top: -20px;">
+                        <div class="col s10 m6 l6" >
                             <h5 class="breadcrumbs-title mt-0 mb-0"><span>{{ isset($title) ? $title : "Title Not Found" }}</span></h5>
                             <ol class="breadcrumbs mb-0">
                                 <li class="breadcrumb-item"><a href="{{route('location.list') }}">Manage Location</a>
@@ -44,13 +47,14 @@
                                 <div class="card-panel">
                                     <div class="row">
                                         <form method="GET" action="">
+                                            
                                             <div class="col s12 m6 l3">
                                                 <label for="users-list-verified">Location Name</label>
                                                 <div class="input-field">
                                                     <input type="text" name="search" value="{{ (Request::get('search')) ? Request::get('search') : null }}">
                                                 </div>
                                             </div>
-                                            <div class="col s12 m6 l3">
+                                            <div class="col s12 m6 l3 dropdownbar" >
                                                 <label for="users-list-role">Location Type</label>
                                                 <div class="input-field">
                                                     <br>
@@ -64,7 +68,7 @@
                                                     </select>
                                                 </div>
                                             </div>
-                                            <div class="col s12 m6 l3">
+                                            <div class="col s12 m6 l3 dropdownbar">
                                                 <label for="users-list-status">Status</label>
                                                 <div class="input-field">
                                                     <br>

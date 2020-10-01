@@ -10,8 +10,15 @@ class DatabaseSeeder extends Seeder
      * @return void
      */
     public function run()
-    {
-        // $this->call(UserSeeder::class);
-         $this->call(LocationTypesSeeder::class);
+    {  
+        Schema::disableForeignKeyConstraints();
+        DB::table('divisions')->truncate();
+        DB::table('districts')->truncate();
+        DB::table('upazilas')->truncate();
+        
+        DB::table('theme_settings')->truncate();
+        $this->call(ThemeSettingsSeeder::class);
+        $this->call(LocationSeeder::class);
+        Schema::enableForeignKeyConstraints();
     }
 }

@@ -14,7 +14,7 @@
     {
       labels: [1, 2],
       series: [
-        { meta: "Completed", value: 80 },
+        { meta: "Completed", value: 90 },
         { meta: "Remaining", value: 20 }
       ]
     },

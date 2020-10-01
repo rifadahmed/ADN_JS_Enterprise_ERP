@@ -13,8 +13,7 @@
 <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
 
     <!-- BEGIN: Page Main-->
-        <div class="row">
-            <div class="content-wrapper-before gradient-45deg-indigo-purple"></div>
+        <div class="row" style="margin-top: -20px;">
             <div class="breadcrumbs-dark pb-0 pt-4" id="breadcrumbs-wrapper">
                 <!-- Search for small screen-->
                 <div class="container">
@@ -50,7 +49,7 @@
                                                     <input type="text" name="search" value="{{ (Request::get('search')) ? Request::get('search') : null }}">
                                                 </div>
                                             </div>
-                                            <div class="col s12 m6 l4">
+                                            <div class="col s12 m6 l4 dropdownbar">
                                                 <label for="users-list-status">Category Status</label>
                                                 <div class="input-field">
                                                     <br>

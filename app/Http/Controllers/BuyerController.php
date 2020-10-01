@@ -3,15 +3,19 @@
 namespace App\Http\Controllers;
 
 use App\Buyer;
+use App\Upazila;
+use App\District;
+use App\Division;
 use App\Location;
 use App\BuyerType;
 use App\LocationType;
+use App\ThemeSetting;
 use Illuminate\Http\Request;
 
 class BuyerController extends Controller
 {
     public function index(Request $request){
-        $data['title'] = "List Of Buyer";
+        $data['title'] = "List Of Buyers";
         // $data['buyers']=Buyer::all();
         $data['buyer_types']=BuyerType::all();
         $buyers = New Buyer();
@@ -46,21 +50,43 @@ class BuyerController extends Controller
 
         $data['buyers'] = $buyers;
         $data['serial']     = managePagination($buyers);
-
+        $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+        $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
+        $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;        
+        $data['menu_selection']=ThemeSetting::where('key',"MENU_SELECTION")->get()->first()->value;
+        $data['nav_color']=ThemeSetting::where('key',"NAV_COLOR")->get()->first()->value;
+        $data['nav_fix']=ThemeSetting::where('key',"NAV_FIX")->get()->first()->status;
+        $data['footer_fix']=ThemeSetting::where('key',"FOOTER_FIX")->get()->first()->status;
         return view('buyers.index', $data);
     }
     public function edit($id){
         $data['title'] = "Edit Buyer";
         $data['buyer_types']=BuyerType::all();
         $data['data']=Buyer::find($id);
-        $data['locations'] = Location::where('location_status','Active')->get();
-
-         return view('buyers.edit', $data);
+        //$data['locations'] = Location::where('location_status','Active')->get();
+        $data['divisions'] = Division::all();
+        $data['districts'] = District::all();
+        $data['areas'] = Upazila::all();
+        $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+        $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
+        $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;        
+        $data['menu_selection']=ThemeSetting::where('key',"MENU_SELECTION")->get()->first()->value;
+        $data['nav_color']=ThemeSetting::where('key',"NAV_COLOR")->get()->first()->value;
+        $data['nav_fix']=ThemeSetting::where('key',"NAV_FIX")->get()->first()->status;
+        $data['footer_fix']=ThemeSetting::where('key',"FOOTER_FIX")->get()->first()->status;
+        return view('buyers.edit', $data);
         
     }
     public function show($id){
         $data['title'] = "Buyer Details";
         $data['buyer']=Buyer::find($id);
+        $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+        $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
+        $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;        
+        $data['menu_selection']=ThemeSetting::where('key',"MENU_SELECTION")->get()->first()->value;
+        $data['nav_color']=ThemeSetting::where('key',"NAV_COLOR")->get()->first()->value;
+        $data['nav_fix']=ThemeSetting::where('key',"NAV_FIX")->get()->first()->status;
+        $data['footer_fix']=ThemeSetting::where('key',"FOOTER_FIX")->get()->first()->status;
         return view('buyers.show', $data);
     }
     public function create(){
@@ -70,16 +96,34 @@ class BuyerController extends Controller
 
         $data['locations'] = Location::where('location_status','Active')->get();
 
+        $data['divisions'] = Division::all();
+        $data['districts'] = District::all();
+        $data['areas'] = Upazila::all();
+        $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+        $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
+        $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;        
+        $data['menu_selection']=ThemeSetting::where('key',"MENU_SELECTION")->get()->first()->value;
+        $data['nav_color']=ThemeSetting::where('key',"NAV_COLOR")->get()->first()->value;
+        $data['nav_fix']=ThemeSetting::where('key',"NAV_FIX")->get()->first()->status;
+        $data['footer_fix']=ThemeSetting::where('key',"FOOTER_FIX")->get()->first()->status;
         return view('buyers.create', $data);
     }
     
     public function store(Request $request){
-        // $request->validate([
-        //     'buyer_type_name' => 'required|unique:buyer_types',
-        //     'buyer_type_status' => 'required',
-        //     'buyer_type_order' => 'nullable|integer',
+       // return $request->all();
+        $request->validate([
+            'buyer_name' => 'required|unique:buyers|regex:/^[\pL\s\.]+$/u',
+            'buyer_phone' => 'required|max:13',
+            'buyer_email' => 'required|email',
+            'buyer_status' => 'required',
+            'buyer_company' => 'required',
+            'buyer_address' => 'required',
+            'buyer_type_id' => 'required',
+            'buyer_division_id' => 'required',
+            'buyer_district_id' => 'required',
+            'buyer_area_id' => 'required',
 
-        // ]);
+        ]);
         $buyerModel = new Buyer();
         $buyerModel->buyer_name = $request->buyer_name;
         $buyerModel->buyer_company = $request->buyer_company;
@@ -94,16 +138,27 @@ class BuyerController extends Controller
         $buyerModel->buyer_status = $request->buyer_status;
 
         $buyerModel->save();
-
+        $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+        $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
+        $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;
         return redirect()->route('buyer.create')->with('success','Buyer has been created successfully!');
     }
     public function update(Request $request,$id){
-        // $request->validate([
-        //     'buyer_type_name' => 'required|unique:buyer_types',
-        //     'buyer_type_status' => 'required',
-        //     'buyer_type_order' => 'nullable|integer',
+        $request->validate([
+            'buyer_name' => 'regex:/^[\pL\s\.]+$/u|unique:buyers,buyer_name,'.$id,
+            'buyer_phone' => 'required|max:13',
+            'buyer_email' => 'required|email',
+            'buyer_company' => 'required',
+            'buyer_address' => 'required',
+            'buyer_type_id' => 'required',
+            'buyer_division_id' => 'required',
+            'buyer_district_id' => 'required',
+            'buyer_area_id' => 'required',
+            
+            //'buyer_status' => 'required',
 
-        // ]);
+
+        ]);
         $buyerModel = Buyer::find($id);
         $buyerModel->buyer_name = $request->buyer_name;
         $buyerModel->buyer_company = $request->buyer_company;
@@ -153,27 +208,55 @@ class BuyerController extends Controller
         $data['buyer_types'] = $buyer_types;
         $data['serial']     = managePagination($buyer_types);
 
+        $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+        $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
+        $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;        
+        $data['menu_selection']=ThemeSetting::where('key',"MENU_SELECTION")->get()->first()->value;
+        $data['nav_color']=ThemeSetting::where('key',"NAV_COLOR")->get()->first()->value;
+        $data['nav_fix']=ThemeSetting::where('key',"NAV_FIX")->get()->first()->status;
+        $data['footer_fix']=ThemeSetting::where('key',"FOOTER_FIX")->get()->first()->status;
         return view('buyers.buyers_type.indexBuyerType', $data);
     }
     public function editBuyerType($id){
         $data['title'] = "Edit Buyer Types";
         $data['data']=BuyerType::findOrFail($id);
+        
+        $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+        $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
+        $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;
+        $data['menu_selection']=ThemeSetting::where('key',"MENU_SELECTION")->get()->first()->value;
+        $data['nav_color']=ThemeSetting::where('key',"NAV_COLOR")->get()->first()->value;
+        $data['nav_fix']=ThemeSetting::where('key',"NAV_FIX")->get()->first()->status;
+        $data['footer_fix']=ThemeSetting::where('key',"FOOTER_FIX")->get()->first()->status;
         return view('buyers.buyers_type.editBuyerType', $data);
     }
     public function showBuyerType($id){
         $data['title'] = "Edit Buyer Types";
         $data['buyer_type']=BuyerType::findOrFail($id);
+        $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+        $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
+        $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;        
+        $data['menu_selection']=ThemeSetting::where('key',"MENU_SELECTION")->get()->first()->value;
+        $data['nav_color']=ThemeSetting::where('key',"NAV_COLOR")->get()->first()->value;
+        $data['nav_fix']=ThemeSetting::where('key',"NAV_FIX")->get()->first()->status;
+        $data['footer_fix']=ThemeSetting::where('key',"FOOTER_FIX")->get()->first()->status;
         return view('buyers.buyers_type.showBuyerType', $data);
     }
     
     public function createBuyerType(){
         $data['title'] = "Create Buyer Types";
-        
+        $data['menu_color']=ThemeSetting::where('key',"MENU_COLOR")->get()->first()->value;
+        $data['menu_dark']=ThemeSetting::where('key',"MENU_DARK")->get()->first()->status;
+        $data['menu_collapse']=ThemeSetting::where('key',"MENU_COLLAPSE")->get()->first()->status;        
+        $data['menu_selection']=ThemeSetting::where('key',"MENU_SELECTION")->get()->first()->value;
+        $data['nav_color']=ThemeSetting::where('key',"NAV_COLOR")->get()->first()->value;
+        $data['nav_fix']=ThemeSetting::where('key',"NAV_FIX")->get()->first()->status;
+        $data['footer_fix']=ThemeSetting::where('key',"FOOTER_FIX")->get()->first()->status;
         return view('buyers.buyers_type.createBuyerType', $data);
     }
     public function storeBuyerType(Request $request){
         $request->validate([
-            'buyer_type_name' => 'required|unique:buyer_types',
+            'buyer_type_name' => 'required|unique:buyer_types|regex:/^[\pL\s\-]+$/u',
             'buyer_type_status' => 'required',
             'buyer_type_order' => 'nullable|integer',
 
@@ -190,7 +273,7 @@ class BuyerController extends Controller
     }
     public function updateBuyerType(Request $request,$id){
         $request->validate([
-            'buyer_type_name' => 'unique:buyer_types,buyer_type_name,'.$id ,
+            'buyer_type_name' => 'regex:/^[\pL\s\-]+$/u|unique:buyer_types,buyer_type_name,'.$id ,
 
             'buyer_type_status' => 'required',
             'buyer_type_order' => 'nullable|integer',
@@ -206,7 +289,62 @@ class BuyerController extends Controller
 
         return redirect()->route('buyer.type.edit',$id)->with('success','Buyer Type has been created successfully!');
     }
-    
+
+    // *****************************Location AJAX Call *****************************
+    public function districtAjaxcall(Request $request){
+            $div_id = $request->div_id;
+            $districts = District::where('division_id',$div_id)->get();
+                            
+            return view('buyers._ajax_districtform',compact('districts'));
+
+    }
+
+    public function upazilaAjaxcall(Request $request){
+        $dis_id = $request->dis_id;
+        $upazilas = Upazila::where('district_id',$dis_id)->get();
+                        
+        return view('buyers._ajax_upazilaform',compact('upazilas'));
+
+    }
+   
+
+     /***
+     * Trash Buyer
+     */
+    public function trash($id)
+    {
+        Buyer::findOrFail($id)->delete();
+        return redirect()->route('buyer.index')->with('success','Buyer trashed successfully');
+    }
+
+    /***
+     * Restore Buyer
+     */
+    public function restore($id)
+    {
+        Buyer::withTrashed()->where('id', $id)->first()->restore();
+        return redirect()->back()->with('success','Buyer has been restored successfully');
+    }
+
+    /***
+     * Delete Buyer Permanently
+     */
+    public function destroy($id)
+    {
+        try {
+            Buyer::where('id', $id)->withTrashed()->forceDelete();
+            return redirect()->back()->with('success','Buyer has been deleted successfully');
+        } catch (\Exception $exception) {
+            if ($exception->getCode() == 23000) {
+                $status = 'warning';
+                $alert = 'You can\'t delete this item because lot\'s of dependency exist on system';
+            } else {
+                $status = 'danger';
+                $alert = $exception->getMessage();
+            }
+            return redirect()->back()->with($status,$alert);
+        }
+    }
     
     
 }

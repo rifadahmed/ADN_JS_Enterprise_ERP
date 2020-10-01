@@ -20,11 +20,11 @@ class CreateSupplierTable extends Migration
             $table->string('supplier_phone',15);
             $table->string('supplier_company',100);
             $table->text('supplier_address');
-            $table->foreign('supplier_division_id')->references('id')->on('locations');
+            $table->foreign('supplier_division_id')->references('id')->on('divisions');
             $table->unsignedBigInteger('supplier_division_id');
-            $table->foreign('supplier_district_id')->references('id')->on('locations');
+            $table->foreign('supplier_district_id')->references('id')->on('districts');
             $table->unsignedBigInteger('supplier_district_id');
-            $table->foreign('supplier_area_id')->references('id')->on('locations');
+            $table->foreign('supplier_area_id')->references('id')->on('upazilas');
             $table->unsignedBigInteger('supplier_area_id');
             $table->double('supplier_opening_balance',8,2);
             $table->enum('supplier_status',['Active','Inactive'])->default('Active');

@@ -1,0 +1,37 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateThemeSettings extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('theme_settings', function (Blueprint $table) {
+            $table->id();
+            $table->string('key');
+            $table->string('value')->nullable();
+            $table->string('value1')->nullable();
+            $table->string('value2')->nullable();
+            $table->string('type')->nullable();
+            $table->boolean('status')->default(1);
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('theme_settings');
+    }
+}
