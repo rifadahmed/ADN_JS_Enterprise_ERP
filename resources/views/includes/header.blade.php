@@ -8,7 +8,7 @@
 
                 <ul class="navbar-list right">
                     <li style="letter-spacing:1px;"> <i class="material-icons" style="margin: 0px 0 0 5px;">attach_money</i><p style="margin: -70px 25px 0 33px;">TOTAL SALES :<span style="color: #0288d1; "> BDT 18,000</span></p> </li> 
-                    <li style="letter-spacing:2px;"> <i class="material-icons" >add_shopping_cart</i><p style="margin: -70px 460px 0 33px ;">  TOTAL PURCHASES :<span style="color: #F086A3"> BDT 30,000</p></span></li>
+                    <li style="letter-spacing:2px;"> <i class="material-icons" >add_shopping_cart</i><p style="margin: -70px 480px 0 33px ;">  TOTAL PURCHASES :<span style="color: #F086A3"> BDT 30,000</p></span></li>
 
                     <li class="hide-on-med-and-down"><a class="waves-effect waves-block waves-light toggle-fullscreen" href="javascript:void(0);"><i class="material-icons">settings_overscan</i></a></li>
                     <li class="hide-on-large-only search-input-wrapper"><a class="waves-effect waves-block waves-light search-button" href="javascript:void(0);"><i class="material-icons">search</i></a></li>
