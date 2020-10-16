@@ -6,7 +6,7 @@
     </div>
     <div class="input-field col s12 m6">
         <label for="warehouse_order">Warehouse Order </label>
-        <input class="validate" id="warehouse_order" name="warehouse_order" value="{{ old('warehouse_order',isset($data) ? $data->warehouse_order : null ) }}" type="text">
+        <input class="validate" id="warehouse_order" name="warehouse_order" value="{{ old('warehouse_order',isset($data) ? $data->warehouse_order : null ) }}" type="text" required>
     </div>
 </div>
 <div class="row">

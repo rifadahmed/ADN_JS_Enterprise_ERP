@@ -16,7 +16,7 @@ class CreateWarehouseTable extends Migration
         Schema::create('warehouses', function (Blueprint $table) {
             $table->id();
             $table->string('warehouse_name',100);
-            $table->integer('warehouse_order');
+            $table->integer('warehouse_order')->nullable();
             $table->enum('warehouse_status',['Active','Inactive'])->default('Active');
             $table->integer('created_by')->nullable();
             $table->integer('updated_by')->nullable();
